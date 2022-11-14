@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: ipsa
 title: Testing of Jekyll
 permalink: /ipsa/front.html
 ---
