@@ -4,4 +4,4 @@ title: Testing of Jekyll
 permalink: /ipsa/front.html
 ---
 
-Welcome to the Python course
+Welcome to the Introduction to Programming course
