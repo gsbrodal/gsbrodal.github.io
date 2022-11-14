@@ -1,0 +1,63 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Windows 10 installation</title>
+<link rel=stylesheet href="ipsa.css">
+</head>
+<body>
+<h1>Windows 10 installation</h1>
+<h2>CPython, pip, and IDLE</h2>
+<p>From <a href="https://www.python.org/downloads" target="_blank">python.org</a> you can download the reference implementation of Python, nicknamed CPython (since it is coded in C):</p>
+<ul>
+<li>Open <a href="https://www.python.org/downloads" target="_blank">www.python.org/downloads</a></li>
+<li>Select "Download Python 3.10.0" or newer</li>
+<li>Download "Windows installer (64-bit)"</li>
+<li>Run the downloaded application, e.g python-3.10.0-amd64.exe</li>
+<li>Select "Add Python 3.10 to PATH"</li>
+<li>Select "Install now"</li>
+</ul>
+<p><em>Note</em>. By default a 64-bit Windows version of Python is installed. For memory consuming Python programs on Windows (requiring above 2GB of RAM), it is important that you download the 64 bit version of Python, also available at <a href="https://www.python.org/downloads/windows" target="_blank">www.python.org/downloads/windows</a> as "Windows installer (64-bit)". The 32-bit version is "Windows installer (32-bit)", and limits your programs to using 2GB of RAM.</p>
+<p>Additional <strong>Python packages</strong> are installed using the program "pip3", included in the above download. To e.g. install the <em>SciPy</em> package that will be used in the course (see <a href="https://www.scipy.org" target="_blank">SciPy.org</a> for more information on the package):</p>
+<ul>
+<li>Open a Command Prompt (Windows-key + type "cmd")</li>
+<li>Run "pip3 install scipy"</li>
+</ul>
+<p>Part of the download is <strong>IDLE</strong>, an <strong>integrated development environment</strong> for Python. Existing Python files (ending on .py) can be opened and edited in IDLE by right-clicking on the file and selecting "Edit with IDLE". The IDLE application should also appear in your Windows Start menu (or Windows-key + "IDLE").</p>
+<p>A Python program program can be <strong>executed</strong> in several ways.</p>
+<ol>
+<li>The easiest is just to double click on the file name, but this closes the output window immediately after the program terminates.</li>
+<li>Open the program in IDLE and press F5 to "Run Module".</li>
+<li>Execute the program from a Windows shell:<ul>
+<li>Open a Command Prompt (Windows-key + type "cmd")</li>
+<li>Change to the relevant folder, e.g. "cd C:\Users\ <em>username</em> \Desktop\"</li>
+<li>Run the python program (here test.py on your desktop) using e.g. "python test.py"</li>
+</ul>
+</li>
+</ol>
+<h2>Anaconda - an easy start to Python</h2>
+<p>Anaconda wrote on their <a href="https://www.anaconda.com" target="_blank">webpage</a> that it is "The Most Popular Python Data Science Platform". Anaconda bundles Python, a lot of libraries, and the <a href="https://github.com/spyder-ide" target="_blank">Spyder IDE</a>. To install Anaconda:</p>
+<ul>
+<li>Open <a href="https://www.anaconda.com/download" target="_blank">www.anaconda.com/download</a></li>
+<li>Select the Python 3.9 "Download"</li>
+<li>Run the download application, e.g. Anaconda3-2021.11-Windows-x86_64.exe</li>
+</ul>
+<p><em>Note</em>: Anaconda does not necessarily support the most recent version of Python provided at <a href="https://www.python.org" target="_blank">python.org</a>.</p>
+<h2>PyPy - for the performance demanding Python programmer</h2>
+<p>PyPy is an alternative implementation of the Python language that is often faster than CPython, but does not support the most recent versions of Python. To install PyPy:</p>
+<ul>
+<li>Open <a href="https://pypy.org" target="_blank">pypy.org</a></li>
+<li>Select "Download"</li>
+<li>Find the section with the most recent Python 3 implementation and download the Windows binary (64bit) (possibly <a href="https://downloads.python.org/pypy/pypy3.8-v7.3.7-win64.zip" download>pypy3.8-v7.3.7-win64.zip</a>.</li>
+<li>Unzip the download folder and move the folder to an appropriate place, e.g. C:\Program Files\</li>
+<li>Add the PyPy folder to your path:<ul>
+<li>Windows-key + "Edit the system environment variables"</li>
+<li>Select "Environment variables"</li>
+<li>Select "Path"</li>
+<li>Select "New" and add the path to the folder with pypy3.exe, e.g. C:\Program Files (x86)\pypy3.8-v7.3.7-win64\</li>
+</ul>
+</li>
+</ul>
+<p>The speed improvements of PyPy over CPython are due to the usage of the Just-In-Time compilation technique, that e.g. also is used inside the Google Chrome browser for executing JavaScript (see the Wikipedia page on <a href="https://en.wikipedia.org/wiki/Chrome_V8" target="_blank">Chrome V8</a> and by Java Virtual Machines for executing Java programs (bytecode) (see more on <a href="https://en.wikipedia.org/wiki/Just-in-time_compilation" target="_blank">Just-In-Time compilation</a> on Wikipedia).</p>
+</body>
+</html>

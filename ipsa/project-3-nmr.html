@@ -1,0 +1,166 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Project III - Simulations of NMR spectra of proteins</title>
+<link rel=stylesheet href="ipsa.css">
+</head>
+<body>
+<h1>Project III - Simulations of NMR spectra of proteins</h1>
+<p><a href="spectrum.png" target="_blank"><img src="spectrum.png" width="45%" class="right"></a></a></p>
+<p>A fingerprint of a protein can be obtained by a nuclear magnetic resonance (NMR) experiment with a given spectrometer frequency (input<sub>MHz</sub>). The fingerprint will be a spectrum of intensities over the frequency range.</p>
+<p>In this project you should compute a simulated approximation of the NMR fingerprint of a protein. In particular you should try to reproduce Figure 5(b) in [1].</p>
+<p>The approximate fingerprint of a protein should be computed based on data available for the <em>chemical shifts</em> of the H-atoms in the protein and coupling data for H-atoms inside amino acids. We will approximate the spectrum with the sum of a set of <em>Lorentz lines</em>.</p>
+<p>Protein molecules consist of one or more chains of amino acid residues. In the mandatory part of this project we will only consider proteins with one chain. Each amino acid in such a chain is identified by a a unique <em>Seq_ID</em>, an integer starting with one for the first amino acid in the sequence. The amino type is identified by <em>Comp_ID</em> (three letter abbreviation). Each atom in an amino acid has again a unique <em>Atom_ID</em>, where the first character is the atom type (i.e. in this project always H).</p>
+<p>This project consists of the below tasks. Please remember to split your code into logical units, e.g. by introducing functions for various (recurring) subtasks.</p>
+<p><a href="nmr_tasks.png" target="_blank"><img src="nmr_tasks.png" width="45%" class="right"></a></p>
+<ol>
+<li>
+<p>Download the files <a href="NFGAIL.csv" download>NFGAIL.csv</a>, <a href="couplings.csv" download>couplings.csv</a> and <a href="68_ubiquitin.csv" download>68_ubiquitin.csv</a>.</p>
+</li>
+<li>
+<p>The simplest Lorentz line is the function</p>
+<blockquote>
+<p><em>L</em>(<em>x</em>) = 1 / (1 + <em>x</em><sup>2</sup>) .</p>
+</blockquote>
+<p>Make a function <code>Lorentz</code> that given <em>x</em> returns <em>L</em>(<em>x</em>), where <em>x</em> can be either an integer, a float or a Numpy array. In the case of a Numpy array the function should be computed pointwise for each value. Plot the function for <em>x</em> &in; [&minus;10, 10] using <code>matplotlib.pyplot</code></p>
+<p><em>Hint</em>: use <code>numpy.linspace</code>.</p>
+<p>The function <em>L</em> has a maximum in (0, 1).  We let (<em>x</em><sub>0</sub>, <em>height</em>) denote the coordinates of the maximum of a Lorentz line.  We let the <em>width</em> of a Lorentz line be the width of the peak at height <em>height</em> / 2, sometimes denoted full width half height (FWHH).
+The function <em>L</em> has width 2. Note that the area below <em>L</em> is &pi; = &int;<sub>(&minus;&infin;,+&infin;)</sub> <em>L</em>(<em>x</em>) <em>dx</em>.</p>
+</li>
+<li>
+<p>Generalize your function <code>Lorentz</code> to take (optional keyword) arguments for <em>x</em><sub>0</sub>, <em>height</em> and <em>width</em>. The resulting function should compute</p>
+<blockquote>
+<p><em>L</em><sub><em>x</em><sub>0</sub>, <em>height</em>, <em>width</em></sub>(<em>x</em>) = <em>height</em> / (1 + (2 &centerdot; (<em>x</em> &minus; <em>x</em><sub>0</sub>) / <em>width</em>)<sup>2</sup>) .</p>
+</blockquote>
+<p>Plot three Lorentz lines for the parameters (<em>x</em><sub>0</sub>, <em>height</em>, <em>width</em>) being (-5, 5, 1), (2, 2, 6), and (5, 3, 0.5) for  <em>x</em> &in; [-10,10].
+Plot also the <em>sum</em> of the three curves. Note that the area below a general Lorentz line is &pi; &centerdot; <em>height</em> &centerdot; <em>width</em> / 2.</p>
+</li>
+<li>
+<p>Our basic assumption is that each atom in a molecule contributes approximately one Lorentz line to the spectra. We will not use the same Lorentz parameters for all atoms. The width will e.g. depend on the atom_id and possibly also on the amino acid the atom is part of.</p>
+<p>Make a function <code>peak_width(amino, atom_id)</code> that returns the width for an atom in a specic amino acide and having a specific atom_id. If atom_id is H the width is 6 (note this is only when the atom_id is H and not for all atoms of type H). If (amino, atom_id) is one of the following four pairs (ASN, HD21), (ASN, HD22), (GLN, HE21), (GLN, HE22) the width is 25. For all other atom_id's the width is 4.</p>
+</li>
+<li>
+<p>We will denote a Lorentz line a <em>peak</em> and identify it by the triple (<em>x</em><sub>0</sub>, <em>height</em>, <em>width</em>).</p>
+<p>For an atom (amino, atom_id) with assigned chemical shift value <em>x</em><sub>0</sub> (in Hz) we create a peak with width determined by <code>peak_width</code> and maximum value at (<em>x</em><sub>0</sub>, <em>height</em>), where <em>height</em> is chosen such that the area below the Lorentz line is &pi;.</p>
+<p>Create a function <code>atom_peak(amino, atom_id, Hz)</code> that returns the triple for the corresponding peak, where <em>x</em><sub>0</sub> = <code>Hz</code> = the chemical shift in Hz.</p>
+<p>Plot the peaks for the three atoms and assigned chemical shifts (PHE, H, 3481 Hz), (ASN, HD21, 3053 Hz), and (ILE, HA, 1673 Hz). Furthermore plot the sum of the three peaks.</p>
+</li>
+<li>
+<p>Create a function <code>read_molecule</code> that reads a list of atoms for a single protein from a CSV-file, where each row stores the description of an atom in the protein (most of the columns will not be used in this project).  You can e.g. store each atom as a dictionary mapping column names to row values (<em>Hint</em>: use <code>zip</code>) or read the file as a <code>pandas</code> data frame.</p>
+</li>
+<li>
+<p>Read in the molecule description of the NFGAIL protein from the file <a href="NFGAIL.csv" download>NFGAIL.csv</a>.  For each of the 44 H-atoms create a peak assuming input<sub>MHz</sub> = 400.13 MHz. The relevant columns are <code>Atom_ID</code>, <code>Comp_ID</code> (= amino acid), and <code>Val</code>. The column <code>Val</code> is the chemical shift in ppm, parts per million, but this value should be converted to Hz for calculations. To get the shift in Hz, multiply the <code>Val</code> value by input<sub>MHz</sub>.</p>
+<p>Plot the sum of the peaks. Make the unit of the x-axis ppm (= Hz / input<sub>MHz</sub>) and make the x-axis be decreasing from left to right.</p>
+<p><em>Note</em>. In the protein descriptions there is no H-atom listed for the first amino acid, since this H-atom will not be visible in the NMR spectra as it is in fast exchange with water.</p>
+</li>
+<li>
+<p>To get a more refined spectrum we will take couplings between atoms into account. Between two H-atoms <em>A</em> and <em>B</em> in an amino acid (i.e. two peaks) there can be a coupling with magnitude <em>J</em><sub><em>AB</em></sub>, in the following just denoted <em>J</em>, that influences the resulting spectrum. (Many other factors influence the spectrum, but we will happily ignore these in our simulations).  The coupling between <em>A</em> and <em>B</em> causes both peaks to be split into two new peaks <em>A</em><sub>inner</sub>, <em>A</em><sub>outer</sub>, <em>B</em><sub>inner</sub> and <em>B</em><sub>outer</sub>, where <em>B</em><sub>inner</sub> is closer to <em>A</em> than <em>B</em>, and <em>B</em><sub>outer</sub> is further away from <em>A</em> than <em>B</em>. In the following we only consider <em>B</em><sub>inner</sub> and <em>B</em><sub>outer</sub> (<em>A</em> is handled symmetrically).</p>
+<p>The height of <em>B</em><sub>outer</sub> is smaller than the height of <em>B</em><sub>inner</sub>, the sum of their heights equals the height of <em>B</em>, and their width equals the width of <em>B</em>.
+Assume <em>A</em> and <em>B</em> have their maximum at_x_<sub>0</sub> = <em>&nu;</em><sub><em>A</em></sub>
+and <em>x</em><sub>0</sub> = <em>&nu;</em><sub><em>B</em></sub>, respectively.
+Let</p>
+<blockquote>
+<p><em>Q</em> = sqrt((<em>&nu;<sub>A</sub></em> &minus; <em>&nu;<sub>B</sub></em>)<sup>2</sup> + <em>J</em><sup>2</sup>)</p>
+<p><em>&nu;<sub>m</sub></em> = (<em>&nu;<sub>A</sub></em> + <em>&nu;<sub>B</sub></em>) / 2</p>
+<p>&sigma; = 1 if &nu;<sub><em>A</em></sub> &lt; &nu;<sub><em>B</em></sub>, &nbsp;&nbsp;&minus;1 otherwise</p>
+<p>&alpha;<sub>inner</sub> = (1 + <em>J</em> / <em>Q</em>) / 2 </p>
+<p>&alpha;<sub>outer</sub> = (1 &minus; <em>J</em> / <em>Q</em>) / 2 .</p>
+</blockquote>
+<p>The points <em>B</em><sub>inner</sub> and <em>B</em><sub>outer</sub> are given by</p>
+<blockquote>
+<p><em>&nu;</em><sub><em>B</em><sub>inner</sub></sub> = <em>&nu;</em><sub><em>m</em></sub> + &sigma; &centerdot; (<em>Q</em> &minus; <em>J</em>) / 2 ,
+&nbsp;&nbsp;&nbsp; <em>height</em><sub><em>B</em><sub>inner</sub></sub> = <em>height</em><sub><em>B</em></sub> &centerdot; &alpha;<sub>inner</sub> ,
+&nbsp;&nbsp;&nbsp; <em>width</em><sub><em>B</em><sub>inner</sub></sub> = <em>width</em><sub><em>B</em></sub> ,</p>
+<p><em>&nu;</em><sub><em>B</em><sub>outer</sub></sub> = <em>&nu;</em><sub><em>m</em></sub> + &sigma; &centerdot; (<em>Q</em> + <em>J</em>) / 2 ,
+&nbsp;&nbsp;&nbsp; <em>height</em><sub><em>B</em><sub>outer</sub></sub> = <em>height</em><sub><em>B</em></sub> &centerdot; &alpha;<sub>outer</sub> ,
+&nbsp;&nbsp;&nbsp; <em>width</em><sub><em>B</em><sub>outer</sub></sub> = <em>width</em><sub><em>B</em></sub> .</p>
+</blockquote>
+<p>Make a function <code>apply_coupling(A, B, J)</code> that takes two peaks <code>A</code> and <code>B</code> and computes the effect of <code>A</code> on <code>B</code>, when the coupling has magnitude <code>J</code>. Returns the list of the two peaks <code>B</code><sub>inner</sub> and <code>B</code><sub>outer</sub> that <code>B</code> is split into.
+If <code>J</code> = 0 or <em>x</em><sub>0</sub>(<code>A</code>) = <em>x</em><sub>0</sub>(<code>B</code>), then only <code>[B]</code> is returned.</p>
+<p>Plot the four peaks resulting from the mutual coupling of two peaks <em>A</em> = (25, 1, 1) and <em>B</em> = (75, 1, 1) with <em>J</em> = 10.</p>
+</li>
+<li>
+<p>If an atom has couplings with several atoms the computations become slightly more involved. Assume <em>B</em> has couplings with <em>k</em> atoms <em>A</em><sub>1</sub>,  <em>A</em><sub>2</sub>, ..., <em>A</em><sub><em>k</em></sub> with magnitudes <em>J</em><sub>1</sub>,  <em>J</em><sub>2</sub>, ..., <em>J</em><sub><em>k</em></sub>, respectively. In general the peak for <em>B</em> will be split into 2<sup><em>k</em></sup> peaks.</p>
+<p>The basic idea is to start with the peak <em>B</em>. Applying the coupling of <em>B</em> and <em>A</em><sub>1</sub> with magnitude <em>J</em><sub>1</sub> on <em>B</em> results in a list <em>L</em><sub>1</sub> with at most two peaks. Applying the coupling of <em>B</em> and <em>A</em><sub>2</sub> with magnitude <em>J</em><sub>2</sub> on each <em>B'</em> &in; <em>L</em><sub>1</sub> results in the list <em>L</em><sub>2</sub> with at most four peaks. Applying <em>A</em><sub>3</sub> on the peaks in <em>L</em><sub>2</sub> results in eight peaks <em>L</em><sub>3</sub>, etc.</p>
+<p>Applying the coupling between <em>A</em><sub><em>i</em></sub> and <em>B</em> with magnitude <em>J</em> on a peak <em>B'</em> &in; <em>L</em><sub><em>i</em> &minus; 1</sub> is done as applying <em>A</em> on <em>B</em>,  except that the final computation of the points <em>B'</em><sub>inner</sub> and <em>B'</em><sub>outer</sub> are given by</p>
+<blockquote>
+<p><em>&nu;</em><sub><em>B'</em><sub>inner</sub></sub> = <em>&nu;</em><sub><em>B'</em></sub> &minus; <em>&nu;</em><sub><em>B</em></sub> + <em>&nu;</em><sub><em>m</em></sub> + &sigma; &centerdot; (<em>Q</em> &minus; <em>J</em>) / 2 ,
+&nbsp;&nbsp;&nbsp; <em>height</em><sub><em>B'</em><sub>inner</sub></sub> = <em>height</em><sub><em>B'</em></sub> &centerdot; &alpha;<sub>inner</sub> ,
+&nbsp;&nbsp;&nbsp; <em>width</em><sub><em>B'</em><sub>inner</sub></sub> = <em>width</em><sub><em>B</em></sub></p>
+<p><em>&nu;</em><sub><em>B'</em><sub>outer</sub></sub> = <em>&nu;</em><sub><em>B'</em></sub> &minus; <em>&nu;</em><sub><em>B</em></sub> + <em>&nu;</em><sub><em>m</em></sub> + &sigma; &centerdot;  (<em>Q</em> + <em>J</em>) / 2 ,
+&nbsp;&nbsp;&nbsp; <em>height</em><sub><em>B'</em><sub>outer</sub></sub> = <em>height</em><sub><em>B'</em></sub> &centerdot; &alpha;<sub>outer</sub> ,
+&nbsp;&nbsp;&nbsp; <em>width</em><sub><em>B'</em><sub>outer</sub></sub> = <em>width</em><sub><em>B</em></sub></p>
+</blockquote>
+<p>Extend your function <code>apply_coupling</code> to also be able to take a peak <em>B'</em> as an additional (optional) fourth argument. Note that for <em>B'</em> = <em>B</em> the function should return the same value as without the <em>B'</em> argument.</p>
+<p>Make a function  <code>apply_couplings([(A</code><sub><code>1</code></sub><code>, J</code><sub><code>1</code></sub><code>), (A</code><sub><code>2</code></sub><code>, J</code><sub><code>2</code></sub><code>), ..., (A</code><sub><code>k</code></sub><code>, J</code><sub><code>k</code></sub><code>)], B)</code> to apply all couplings on <code>B</code>.</p>
+<p>Plot the four peaks and their sum resulting from applying
+<em>A</em><sub>1</sub> = (3, 1, 1) and
+<em>A</em><sub>2</sub> = (5, 1, 1) on
+<em>B</em><sub>1</sub> = (9, 1, 1)
+with magnitude <em>J</em><sub>1</sub> = 1 and <em>J</em><sub>2</sub> = 2, respectively.
+Note that permuting the list of (<em>A</em><sub><em>i</em></sub>, <em>J</em><sub><em>i</em></sub>)s should result in the same set of peaks for <em>B</em>.</p>
+</li>
+<li>
+<p>Make a function to read the file <a href="couplings.csv" download>couplings.csv</a> that for each of the 20 amino acids contains the coupling magnitudes among the H-atoms inside the amino acid.</p>
+</li>
+<li>
+<p>Make a function <code>split_comps</code> that splits a list of atoms for a protein into a list of sublists, one sublist for each amino acid on the chain, i.e. split the list into sublists based on Seq_ID.</p>
+</li>
+<li>
+<p>Make a function <code>comp_peaks(comp, couplings, input_MHz)</code> that computes the peaks for all atoms in a amino acid (comp) by taking the table of couplings from <a href="couplings.csv" download>couplings.csv</a> into acount.</p>
+</li>
+<li>
+<p>Make a function <code>protein_peaks(atoms, couplings, input_MHz)</code> that takes a list of atoms for a protein, a table of couplings, and a frequency input<sub>MHz</sub> and returns the resulting peaks by applying all couplings.</p>
+<p>Apply the function to the data from <a href="NFGAIL.csv" download>NFGAIL.csv</a> with input<sub>MHz</sub> = 400.13 MHz.</p>
+<p>Plot the sum of the resulting 542 peaks. Make the unit of the x-axis ppm (= Hz / input<sub>MHz</sub>) and make the x-axis be decreasing from left to right.</p>
+<p>Your result should be a reproduction of 5(b) in [<a href="https://doi.org/10.1002/mrc.4663" target="_blank">1</a>].</p>
+</li>
+</ol>
+<p><em>The following tasks are optional.</em></p>
+<p>In the previous tasks you were given CSV-files with the description of proteins only containing one chain. The following tasks ask you to download protein descriptions from the Biological Magnetic Resonance Data Bank (BMRB, <a href="http://www.bmrb.wisc.edu" target="_blank">bmrb.wisc.edu</a> containing an arbitrary number of chains. In the data bank each data set for a molecule has a unique <em>Entry_ID</em> value. Each chain is identified by a unique <em>Entity_ID</em>. Each amino acid in a chain has a unique <em>Seq_ID</em> (and amino type <em>Comp_ID</em>) and each atom in an amino acid has again a unique <em>Atom_ID</em>.</p>
+<ol start="14">
+<li>
+<p>Download the file <a href="http://www.bmrb.wisc.edu/ftp/pub/bmrb/relational_tables/nmr-star3.1/Atom_chem_shift.csv" download>Atom_chem_shift.csv</a> (700+ MB) from <a href="http://www.bmrb.wisc.edu" target="_blank">www.bmrb.wisc.edu</a> &gt; Bulk access &gt; <a href="http://www.bmrb.wisc.edu/ftp/pub/bmrb/relational_tables/nmr-star3.1" target="_blank">CSV relational data tables</a>.  This file contains the atom shift data for <em>all</em> data sets on the web site.</p>
+</li>
+<li>
+<p>Write a function <code>csv_extract</code> that given a value <em>Entry_ID</em>, from Atom_chem_shift.csv extracts all rows with value <em>Entry_ID</em> in column <code>Entry_ID</code> and outputs the resulting rows to a new CSV-file. Test this with <em>Entry_ID</em> = 68  and <em>Entry_ID</em> = 6203. The result for <em>Entry_ID</em> = 68 should be the 556 atoms as provided in the file <a href="68_ubiquitin.csv" download>68_ubiquitin.csv</a> (but with additional columns). The result for <em>Entry_ID</em> = 6203 should be a file with a header row plus 329 data rows (atoms) for ThrB12-DKP-insulin.</p>
+<p><em>Hint</em>: Avoid reading the whole table into memory. If you e.g. read the complete table using Pandas, the data will take up memory &approx; 3 &times; file size. Instead scan through the file using the <code>csv</code> module and only have the current line in memory. Scanning through the 700+ MB should be possible within in the order of a minute.</p>
+</li>
+<li>
+<p>Update the function <code>split_comps</code> to be able to handle more than one chain of amino acids. In particular each comp should now be identified not only by Seq_ID but by the pair (Entity_ID, Seq_id).</p>
+</li>
+<li>
+<p>Extract data for ThrB12-DKP-insulin (<code>Entry_ID</code> = 6203) from Atom_chem_shift.csv and plot the resulting simulated spectrum for input<sub>MHz</sub> = 500 MHz.  Note that the data for ThrB12-DKP-insulin consists of two chains of 131 and 198 atoms, respectively.  You can find the Entry_ID value for your favorite protein by searching the BMRB data base at <a href="http://www.bmrb.wisc.edu" target="_blank">www.bmrb.wisc.edu</a>.</p>
+</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>Protein</th>
+<th align="center">Uncoupled peaks</th>
+<th align="center">Coupled peaks</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>NFGAIL</td>
+<td align="center">44</td>
+<td align="center">542</td>
+</tr>
+<tr>
+<td>Ubiquitin</td>
+<td align="center">556</td>
+<td align="center">6805</td>
+</tr>
+<tr>
+<td>ThrB12-DKP-insulin</td>
+<td align="center">329</td>
+<td align="center">3338</td>
+</tr>
+</tbody>
+</table>
+<h2>References</h2>
+<p>[1] <em>Fast simulations of multidimensional NMR spectra of proteins and peptides</em>.  Thomas Vosegaard. Magnetic Resonance in Chemistry. 56(6), 438-448, 2018. DOI: <a href="https://doi.org/10.1002/mrc.4663" target="_blank">10.1002/mrc.4663</a>.</p>
+</body>
+</html>

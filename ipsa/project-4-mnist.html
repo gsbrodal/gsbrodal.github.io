@@ -1,0 +1,151 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Project IV - MNIST Image Classification</title>
+<link rel=stylesheet href="ipsa.css">
+</head>
+<body>
+<h1>Project IV - MNIST Image Classification</h1>
+<p><a href="mnist.png" target="_blank"><img src="mnist.png" width="45%" class="right"></a></p>
+<p>In this project we are going to create a very simple <em>neural network</em> (<em>linear classifier</em>) to identify the  handwritten digits from the <a href="http://yann.lecun.com/exdb/mnist" target="_blank">MNIST</a> database - often considered the "Hello World" problem in neural networks.
+In this problem we are given grayscale images of size 28 &times; 28 showing handwritten digits and are going to classify them into the 10 <em>classes</em> 0&nbsp;-&nbsp;9, depending on the digit depicted in the image.  The MNIST database consists of 60.000 images to train your network on and 10.000 images to test the
+quality (accuracy) of the resulting network. For all images the correct label 0&nbsp;-&nbsp;9 is part of the database.  There exist many of-the-shelf modules for this problem in Python, e.g.
+<a href="https://keras.io" target="_blank">Keras</a>,
+<a href="https://www.tensorflow.org" target="_blank">TensorFlow</a>,
+<a href="https://scikit-learn.org/stable/modules/neural_networks_supervised.html#" target="_blank">scikit</a>, and
+<a href="https://pytorch.org" target="_blank">PyTorch</a>,
+but in this project we are going to build a solution using pure Python from scratch.</p>
+<p>A good introduction to the topic are the following four videos from
+the YouTube channel by 3BLUE1BROWN:
+<a href="https://www.youtube.com/watch?v=aircAruvnKk" target="_blank">Neural Network</a> (19:13),
+<a href="https://www.youtube.com/watch?v=IHZwWFHWa-w" target="_blank">Gradient Descend</a> (21:00),
+<a href="https://www.youtube.com/watch?v=Ilg3gGewQ5U" target="_blank">Backpropagation</a> (13:53), and
+<a href="https://www.youtube.com/watch?v=tIeHLnjs5U8" target="_blank">Backpropagation Calculus</a> (10:17).
+The few mathematical equations required in this project for performing simple backpropagation are stated explicitly below.</p>
+<p><strong>You are not allowed to use NumPy, Keras, etc. in the questions below (if not stated otherwise).</strong></p>
+<p>The first group of tasks concerns reading the raw data and visualizing them.</p>
+<ol>
+<li>
+<p>From <a href="http://yann.lecun.com/exdb/mnist" target="_blank">yann.lecun.com/exdb/mnist/</a> download the following four files:</p>
+<ul>
+<li>t10k-images.idx3-ubyte.gz (1.6 MB)</li>
+<li>t10k-labels.idx1-ubyte.gz (4.4 KB)</li>
+<li>train-images.idx3-ubyte.gz (9.6 MB)</li>
+<li>train-labels.idx1-ubyte.gz (28.3 KB)</li>
+</ul>
+</li>
+<li>
+<p>Make a function <code>read_labels(filename)</code> to read a file containing labels (integers 0-9) in the format described under <a href="http://yann.lecun.com/exdb/mnist/" target="_blank">FILE FORMATS FOR THE MNIST DATABASE</a>. The function should return a list of integers. Test your method on the files t10k-labels.idx1-ubyte.gz and train-labels.idx1-ubyte.gz (the first five values of the 10.000 values in t10k-labels.idx1-ubyte.gz are [7, 2, 1, 0, 4]).  The function should check if the <em>magic number</em> of the file is 2049.</p>
+<p><em>Hint</em>: Open the files for reading in binary mode by providing <code>open</code> with the argument <code>'rb'</code>. You can either uncompress the files using a program like 7zip, or work directly with the compressed files using the <code>gzip</code> module in Python. In particular <code>gzip.open</code> will be relevant. To convert 4 bytes to an integer <code>int.from_bytes</code> might become useful.</p>
+</li>
+<li>
+<p>Make a function <code>read_images(filename)</code> to read a file containing MNIST images in the format described under <a href="http://yann.lecun.com/exdb/mnist" target="_blank">FILE FORMATS FOR THE MNIST DATABASE</a>.  Test your method on the files t10k-images.idx3-ubyte.gz and train-images.idx3-ubyte.gz.  The function should return a three dimensional list of integers, such that images[image][row][column] is a pixel value (an integer in the range 0..255), and 0 &le; row, column &lt; 28 and 0 &le; image &lt; 10000 for t10k-images.idx3-ubyte.gz. The function should check if the <em>magic number</em> of the file is 2051.</p>
+</li>
+<li>
+<p>Make a function <code>plot_images(images, labels)</code> to show a set of images and their corresponding labels as titles using <code>imshow</code> from <code>matplotlib.pyplot</code>. Show the first few images from t10k-images.idx3-ubyte.gz with their labels from t10k-labels.idx1-ubyte.gz as titles. Remember to select an appropriate colormap for <code>imshow</code>.</p>
+</li>
+</ol>
+<p>A <em>linear classifier</em> consists of a pair (<em>A</em>, <em>b</em>), where <em>A</em> is a <em>weight matrix</em> of size 784 &times; 10 and <em>b</em> is a <em>bias vector</em> of length 10.  An image containing 28 &times; 28 pixels is viewed as a vector <em>x</em> of length 784 (= 28 &middot; 28), where the pixel values are scaled to be floats in the range [0, 1].  In the following we denote this representation an <em>image vector</em>. The prediction by the classifier is computed as</p>
+<blockquote>
+<p><em>a</em> = <em>xA</em> + <em>b</em>,</p>
+</blockquote>
+<p>where <em>a</em> = (<em>a</em><sub>0</sub>, ..., <em>a</em><sub>9</sub>), i.e. the result of the vector-matrix product <em>xA</em>, that results in a vector of length 10, followed by a
+vector-vector addition with <em>b</em>.  The predicted class is the index <em>i</em>, such that <em>a</em><sub><em>i</em></sub> is the largest entry in <em>a</em>.</p>
+<p>In the follow we will apply the cost measure <em>mean squared error</em> to evalutate how close the output <em>a</em> = <em>xA</em> + <em>b</em> of a network (<em>A</em>, <em>b</em>) is for an input <em>x</em> to the correct answer <em>y</em>, where we assume that <em>y</em> is the categorical vector of length 10 for the correct label, i.e. <em>y</em><sub><em>i</em></sub> = 1 if <em>i</em> = label, and 0 otherwise:</p>
+<blockquote>
+<p>cost(<em>a</em>, <em>y</em>) = sum<sub><em>i</em></sub> ((<em>a</em><sub><em>i</em></sub> - <em>y</em><sub><em>i</em></sub>)<sup>2</sup>) / 10</p>
+</blockquote>
+<p>We use the mean squared error because is has an easy computable derivative, although better cost functions exist for this learning problem, e.g. softmax.</p>
+<p>Below you will be asked to compute weights (<em>A</em>, <em>b</em>) using back propagation.  To get started, a set of weights (<em>A</em>, <em>b</em>) is available as <a href="mnist_linear.weights" target="_blank">mnist_linear.weights</a>. The weights were generated using the short program <a href="mnist_keras_linear.py" download>mnist_keras_linear.py</a> using the neural networks API <a href="https://keras.io/" target="_blank">Keras</a> running on top of Google's TensorFlow.  The network achieves around 92% accuracy on the MNIST test set (you should not expect to reach this level, since this network is trained using the softmax cost function).</p>
+<ol start="5">
+<li><em>Optional</em>: You should be able to reproduce a similar weight file (but not exactly the same) by runing the script, after pip installing tensorflow.  This is not part of the project.</li>
+</ol>
+<p>The second group of tasks is to load and save existing linear classifier networks and to evaluate their performance, together with various helper functions. In the following we assume the vector <em>b</em> to be represented by a standard Python list of floats and the matrix <em>A</em> to be represented by a list-of-lists of floats.</p>
+<ol start="6">
+<li>
+<p>Write functions <code>linear_load(file_name)</code> and <code>linear_save(file_name, network)</code> to load and save a linear classifier <code>network</code> = (<em>A</em>, <em>b</em>) using <a href="https://docs.python.org/3/library/json.html" target="_blank">JSON</a>. Test your functions on <a href="mnist_linear.weights" target="_blank">mnist_linear.weights</a>.</p>
+</li>
+<li>
+<p>Write function <code>image_to_vector(image)</code> that converts an image (list-of-lists) with integer pixel values in the range [0, 255] to an image vector (list) with pixel values being floats in the range [0, 1].</p>
+</li>
+<li>
+<p>Write functions for basic linear algebra <code>add(U, V)</code>, <code>sub(U, V)</code>, <code>scalar_multiplication(scalar, V)</code> <code>multiply(V, M)</code>, <code>transpose(M)</code> where <code>V</code> and <code>U</code> are vectors and <code>M</code> is a matrix.  Include assertions to check if the dimensions of the arguments to <code>add</code> and <code>multiply</code> fit.</p>
+</li>
+<li>
+<p>Write a function <code>mean_square_error(U, V)</code> to compute the mean squared error between two vectors.</p>
+<p><em>Examples</em>: <code>mean_square_error([1,2,3,4], [3,1,3,2])</code> shoule return <code>2.25</code>.</p>
+</li>
+<li>
+<p>Write function a function <code>argmax(V)</code> that returns an index into the list <code>V</code> with maximal value (corresponding to <a href="https://docs.scipy.org/doc/numpy/reference/generated/numpy.argmax.html" target="_blank"><code>numpy.argmax</code></a>).</p>
+<p><em>Example</em>: <code>argmax([6, 2, 7, 10, 5])</code> should return <code>3</code>.</p>
+</li>
+<li>
+<p>Implement a function <code>categorical(label, classes=10)</code> that takes a label from [0, 9] and returns a vector of length <code>classes</code>, with all entries being zero, except entry <code>label</code> that equals one.  For an image with this label, the categorical vector is the expected ideal output of a perfect network for the image.</p>
+<p><em>Example</em>: <code>categorical(3)</code> should return <code>[0,0,0,1,0,0,0,0,0,0]</code>.</p>
+</li>
+<li>
+<p>Write a function <code>predict(network, image)</code> that returns <em>xA</em> + <em>b</em>, given a network (<em>A</em>, <em>b</em>) and an image vector.</p>
+</li>
+<li>
+<p>Create a function <code>evaluate(network, images, labels)</code> that given a list of image vectors and corresponding labels, returns the tuple (<em>predictions</em>, <em>cost</em>, <em>accuracy</em>), where <em>predictions</em> is a list of the predicted labels for the images, <em>cost</em> is the average of mean square errors over all input-output pairs, and <em>accuracy</em> the fraction of inputs where the predicted labels are correct.  Apply this to the loaded network and the 10.000 test images in t10k-images.  The accuracy should be around 92%, whereas the cost should be 230 (the cost is very bad since the network was trained to optimze the cost measure softmax).</p>
+<p><em>Hint.</em> Use your <code>argmax</code> function to convert network output into a label prediction.</p>
+</li>
+<li>
+<p>Extend <code>plot_images</code> to take an optional argument <code>prediction</code> that is a list of predicted labels for the images, and visualizes if the prediction is correct or wrong. Test it on a set of images from t10k-images and their correct labels from t10k-labels.</p>
+</li>
+<li>
+<p>Column <em>i</em> of matrix <em>A</em> contains the (positive or negative) weight of each input pixel for class <em>i</em>, i.e. the contribution of the pixels towards the image showing the digit <em>i</em>. Use <code>imshow</code> to visualize each column (each column is a vector of length 784 that should be reshaped to an image of size 28 &times; 28).</p>
+</li>
+</ol>
+<p>The third group of tasks is to train your own linear classifier network, i.e.  to compute a matrix <em>A</em> and a vector <em>b</em>.</p>
+<ol start="16">
+<li>
+<p>Create function <code>create_batches(values, batch_size)</code> that partitions a list of values into batches of size batch_size, except for the last batch, that can be smaller. The list should be permuted before being cut into batches.</p>
+<p><em>Example</em>: <code>create_batches(list(range(7)), 3)</code> should return <code>[[3, 0, 1], [2, 5, 4], [6]]</code>.</p>
+</li>
+<li>
+<p>Create a function <code>update(network, images, labels)</code> that updates the network <code>network</code> = (<em>A</em>, <em>b</em>) given a batch of <em>n</em> image vectors and corresponding output labels (performs one step of a stochastical gradient descend in the 784 &middot; 10 + 10 = 7850 dimensional space where all entries of <em>A</em> and <em>b</em> are considered to be variables).</p>
+<p>For each input in the batch, we consider the tuple (<em>x</em>, <em>a</em>, <em>y</em>), where <em>x</em> is the image vector, <em>a</em> = <em>xA</em> + <em>b</em> the current network's output on input <em>x</em>, and <em>y</em> the corresponding categorical vector for the label. The biases <em>b</em> and weights <em>A</em> are updated as follows:</p>
+<blockquote>
+<p><em>b</em><sub><em>j</em></sub> <code>-=</code> &sigma; &middot; (1 / <em>n</em>) &middot;
+&sum;<sub>(<em>x</em>,<em>a</em>,<em>y</em>)</sub>
+2 &middot; (<em>a</em><sub><em>j</em></sub> - <em>y</em><sub><em>j</em></sub>) / 10 </p>
+<p><em>A</em><sub><em>ij</em></sub> <code>-=</code> &sigma; &middot; (1 / <em>n</em>) &middot;
+&sum;<sub>(<em>x</em>,<em>a</em>,<em>y</em>)</sub>
+ <em>x</em><sub><em>i</em></sub> &middot; 2 &middot; (<em>a</em><sub><em>j</em></sub> - <em>y</em><sub><em>j</em></sub>) / 10 </p>
+</blockquote>
+<p>For this problem an appropriate value for the <em>step size</em> &sigma; of the gradient descend is &sigma; = 0.1.</p>
+<p>In the above equations 2 &middot; (<em>a</em><sub><em>j</em></sub> -<em>y</em><sub><em>j</em></sub>) / 10 is the derivative of the cost function (mean squared error) wrt. to the output <em>a</em><sub><em>j</em></sub>, whereas <em>x</em><sub><em>i</em></sub> &middot; 2 &middot; (<em>a</em><sub><em>j</em></sub> - <em>y</em><sub><em>j</em></sub>) / 10 is the derivative of the cost function w.r.t. to <em>A</em><sub><em>ij</em></sub> &mdash; both for a specific image (<em>x</em>, <em>a</em>, <em>y</em>).</p>
+</li>
+<li>
+<p>Create a function <code>learn(images, labels, epochs, batch_size)</code> to train an initially random network on a set of image vectors and labels. First initialize the network to contain random weights: each value of <em>b</em> to be a uniform random value in [0, 1], and each value in <em>A</em> to be a uniform random value in [0, 1&nbsp;/&nbsp;784].  Then perform <code>epochs</code> epochs, each epoch consiting of partitioning the input into batches of <code>batch_size</code> images, and calling <code>update</code> with each of the batches. Try running your learning function with <code>epochs=5</code> and <code>batch_size=100</code> on the MNIST training set train-images and train-labels. </p>
+<p><em>Hint</em>. The above computation can take a long time, so print regularly a status of the current progress of the network learning, e.g. by evaluating the network on (a subset of) the test images t10k-images. Regularly save the best network seen so far.</p>
+</li>
+</ol>
+<p>Here are some additional optional tasks. Feel free to come up with your own (other networks, other optimization strategies, other loss  functions, ...).</p>
+<ol start="19">
+<li>
+<p><em>Optional</em>.  Instead of using the mean squared error as the cost function try to use the <em>categorical cross entropy</em> (see e.g. this <a href="https://gombru.github.io/2018/05/23/cross_entropy_loss" target="_blank">blog</a>): On output <em>a</em> where the expected output is the categorical vector <em>y</em>, the categorical cross entropy is defined as <em>CE</em>(<em>y</em>, <em>softmax</em>(<em>a</em>)), where <em>softmax</em>(<em>a</em>)<sub><em>i</em></sub> = <em>e</em><sup><em>a</em><sub><em>i</em></sub></sup> / (&Sum;<sub><em>j</em></sub> <em>e</em><sup><em>a</em><sub><em>j</em></sub></sup>) and the <em>cross entropy</em> is defined as <em>CE</em>(<em>y</em>, <em>&acirc;</em>) = - &sum;<sub><em>i</em></sub> (<em>y</em><sub><em>i</em></sub> &middot; log <em>&acirc;</em><sub><em>i</em></sub>).</p>
+<p>In <code>update</code> the derivative of the cost function w.r.t. output <em>a</em><sub><em>j</em></sub> should be replaced by <em>e</em><sup><em>a</em><sub><em>j</em></sub></sup> /(&Sum;<sub><em>k</em></sub> <em>e</em><sup><em>a</em><sub><em>k</em></sub></sup>) - <em>y</em><sub><em>j</em></sub>.</p>
+<p><em>Note</em>. <em>softmax</em>(<em>a</em>) is a vector with the same length as <em>a</em> with values having the same relative order as in <em>a</em>, but elements are scalled so that <em>softmax</em>(<em>a</em>)<sub><em>i</em></sub> &in; ]0,1[ and 1 = &sum;<sub><em>i</em></sub> <em>softmax</em>(<em>a</em>)<sub><em>i</em></sub>. Furthermore, since <em>y</em> is categorical with <em>y</em><sub><em>i</em></sub> = 1 for exactly one <em>i</em>, <em>CE</em>(<em>y</em>, <em>softmax</em>(<em>a</em>)) = log(&Sum;<sub><em>j</em></sub> <em>e</em><sup><em>a</em><sub><em>j</em></sub></sup>) - <em>a</em><sub><em>i</em></sub>.</p>
+</li>
+<li>
+<p><em>Optional</em>. Visualize the changing weights, cost, and accuracy during the learning.</p>
+<p><em>Hint</em>. You can use <code>matplotlib.animation.FuncAnimation</code>, and let the provided function apply one batch of training data to the network for each call.</p>
+</li>
+<li>
+<p><em>Optional</em>: Redo the above exercises in Numpy. Create a generic method for reading IDX files into NumPy arrays based on the specification <a href="http://yann.lecun.com/exdb/mnist" target="_blank">THE IDX FILE FORMAT</a>.  Data can be read from a file directly into a NumPy array using <code>numpy.fromfile</code> and an appropriate
+<a href="https://docs.scipy.org/doc/numpy/reference/arrays.dtypes.html" target="_blank">dtype</a>.</p>
+<p><em>Hint</em>. <code>np.argmax(test_images.reshape(10000, 28 * 28) @ A + b, axis=1)</code> computes the predictions for all tests images, if they are all in one NumPy array with shape (10000, 28, 28).</p>
+</li>
+<li>
+<p><em>Optional</em>: Compare your pure Python solution with your Numpy implementation (if you did the above optional task) and/or the solution using Keras, e.g. on running time, accuracy achieved, epochs.</p>
+</li>
+<li>
+<p><em>Optional</em>: Try to take a picture of your own handwritten letters and see if your program can classify your digits. It is important that you preprocess your images to the same nomalized format as the original MNIST data: Images should be 28 &times; 28 pixels where each pixel is represented by an 8-bit greyscale value where 255 is black and 0 is white. The center of mass should be in the center of the image.  In the test data all images were first scaled to fit in a 20 &times; 20 box, and then padded with eight rows and columns with zeros to make the center of mass the center of the image, see <a href="http://yann.lecun.com/exdb/mnist" target="_blank">yann.lecun.com/exdb/mnist</a>.</p>
+<p><em>Hint</em>: <code>PIL.Image.resize</code> from the <code>Pillow</code> (Python Imaging Library) might be usefull. Remember to set the resampling filter to BILINEAR.</p>
+</li>
+</ol>
+</body>
+</html>

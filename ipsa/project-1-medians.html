@@ -1,0 +1,40 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Project I - Geometric medians</title>
+<link rel=stylesheet href="ipsa.css">
+</head>
+<body>
+<h1>Project I - Geometric medians</h1>
+<p><a href="geometric-median.png" target="_blank"><img src="geometric-median.png" width="40%" class="right"></a></p>
+<p><em>Motivation: Assume you want to build a <a href="http://www.businessinsider.com/amazon-has-applied-to-patent-a-beehive-like-drone-tower-2017-6?r=US&amp;IR=T&amp;IR=T" target="_blank">drone tower</a> from where to deliver parcels to costumers, and you know the destinations (points) where to deliver parcels. What is the optimal placement of the tower, if each drone can at most carry one parcel and needs to return to the tower between each delivery?</em></p>
+<p>The <a href="https://en.wikipedia.org/wiki/Geometric_median" target="_blank">geometric median</a> of a point set <em>S</em>&nbsp;=&nbsp;{<em>p</em><sub>1</sub>,&nbsp;...,&nbsp;<em>p</em><sub><em>n</em></sub>} in the plane is a point <em>q</em> (not necessarily a point in <em>S</em>), that minimizes the sum of distances to the points, i.e. minimizes &sum;<sub><em>i</em>=1..<em>n</em></sub> |<em>p</em><sub><em>i</em></sub> - <em>q</em>|, where |<em>p</em> - <em>q</em>| = ((<em>p</em><sub><em>x</em></sub> - <em>q</em><sub><em>x</em></sub>)<sup>2</sup> + (<em>p</em><sub><em>y</em></sub> - <em>q</em><sub>y</sub>)<sup>2</sup>)<sup>0.5</sup>.</p>
+<ol>
+<li>
+<p>Create a function <code>geometric_median</code> that given a list of points computes the geometric median of the point set.
+<br>
+<em>Hint</em>. Use the <code>minimize</code> function from the module <code>scipy.optimize</code>.</p>
+</li>
+<li>
+<p>Make representative visualizations that show both the input point sets and the computed geometric medians. Examples should include point sets with two and three points, and a random point set.</p>
+</li>
+<li>
+<p>Use the <code>matplotlib</code> plotting function <code>contour</code> to plot a contour map to illustrate that it is the correct minimum that mas been found (the <em>z</em>-value for a point (<em>x</em>, <em>y</em>) in the contour map is the sum of the distances from (<em>x</em>, <em>y</em>) to all input points).</p>
+</li>
+</ol>
+<p>Next we want to find <em>two</em> points <em>q</em><sub>1</sub> and <em>q</em><sub>2</sub> such that the perpendicular bisector of <em>q</em><sub>1</sub> and <em>q</em><sub>2</sub> partitions the point set into the points closest to <em>q</em><sub>1</sub> and those closest to <em>q</em><sub>2</sub>. We want to find two points <em>q</em><sub>1</sub> and <em>q</em><sub>2</sub> such that the sum of distances to the nearest point of <em>q</em><sub>1</sub> and <em>q</em><sub>2</sub> is minimized, i.e. &sum;<sub><em>i</em>=1..<em>n</em></sub> min(|<em>p</em><sub><em>i</em></sub> - <em>q</em><sub>1</sub>|, |<em>p</em><sub><em>i</em></sub> - <em>q</em><sub>2</sub>|) is minimized.</p>
+<p>To solve this problem one essentially has to consider all possible bisection lines, and to find the geometric median on both sides of the bisector, e.g. using the algorithm from the first question. Assuming no three points are on a line, it is sufficient to consider all <em>n</em>(<em>n</em>-1)/2 bisector lines that go through two input points, and for each bisector line to consider the <a href="two-geometric-medians.pdf" target="_blank">two cases</a> where the two points on the line both are considered to be to the left or to the right of the line.</p>
+<ol start="4">
+<li>
+<p>Create a function <code>two_geometric_medians</code> that give a list of points <em>p</em><sub>1</sub>, ..., <em>p<sub>n</sub></em> computes two points <em>q</em><sub>1</sub> and <em>q</em><sub>2</sub> minimizing &sum;<sub><em>i</em>=1..<em>n</em></sub> min(|<em>p<sub>i</sub></em> - <em>q</em><sub>1</sub>|, |<em>p<sub>i</sub></em> - <em>q</em><sub>2</sub>|).  It can be assumed that no three points are on a line.</p>
+</li>
+<li>
+<p>Visualize your solution, showing imput points, <em>q</em><sub>1</sub> and <em>q</em><sub>2</sub>, and the perpendicular bisector between <em>q</em><sub>1</sub> and <em>q</em><sub>2</sub>.</p>
+</li>
+<li>
+<p><em>Optional</em>. Extend your solution to handle the case where three or more points can be on a line. E.g. what is your solution if you have four points on a line?</p>
+</li>
+</ol>
+</body>
+</html>
