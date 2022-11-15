@@ -1,19 +1,11 @@
 # Python books
 
 <div markdown="1" class="float-left">
-<img src="guttag2ed.jpg" width="100">
-
-John V. Guttag. [_Introduction to Computation and Programming Using Python With Application to Understanding Data_](https://mitpress.mit.edu/books/introduction-computation-and-programming-using-python-second-edition). Second Edition. 472 pages. MIT Press, 2016. ISBN: 9780262529624.
-
-Recommended textbook for the free online course [_Introduction to Computer Science and Programming Using Python_](https://www.edx.org/course/introduction-to-computer-science-and-programming-7) and [_Introduction to Computational Thinking and Data Science_](https://www.edx.org/course/introduction-computational-thinking-data-mitx-6-00-2x-6) offered by MITx on edX.
-</div>
-
-<div markdown="1" class="float-left">
 <img src="guttag3ed.jpg" width="100">
 
 John V. Guttag. [_Introduction to Computation and Programming Using Python With Application to Computational Modeling and Understanding Data_](https://mitpress.mit.edu/books/introduction-computation-and-programming-using-python-third-edition). Third Edition. 664 pages. MIT Press, 2021. ISBN: 9780262542364.
 
-New edition of above book.
+Recommended textbook for the free online course [_Introduction to Computer Science and Programming Using Python_](https://www.edx.org/course/introduction-to-computer-science-and-programming-7) and [_Introduction to Computational Thinking and Data Science_](https://www.edx.org/course/introduction-computational-thinking-data-mitx-6-00-2x-6) offered by MITx on edX.
 </div>
 
 <div markdown="1" class="float-left">

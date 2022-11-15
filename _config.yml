@@ -7,7 +7,7 @@ defaults:
 
 menu:
   - title: "Welcome"
-    url: welcome
+    url: index
   - title: "Course plan"
     url: plan
   - title: "Course plan (compact)"
