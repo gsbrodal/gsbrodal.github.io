@@ -1,0 +1,44 @@
+# Previous exams
+
+2020- Programming exam (zip files; use "Save link as" to download)
+
+* August 2022 [
+  [questions](exams/ipsa22r.zip),
+  [answers](exams/ipsa22r-answers.zip) ]
+* June 2022 [
+  [questions](exams/ipsa22.zip),
+  [answers](exams/ipsa22answers.zip) ]
+* August 2021 [
+  [questions](exams/ipsa21r.zip),
+  [answers](exams/ipsa21r-answers.zip) ]
+* June 2021 [
+  [questions](exams/ipsa21.zip),
+  [answers](exams/ipsa21answers.zip) ]
+* August 2020 [
+  [questions](exams/ipsa20r.zip),
+  [answers](exams/ipsa20r-answers.zip) ]
+* June 2020 [
+  [questions](exams/ipsa20.zip),
+  [answers](exams/ipsa20answers.zip) ]
+* Mock exam [
+  [questions](exams/ipsa20mock.zip),
+  [answers](exams/ipsa20mock-answers.zip) ]
+
+2018-2019 Multiple choice exam (pdf files)
+
+* August 2019 [
+  [questions](http://cs.au.dk/~gerth/share/exams/ipsa19r.pdf),
+  [answers](http://cs.au.dk/~gerth/share/exams/ipsa19r-answers.pdf) ]
+* June 2019 [
+  [questions](http://cs.au.dk/~gerth/share/exams/ipsa19.pdf),
+  [answers](http://cs.au.dk/~gerth/share/exams/ipsa19answers.pdf),
+  [statistics](http://cs.au.dk/~gerth/share/exams/ipsa19statistics.pdf) ]
+* June 2018 [
+  [questions](http://cs.au.dk/~gerth/share/exams/ipsa18.pdf),
+  [answers](http://cs.au.dk/~gerth/share/exams/ipsa18answers.pdf),
+  [pdf form](http://cs.au.dk/~gerth/share/exams/ipsa18pdfform.pdf),
+  [statistics](http://cs.au.dk/~gerth/share/exams/ipsa18statistics.pdf) ]
+* Mock exam [
+  [questions](http://cs.au.dk/~gerth/share/exams/ipsa18mock.pdf),
+  [answers](http://cs.au.dk/~gerth/share/exams/ipsa18mock-answers.pdf),
+  [pdf form](http://cs.au.dk/~gerth/share/exams/ipsa18mock-pdfform.pdf) ]
