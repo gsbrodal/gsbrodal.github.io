@@ -4,6 +4,9 @@ defaults:
     values:
       layout: "ipsa"
 
+include:
+  - "_*.txt"
+
 menu:
   - title: "Welcome"
     url: "welcome"
