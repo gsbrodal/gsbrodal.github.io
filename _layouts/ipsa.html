@@ -6,53 +6,52 @@
     <link rel="stylesheet" href="/ipsa/style.css">
     <style>
       body {
-	  font-family: sans-serif;
-	  margin: 0px;
-	  padding: 0px;xs
+	      font-family: sans-serif;
+	      margin: 0px;
+	      padding: 0px;xs
       }
       footer {
-	  margin: 30px;
-	  text-align: center;
+        margin: 30px;
+        text-align: center;
       }
       header {
-	  /* background-color: #002546; */
-	  color: white;
-	  padding: 25px 30px 25px 30px;
-	  background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.5)), url('../ipsa/banner.jpg');
-
-	  background-repeat: no-repeat;
-	  background-size: cover;
-	  background-position: center;
+        /* background-color: #002546; */
+        color: white;
+        padding: 25px 30px 25px 30px;
+        background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.5)), url('../ipsa/banner.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
       }
       header h1, header h2 {
-	  line-height: 1;
-	  margin-top: 5px;
-	  margin-bottom: 5px;
+        line-height: 1;
+        margin-top: 5px;
+        margin-bottom: 5px;
       }
       nav {
-	  /* background: #e0e0e0; */
-	  margin: 0px;
-	  padding: 10px;
-	  width: 15%;
-	  display: inline-block;
+        margin: 0px;
+        padding: 10px;
+        width: 15%;
+        display: inline-block;
       }
       nav a {
-	  color: black !important;
-	  display: block;
-	  line-height: 1.2;
-	  text-decoration: none;
-	  padding: 2px;
+        color: black !important;
+        display: block;
+        line-height: 1.2;
+        text-decoration: none;
+        padding: 2px;
       }
       nav a:hover {
-	  background: #e0e0e0;
-	  font-weight: bold;
+        background: #e0e0e0;
+      }
+      nav a.current {
+        font-weight: bold;
       }
       div.content {
-	  vertical-align: top;
-	  display: inline-block;
-	  width: calc(85% - 40px);
-	  /* background-color: red; */
-	  padding: 10px;
+        vertical-align: top;
+        display: inline-block;
+        width: calc(85% - 40px);
+        padding: 10px;
       }
     </style>
   </head>
@@ -64,17 +63,22 @@
       </div>
     </header>
     <nav>
+      {% for entry in site.menu %}
+        {% if page.url contains entry.url %}
+           <a href="{{ item.url }}" class="current">
+        {% endif %}
+           <a href="{{ item.url }}">
+        {% else %}
+        {{ item.title }}
+        </a>
+	   {% endfor %}
+	   ---
       <a href="welcome">Welcome</a>
-      <!-- Who, where and when -->
       <a href="plan">Course plan</a>
       <a href="plan_compact">Course plan (compact)</a>
       <a href="slides/all_slides.pdf">All slides (pdf)</a>
       <a href="exercises">Exercises</a>
       <a href="handings">Handins</a>
-      <!--
-      Deadlines
-      Information
-	-->
       <a href="project">Final project</a>
       <a href="project-1-medians">&nbsp;&nbsp;&nbsp;I - Medians</a>
       <a href="project-2-portfolio">&nbsp;&nbsp;&nbsp;II - Portfolio</a>
