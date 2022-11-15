@@ -1,8 +1,7 @@
 defaults:
   -
     scope:
-      path: "ipsa"
-      type: "pages"
+      path: "ipsa/*.md"
     values:
       layout: "ipsa"
-      permalink: /:title
+#      permalink: /:title
