@@ -6,18 +6,17 @@
     <link rel="stylesheet" href="/ipsa/style.css">
     <style>
       body {
-	      font-family: sans-serif;
-	      margin: 0px;
-	      padding: 0px;xs
+        font-family: sans-serif;
+	margin: 0px;
+	padding: 0px;xs
       }
       footer {
         margin: 30px;
         text-align: center;
       }
       header {
-        /* background-color: #002546; */
         color: white;
-        padding: 25px 30px 25px 30px;
+        padding: 25px 40px 25px 40px;
         background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.5)), url('../ipsa/banner.jpg');
         background-repeat: no-repeat;
         background-size: cover;
@@ -63,33 +62,15 @@
       </div>
     </header>
     <nav>
-      {% for entry in site.menu %}
-        {% if page.url contains entry.url %}
-           <a href="{{ entry.url }}" class="current">
-        {% else %}
-           <a href="{{ entry.url }}">
-        {% endif %}{{ entry.title }}</a>
-      {% endfor %}
-	   ---
-      <a href="welcome">Welcome</a>
-      <a href="plan">Course plan</a>
-      <a href="plan_compact">Course plan (compact)</a>
-      <a href="slides/all_slides.pdf">All slides (pdf)</a>
-      <a href="exercises">Exercises</a>
-      <a href="handings">Handins</a>
-      <a href="project">Final project</a>
-      <a href="project-1-medians">&nbsp;&nbsp;&nbsp;I - Medians</a>
-      <a href="project-2-portfolio">&nbsp;&nbsp;&nbsp;II - Portfolio</a>
-      <a href="project-3-nmr">&nbsp;&nbsp;&nbsp;III - NMR</a>
-      <a href="project-4-mnist">&nbsp;&nbsp;&nbsp;IV - MNIST</a>
-      <a href="project-5-open-topic">&nbsp;&nbsp;&nbsp;V - Open topic</a>
-      <a href="exam">Exam</a>
-      <a href="plagiarism">Plagiarism</a>
-      <a href="workload">Workload</a>
-      <a href="literature">Literature</a>
-      <a href="installing">Installing Python</a>
-      <a href="resources">Python resources</a>
-      <a href="https://kursuskatalog.au.dk/en/course/117934/">AU course description</a>
+      {% for entry in site.menu %}{%
+           if page.url contains entry.url
+             %}<a href="{{ entry.url }}" class="current">{%
+ 	   else
+	     %}<a href="{{ entry.url }}">{%
+       ´    endif 
+           %}{{ entry.title }}</a>{%
+         endfor 
+      %}
     </nav><div class="content">{{ content }}</div>
     <footer>
       <hr>
