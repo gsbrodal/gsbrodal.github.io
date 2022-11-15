@@ -4,4 +4,3 @@ defaults:
       path: "ipsa/*.md"
     values:
       layout: "ipsa"
-#      permalink: /:title

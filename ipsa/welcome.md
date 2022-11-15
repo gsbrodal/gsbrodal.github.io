@@ -1,9 +1,3 @@
----
-layout: ipsa
-title: Welcome
-permalink: /ipsa/welcome.html
----
-
 # Welcome
 
 Welcome to the course _Introduction to Programming with Scientific Applications_.  The course gives an introduction to the Python 3 programming language and applications.  Throughout the course students are encouraged to seek online information in e.g. the Python language specification.

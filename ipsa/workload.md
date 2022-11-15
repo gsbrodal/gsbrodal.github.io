@@ -1,8 +1,4 @@
----
-layout: ipsa
-title: Expected course work load
-permalink: /ipsa/workload.html
----
+# Expected course work load
 
 Below is an estimation of the expected number of hours required for the course.
 
