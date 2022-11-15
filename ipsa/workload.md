@@ -1,6 +1,6 @@
 # Expected course work load
 
-Below is an estimation of the expected number of hours required for the course.
+Below is an estimation of the expected number of hours required for the course during the 14 weeks of teaching and the exam period.
 
 |                                       | Hours pr week |  Hours  | 
 |:--------------------------------------|:-------------:|--------:|

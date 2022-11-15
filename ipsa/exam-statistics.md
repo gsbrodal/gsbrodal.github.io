@@ -7,3 +7,5 @@
 | June 2020 |  0 |  2 |  8 | 10 | 46 | 31 | 48 |  145  |
 | June 2019 |  1 |  4 | 13 | 26 | 51 | 36 | 12 |  143  |
 | June 2018 |  0 |  0 |  6 | 16 | 34 | 23 | 12 |   91  | 
+
+Notice that during 2018-2019 the final exam in the course was a multiple-choice exam. Since 2020 the exam has been a programming exam.
