@@ -112,11 +112,11 @@ The third group of tasks is to train your own linear classifier network, i.e.  t
 
 Here are some additional optional tasks. Feel free to come up with your own (other networks, other optimization strategies, other loss  functions, ...).
 
-19. _Optional_.  Instead of using the mean squared error as the cost function try to use the _categorical cross entropy_ (see e.g. this [blog](https://gombru.github.io/2018/05/23/cross_entropy_loss)): On output _a_ where the expected output is the categorical vector _y_, the categorical cross entropy is defined as _CE_(_y_, _softmax_(_a_)), where _softmax_(_a_)<sub>_i_</sub> = _e_<sup>_a_<sub>_i_</sub></sup> / (&Sum;<sub>_j_</sub> _e_<sup>_a_<sub>_j_</sub></sup>) and the _cross entropy_ is defined as _CE_(_y_, _&acirc;_) = - &sum;<sub>_i_</sub> (_y_<sub>_i_</sub> &middot; log _&acirc;_<sub>_i_</sub>).
+19. _Optional_.  Instead of using the mean squared error as the cost function try to use the _categorical cross entropy_ (see e.g. this [blog](https://gombru.github.io/2018/05/23/cross_entropy_loss)): On output _a_ where the expected output is the categorical vector _y_, the categorical cross entropy is defined as _CE_(_y_, _softmax_(_a_)), where _softmax_(_a_)<sub>_i_</sub> = _e_<sup>_a_<sub>_i_</sub></sup> / (&sum;<sub>_j_</sub> _e_<sup>_a_<sub>_j_</sub></sup>) and the _cross entropy_ is defined as _CE_(_y_, _&acirc;_) = - &sum;<sub>_i_</sub> (_y_<sub>_i_</sub> &middot; log _&acirc;_<sub>_i_</sub>).
     
-    In `update` the derivative of the cost function w.r.t. output _a_<sub>_j_</sub> should be replaced by _e_<sup>_a_<sub>_j_</sub></sup> /(&Sum;<sub>_k_</sub> _e_<sup>_a_<sub>_k_</sub></sup>) - _y_<sub>_j_</sub>.
+    In `update` the derivative of the cost function w.r.t. output _a_<sub>_j_</sub> should be replaced by _e_<sup>_a_<sub>_j_</sub></sup> /(&sum;<sub>_k_</sub> _e_<sup>_a_<sub>_k_</sub></sup>) - _y_<sub>_j_</sub>.
 
-    _Note_. _softmax_(_a_) is a vector with the same length as _a_ with values having the same relative order as in _a_, but elements are scalled so that _softmax_(_a_)<sub>_i_</sub> &in; ]0,1[ and 1 = &sum;<sub>_i_</sub> _softmax_(_a_)<sub>_i_</sub>. Furthermore, since _y_ is categorical with _y_<sub>_i_</sub> = 1 for exactly one _i_, _CE_(_y_, _softmax_(_a_)) = log(&Sum;<sub>_j_</sub> _e_<sup>_a_<sub>_j_</sub></sup>) - _a_<sub>_i_</sub>.
+    _Note_. _softmax_(_a_) is a vector with the same length as _a_ with values having the same relative order as in _a_, but elements are scalled so that _softmax_(_a_)<sub>_i_</sub> &in; ]0,1[ and 1 = &sum;<sub>_i_</sub> _softmax_(_a_)<sub>_i_</sub>. Furthermore, since _y_ is categorical with _y_<sub>_i_</sub> = 1 for exactly one _i_, _CE_(_y_, _softmax_(_a_)) = log(&sum;<sub>_j_</sub> _e_<sup>_a_<sub>_j_</sub></sup>) - _a_<sub>_i_</sub>.
 
 20. _Optional_. Visualize the changing weights, cost, and accuracy during the learning.
 

@@ -1,6 +1,6 @@
 # Project III - Simulations of NMR spectra of proteins
 
-[<img src="spectrum.png" width="45%" class="right"></a>](spectrum.png)
+[<img src="spectrum.png" width="45%" class="right">](spectrum.png)
 
 A fingerprint of a protein can be obtained by a nuclear magnetic resonance (NMR) experiment with a given spectrometer frequency (input<sub>MHz</sub>). The fingerprint will be a spectrum of intensities over the frequency range.
 
@@ -29,10 +29,10 @@ This project consists of the below tasks. Please remember to split your code int
 
 3.  Generalize your function `Lorentz` to take (optional keyword) arguments for _x_<sub>0</sub>, _height_ and _width_. The resulting function should compute
 
-    > _L_<sub>_x_<sub>0</sub>, _height_, _width_</sub>(_x_) = _height_ / (1 + (2 &centerdot; (_x_ &minus; _x_<sub>0</sub>) / _width_)<sup>2</sup>) .
+    > _L_<sub>_x_<sub>0</sub>, _height_, _width_</sub>(_x_) = _height_ / (1 + (2 &middot; (_x_ &minus; _x_<sub>0</sub>) / _width_)<sup>2</sup>) .
 
     Plot three Lorentz lines for the parameters (_x_<sub>0</sub>, _height_, _width_) being (-5, 5, 1), (2, 2, 6), and (5, 3, 0.5) for  _x_ &in; [-10,10].
-    Plot also the _sum_ of the three curves. Note that the area below a general Lorentz line is &pi; &centerdot; _height_ &centerdot; _width_ / 2.
+    Plot also the _sum_ of the three curves. Note that the area below a general Lorentz line is &pi; &middot; _height_ &middot; _width_ / 2.
 
 4.  Our basic assumption is that each atom in a molecule contributes approximately one Lorentz line to the spectra. We will not use the same Lorentz parameters for all atoms. The width will e.g. depend on the atom_id and possibly also on the amino acid the atom is part of.
 
@@ -73,12 +73,12 @@ This project consists of the below tasks. Please remember to split your code int
 
     The points _B_<sub>inner</sub> and _B_<sub>outer</sub> are given by
     
-    >_&nu;_<sub>_B_<sub>inner</sub></sub> = _&nu;_<sub>_m_</sub> + &sigma; &centerdot; (_Q_ &minus; _J_) / 2 ,
-    > &nbsp;&nbsp;&nbsp; _height_<sub>_B_<sub>inner</sub></sub> = _height_<sub>_B_</sub> &centerdot; &alpha;<sub>inner</sub> ,
+    >_&nu;_<sub>_B_<sub>inner</sub></sub> = _&nu;_<sub>_m_</sub> + &sigma; &middot; (_Q_ &minus; _J_) / 2 ,
+    > &nbsp;&nbsp;&nbsp; _height_<sub>_B_<sub>inner</sub></sub> = _height_<sub>_B_</sub> &middot; &alpha;<sub>inner</sub> ,
     > &nbsp;&nbsp;&nbsp; _width_<sub>_B_<sub>inner</sub></sub> = _width_<sub>_B_</sub> ,
 
-    > _&nu;_<sub>_B_<sub>outer</sub></sub> = _&nu;_<sub>_m_</sub> + &sigma; &centerdot; (_Q_ + _J_) / 2 ,
-    > &nbsp;&nbsp;&nbsp; _height_<sub>_B_<sub>outer</sub></sub> = _height_<sub>_B_</sub> &centerdot; &alpha;<sub>outer</sub> ,
+    > _&nu;_<sub>_B_<sub>outer</sub></sub> = _&nu;_<sub>_m_</sub> + &sigma; &middot; (_Q_ + _J_) / 2 ,
+    > &nbsp;&nbsp;&nbsp; _height_<sub>_B_<sub>outer</sub></sub> = _height_<sub>_B_</sub> &middot; &alpha;<sub>outer</sub> ,
     > &nbsp;&nbsp;&nbsp; _width_<sub>_B_<sub>outer</sub></sub> = _width_<sub>_B_</sub> .
 
     Make a function `apply_coupling(A, B, J)` that takes two peaks `A` and `B` and computes the effect of `A` on `B`, when the coupling has magnitude `J`. Returns the list of the two peaks `B`<sub>inner</sub> and `B`<sub>outer</sub> that `B` is split into.
@@ -92,12 +92,12 @@ If `J` = 0 or _x_<sub>0</sub>(`A`) = _x_<sub>0</sub>(`B`), then only `[B]` is re
 
     Applying the coupling between _A_<sub>_i_</sub> and _B_ with magnitude _J_ on a peak _B'_ &in; _L_<sub>_i_ &minus; 1</sub> is done as applying _A_ on _B_,  except that the final computation of the points _B'_<sub>inner</sub> and _B'_<sub>outer</sub> are given by
 
-    >_&nu;_<sub>_B'_<sub>inner</sub></sub> = _&nu;_<sub>_B'_</sub> &minus; _&nu;_<sub>_B_</sub> + _&nu;_<sub>_m_</sub> + &sigma; &centerdot; (_Q_ &minus; _J_) / 2 ,
-    > &nbsp;&nbsp;&nbsp; _height_<sub>_B'_<sub>inner</sub></sub> = _height_<sub>_B'_</sub> &centerdot; &alpha;<sub>inner</sub> ,
+    >_&nu;_<sub>_B'_<sub>inner</sub></sub> = _&nu;_<sub>_B'_</sub> &minus; _&nu;_<sub>_B_</sub> + _&nu;_<sub>_m_</sub> + &sigma; &middot; (_Q_ &minus; _J_) / 2 ,
+    > &nbsp;&nbsp;&nbsp; _height_<sub>_B'_<sub>inner</sub></sub> = _height_<sub>_B'_</sub> &middot; &alpha;<sub>inner</sub> ,
     > &nbsp;&nbsp;&nbsp; _width_<sub>_B'_<sub>inner</sub></sub> = _width_<sub>_B_</sub>
 
-    >_&nu;_<sub>_B'_<sub>outer</sub></sub> = _&nu;_<sub>_B'_</sub> &minus; _&nu;_<sub>_B_</sub> + _&nu;_<sub>_m_</sub> + &sigma; &centerdot;  (_Q_ + _J_) / 2 ,
-    > &nbsp;&nbsp;&nbsp; _height_<sub>_B'_<sub>outer</sub></sub> = _height_<sub>_B'_</sub> &centerdot; &alpha;<sub>outer</sub> ,
+    >_&nu;_<sub>_B'_<sub>outer</sub></sub> = _&nu;_<sub>_B'_</sub> &minus; _&nu;_<sub>_B_</sub> + _&nu;_<sub>_m_</sub> + &sigma; &middot;  (_Q_ + _J_) / 2 ,
+    > &nbsp;&nbsp;&nbsp; _height_<sub>_B'_<sub>outer</sub></sub> = _height_<sub>_B'_</sub> &middot; &alpha;<sub>outer</sub> ,
     > &nbsp;&nbsp;&nbsp; _width_<sub>_B'_<sub>outer</sub></sub> = _width_<sub>_B_</sub>
 
     Extend your function `apply_coupling` to also be able to take a peak _B'_ as an additional (optional) fourth argument. Note that for _B'_ = _B_ the function should return the same value as without the _B'_ argument.
