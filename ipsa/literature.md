@@ -1,4 +1,4 @@
-# Basic literature
+# Literature
 
 The material for the course primarily consists of slides from the lectures and online documentation available from [python.org](https://www.python.org) and related sites.
 

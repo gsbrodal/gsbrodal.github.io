@@ -32,6 +32,6 @@ The course curriculum for the exam consists of the slides covered during the cou
 
 The grade reflects an _overall assessment_ of the final implementation project and the final exam.
 
-The final exam contributes 80% to the final grade. The result of the final exam must meet the minimum requirements for acceptance to be able to pass the course.
+The final exam contributes 80% to the final grade and the implementation project 20%. The result of the final exam must meet the minimum requirements for acceptance to be able to pass the course.
 
-The project done during the course will also count towards the reexam.
+The implementation project done during the course will also count towards the reexam.
