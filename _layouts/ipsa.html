@@ -11,7 +11,8 @@
 	  padding: 0px;xs
       }
       footer {
-	  margin: 20px;
+	  margin: 30px;
+	  text-align: center;
       }
       header {
 	  /* background-color: #002546; */
@@ -57,40 +58,37 @@
   </head>
   <body>
     <header>
+      <img src="../ipsa/au-logo.png" height="50px" style="display:inline-block; margin-right:30px"><div style="display:inline-block">
       <h1>Introduction to Programming with Scientific Applications</h1>
       <h2>Aarhus University, Department of Computer Science</h2>
+      </div>
     </header>
     <nav>
-      <a href="welcome.html">Welcome</a>
+      <a href="welcome">Welcome</a>
       <!-- Who, where and when -->
-      <a href="workload.html">Workload</a>
-      <a href="literature.html">Literature</a>
-      <a href="exercises.html">Exercises</a>
-      <a href="handings.html">Handins</a>
+      <a href="plan">Course plan</a>
+      <a href="plan_compact">Course plan (compact)</a>
+      <a href="slides/all_slides.pdf">All slides (pdf)</a>
+      <a href="exercises">Exercises</a>
+      <a href="handings">Handins</a>
       <!--
       Deadlines
       Information
 	-->
+      <a href="project">Final project</a>
+      <a href="project-1-medians">&nbsp;&nbsp;&nbsp;I - Medians</a>
+      <a href="project-2-portfolio">&nbsp;&nbsp;&nbsp;II - Portfolio</a>
+      <a href="project-3-nmr">&nbsp;&nbsp;&nbsp;III - NMR</a>
+      <a href="project-4-mnist">&nbsp;&nbsp;&nbsp;IV - MNIST</a>
+      <a href="project-5-open-topic">&nbsp;&nbsp;&nbsp;V - Open topic</a>
+      <a href="exam">Exam</a>
       <a href="plagiarism">Plagiarism</a>
-      <a href="project.html">Final project</a>
-      <!--
-      Project I - Medians
-      Project II - Portfolio
-      Project III - NMR
-      Project IV - MNIST
-      Project V - Open topic
-      -->
-      <a href="exam.html">Exam</a>
-      <a href="installing.html">Installing Python</a>
-      <a href="resources.html">Python resources</a>
-      <a href="plan.html">Course plan</a>
-      <a href="full_plan.html">Course plan (compact)</a>
-      <a href="all_slides.pdf">All slides (pdf)</a>
-      <a href="https://kursuskatalog.au.dk/en/course/117934/">Official course description</a>
-    </nav>
-    <div class="content">
-{{ content }}
-    </div>
+      <a href="workload">Workload</a>
+      <a href="literature">Literature</a>
+      <a href="installing">Installing Python</a>
+      <a href="resources">Python resources</a>
+      <a href="https://kursuskatalog.au.dk/en/course/117934/">AU course description</a>
+    </nav><div class="content">{{ content }}</div>
     <footer>
       <hr>
       &copy; {{ site.time | date: '%Y' }} Gerth Stølting Brodal, Aarhus University, Department of Computer Science

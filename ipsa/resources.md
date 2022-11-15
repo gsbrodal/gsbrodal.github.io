@@ -25,10 +25,14 @@ Below is a list of resources for information on Python. For information on speci
 
 ## Libraries
 
-* SciPy - open-source Python software for mathematics, science, and engineering:
+* NumPy - The fundamental package for scientific computing with Python:
+  [numpy.org](https://numpy.org/) 
+* SciPy -  Fundamental algorithms for scientific computing in Python:
   [scipy.org](https://scipy.org)
-* matplotlib - A library for 2D plotting (MATLAB users should find many similarities):
+* matplotlib - Matplotlib is a comprehensive library for creating static, animated, and interactive visualizations in Python:
   [matplotlib.org](https://matplotlib.org)
-* openpyxl - A library to read/write Excel 2010 xlsx/xlsm files:
-  [pypi.python.org/pypi/openpyxl](https://pypi.org/project/openpyxl)
-* Visit [pypi.org](https://pypi.org) for exploring +300.000 projects
+* pandas - Powerful, flexible and easy to use open source data analysis and manipulation tool:
+  [pandas.pydata.org](https://pandas.pydata.org/)
+* jupyter - Web application for creating and sharing computational documents:
+  [jupyter.org/](https://jupyter.org/)
+* Visit [pypi.org](https://pypi.org) for exploring +400.000 projects
