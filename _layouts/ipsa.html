@@ -61,7 +61,7 @@
       <h2>Aarhus University, Department of Computer Science</h2>
     </header>
     <nav>
-      <a href="Welcome.html">Welcome</a>
+      <a href="welcome.html">Welcome</a>
       <!-- Who, where and when -->
       <a href="workload.html">Workload</a>
       <a href="literature.html">Literature</a>
@@ -86,15 +86,14 @@
       <a href="plan.html">Course plan</a>
       <a href="full_plan.html">Course plan (compact)</a>
       <a href="all_slides.pdf">All slides (pdf)</a>
-      <a href="">Official course description</a>
-    </nav><div class="content">
-    <section>
-      {{ content }}
-    </section>
+      <a href="https://kursuskatalog.au.dk/en/course/117934/">Official course description</a>
+    </nav>
+    <div class="content">
+{{ content }}
     </div>
     <footer>
       <hr>
-      &copy; Gerth Stølting Brodal, Aarhus University, Department of Computer Science
+      &copy; {{ site.time | date: '%Y' }} Gerth Stølting Brodal, Aarhus University, Department of Computer Science
     </footer>
   </body>
 </html>
