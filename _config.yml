@@ -1,7 +1,7 @@
 defaults:
   -
     scope:
-      path: "ipsa"
+      path: "ipsa/"
       type: "pages"
     values:
       layout: "ipsa"
