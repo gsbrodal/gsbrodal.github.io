@@ -6,9 +6,9 @@ defaults:
       layout: "ipsa"
 
 menu:
-  - title: Welcome
+  - title: "Welcome"
     url: welcome
-  - title: Course plan
+  - title: "Course plan"
     url: plan
   - title: Course plan (compact)
     url: plan_compact
@@ -20,15 +20,15 @@ menu:
     url: handings
   - title: Final project
     url: project
-  - title: &nbsp;&nbsp;&nbsp;I - Medians
+  - title: "&nbsp;&nbsp;&nbsp;I - Medians"
     url: project-1-medians
-  - title: &nbsp;&nbsp;&nbsp;II - Portfolio
+  - title: "&nbsp;&nbsp;&nbsp;II - Portfolio"
     url: project-2-portfolio
-  - title: &nbsp;&nbsp;&nbsp;III - NMR
+  - title: "&nbsp;&nbsp;&nbsp;III - NMR"
     url: project-3-nmr
-  - title: &nbsp;&nbsp;&nbsp;IV - MNIST
+  - title: "&nbsp;&nbsp;&nbsp;IV - MNIST"
     url: project-4-mnist
-  - title: &nbsp;&nbsp;&nbsp;V - Open topic
+  - title: "&nbsp;&nbsp;&nbsp;V - Open topic"
     url: project-5-open-topic
   - title: Exam
     url: exam
