@@ -91,7 +91,7 @@ table { border-collapse: collapse; line-height: 150%; }
 tbody tr { border-bottom: 0.5pt solid black; }
 tbody tr:first-child { border-top: 1pt solid black; }
 tbody tr:last-child { border-bottom: 1pt solid black; }
-/* tbody tr:nth-child(odd) { background-color: #e2e2e2; } */
+tbody tr:nth-child(odd) { background-color: #f0f0f0; }
 
 img { border: 1px solid black; }
 
