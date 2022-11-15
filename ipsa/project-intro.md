@@ -18,7 +18,7 @@ The project report must contain the below front page (not counted in the 4 pages
 
 You can choose any of the projects listed in the menu as your final project.
 
-## Evaluation of handin
+## Evaluation of project
 
 The project deliverables will be scored according to the below rubric.
 
