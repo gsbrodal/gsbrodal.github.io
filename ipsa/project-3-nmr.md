@@ -20,7 +20,7 @@ This project consists of the below tasks. Please remember to split your code int
 
     > _L_(_x_) = 1 / (1 + _x_<sup>2</sup>) .
 
-    Make a function `Lorentz` that given _x_ returns _L_(_x_), where _x_ can be either an integer, a float or a Numpy array. In the case of a Numpy array the function should be computed pointwise for each value. Plot the function for _x_ &in; [&minus;10, 10] using `matplotlib.pyplot`
+    Make a function `Lorentz` that given _x_ returns _L_(_x_), where _x_ can be either an integer, a float or a Numpy array. In the case of a Numpy array the function should be computed pointwise for each value. Plot the function for _x_ &isin; [&minus;10, 10] using `matplotlib.pyplot`
 
     _Hint_: use `numpy.linspace`.
 
@@ -31,7 +31,7 @@ This project consists of the below tasks. Please remember to split your code int
 
     > _L_<sub>_x_<sub>0</sub>, _height_, _width_</sub>(_x_) = _height_ / (1 + (2 &middot; (_x_ &minus; _x_<sub>0</sub>) / _width_)<sup>2</sup>) .
 
-    Plot three Lorentz lines for the parameters (_x_<sub>0</sub>, _height_, _width_) being (-5, 5, 1), (2, 2, 6), and (5, 3, 0.5) for  _x_ &in; [-10,10].
+    Plot three Lorentz lines for the parameters (_x_<sub>0</sub>, _height_, _width_) being (-5, 5, 1), (2, 2, 6), and (5, 3, 0.5) for  _x_ &isin; [-10,10].
     Plot also the _sum_ of the three curves. Note that the area below a general Lorentz line is &pi; &middot; _height_ &middot; _width_ / 2.
 
 4.  Our basic assumption is that each atom in a molecule contributes approximately one Lorentz line to the spectra. We will not use the same Lorentz parameters for all atoms. The width will e.g. depend on the atom_id and possibly also on the amino acid the atom is part of.
@@ -88,9 +88,9 @@ If `J` = 0 or _x_<sub>0</sub>(`A`) = _x_<sub>0</sub>(`B`), then only `[B]` is re
 
 9.  If an atom has couplings with several atoms the computations become slightly more involved. Assume _B_ has couplings with _k_ atoms _A_<sub>1</sub>,  _A_<sub>2</sub>, ..., _A_<sub>_k_</sub> with magnitudes _J_<sub>1</sub>,  _J_<sub>2</sub>, ..., _J_<sub>_k_</sub>, respectively. In general the peak for _B_ will be split into 2<sup>_k_</sup> peaks.
 
-    The basic idea is to start with the peak _B_. Applying the coupling of _B_ and _A_<sub>1</sub> with magnitude _J_<sub>1</sub> on _B_ results in a list _L_<sub>1</sub> with at most two peaks. Applying the coupling of _B_ and _A_<sub>2</sub> with magnitude _J_<sub>2</sub> on each _B'_ &in; _L_<sub>1</sub> results in the list _L_<sub>2</sub> with at most four peaks. Applying _A_<sub>3</sub> on the peaks in _L_<sub>2</sub> results in eight peaks _L_<sub>3</sub>, etc.
+    The basic idea is to start with the peak _B_. Applying the coupling of _B_ and _A_<sub>1</sub> with magnitude _J_<sub>1</sub> on _B_ results in a list _L_<sub>1</sub> with at most two peaks. Applying the coupling of _B_ and _A_<sub>2</sub> with magnitude _J_<sub>2</sub> on each _B'_ &isin; _L_<sub>1</sub> results in the list _L_<sub>2</sub> with at most four peaks. Applying _A_<sub>3</sub> on the peaks in _L_<sub>2</sub> results in eight peaks _L_<sub>3</sub>, etc.
 
-    Applying the coupling between _A_<sub>_i_</sub> and _B_ with magnitude _J_ on a peak _B'_ &in; _L_<sub>_i_ &minus; 1</sub> is done as applying _A_ on _B_,  except that the final computation of the points _B'_<sub>inner</sub> and _B'_<sub>outer</sub> are given by
+    Applying the coupling between _A_<sub>_i_</sub> and _B_ with magnitude _J_ on a peak _B'_ &isin; _L_<sub>_i_ &minus; 1</sub> is done as applying _A_ on _B_,  except that the final computation of the points _B'_<sub>inner</sub> and _B'_<sub>outer</sub> are given by
 
     >_&nu;_<sub>_B'_<sub>inner</sub></sub> = _&nu;_<sub>_B'_</sub> &minus; _&nu;_<sub>_B_</sub> + _&nu;_<sub>_m_</sub> + &sigma; &middot; (_Q_ &minus; _J_) / 2 ,
     > &nbsp;&nbsp;&nbsp; _height_<sub>_B'_<sub>inner</sub></sub> = _height_<sub>_B'_</sub> &middot; &alpha;<sub>inner</sub> ,
@@ -134,7 +134,7 @@ In the previous tasks you were given CSV-files with the description of proteins 
 
 15.  Write a function `csv_extract` that given a value _Entry_ID_, from Atom_chem_shift.csv extracts all rows with value _Entry_ID_ in column `Entry_ID` and outputs the resulting rows to a new CSV-file. Test this with _Entry_ID_ = 68  and _Entry_ID_ = 6203. The result for _Entry_ID_ = 68 should be the 556 atoms as provided in the file [68_ubiquitin.csv](68_ubiquitin.csv) (but with additional columns). The result for _Entry_ID_ = 6203 should be a file with a header row plus 329 data rows (atoms) for ThrB12-DKP-insulin.
 
-     _Hint_: Avoid reading the whole table into memory. If you e.g. read the complete table using Pandas, the data will take up memory &approx; 3 &times; file size. Instead scan through the file using the `csv` module and only have the current line in memory. Scanning through the 700+ MB should be possible within in the order of a minute.
+     _Hint_: Avoid reading the whole table into memory. If you e.g. read the complete table using Pandas, the data will take up memory &asymp; 3 &times; file size. Instead scan through the file using the `csv` module and only have the current line in memory. Scanning through the 700+ MB should be possible within in the order of a minute.
 
 16.  Update the function `split_comps` to be able to handle more than one chain of amino acids. In particular each comp should now be identified not only by Seq_ID but by the pair (Entity_ID, Seq_id).
 

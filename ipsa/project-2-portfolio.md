@@ -5,7 +5,7 @@
 We consider the problem of choosing a _long term_ stock portfolio, given a set of stocks and their price over some period under _risk aversion parameter_ &gamma;&nbsp;&gt;&nbsp;0.
 
 Assume there are _m_ stocks to be considered.
-The portfolio will be represented by a column vector _w_ &in; &#8477;<sup>_m_</sup>,
+The portfolio will be represented by a column vector _w_ &isin; &#8477;<sup>_m_</sup>,
 such that &sum;<sub>_i_=1.._m_</sub> _w_<sub>_i_</sub> = 1.
 If _w_<sub>_i_</sub>&nbsp;&gt;&nbsp;0,
 you use a fraction _w_<sub>_i_</sub> of your total money to buy
@@ -14,9 +14,9 @@ represent [shorting](https://en.wikipedia.org/wiki/Short_(finance)) that stock.
 In both cases we assume the stock is bought/shorted for the entire period.
 
 Let _p_<sub>_j_,_i_</sub> represent the price of the _i_'th stock at time step _j_.
-If there are _n_&nbsp;+&nbsp;1 time steps, then _p_&nbsp;&in;&nbsp;&#8477;<sup>(_n_+1)&times;_m_</sup> is a matrix.
+If there are _n_&nbsp;+&nbsp;1 time steps, then _p_&nbsp;&isin;&nbsp;&#8477;<sup>(_n_+1)&times;_m_</sup> is a matrix.
 
-We let _r_ &in; &#8477;<sup>_n_&times;_m_</sup> be  the matrix, where _r_<sub>_j_,_i_</sub> represents the fractional reward of stock _i_ at time step _j_, i.e. _r_<sub>_j_,_i_</sub> = (_p_<sub>_j_+1,_i_</sub>&nbsp;&minus;&nbsp;_p_<sub>_j_,_i_</sub>)&nbsp;/&nbsp;_p_<sub>_j_,_i_</sub> for 1&nbsp;&le;&nbsp;_j_&nbsp;&le;&nbsp;_n_.
+We let _r_ &isin; &#8477;<sup>_n_&times;_m_</sup> be  the matrix, where _r_<sub>_j_,_i_</sub> represents the fractional reward of stock _i_ at time step _j_, i.e. _r_<sub>_j_,_i_</sub> = (_p_<sub>_j_+1,_i_</sub>&nbsp;&minus;&nbsp;_p_<sub>_j_,_i_</sub>)&nbsp;/&nbsp;_p_<sub>_j_,_i_</sub> for 1&nbsp;&le;&nbsp;_j_&nbsp;&le;&nbsp;_n_.
 
 By _r_<sub>_j_</sub> we denote the _j_'th row of _r_, viewed as a _column vector_ (_r_<sub>_j_,1</sub>, ..., _r_<sub>_j_,_m_</sub>).
 

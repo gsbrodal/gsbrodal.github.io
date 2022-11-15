@@ -116,7 +116,7 @@ Here are some additional optional tasks. Feel free to come up with your own (oth
     
     In `update` the derivative of the cost function w.r.t. output _a_<sub>_j_</sub> should be replaced by _e_<sup>_a_<sub>_j_</sub></sup> /(&sum;<sub>_k_</sub> _e_<sup>_a_<sub>_k_</sub></sup>) - _y_<sub>_j_</sub>.
 
-    _Note_. _softmax_(_a_) is a vector with the same length as _a_ with values having the same relative order as in _a_, but elements are scalled so that _softmax_(_a_)<sub>_i_</sub> &in; ]0,1[ and 1 = &sum;<sub>_i_</sub> _softmax_(_a_)<sub>_i_</sub>. Furthermore, since _y_ is categorical with _y_<sub>_i_</sub> = 1 for exactly one _i_, _CE_(_y_, _softmax_(_a_)) = log(&sum;<sub>_j_</sub> _e_<sup>_a_<sub>_j_</sub></sup>) - _a_<sub>_i_</sub>.
+    _Note_. _softmax_(_a_) is a vector with the same length as _a_ with values having the same relative order as in _a_, but elements are scalled so that _softmax_(_a_)<sub>_i_</sub> &isin; ]0,1[ and 1 = &sum;<sub>_i_</sub> _softmax_(_a_)<sub>_i_</sub>. Furthermore, since _y_ is categorical with _y_<sub>_i_</sub> = 1 for exactly one _i_, _CE_(_y_, _softmax_(_a_)) = log(&sum;<sub>_j_</sub> _e_<sup>_a_<sub>_j_</sub></sup>) - _a_<sub>_i_</sub>.
 
 20. _Optional_. Visualize the changing weights, cost, and accuracy during the learning.
 
