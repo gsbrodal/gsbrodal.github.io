@@ -64,7 +64,7 @@
       </div>
     </header>
     <nav>
-      {% for entry in site.menu %}{% if page.url contains entry.url %}<a href="{{ entry.url }}" class="current">{% else %}<a href="{{ entry.url }}">{% endif %}{{ entry.title }}</a>
+      {% for entry in site.menu %}{% if page.url != nil %}{% if page.url contains entry.url %}<a href="{{ entry.url }}" class="current">{% else %}<a href="{{ entry.url }}">{% endif %}{{ entry.title }}</a>{% else %}{{ entry.title }}{% endif %}
       {% endfor %}
     </nav><div class="content">{{ content }}</div>
     <footer>
