@@ -10,15 +10,15 @@ menu:
     url: welcome
   - title: "Course plan"
     url: plan
-  - title: Course plan (compact)
+  - title: "Course plan (compact)"
     url: plan_compact
-  - title: All slides (pdf)
+  - title: "All slides (pdf)"
     url: slides/all_slides.pdf
-  - title: Exercises
+  - title: "Exercises"
     url: exercises
-  - title: Handins
-    url: handings
-  - title: Final project
+  - title: "Handins"
+    url: handins
+  - title: "Final project"
     url: project
   - title: "&nbsp;&nbsp;&nbsp;I - Medians"
     url: project-1-medians
@@ -30,17 +30,17 @@ menu:
     url: project-4-mnist
   - title: "&nbsp;&nbsp;&nbsp;V - Open topic"
     url: project-5-open-topic
-  - title: Exam
+  - title: "Exam"
     url: exam
-  - title: Plagiarism
+  - title: "Plagiarism"
     url: plagiarism
-  - title: Workload
+  - title: "Workload"
     url: workload
-  - title: Literature
+  - title: "Literature"
     url: literature
-  - title: Installing Python
-    url: installing
-  - title: Python resources
+  - title: "Install Python"
+    url: install
+  - title: "Python resources"
     url: resources
-  - title: AU course description
+  - title: "AU course description"
     url: https://kursuskatalog.au.dk/en/course/117934/
