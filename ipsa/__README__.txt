@@ -27,10 +27,18 @@ INTRODUKTION TIL PROGRAMMERING MED VIDENSKABELIGE ANVENDELSER
   * Vægtningen af opgaverne:
 
      Problem  Point  Navn
-        A  
-        B  
-        C  
-	...
+        A       6    INTERVAL SUM    
+        B       6    MAXSUM
+        C       6    BLOCK
+        D       6    PLUSMINUS
+        E       6    CAPITAL
+        F      10    SELECT
+        G      10    FRAGILE VALUES
+        H      10    DRAW
+        I      10    RESTRICTED QUEENS
+        J      10    RESTRICTED LABELS
+        K      10    REVERSIBLE
+        L      10    SIGNED SUBSET
 
     Totalt 100 point
 
