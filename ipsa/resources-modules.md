@@ -33,6 +33,6 @@ Below is a list of resources for information on Python. For information on speci
   [matplotlib.org](https://matplotlib.org)
 * pandas - Powerful, flexible and easy to use open source data analysis and manipulation tool:
   [pandas.pydata.org](https://pandas.pydata.org/)
-* jupyter - Web application for creating and sharing computational documents:
+* Jupyter - Web application for creating and sharing computational documents:
   [jupyter.org](https://jupyter.org/)
-* Visit [pypi.org](https://pypi.org) for exploring +400.000 projects
+* Visit the Python Package Index [pypi.org](https://pypi.org) for exploring +400.000 projects
