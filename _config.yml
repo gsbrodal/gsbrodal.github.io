@@ -1,6 +1,5 @@
 defaults:
-  -
-    scope:
+  - scope:
       path: "ipsa/*.md"
     values:
       layout: "ipsa"
@@ -43,4 +42,4 @@ menu:
   - title: "Python resources"
     url: resources
   - title: "AU course description"
-    url: https://kursuskatalog.au.dk/en/course/117934/
+    url: https://kursuskatalog.au.dk/en/course/117934/Introduction-to-Programming-with-Scientific-Applications
