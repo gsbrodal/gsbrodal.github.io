@@ -6,40 +6,40 @@ defaults:
 
 menu:
   - title: "Welcome"
-    url: index
+    url: "welcome"
   - title: "Course plan"
-    url: plan
+    url: "plan"
   - title: "Course plan (compact)"
-    url: plan_compact
+    url: "plan_compact"
   - title: "All slides (pdf)"
-    url: slides/all_slides.pdf
+    url: "slides/all_slides.pdf"
   - title: "Exercises"
-    url: exercises
+    url: "exercises"
   - title: "Handins"
-    url: handins
+    url: "handins"
   - title: "Final project"
-    url: project
+    url: "project"
   - title: "&nbsp;&nbsp;&nbsp;I - Medians"
-    url: project-1-medians
+    url: "project-1-medians"
   - title: "&nbsp;&nbsp;&nbsp;II - Portfolio"
-    url: project-2-portfolio
+    url: "project-2-portfolio"
   - title: "&nbsp;&nbsp;&nbsp;III - NMR"
-    url: project-3-nmr
+    url: "project-3-nmr"
   - title: "&nbsp;&nbsp;&nbsp;IV - MNIST"
-    url: project-4-mnist
+    url: "project-4-mnist"
   - title: "&nbsp;&nbsp;&nbsp;V - Open topic"
-    url: project-5-open-topic
+    url: "project-5-open-topic"
   - title: "Exam"
-    url: exam
+    url: "exam"
   - title: "Plagiarism"
-    url: plagiarism
+    url: "plagiarism"
   - title: "Workload"
-    url: workload
+    url: "workload"
   - title: "Literature"
-    url: literature
+    url: "literature"
   - title: "Install Python"
-    url: install
+    url: "install"
   - title: "Python resources"
-    url: resources
+    url: "resources"
   - title: "AU course description"
-    url: https://kursuskatalog.au.dk/en/course/117934/Introduction-to-Programming-with-Scientific-Applications
+    url: "https://kursuskatalog.au.dk/en/course/117934/Introduction-to-Programming-with-Scientific-Applications"
