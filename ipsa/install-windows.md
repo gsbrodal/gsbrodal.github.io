@@ -1,13 +1,3 @@
-# General information about Python
-
-To develop Python programs you need to be able to _edit_ Python programs and to be able to _execute_ Python programs.
-
-Editing can in principle be done using any basic text editor like Notepad on Windows, but in practice one would like a more advanced editor that automatically formats and highlights your program, and gives more advanced editing. Examples are IDLE and Spyder, which automatically will be installed depending on if you install CPython from [python.org](https://www.python.org/) or Anaconda as described below.
-
-For discussions of alternative IDEs for Python code development try a [Google search for "best python ides"](https://www.google.com/search?q=best+python+ides&oq=best+python+ides).
-
-To execute a Python program you need an _interpreter_. The reference implementation and most widely used implementation is CPython which can be installed from [python.org/downloads](https://www.python.org/downloads) or [www.anaconda.com/download](https://www.anaconda.com/download) as described below. But other implementations exist, e.g. PyPy as mentioned below. An overview can be found on [www.python.org/download/alternatives](https://www.python.org/download/alternatives).
-
 # Windows 10 installation
 
 ## CPython, pip, and IDLE
@@ -64,7 +54,3 @@ PyPy is an alternative implementation of the Python language that is often faste
     * Select "New" and add the path to the folder with pypy3.exe, e.g. C:\Program Files (x86)\pypy3.8-v7.3.7-win64\
 
 The speed improvements of PyPy over CPython are due to the usage of the Just-In-Time compilation technique, that e.g. also is used inside the Google Chrome browser for executing JavaScript (see the Wikipedia page on [Chrome V8](https://en.wikipedia.org/wiki/Chrome_V8) and by Java Virtual Machines for executing Java programs (bytecode) (see more on [Just-In-Time compilation](https://en.wikipedia.org/wiki/Just-in-time_compilation) on Wikipedia).
-
-# Mac OS X and Linux installation
-
-If you are using Mac OS X or Linux then the webpages mentioned for Windows 10 installation also contain download links for [CPython/IDLE/pip](https://www.python.org/downloads), [Anaconda](https://www.anaconda.com/download) and [PyPy](https://pypy.org/download.html).
