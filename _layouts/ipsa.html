@@ -65,13 +65,11 @@
     <nav>
       {% for entry in site.menu %}
         {% if page.url contains entry.url %}
-           <a href="{{ item.url }}" class="current">
-        {% endif %}
-           <a href="{{ item.url }}">
+           <a href="{{ entry.url }}" class="current">
         {% else %}
-        {{ item.title }}
-        </a>
-	   {% endfor %}
+           <a href="{{ entry.url }}">
+        {% endif %}{{ entry.title }}</a>
+      {% endfor %}
 	   ---
       <a href="welcome">Welcome</a>
       <a href="plan">Course plan</a>
