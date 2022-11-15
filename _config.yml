@@ -5,3 +5,4 @@ defaults:
       type: "pages"
     values:
       layout: "ipsa"
+      permalink: /:title
