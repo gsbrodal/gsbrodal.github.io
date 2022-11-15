@@ -1,5 +1,6 @@
 ---
 layout: ipsa
+title: Expected course work load
 permalink: /ipsa/workload.html
 ---
 
