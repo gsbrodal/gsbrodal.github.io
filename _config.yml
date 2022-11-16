@@ -4,11 +4,11 @@ defaults:
     values:
       layout: "ipsa"
   - scope:
-      path: "ipsa/plan.html"
+      path: "ipsa/plan-full"
     values:
       layout: "ipsa"
   - scope:
-      path: "ipsa/exercises.html"
+      path: "ipsa/exercises"
     values:
       layout: "ipsa"
 
@@ -19,11 +19,11 @@ menu:
   - title: "Welcome"
     url: "welcome"
   - title: "Course plan"
-    url: "plan"
+    url: "plan-full"
   - title: "Compact plan"
-    url: "plan_compact"
+    url: "plan-compact"
   - title: "All slides (pdf)"
-    url: "slides/all_slides.pdf"
+    url: "slides/all-slides.pdf"
   - title: "Exercises"
     url: "exercises"
   - title: "Handins"
