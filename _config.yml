@@ -1,6 +1,18 @@
 defaults:
   - scope:
-      path: "ipsa/*.md" "ipsa/plan.html" "ipsa/exercises.html"
+      path: "ipsa/*.md"
+    values:
+      layout: "ipsa"
+
+defaults:
+  - scope:
+      path: "ipsa/plan.html"
+    values:
+      layout: "ipsa"
+
+defaults:
+  - scope:
+      path: "ipsa/exercises.html"
     values:
       layout: "ipsa"
 
