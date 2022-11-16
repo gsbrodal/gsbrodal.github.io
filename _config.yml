@@ -4,13 +4,12 @@ defaults:
     values:
       layout: "ipsa"
 
-defaults:
+
   - scope:
       path: "ipsa/plan.html"
     values:
       layout: "ipsa"
 
-defaults:
   - scope:
       path: "ipsa/exercises.html"
     values:
