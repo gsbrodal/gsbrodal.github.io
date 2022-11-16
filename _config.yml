@@ -1,7 +1,7 @@
 defaults:
   -
     scope:
-      path: "ipsa/exercises.html"
+      path: "ipsa/"
     values:
       layout: "ipsa"
 
