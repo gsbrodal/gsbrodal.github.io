@@ -52,7 +52,7 @@ img.right {
   margin: 8px 0
 }
 
-.exercise { background: #f0f0f0; }
+/* .exercise { background: #f0f0f0; } */
 
 .solution { background: #f4f4ff; }
 
@@ -70,7 +70,8 @@ table.schedule tbody tr {
 
 a.button {
   color: #000000;
-  background: #d0e0d0;
+  /* background: #d0e0d0; */
+  border: 1pt solid black;
   border-radius: 5px;
   padding: 0px;
   padding-left: 10px;
@@ -79,6 +80,10 @@ a.button {
   text-decoration:none;
   line-height: 1.6;
   white-space: nowrap;
+}
+
+a.button:hover {
+  background: #e0e0e0;
 }
 
 tr { vertical-align: top;  }

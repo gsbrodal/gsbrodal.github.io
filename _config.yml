@@ -1,14 +1,17 @@
 defaults:
-  - scope:
+  -
+    scope:
       path: "ipsa/*.md"
     values:
       layout: "ipsa"
-  - scope:
+  -
+    scope:
       path: "ipsa/plan-full"
     values:
       layout: "ipsa"
-  - scope:
-      path: "ipsa/exercises"
+  -
+    scope:
+      path: "ipsa/exercises.html"
     values:
       layout: "ipsa"
 
@@ -20,9 +23,9 @@ menu:
     url: "welcome"
   - title: "Course plan"
     url: "plan-full"
-  - title: "Compact plan"
+  - title: "&nbsp;&nbsp;&nbsp;Compact"
     url: "plan-compact"
-  - title: "All slides (pdf)"
+  - title: "&nbsp;&nbsp;&nbsp;All slides (pdf)"
     url: "slides/all-slides.pdf"
   - title: "Exercises"
     url: "exercises"
