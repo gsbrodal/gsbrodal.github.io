@@ -4,7 +4,7 @@ defaults:
       path: "ipsa"
     values:
       layout: "ipsa"
-
+  
 include:
   - "_*.txt"  # otherwise __README__.txt is missing
 
