@@ -6,7 +6,7 @@ defaults:
       layout: "ipsa"
 
 include:
-  - "_*.txt"
+  - "_*.txt"  # otherwise __README__.txt is missing
 
 menu:
   - title: "Welcome"
