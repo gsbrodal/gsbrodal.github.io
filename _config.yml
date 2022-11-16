@@ -3,13 +3,10 @@ defaults:
       path: "ipsa/*.md"
     values:
       layout: "ipsa"
-
-
   - scope:
       path: "ipsa/plan.html"
     values:
       layout: "ipsa"
-
   - scope:
       path: "ipsa/exercises.html"
     values:
