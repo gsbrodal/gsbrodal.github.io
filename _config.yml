@@ -1,6 +1,6 @@
 defaults:
   - scope:
-      path: "ipsa/*.md"
+      path: "ipsa/*.md" "ipsa/plan.html" "ipsa/exercises.html"
     values:
       layout: "ipsa"
 
