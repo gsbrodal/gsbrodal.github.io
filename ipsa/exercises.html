@@ -45,15 +45,9 @@ title: "Exercises"
 <h2>Exercise 1.1 (Brightspace registrations)</h2>
 <ol>
 <li>
-<p>Go to "Course Tools &gt; Groups" on the course page on Brightspace
-    and register your <strong>Exercise class</strong>.
-    This is required, so that the teaching assistants know which handins to correct.</p>
-</li>
-<li>
-<p>On the same page register your <strong>Handin group</strong>.
+<p>Go to "Course Tools &gt; Groups" on the page on Brightspace register your <strong>Handin group</strong>.
     You cannot handin your assignments before you have registered for a handin group.
-    Note that each group name has the format
-    <strong>Handing group <em>number</em></strong>.</p>
+    Note that each group name has the format <strong>Handin group <em>number</em></strong>.</p>
 </li>
 <li>
 <p>(Optional) On the course webpage visit the "Activity Tools &gt; Discussions", and subscribe
@@ -278,7 +272,7 @@ c = r.step
 
     <span class="c1"># insert your code here</span>
 
-    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;range(</span><span class="si">%s</span><span class="s1">,</span><span class="si">%s</span><span class="s1">,</span><span class="si">%s</span><span class="s1">)[</span><span class="si">%s</span><span class="s1">:</span><span class="si">%s</span><span class="s1">:</span><span class="si">%s</span><span class="s1">] =&#39;</span> <span class="o">%</span> <span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">z</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">,</span> <span class="n">k</span><span class="p">),</span> <span class="n">r</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;range(</span><span class="si">{</span><span class="n">x</span><span class="si">}</span><span class="s1">, </span><span class="si">{</span><span class="n">y</span><span class="si">}</span><span class="s1">, </span><span class="si">{</span><span class="n">z</span><span class="si">}</span><span class="s1">)[</span><span class="si">{</span><span class="n">i</span><span class="si">}</span><span class="s1">:</span><span class="si">{</span><span class="n">j</span><span class="si">}</span><span class="s1">:</span><span class="si">{</span><span class="n">k</span><span class="si">}</span><span class="s1">] = </span><span class="si">{</span><span class="n">r</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
 
     <span class="k">if</span> <span class="n">r</span> <span class="o">!=</span> <span class="nb">range</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span><span class="p">):</span>
         <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Wrong range: a b c =&#39;</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span><span class="p">)</span>
@@ -1218,7 +1212,7 @@ during the recursion when the first solution has been found. Do not generate an 
 converted into a new string, with the output put into a 'box' (see example below).  You can assume that the string returned by a function only consist of a single line of text, i.e. the string does not contain <code>'\n'</code>.</p>
 <div class="codehilite"><pre><span></span><code><span class="nv">@BoxIt</span><span class="w"></span>
 <span class="n">def</span><span class="w"> </span><span class="n">plus</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="p">)</span><span class="err">:</span><span class="w"></span>
-<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="s1">&#39;The sum of %s and %s is %s&#39;</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="p">,</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">y</span><span class="p">)</span><span class="w"></span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">f</span><span class="s1">&#39;The sum of {x} and {y} is {x + y}&#39;</span><span class="w"></span>
 
 <span class="k">print</span><span class="p">(</span><span class="n">plus</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">))</span><span class="w"></span>
 </code></pre></div>
@@ -1239,7 +1233,7 @@ converted into a new string, with the output put into a 'box' (see example below
 <span class="nv">@BoxIt</span><span class="w"></span>
 <span class="nv">@BoxIt</span><span class="w"></span>
 <span class="n">def</span><span class="w"> </span><span class="n">plus</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="p">)</span><span class="err">:</span><span class="w"></span>
-<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="s1">&#39;%s + %s = %s&#39;</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="p">,</span><span class="w"> </span><span class="n">x</span><span class="o">+</span><span class="n">y</span><span class="p">)</span><span class="w"></span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">f</span><span class="s1">&#39;{x} + {y} = {x + y}&#39;</span><span class="w"></span>
 
 <span class="k">print</span><span class="p">(</span><span class="n">test</span><span class="p">())</span><span class="w"></span>
 <span class="k">print</span><span class="p">(</span><span class="n">plus</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p">))</span><span class="w"></span>
