@@ -13,7 +13,7 @@ a:hover {
   color: #707090
 }
 
-.vtbegenerated ol { 
+ol { 
   list-style-type: lower-alpha !important; 
 }
 
