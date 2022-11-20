@@ -641,7 +641,8 @@ Right: (&#39;A&#39;, (&#39;G&#39;, ((&#39;E&#39;, &#39;F&#39;), ((&#39;B&#39;, &
 <p>Make a function <code>triplet_distance(tree1, tree2)</code> that computes the triplet distance between the trees <code>tree1</code> and <code>tree2</code>.</p>
 <p><em>Hint</em>. Recall that the triplet distance equals <em>n</em> · (<em>n</em> - 1) · (<em>n</em> - 2) / 6 minus the number of common triplets between <code>tree1</code> and <code>tree2</code>, where <em>n</em> is the number of common labels in <code>tree1</code> and <code>tree2</code>, and use Python <code>set</code> to handle the sets of computed triplets.</p>
 <p><em>Example</em>. For the two trees above</p>
-<div class="codehilite"><pre><span></span><code>triplet_distance((((&#39;A&#39;, &#39;F&#39;), &#39;B&#39;), (&#39;D&#39;, (&#39;C&#39;, &#39;E&#39;))), ((((&#39;D&#39;, &#39;A&#39;), &#39;B&#39;), &#39;F&#39;), (&#39;C&#39;, &#39;E&#39;))
+<div class="codehilite"><pre><span></span><code>triplet_distance((((&#39;A&#39;, &#39;F&#39;), &#39;B&#39;), (&#39;D&#39;, (&#39;C&#39;, &#39;E&#39;))),
+                 ((((&#39;D&#39;, &#39;A&#39;), &#39;B&#39;), &#39;F&#39;), (&#39;C&#39;, &#39;E&#39;)))
 </code></pre></div>
 
 <p>should return 10.</p>

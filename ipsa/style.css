@@ -17,6 +17,11 @@ a:hover {
   list-style-type: lower-alpha !important; 
 }
 
+.exercise pre, .handin pre {
+white-space: pre-wrap;
+word-wrap: break-word;
+}
+
 div.float-left {
   overflow: hidden;
 }
