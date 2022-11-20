@@ -13,7 +13,7 @@ a:hover {
   color: #707090
 }
 
-ol { 
+.exercise ol { 
   list-style-type: lower-alpha !important; 
 }
 
