@@ -1,5 +1,6 @@
 # Welcome
 
+
 This page containts the public content for the course [_Introduction to Programming with Scientific Applications_](https://kursuskatalog.au.dk/en/course/117934/Introduction-to-Programming-with-Scientific-Applications) offered by Aarhus University, Department of Computer Science. The lectuerer is [Gerth Stølting Brodal](https://cs.au.dk/~gerth/index.html).  Class lists, discussions, student handins and feedback are handled using Brightspace at [brightspace.au.dk](https://brightspace.au.dk/).
 
 The course gives an introduction to the Python 3 programming language and applications using Python.  Throughout the course students are encouraged to seek online information in e.g. the Python language specification.
