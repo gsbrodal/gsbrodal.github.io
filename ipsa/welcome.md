@@ -1,13 +1,12 @@
 # Welcome
 
-
 This page containts the public content for the course [_Introduction to Programming with Scientific Applications_](https://kursuskatalog.au.dk/en/course/117934/Introduction-to-Programming-with-Scientific-Applications) offered by Aarhus University, Department of Computer Science. The lectuerer is [Gerth Stølting Brodal](https://cs.au.dk/~gerth/index.html).  Class lists, discussions, student handins and feedback are handled using Brightspace at [brightspace.au.dk](https://brightspace.au.dk/).
 
 The course gives an introduction to the Python 3 programming language and applications using Python.  Throughout the course students are encouraged to seek online information in e.g. the Python language specification.
 
 The course will be run with 2 x 2 hours of weekly lectures (alternatively recorded lectures on YouTube), 3 hours of TA classes ("øvelser"), and 3 hours of staffed study café.
 
-During the course students are required to hand in 10 weekly handins and one larger implementation project. Handins and the project are done in groups of up to three persons. Approval of the weekly handins is a prerequisite to attend the exam. The final exam will be a programming exam with all aids, incl. internet, and _the final grade will be based on overall evaluation of the implementation project (20%) and the programming exam (80%)_.
+During the course students are required to hand in 10 weekly handins and one larger implementation project. Handins and the project are done in groups of up to three persons. Approval of the weekly handins is a prerequisite to attend the exam. The final exam will be a programming exam with all aids, incl. internet, and _the final grade will be based on an overall evaluation of the implementation project (20%) and the programming exam (80%)_.
 
 ## Course content
 
