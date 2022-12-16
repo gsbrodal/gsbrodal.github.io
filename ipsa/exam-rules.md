@@ -14,6 +14,8 @@ program to test your solution during the exam, where it tests if your code gener
 _Communication with others about the exam is not permitted during the exam. Students are required to have
 [ITX-Flex](https://studerende.au.dk/en/digital-eksamen/information-about-itx-flex/) turned on throughout the entire exam._
 
+_It is exam cheating, if you use AI for the exam (ChatGPT, GitHub Copilot, etc.), as the exam assignment has not been solved independently and individually._
+
 ## ITX-Flex and Linux
 
 The following information concerning the exam is taken from the study portal's [Important Information about Exams](https://studerende.au.dk/en/studies/subject-portals/computer-science/examination/important-information-about-exams):
