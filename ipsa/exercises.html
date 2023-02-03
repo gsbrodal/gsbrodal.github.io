@@ -82,35 +82,35 @@ See <em>Installing Python</em> in the course menu for more information.</p>
 The program should ask the user for the four end-points <em>a</em>, <em>b</em>, <em>c</em> and <em>d</em> of the two intervals, and print if the two intervals overlap or not. If the two intervals overlap, the program should print the interval where the two input intervals overlap.</p>
 <p><em>Hint</em>. Use one or more <code>if</code>-statements.</p>
 <p><em>Examples</em>:</p>
-<div class="codehilite"><pre><span></span><code>[<span class="mi">2</span>,<span class="w"> </span><span class="mi">4</span>]<span class="w"> </span><span class="nv">and</span><span class="w"> </span>[<span class="mi">6</span>,<span class="w"> </span><span class="mi">9</span>]<span class="w"> </span><span class="k">do</span><span class="w"> </span><span class="nv">not</span><span class="w"> </span><span class="nv">overlap</span><span class="w"></span>
-[<span class="mi">5</span>,<span class="w"> </span><span class="mi">7</span>]<span class="w"> </span><span class="nv">and</span><span class="w"> </span>[<span class="mi">1</span>,<span class="w"> </span><span class="mi">3</span>]<span class="w"> </span><span class="k">do</span><span class="w"> </span><span class="nv">not</span><span class="w"> </span><span class="nv">overlap</span><span class="w"></span>
-[<span class="mi">4</span>,<span class="w"> </span><span class="mi">8</span>]<span class="w"> </span><span class="nv">and</span><span class="w"> </span>[<span class="o">-</span><span class="mi">6</span>,<span class="w"> </span><span class="mi">2</span>]<span class="w"> </span><span class="k">do</span><span class="w"> </span><span class="nv">not</span><span class="w"> </span><span class="nv">overlap</span><span class="w"></span>
-[<span class="mi">2</span>,<span class="w"> </span><span class="mi">5</span>]<span class="w"> </span><span class="nv">and</span><span class="w"> </span>[<span class="mi">3</span>,<span class="w"> </span><span class="mi">9</span>]<span class="w"> </span><span class="nv">overlap</span><span class="w"> </span><span class="nv">in</span><span class="w"> </span><span class="nv">the</span><span class="w"> </span><span class="nv">interval</span><span class="w"> </span>[<span class="mi">3</span>,<span class="w"> </span><span class="mi">5</span>]<span class="w"></span>
-[<span class="mi">3</span>,<span class="w"> </span><span class="mi">6</span>]<span class="w"> </span><span class="nv">and</span><span class="w"> </span>[<span class="mi">1</span>,<span class="w"> </span><span class="mi">3</span>]<span class="w"> </span><span class="nv">overlap</span><span class="w"> </span><span class="nv">in</span><span class="w"> </span><span class="nv">the</span><span class="w"> </span><span class="nv">interval</span><span class="w"> </span>[<span class="mi">3</span>,<span class="w"> </span><span class="mi">3</span>]<span class="w"></span>
-[<span class="mi">1</span>,<span class="w"> </span><span class="mi">8</span>]<span class="w"> </span><span class="nv">and</span><span class="w"> </span>[<span class="mi">2</span>,<span class="w"> </span><span class="mi">6</span>]<span class="w"> </span><span class="nv">overlap</span><span class="w"> </span><span class="nv">in</span><span class="w"> </span><span class="nv">the</span><span class="w"> </span><span class="nv">interval</span><span class="w"> </span>[<span class="mi">2</span>,<span class="w"> </span><span class="mi">6</span>]<span class="w"></span>
+<div class="codehilite"><pre><span></span><code>[<span class="mi">2</span>,<span class="w"> </span><span class="mi">4</span>]<span class="w"> </span><span class="nv">and</span><span class="w"> </span>[<span class="mi">6</span>,<span class="w"> </span><span class="mi">9</span>]<span class="w"> </span><span class="k">do</span><span class="w"> </span><span class="nv">not</span><span class="w"> </span><span class="nv">overlap</span>
+[<span class="mi">5</span>,<span class="w"> </span><span class="mi">7</span>]<span class="w"> </span><span class="nv">and</span><span class="w"> </span>[<span class="mi">1</span>,<span class="w"> </span><span class="mi">3</span>]<span class="w"> </span><span class="k">do</span><span class="w"> </span><span class="nv">not</span><span class="w"> </span><span class="nv">overlap</span>
+[<span class="mi">4</span>,<span class="w"> </span><span class="mi">8</span>]<span class="w"> </span><span class="nv">and</span><span class="w"> </span>[<span class="o">-</span><span class="mi">6</span>,<span class="w"> </span><span class="mi">2</span>]<span class="w"> </span><span class="k">do</span><span class="w"> </span><span class="nv">not</span><span class="w"> </span><span class="nv">overlap</span>
+[<span class="mi">2</span>,<span class="w"> </span><span class="mi">5</span>]<span class="w"> </span><span class="nv">and</span><span class="w"> </span>[<span class="mi">3</span>,<span class="w"> </span><span class="mi">9</span>]<span class="w"> </span><span class="nv">overlap</span><span class="w"> </span><span class="nv">in</span><span class="w"> </span><span class="nv">the</span><span class="w"> </span><span class="nv">interval</span><span class="w"> </span>[<span class="mi">3</span>,<span class="w"> </span><span class="mi">5</span>]
+[<span class="mi">3</span>,<span class="w"> </span><span class="mi">6</span>]<span class="w"> </span><span class="nv">and</span><span class="w"> </span>[<span class="mi">1</span>,<span class="w"> </span><span class="mi">3</span>]<span class="w"> </span><span class="nv">overlap</span><span class="w"> </span><span class="nv">in</span><span class="w"> </span><span class="nv">the</span><span class="w"> </span><span class="nv">interval</span><span class="w"> </span>[<span class="mi">3</span>,<span class="w"> </span><span class="mi">3</span>]
+[<span class="mi">1</span>,<span class="w"> </span><span class="mi">8</span>]<span class="w"> </span><span class="nv">and</span><span class="w"> </span>[<span class="mi">2</span>,<span class="w"> </span><span class="mi">6</span>]<span class="w"> </span><span class="nv">overlap</span><span class="w"> </span><span class="nv">in</span><span class="w"> </span><span class="nv">the</span><span class="w"> </span><span class="nv">interval</span><span class="w"> </span>[<span class="mi">2</span>,<span class="w"> </span><span class="mi">6</span>]
 </code></pre></div>
 </div>
 <div class="exercise">
 <h2>Exercise 2.4 (integer square root)</h2>
 <p>Consider the following program for finding the integer square root of a non-negative integer:</p>
-<div class="codehilite"><pre><span></span><code><span class="nv">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">int</span><span class="ss">(</span><span class="nv">input</span><span class="ss">(</span><span class="s1">&#39;x: &#39;</span><span class="ss">))</span><span class="w"></span>
+<div class="codehilite"><pre><span></span><code><span class="nv">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">int</span><span class="ss">(</span><span class="nv">input</span><span class="ss">(</span><span class="s1">&#39;x: &#39;</span><span class="ss">))</span>
 
-<span class="nv">low</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="w"></span>
-<span class="nv">high</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">x</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="w"></span>
+<span class="nv">low</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span>
+<span class="nv">high</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">x</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span>
 
-<span class="k">while</span><span class="w"> </span><span class="nv">True</span>:<span class="w">  </span>#<span class="w"> </span><span class="nv">low</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="nv">sqrt</span><span class="ss">(</span><span class="nv">x</span><span class="ss">)</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="nv">high</span><span class="w"></span>
-<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="nv">low</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="nv">high</span>:<span class="w"></span>
-<span class="w">        </span><span class="k">break</span><span class="w"></span>
+<span class="k">while</span><span class="w"> </span><span class="nv">True</span>:<span class="w">  </span>#<span class="w"> </span><span class="nv">low</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="nv">sqrt</span><span class="ss">(</span><span class="nv">x</span><span class="ss">)</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="nv">high</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="nv">low</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="nv">high</span>:
+<span class="w">        </span><span class="k">break</span>
 
-<span class="w">    </span><span class="nv">mid</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ss">(</span><span class="nv">high</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nv">low</span><span class="ss">)</span><span class="w"> </span><span class="o">//</span><span class="w"> </span><span class="mi">2</span><span class="w"></span>
+<span class="w">    </span><span class="nv">mid</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ss">(</span><span class="nv">high</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nv">low</span><span class="ss">)</span><span class="w"> </span><span class="o">//</span><span class="w"> </span><span class="mi">2</span>
 
-<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="nv">mid</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="nv">mid</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="nv">x</span>:<span class="w"></span>
-<span class="w">        </span><span class="nv">low</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">mid</span><span class="w"></span>
-<span class="w">        </span><span class="k">continue</span><span class="w"></span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="nv">mid</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="nv">mid</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="nv">x</span>:
+<span class="w">        </span><span class="nv">low</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">mid</span>
+<span class="w">        </span><span class="k">continue</span>
 
-<span class="w">    </span><span class="nv">high</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">mid</span><span class="w"></span>
+<span class="w">    </span><span class="nv">high</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">mid</span>
 
-<span class="nv">print</span><span class="ss">(</span><span class="nv">low</span><span class="ss">)</span><span class="w">  </span>#<span class="w"> </span><span class="nv">low</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">floor</span><span class="ss">(</span><span class="nv">sqrt</span><span class="ss">(</span><span class="nv">x</span><span class="ss">))</span><span class="w"></span>
+<span class="nv">print</span><span class="ss">(</span><span class="nv">low</span><span class="ss">)</span><span class="w">  </span>#<span class="w"> </span><span class="nv">low</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">floor</span><span class="ss">(</span><span class="nv">sqrt</span><span class="ss">(</span><span class="nv">x</span><span class="ss">))</span>
 </code></pre></div>
 
 <ol>
@@ -147,9 +147,26 @@ Recall <em>f</em>'(<em>x</em>) = 2 * <em>x</em>. In your computaions you can use
 <span class="nb">print</span><span class="p">(</span><span class="n">math</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">n</span><span class="p">))</span>
 </code></pre></div>
 </div>
+<div class="exercise">
+<h2>Exercise 2.8** (Stirlings's approximation)</h2>
+<p><a target="_blank" href="https://en.wikipedia.org/wiki/Stirling%27s_approximation">Stirling's approximation</a> states that <em>n</em>! can be approximated by <em>S</em>(<em>n</em>) = (2 <em>&pi;</em> <em>n</em>)<sup>0.5</sup> &middot; (<em>n</em> / <em>e</em>)<sup><em>n</em></sup>.</p>
+<p>Write a program that asks the user for an <em>n</em> and prints the ratio <em>n</em>! / <em>S</em>(<em>n</em>), i.e. how good an approximation <em>S</em>(<em>n</em>) is to <em>n</em>!.</p>
+<p>Some example outputs:</p>
+<div class="codehilite"><pre><span></span><code><span class="mf">1</span><span class="err">!</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">S</span><span class="p">(</span><span class="mf">1</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">1.08443755</span>
+<span class="mf">10</span><span class="err">!</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">S</span><span class="p">(</span><span class="mf">10</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">1.00836536</span>
+<span class="mf">100</span><span class="err">!</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">S</span><span class="p">(</span><span class="mf">100</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">1.00083368</span>
+<span class="mf">1000</span><span class="err">!</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">S</span><span class="p">(</span><span class="mf">1000</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">1.00008334</span>
+<span class="mf">10000</span><span class="err">!</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">S</span><span class="p">(</span><span class="mf">10000</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">1.00000833</span>
+<span class="mf">100000</span><span class="err">!</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">S</span><span class="p">(</span><span class="mf">100000</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">1.00000083</span>
+</code></pre></div>
+
+<p><em>Note</em>: Use <code>import math</code> to get access to the constants <code>math.pi</code> and <code>math.e</code>.</p>
+<p><em>Warning</em>: Computing the ratio for larger <em>n</em> can be tricky.</p>
+<p>This exercise is inspired by a problem from <a target="_blank" href="https://open.kattis.com/problems/stirlingsapproximation">Kattis</a>.</p>
+</div>
 <a name="handin1"></a>
 <div class="handin">
-<h2>Exercise 2.8 - handin 1 (down payment)</h2>
+<h2>Exercise 2.9 - handin 1 (down payment)</h2>
 <p>Write a program to compute how many months it takes to pay down a loan, that has a fixed monthly interest rate, and the borrower makes a fixed monthly payment. The program should ask the user for three values: The size of the initial loan, the monthly interest rate in percent, and the size of the monthly payment of the borrower. The program should output for each month the size of the remaining loan.</p>
 <p><em>Handin format</em>. The handin should consist of a <strong>single Python file</strong>, e.g. handin1.py. The files should start with a Python docstring (string in triple quotes, <code>"""</code> or <code>'''</code>) containing the <strong>study ids</strong> and <strong>names</strong> of the students who made the handin. A handin group consists of 1-3 students. Furthermore the docstring must contain a short <strong>reflection</strong> (5-10 lines) on your solution to the exercise. This could be a short discussion of the design choices you made during your implementation, the problems you encountered, what were the hard and easy parts to get your solution to work, what restrictions on the user input did you make, limitations in your implementation, what language features were particularly useful, ... A template for the handin is below.  The <strong>filename</strong> of a submission must contain the names of all group members and their study id.</p>
 <div class="codehilite"><pre><span></span><code><span class="s">&#39;&#39;&#39;</span>
@@ -685,18 +702,18 @@ Right: (&#39;A&#39;, (&#39;G&#39;, ((&#39;E&#39;, &#39;F&#39;), ((&#39;B&#39;, &
 <h2>Exercise 9.3 (maze path)</h2>
 <p>In this exercise you should code a recursive maze solver, that does a recursive search for the path from <code>'A'</code> to <code>'B'</code> in a rectangular maze. The program should read from input a maze represented by first a single line containing two numbers, the number of rows <code>n</code> and columns <code>m</code> of the maze, followed by <code>n</code> rows each containing a string of length <code>m</code> representing the maze, where <code>'#'</code> is a blocked cell, <code>'A'</code> denotes the start cell, <code>'B'</code> the end cell, and <code>'.'</code> a free cell (<code>'A'</code> and <code>'B'</code> are also free cells). Given a free cell one can move to an adjacent free cell horizontally and vertically but not diagonally.</p>
 <p>An example input:</p>
-<div class="codehilite"><pre><span></span><code><span class="mf">11</span><span class="w"> </span><span class="mf">19</span><span class="w"></span>
-<span class="err">#######</span><span class="n">A</span><span class="err">###########</span><span class="w"></span>
-<span class="err">#</span><span class="mf">.......</span><span class="err">#</span><span class="mf">.</span><span class="err">#</span><span class="mf">...</span><span class="err">#</span><span class="mf">...</span><span class="err">#</span><span class="w"></span>
-<span class="err">#</span><span class="mf">.</span><span class="err">###</span><span class="mf">.</span><span class="err">###</span><span class="mf">...</span><span class="err">#</span><span class="mf">.</span><span class="err">#</span><span class="mf">.</span><span class="err">#</span><span class="mf">.</span><span class="err">#</span><span class="w"></span>
-<span class="err">#</span><span class="mf">...</span><span class="err">#</span><span class="mf">.....</span><span class="err">#</span><span class="mf">.</span><span class="err">#</span><span class="mf">...</span><span class="err">#</span><span class="mf">.</span><span class="err">#</span><span class="w"></span>
-<span class="err">#</span><span class="mf">.</span><span class="err">#</span><span class="mf">.</span><span class="err">###</span><span class="mf">.</span><span class="err">#</span><span class="mf">.</span><span class="err">#</span><span class="mf">.</span><span class="err">#</span><span class="mf">.</span><span class="err">###</span><span class="mf">.</span><span class="err">#</span><span class="w"></span>
-<span class="err">#</span><span class="mf">.</span><span class="err">#</span><span class="mf">.....</span><span class="err">#</span><span class="mf">...</span><span class="err">#</span><span class="mf">.</span><span class="err">#</span><span class="mf">...</span><span class="err">#</span><span class="w"></span>
-<span class="err">#</span><span class="mf">.</span><span class="err">###########</span><span class="mf">.</span><span class="err">#</span><span class="mf">.</span><span class="err">#</span><span class="mf">.</span><span class="err">#</span><span class="w"></span>
-<span class="err">#</span><span class="mf">.</span><span class="err">#</span><span class="mf">.</span><span class="err">#</span><span class="mf">.....</span><span class="err">#</span><span class="mf">...</span><span class="err">#</span><span class="mf">.</span><span class="err">#</span><span class="mf">.</span><span class="err">#</span><span class="w"></span>
-<span class="err">#</span><span class="mf">.</span><span class="err">#</span><span class="mf">.</span><span class="err">#####</span><span class="mf">.</span><span class="err">#####</span><span class="mf">.</span><span class="err">#</span><span class="mf">.</span><span class="err">#</span><span class="w"></span>
-<span class="err">#</span><span class="mf">.........</span><span class="err">#</span><span class="mf">.....</span><span class="err">#</span><span class="mf">.</span><span class="err">#</span><span class="w"></span>
-<span class="err">###############</span><span class="n">B</span><span class="err">###</span><span class="w"></span>
+<div class="codehilite"><pre><span></span><code><span class="mf">11</span><span class="w"> </span><span class="mf">19</span>
+<span class="err">#######</span><span class="n">A</span><span class="err">###########</span>
+<span class="err">#</span><span class="mf">.......</span><span class="err">#</span><span class="mf">.</span><span class="err">#</span><span class="mf">...</span><span class="err">#</span><span class="mf">...</span><span class="err">#</span>
+<span class="err">#</span><span class="mf">.</span><span class="err">###</span><span class="mf">.</span><span class="err">###</span><span class="mf">...</span><span class="err">#</span><span class="mf">.</span><span class="err">#</span><span class="mf">.</span><span class="err">#</span><span class="mf">.</span><span class="err">#</span>
+<span class="err">#</span><span class="mf">...</span><span class="err">#</span><span class="mf">.....</span><span class="err">#</span><span class="mf">.</span><span class="err">#</span><span class="mf">...</span><span class="err">#</span><span class="mf">.</span><span class="err">#</span>
+<span class="err">#</span><span class="mf">.</span><span class="err">#</span><span class="mf">.</span><span class="err">###</span><span class="mf">.</span><span class="err">#</span><span class="mf">.</span><span class="err">#</span><span class="mf">.</span><span class="err">#</span><span class="mf">.</span><span class="err">###</span><span class="mf">.</span><span class="err">#</span>
+<span class="err">#</span><span class="mf">.</span><span class="err">#</span><span class="mf">.....</span><span class="err">#</span><span class="mf">...</span><span class="err">#</span><span class="mf">.</span><span class="err">#</span><span class="mf">...</span><span class="err">#</span>
+<span class="err">#</span><span class="mf">.</span><span class="err">###########</span><span class="mf">.</span><span class="err">#</span><span class="mf">.</span><span class="err">#</span><span class="mf">.</span><span class="err">#</span>
+<span class="err">#</span><span class="mf">.</span><span class="err">#</span><span class="mf">.</span><span class="err">#</span><span class="mf">.....</span><span class="err">#</span><span class="mf">...</span><span class="err">#</span><span class="mf">.</span><span class="err">#</span><span class="mf">.</span><span class="err">#</span>
+<span class="err">#</span><span class="mf">.</span><span class="err">#</span><span class="mf">.</span><span class="err">#####</span><span class="mf">.</span><span class="err">#####</span><span class="mf">.</span><span class="err">#</span><span class="mf">.</span><span class="err">#</span>
+<span class="err">#</span><span class="mf">.........</span><span class="err">#</span><span class="mf">.....</span><span class="err">#</span><span class="mf">.</span><span class="err">#</span>
+<span class="err">###############</span><span class="n">B</span><span class="err">###</span>
 </code></pre></div>
 
 <p>The program should output the string 'no path' if there exist no path from <code>'A'</code> to <code>'B'</code> in the maze. If there exists a path, a solution should be printed with 'x' marking the path from <code>'A'</code> to <code>'B'</code>. A possible solution to the above maze is:</p>
@@ -765,22 +782,22 @@ print(f&#39;{L1 = } {L2 = } {L3 = }&#39;)
 <div class="handin">
 <h2>Exercise 9.5 - handin 5 (eight queens puzzle)</h2>
 <p>Write a program that solves the <a target="_blank" href="https://en.wikipedia.org/wiki/Eight_queens_puzzle">eight queens puzzle</a>. The program should solve the more general problem of solving the <em>n</em> queen problem on an <em>n</em> x <em>n</em> chessboard, where <em>n</em> is given as input. The program should output at least one solution if solutions exist, e.g. as below, or that there is no solution.</p>
-<div class="codehilite"><pre><span></span><code><span class="nf">Size</span><span class="w"> </span><span class="no">of</span><span class="w"> </span><span class="no">board</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="w"></span>
-<span class="nf">Q....</span><span class="w"></span>
-<span class="na">..Q..</span><span class="w"></span>
-<span class="na">....Q</span><span class="w"></span>
-<span class="na">.Q...</span><span class="w"></span>
-<span class="na">...Q.</span><span class="w"></span>
+<div class="codehilite"><pre><span></span><code><span class="nf">Size</span><span class="w"> </span><span class="no">of</span><span class="w"> </span><span class="no">board</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span>
+<span class="nf">Q....</span>
+<span class="na">..Q..</span>
+<span class="na">....Q</span>
+<span class="na">.Q...</span>
+<span class="na">...Q.</span>
 </code></pre></div>
 
 <p><em>Hint</em>. Write a recursive solution that generates all possible solutions, but avoids expanding partial solutions already known to be invalid. Since no two queens can be in the same row, a solution must have exactly one queen in each row. A partial solution for the first <em>i</em> queens can be described by a tuple of
 length <em>i</em> with the column positions for the queens in the <em>i</em> first rows. E.g., the tuple (0, 2, 4) could represent a partial solution for the first three rows of a 5 x 5 board:</p>
-<div class="codehilite"><pre><span></span><code><span class="n">column</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="mi">01234</span><span class="w"></span>
-<span class="n">row</span><span class="w"> </span><span class="mi">0</span><span class="w">  </span><span class="o">:</span><span class="w"> </span><span class="n">Q</span><span class="o">....</span><span class="w"></span>
-<span class="n">row</span><span class="w"> </span><span class="mi">1</span><span class="w">  </span><span class="o">:</span><span class="w"> </span><span class="o">..</span><span class="n">Q</span><span class="o">..</span><span class="w"></span>
-<span class="n">row</span><span class="w"> </span><span class="mi">2</span><span class="w">  </span><span class="o">:</span><span class="w"> </span><span class="o">....</span><span class="n">Q</span><span class="w"></span>
-<span class="n">row</span><span class="w"> </span><span class="mi">3</span><span class="w">  </span><span class="o">:</span><span class="w"> </span><span class="o">.....</span><span class="w"></span>
-<span class="n">row</span><span class="w"> </span><span class="mi">4</span><span class="w">  </span><span class="o">:</span><span class="w"> </span><span class="o">.....</span><span class="w"></span>
+<div class="codehilite"><pre><span></span><code><span class="n">column</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="mi">01234</span>
+<span class="n">row</span><span class="w"> </span><span class="mi">0</span><span class="w">  </span><span class="o">:</span><span class="w"> </span><span class="n">Q</span><span class="o">....</span>
+<span class="n">row</span><span class="w"> </span><span class="mi">1</span><span class="w">  </span><span class="o">:</span><span class="w"> </span><span class="o">..</span><span class="n">Q</span><span class="o">..</span>
+<span class="n">row</span><span class="w"> </span><span class="mi">2</span><span class="w">  </span><span class="o">:</span><span class="w"> </span><span class="o">....</span><span class="n">Q</span>
+<span class="n">row</span><span class="w"> </span><span class="mi">3</span><span class="w">  </span><span class="o">:</span><span class="w"> </span><span class="o">.....</span>
+<span class="n">row</span><span class="w"> </span><span class="mi">4</span><span class="w">  </span><span class="o">:</span><span class="w"> </span><span class="o">.....</span>
 </code></pre></div>
 
 <p>One way to structure your program is to define three functions:</p>
@@ -974,17 +991,17 @@ Margrethe (1940)
 </li>
 </ul>
 <p><em>Example</em>.</p>
-<div class="codehilite"><pre><span></span><code><span class="o">&gt;</span><span class="w"> </span><span class="nv">shapes</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>[<span class="nv">Rectangle</span><span class="ss">(</span><span class="mi">0</span>,<span class="w"> </span><span class="mi">10</span>,<span class="w"> </span><span class="mi">0</span>,<span class="w"> </span><span class="mi">1</span><span class="ss">)</span>,<span class="w"> </span><span class="nv">Circle</span><span class="ss">(</span><span class="mi">4</span>,<span class="w"> </span><span class="mi">1</span>,<span class="w"> </span><span class="mi">4</span><span class="ss">)</span>,<span class="w"> </span><span class="nv">Triangle</span><span class="ss">(</span><span class="mi">1</span>,<span class="w"> </span><span class="mi">2</span>,<span class="w"> </span><span class="mi">1</span>,<span class="w"> </span><span class="mi">4</span>,<span class="w"> </span><span class="mi">2</span>,<span class="w"> </span><span class="mi">3</span><span class="ss">)</span>]<span class="w"></span>
-<span class="o">&gt;</span><span class="w"> </span>[<span class="nv">str</span><span class="ss">(</span><span class="nv">s</span><span class="ss">)</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="nv">s</span><span class="w"> </span><span class="nv">in</span><span class="w"> </span><span class="nv">shapes</span>]<span class="w"></span>
-[<span class="s1">&#39;Rectangle((0, 0), (10, 1))&#39;</span>,<span class="w"> </span><span class="s1">&#39;Circle(radius=4, center_x=1, center_y=4)&#39;</span>,<span class="w"> </span><span class="s1">&#39;Triangle((1, 2), (1, 4), (2, 3))&#39;</span>]<span class="w"></span>
-<span class="o">&gt;</span><span class="w"> </span>[<span class="nv">s</span>.<span class="nv">area</span><span class="ss">()</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="nv">s</span><span class="w"> </span><span class="nv">in</span><span class="w"> </span><span class="nv">shapes</span>]<span class="w"></span>
-[<span class="mi">10</span>,<span class="w"> </span><span class="mi">50</span>.<span class="mi">26548245743669</span>,<span class="w"> </span><span class="mi">1</span>.<span class="mi">0</span>]<span class="w"></span>
-<span class="o">&gt;</span><span class="w"> </span>[<span class="nv">s</span>.<span class="nv">perimeter</span><span class="ss">()</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="nv">s</span><span class="w"> </span><span class="nv">in</span><span class="w"> </span><span class="nv">shapes</span>]<span class="w"></span>
-[<span class="mi">22</span>,<span class="w"> </span><span class="mi">25</span>.<span class="mi">132741228718345</span>,<span class="w"> </span><span class="mi">4</span>.<span class="mi">82842712474619</span>]<span class="w"></span>
-<span class="o">&gt;</span><span class="w"> </span>[<span class="nv">s</span>.<span class="nv">fatness</span><span class="ss">()</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="nv">s</span><span class="w"> </span><span class="nv">in</span><span class="w"> </span><span class="nv">shapes</span>]<span class="w"></span>
-[<span class="mi">0</span>.<span class="mi">25963575649502424</span>,<span class="w"> </span><span class="mi">1</span>.<span class="mi">0</span>,<span class="w"> </span><span class="mi">0</span>.<span class="mi">5390120844526473</span>]<span class="w"></span>
-<span class="o">&gt;</span><span class="w"> </span>[<span class="nv">s</span>.<span class="nv">contains</span><span class="ss">(</span><span class="mi">1</span>,<span class="mi">1</span><span class="ss">)</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="nv">s</span><span class="w"> </span><span class="nv">in</span><span class="w"> </span><span class="nv">shapes</span>]<span class="w"></span>
-[<span class="nv">True</span>,<span class="w"> </span><span class="nv">True</span>,<span class="w"> </span><span class="nv">False</span>]<span class="w"></span>
+<div class="codehilite"><pre><span></span><code><span class="o">&gt;</span><span class="w"> </span><span class="nv">shapes</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>[<span class="nv">Rectangle</span><span class="ss">(</span><span class="mi">0</span>,<span class="w"> </span><span class="mi">10</span>,<span class="w"> </span><span class="mi">0</span>,<span class="w"> </span><span class="mi">1</span><span class="ss">)</span>,<span class="w"> </span><span class="nv">Circle</span><span class="ss">(</span><span class="mi">4</span>,<span class="w"> </span><span class="mi">1</span>,<span class="w"> </span><span class="mi">4</span><span class="ss">)</span>,<span class="w"> </span><span class="nv">Triangle</span><span class="ss">(</span><span class="mi">1</span>,<span class="w"> </span><span class="mi">2</span>,<span class="w"> </span><span class="mi">1</span>,<span class="w"> </span><span class="mi">4</span>,<span class="w"> </span><span class="mi">2</span>,<span class="w"> </span><span class="mi">3</span><span class="ss">)</span>]
+<span class="o">&gt;</span><span class="w"> </span>[<span class="nv">str</span><span class="ss">(</span><span class="nv">s</span><span class="ss">)</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="nv">s</span><span class="w"> </span><span class="nv">in</span><span class="w"> </span><span class="nv">shapes</span>]
+[<span class="s1">&#39;Rectangle((0, 0), (10, 1))&#39;</span>,<span class="w"> </span><span class="s1">&#39;Circle(radius=4, center_x=1, center_y=4)&#39;</span>,<span class="w"> </span><span class="s1">&#39;Triangle((1, 2), (1, 4), (2, 3))&#39;</span>]
+<span class="o">&gt;</span><span class="w"> </span>[<span class="nv">s</span>.<span class="nv">area</span><span class="ss">()</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="nv">s</span><span class="w"> </span><span class="nv">in</span><span class="w"> </span><span class="nv">shapes</span>]
+[<span class="mi">10</span>,<span class="w"> </span><span class="mi">50</span>.<span class="mi">26548245743669</span>,<span class="w"> </span><span class="mi">1</span>.<span class="mi">0</span>]
+<span class="o">&gt;</span><span class="w"> </span>[<span class="nv">s</span>.<span class="nv">perimeter</span><span class="ss">()</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="nv">s</span><span class="w"> </span><span class="nv">in</span><span class="w"> </span><span class="nv">shapes</span>]
+[<span class="mi">22</span>,<span class="w"> </span><span class="mi">25</span>.<span class="mi">132741228718345</span>,<span class="w"> </span><span class="mi">4</span>.<span class="mi">82842712474619</span>]
+<span class="o">&gt;</span><span class="w"> </span>[<span class="nv">s</span>.<span class="nv">fatness</span><span class="ss">()</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="nv">s</span><span class="w"> </span><span class="nv">in</span><span class="w"> </span><span class="nv">shapes</span>]
+[<span class="mi">0</span>.<span class="mi">25963575649502424</span>,<span class="w"> </span><span class="mi">1</span>.<span class="mi">0</span>,<span class="w"> </span><span class="mi">0</span>.<span class="mi">5390120844526473</span>]
+<span class="o">&gt;</span><span class="w"> </span>[<span class="nv">s</span>.<span class="nv">contains</span><span class="ss">(</span><span class="mi">1</span>,<span class="mi">1</span><span class="ss">)</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="nv">s</span><span class="w"> </span><span class="nv">in</span><span class="w"> </span><span class="nv">shapes</span>]
+[<span class="nv">True</span>,<span class="w"> </span><span class="nv">True</span>,<span class="w"> </span><span class="nv">False</span>]
 </code></pre></div>
 </div>
 <a name="handin6"></a>
@@ -1054,16 +1071,16 @@ Sum = 5
 <h2>Exercise 13.2 (transposing)</h2>
 <p>In this excercise we assume that a file stores a matrix, where the rows are stored in consecutive lines in the file, and where column values are separated by <code>;</code>. Your task is to make a program that writes the <a target="_blank" href="https://en.wikipedia.org/wiki/Transpose">transposed matrix</a> to another file - see example below.</p>
 <p>Input:</p>
-<div class="codehilite"><pre><span></span><code><span class="mf">1</span><span class="p">;</span><span class="mf">2</span><span class="p">;</span><span class="mf">3</span><span class="p">;</span><span class="mf">4</span><span class="w"></span>
-<span class="mf">5</span><span class="p">;</span><span class="mf">6</span><span class="p">;</span><span class="mf">7</span><span class="p">;</span><span class="mf">8</span><span class="w"></span>
-<span class="mf">9</span><span class="p">;</span><span class="mf">10</span><span class="p">;</span><span class="mf">11</span><span class="p">;</span><span class="mf">12</span><span class="w"></span>
+<div class="codehilite"><pre><span></span><code><span class="mf">1</span><span class="p">;</span><span class="mf">2</span><span class="p">;</span><span class="mf">3</span><span class="p">;</span><span class="mf">4</span>
+<span class="mf">5</span><span class="p">;</span><span class="mf">6</span><span class="p">;</span><span class="mf">7</span><span class="p">;</span><span class="mf">8</span>
+<span class="mf">9</span><span class="p">;</span><span class="mf">10</span><span class="p">;</span><span class="mf">11</span><span class="p">;</span><span class="mf">12</span>
 </code></pre></div>
 
 <p>Output:</p>
-<div class="codehilite"><pre><span></span><code><span class="mf">1</span><span class="p">;</span><span class="mf">5</span><span class="p">;</span><span class="mf">9</span><span class="w"></span>
-<span class="mf">2</span><span class="p">;</span><span class="mf">6</span><span class="p">;</span><span class="mf">10</span><span class="w"></span>
-<span class="mf">3</span><span class="p">;</span><span class="mf">7</span><span class="p">;</span><span class="mf">11</span><span class="w"></span>
-<span class="mf">4</span><span class="p">;</span><span class="mf">8</span><span class="p">;</span><span class="mf">12</span><span class="w"></span>
+<div class="codehilite"><pre><span></span><code><span class="mf">1</span><span class="p">;</span><span class="mf">5</span><span class="p">;</span><span class="mf">9</span>
+<span class="mf">2</span><span class="p">;</span><span class="mf">6</span><span class="p">;</span><span class="mf">10</span>
+<span class="mf">3</span><span class="p">;</span><span class="mf">7</span><span class="p">;</span><span class="mf">11</span>
+<span class="mf">4</span><span class="p">;</span><span class="mf">8</span><span class="p">;</span><span class="mf">12</span>
 </code></pre></div>
 
 <p>The program should ask the user for the name of an input file and the name of an output file, read the matrix in the input file, and write the transposed matrix to the output file.</p>
@@ -1085,20 +1102,20 @@ Sum = 5
 <h2>Exercise 13.3 (grade statistics)</h2>
 <p>In this exercise you should write a program that reads two files: one respectively containing the names and address of students, and one containing exam results. The output of the program should be a summary of the exam performances.</p>
 <p>The student list is stored in a file, with one student per line, consisting of the three fields, separated by <code>;</code> : the unique student id, name and address.</p>
-<div class="codehilite"><pre><span></span><code><span class="mf">107</span><span class="p">;</span><span class="n">Donald</span><span class="w"> </span><span class="n">Duck</span><span class="p">;</span><span class="n">Duck</span><span class="w"> </span><span class="n">Steet</span><span class="w"> </span><span class="mf">13</span><span class="p">,</span><span class="w"> </span><span class="n">Duckburg</span><span class="w"></span>
-<span class="mf">243</span><span class="p">;</span><span class="n">Mickey</span><span class="w"> </span><span class="n">Mouse</span><span class="p">;</span><span class="n">Mouse</span><span class="w"> </span><span class="n">Street</span><span class="w"> </span><span class="mf">42</span><span class="p">,</span><span class="w"> </span><span class="n">Duckburg</span><span class="w"></span>
-<span class="mf">465</span><span class="p">;</span><span class="kr">Go</span><span class="n">ofy</span><span class="p">;</span><span class="n">Clumsy</span><span class="w"> </span><span class="n">Road</span><span class="w"> </span><span class="mf">7</span><span class="p">,</span><span class="w"> </span><span class="n">Duckburg</span><span class="w"></span>
-<span class="mf">777</span><span class="p">;</span><span class="n">Scrooge</span><span class="w"> </span><span class="n">McDuck</span><span class="p">;</span><span class="n">Money</span><span class="w"> </span><span class="n">Street</span><span class="w"> </span><span class="mf">1</span><span class="p">,</span><span class="w"> </span><span class="n">Duckburg</span><span class="w"></span>
+<div class="codehilite"><pre><span></span><code><span class="mf">107</span><span class="p">;</span><span class="n">Donald</span><span class="w"> </span><span class="n">Duck</span><span class="p">;</span><span class="n">Duck</span><span class="w"> </span><span class="n">Steet</span><span class="w"> </span><span class="mf">13</span><span class="p">,</span><span class="w"> </span><span class="n">Duckburg</span>
+<span class="mf">243</span><span class="p">;</span><span class="n">Mickey</span><span class="w"> </span><span class="n">Mouse</span><span class="p">;</span><span class="n">Mouse</span><span class="w"> </span><span class="n">Street</span><span class="w"> </span><span class="mf">42</span><span class="p">,</span><span class="w"> </span><span class="n">Duckburg</span>
+<span class="mf">465</span><span class="p">;</span><span class="kr">Go</span><span class="n">ofy</span><span class="p">;</span><span class="n">Clumsy</span><span class="w"> </span><span class="n">Road</span><span class="w"> </span><span class="mf">7</span><span class="p">,</span><span class="w"> </span><span class="n">Duckburg</span>
+<span class="mf">777</span><span class="p">;</span><span class="n">Scrooge</span><span class="w"> </span><span class="n">McDuck</span><span class="p">;</span><span class="n">Money</span><span class="w"> </span><span class="n">Street</span><span class="w"> </span><span class="mf">1</span><span class="p">,</span><span class="w"> </span><span class="n">Duckburg</span>
 </code></pre></div>
 
 <p>The second file contains the list of exam results, consisting of a line per grade given, consisting of a triple, with values separated by <code>;</code>: student id, course name, and grade.</p>
-<div class="codehilite"><pre><span></span><code><span class="mf">107</span><span class="p">;</span><span class="n">Programming</span><span class="p">;</span><span class="mf">10</span><span class="w"></span>
-<span class="mf">107</span><span class="p">;</span><span class="n">Mathematics</span><span class="p">;</span><span class="mf">8</span><span class="w"></span>
-<span class="mf">107</span><span class="p">;</span><span class="n">Computability</span><span class="p">;</span><span class="mf">7</span><span class="w"></span>
-<span class="mf">243</span><span class="p">;</span><span class="n">Programming</span><span class="p">;</span><span class="mf">10</span><span class="w"></span>
-<span class="mf">243</span><span class="p">;</span><span class="n">Computer</span><span class="w"> </span><span class="kr">for</span><span class="n">ensic</span><span class="p">;</span><span class="mf">10</span><span class="w"></span>
-<span class="mf">243</span><span class="p">;</span><span class="n">Computability</span><span class="p">;</span><span class="mf">9</span><span class="w"></span>
-<span class="mf">465</span><span class="p">;</span><span class="n">Mathematics</span><span class="p">;</span><span class="mf">6</span><span class="w"></span>
+<div class="codehilite"><pre><span></span><code><span class="mf">107</span><span class="p">;</span><span class="n">Programming</span><span class="p">;</span><span class="mf">10</span>
+<span class="mf">107</span><span class="p">;</span><span class="n">Mathematics</span><span class="p">;</span><span class="mf">8</span>
+<span class="mf">107</span><span class="p">;</span><span class="n">Computability</span><span class="p">;</span><span class="mf">7</span>
+<span class="mf">243</span><span class="p">;</span><span class="n">Programming</span><span class="p">;</span><span class="mf">10</span>
+<span class="mf">243</span><span class="p">;</span><span class="n">Computer</span><span class="w"> </span><span class="kr">for</span><span class="n">ensic</span><span class="p">;</span><span class="mf">10</span>
+<span class="mf">243</span><span class="p">;</span><span class="n">Computability</span><span class="p">;</span><span class="mf">9</span>
+<span class="mf">465</span><span class="p">;</span><span class="n">Mathematics</span><span class="p">;</span><span class="mf">6</span>
 </code></pre></div>
 
 <p>The program should print a summary like the below:</p>
@@ -1155,8 +1172,8 @@ during the recursion when the first solution has been found. Do not generate an 
 </li>
 </ul>
 <p>You can use the following function <code>left_turn</code> to determine if a point <code>r</code> is to the left of or on the line through <code>p</code> and <code>q</code> (seen from <code>p</code> towards <code>q</code>)</p>
-<div class="codehilite"><pre><span></span><code><span class="nv">def</span><span class="w"> </span><span class="nv">left_turn</span><span class="ss">(</span><span class="nv">p</span>,<span class="w"> </span><span class="nv">q</span>,<span class="w"> </span><span class="nv">r</span><span class="ss">)</span>:<span class="w"></span>
-<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="ss">(</span><span class="nv">q</span>[<span class="mi">0</span>]<span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="nv">p</span>[<span class="mi">0</span>]<span class="ss">)</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="ss">(</span><span class="nv">r</span>[<span class="mi">1</span>]<span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="nv">p</span>[<span class="mi">1</span>]<span class="ss">)</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="ss">(</span><span class="nv">r</span>[<span class="mi">0</span>]<span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="nv">p</span>[<span class="mi">0</span>]<span class="ss">)</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="ss">(</span><span class="nv">q</span>[<span class="mi">1</span>]<span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="nv">p</span>[<span class="mi">1</span>]<span class="ss">)</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="mi">0</span><span class="w"></span>
+<div class="codehilite"><pre><span></span><code><span class="nv">def</span><span class="w"> </span><span class="nv">left_turn</span><span class="ss">(</span><span class="nv">p</span>,<span class="w"> </span><span class="nv">q</span>,<span class="w"> </span><span class="nv">r</span><span class="ss">)</span>:
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="ss">(</span><span class="nv">q</span>[<span class="mi">0</span>]<span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="nv">p</span>[<span class="mi">0</span>]<span class="ss">)</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="ss">(</span><span class="nv">r</span>[<span class="mi">1</span>]<span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="nv">p</span>[<span class="mi">1</span>]<span class="ss">)</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="ss">(</span><span class="nv">r</span>[<span class="mi">0</span>]<span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="nv">p</span>[<span class="mi">0</span>]<span class="ss">)</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="ss">(</span><span class="nv">q</span>[<span class="mi">1</span>]<span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="nv">p</span>[<span class="mi">1</span>]<span class="ss">)</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="mi">0</span>
 </code></pre></div>
 
 <ol>
@@ -1195,27 +1212,27 @@ during the recursion when the first solution has been found. Do not generate an 
 <div class="exercise">
 <h2>Exercise 15.1 (decorator returns int)</h2>
 <p>Create a function decorator <code>@enforce_integer_return</code> that checks if a function returns a value of type <code>int</code> and raises an <code>AssertionError</code> if the result is of a different type. The decorator could e.g. be used as in the example below.</p>
-<div class="codehilite"><pre><span></span><code><span class="o">&gt;</span><span class="w"> </span><span class="nv">@enforce_integer_return</span><span class="w"></span>
-<span class="w">  </span><span class="n">def</span><span class="w"> </span><span class="n">my_sum</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="p">)</span><span class="err">:</span><span class="w"></span>
-<span class="w">      </span><span class="k">return</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">y</span><span class="w"></span>
+<div class="codehilite"><pre><span></span><code><span class="o">&gt;</span><span class="w"> </span><span class="nv">@enforce_integer_return</span>
+<span class="w">  </span><span class="n">def</span><span class="w"> </span><span class="n">my_sum</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="p">)</span><span class="err">:</span>
+<span class="w">      </span><span class="k">return</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">y</span>
 
-<span class="o">&gt;</span><span class="w"> </span><span class="n">my_sum</span><span class="p">(</span><span class="mi">19</span><span class="p">,</span><span class="w"> </span><span class="mi">23</span><span class="p">)</span><span class="w"></span>
-<span class="mi">42</span><span class="w"></span>
+<span class="o">&gt;</span><span class="w"> </span><span class="n">my_sum</span><span class="p">(</span><span class="mi">19</span><span class="p">,</span><span class="w"> </span><span class="mi">23</span><span class="p">)</span>
+<span class="mi">42</span>
 
-<span class="o">&gt;</span><span class="w"> </span><span class="n">my_sum</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mf">2.5</span><span class="p">)</span><span class="w"></span>
-<span class="p">...</span><span class="w"></span>
-<span class="nl">AssertionError</span><span class="p">:</span><span class="w"> </span><span class="k">result</span><span class="w"> </span><span class="n">must</span><span class="w"> </span><span class="n">be</span><span class="w"> </span><span class="nc">int</span><span class="w"></span>
+<span class="o">&gt;</span><span class="w"> </span><span class="n">my_sum</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mf">2.5</span><span class="p">)</span>
+<span class="p">...</span>
+<span class="nl">AssertionError</span><span class="p">:</span><span class="w"> </span><span class="k">result</span><span class="w"> </span><span class="n">must</span><span class="w"> </span><span class="n">be</span><span class="w"> </span><span class="nc">int</span>
 </code></pre></div>
 </div>
 <div class="exercise">
 <h2>Exercise 15.2 (box it)</h2>
 <p>Create a decorator <code>@BoxIt</code> for functions returning a string. The output of a function returning a string should be
 converted into a new string, with the output put into a 'box' (see example below).  You can assume that the string returned by a function only consist of a single line of text, i.e. the string does not contain <code>'\n'</code>.</p>
-<div class="codehilite"><pre><span></span><code><span class="nv">@BoxIt</span><span class="w"></span>
-<span class="n">def</span><span class="w"> </span><span class="n">plus</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="p">)</span><span class="err">:</span><span class="w"></span>
-<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">f</span><span class="s1">&#39;The sum of {x} and {y} is {x + y}&#39;</span><span class="w"></span>
+<div class="codehilite"><pre><span></span><code><span class="nv">@BoxIt</span>
+<span class="n">def</span><span class="w"> </span><span class="n">plus</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="p">)</span><span class="err">:</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">f</span><span class="s1">&#39;The sum of {x} and {y} is {x + y}&#39;</span>
 
-<span class="k">print</span><span class="p">(</span><span class="n">plus</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">))</span><span class="w"></span>
+<span class="k">print</span><span class="p">(</span><span class="n">plus</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">))</span>
 </code></pre></div>
 
 <p>should print the following</p>
@@ -1227,59 +1244,59 @@ converted into a new string, with the output put into a 'box' (see example below
 <div class="exercise">
 <h2>Exercise 15.3 (multiline box it) [optional]</h2>
 <p>Generalize your solution to Exercise 15.3, so that it can handle multiline output.</p>
-<div class="codehilite"><pre><span></span><code><span class="nv">@BoxIt</span><span class="w"></span>
-<span class="n">def</span><span class="w"> </span><span class="n">test</span><span class="p">()</span><span class="err">:</span><span class="w"></span>
-<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="s1">&#39;This\n   is a\n      test&#39;</span><span class="w"></span>
+<div class="codehilite"><pre><span></span><code><span class="nv">@BoxIt</span>
+<span class="n">def</span><span class="w"> </span><span class="n">test</span><span class="p">()</span><span class="err">:</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="s1">&#39;This\n   is a\n      test&#39;</span>
 
-<span class="nv">@BoxIt</span><span class="w"></span>
-<span class="nv">@BoxIt</span><span class="w"></span>
-<span class="n">def</span><span class="w"> </span><span class="n">plus</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="p">)</span><span class="err">:</span><span class="w"></span>
-<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">f</span><span class="s1">&#39;{x} + {y} = {x + y}&#39;</span><span class="w"></span>
+<span class="nv">@BoxIt</span>
+<span class="nv">@BoxIt</span>
+<span class="n">def</span><span class="w"> </span><span class="n">plus</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="p">)</span><span class="err">:</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">f</span><span class="s1">&#39;{x} + {y} = {x + y}&#39;</span>
 
-<span class="k">print</span><span class="p">(</span><span class="n">test</span><span class="p">())</span><span class="w"></span>
-<span class="k">print</span><span class="p">(</span><span class="n">plus</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p">))</span><span class="w"></span>
+<span class="k">print</span><span class="p">(</span><span class="n">test</span><span class="p">())</span>
+<span class="k">print</span><span class="p">(</span><span class="n">plus</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p">))</span>
 </code></pre></div>
 
 <p>should print the following</p>
-<div class="codehilite"><pre><span></span><code><span class="nb">+------------+</span><span class="c"></span>
+<div class="codehilite"><pre><span></span><code><span class="nb">+------------+</span>
 <span class="c">| This       |</span>
 <span class="c">|    is a    |</span>
 <span class="c">|       test |</span>
-<span class="nb">+------------+</span><span class="c"></span>
-<span class="nb">+---------------+</span><span class="c"></span>
+<span class="nb">+------------+</span>
+<span class="nb">+---------------+</span>
 <span class="c">| </span><span class="nb">+-----------+</span><span class="c"> |</span>
 <span class="c">| | 3 </span><span class="nb">+</span><span class="c"> 4 = 7 | |</span>
 <span class="c">| </span><span class="nb">+-----------+</span><span class="c"> |</span>
-<span class="nb">+---------------+</span><span class="c"></span>
+<span class="nb">+---------------+</span>
 </code></pre></div>
 </div>
 <div class="exercise">
 <h2>Exercise 15.4** (decorator composition) [optional]</h2>
 <p>If you repeatedly apply the same set of decorators to your functions, it might be convenient to compose these decorators into one decorator.</p>
 <p>Recall that:</p>
-<div class="codehilite"><pre><span></span><code><span class="nv">@dec3</span><span class="w"></span>
-<span class="nv">@dec2</span><span class="w"></span>
-<span class="nv">@dec1</span><span class="w"></span>
-<span class="n">def</span><span class="w"> </span><span class="n">my_func</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">)</span><span class="err">:</span><span class="w"></span>
-<span class="w">    </span><span class="p">...</span><span class="w"></span>
+<div class="codehilite"><pre><span></span><code><span class="nv">@dec3</span>
+<span class="nv">@dec2</span>
+<span class="nv">@dec1</span>
+<span class="n">def</span><span class="w"> </span><span class="n">my_func</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">)</span><span class="err">:</span>
+<span class="w">    </span><span class="p">...</span>
 </code></pre></div>
 
 <p>is equivalent to</p>
-<div class="codehilite"><pre><span></span><code><span class="n">def</span><span class="w"> </span><span class="n">my_func</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">):</span><span class="w"></span>
-<span class="w">    </span><span class="o">...</span><span class="w"></span>
+<div class="codehilite"><pre><span></span><code><span class="n">def</span><span class="w"> </span><span class="n">my_func</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">):</span>
+<span class="w">    </span><span class="o">...</span>
 
-<span class="n">my_func</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">dec3</span><span class="p">(</span><span class="n">dec2</span><span class="p">(</span><span class="n">dec1</span><span class="p">(</span><span class="n">my_func</span><span class="p">)))</span><span class="w"></span>
+<span class="n">my_func</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">dec3</span><span class="p">(</span><span class="n">dec2</span><span class="p">(</span><span class="n">dec1</span><span class="p">(</span><span class="n">my_func</span><span class="p">)))</span>
 </code></pre></div>
 
 <p>One could compose the three decorators into one decorator <code>dec_composed</code> as</p>
-<div class="codehilite"><pre><span></span><code><span class="nv">def</span><span class="w"> </span><span class="nv">dec_composed</span><span class="ss">(</span><span class="nv">f</span><span class="ss">)</span>:<span class="w"></span>
-<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="nv">dec3</span><span class="ss">(</span><span class="nv">dec2</span><span class="ss">(</span><span class="nv">dec1</span><span class="ss">(</span><span class="nv">f</span><span class="ss">)))</span><span class="w"></span>
+<div class="codehilite"><pre><span></span><code><span class="nv">def</span><span class="w"> </span><span class="nv">dec_composed</span><span class="ss">(</span><span class="nv">f</span><span class="ss">)</span>:
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="nv">dec3</span><span class="ss">(</span><span class="nv">dec2</span><span class="ss">(</span><span class="nv">dec1</span><span class="ss">(</span><span class="nv">f</span><span class="ss">)))</span>
 </code></pre></div>
 
 <p>and using this new decorator as</p>
-<div class="codehilite"><pre><span></span><code><span class="nv">@dec_composed</span><span class="w"></span>
-<span class="n">def</span><span class="w"> </span><span class="n">my_func</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">)</span><span class="err">:</span><span class="w"></span>
-<span class="w">    </span><span class="p">...</span><span class="w"></span>
+<div class="codehilite"><pre><span></span><code><span class="nv">@dec_composed</span>
+<span class="n">def</span><span class="w"> </span><span class="n">my_func</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">)</span><span class="err">:</span>
+<span class="w">    </span><span class="p">...</span>
 </code></pre></div>
 
 <p>In this exercise you should make a function <code>compose</code> that takes a sequence of decorator functions, and composes them into one new decorator. The above decorator composition could then have been written as:</p>
@@ -1287,37 +1304,37 @@ converted into a new string, with the output put into a 'box' (see example below
 </code></pre></div>
 
 <p>Alternatively one could use <code>compose</code> as a decorator with arguments</p>
-<div class="codehilite"><pre><span></span><code><span class="nv">@compose</span><span class="p">(</span><span class="n">dec3</span><span class="p">,</span><span class="w"> </span><span class="n">dec2</span><span class="p">,</span><span class="w"> </span><span class="n">dec1</span><span class="p">)</span><span class="w"></span>
-<span class="n">def</span><span class="w"> </span><span class="n">my_func</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">)</span><span class="err">:</span><span class="w"></span>
-<span class="w">    </span><span class="p">...</span><span class="w"></span>
+<div class="codehilite"><pre><span></span><code><span class="nv">@compose</span><span class="p">(</span><span class="n">dec3</span><span class="p">,</span><span class="w"> </span><span class="n">dec2</span><span class="p">,</span><span class="w"> </span><span class="n">dec1</span><span class="p">)</span>
+<span class="n">def</span><span class="w"> </span><span class="n">my_func</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">)</span><span class="err">:</span>
+<span class="w">    </span><span class="p">...</span>
 </code></pre></div>
 
 <p>The below example uses the <code>compose</code> function in the two different ways.</p>
-<div class="codehilite"><pre><span></span><code><span class="n">def</span><span class="w"> </span><span class="k">double</span><span class="p">(</span><span class="n">f</span><span class="p">)</span><span class="err">:</span><span class="w"></span>
-<span class="w">    </span><span class="n">def</span><span class="w"> </span><span class="n">wrapper</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">)</span><span class="err">:</span><span class="w"></span>
-<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">f</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">)</span><span class="w"></span>
+<div class="codehilite"><pre><span></span><code><span class="n">def</span><span class="w"> </span><span class="k">double</span><span class="p">(</span><span class="n">f</span><span class="p">)</span><span class="err">:</span>
+<span class="w">    </span><span class="n">def</span><span class="w"> </span><span class="n">wrapper</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">)</span><span class="err">:</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">f</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">)</span>
 
-<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">wrapper</span><span class="w"></span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">wrapper</span>
 
-<span class="n">def</span><span class="w"> </span><span class="n">add_three</span><span class="p">(</span><span class="n">f</span><span class="p">)</span><span class="err">:</span><span class="w"></span>
-<span class="w">    </span><span class="n">def</span><span class="w"> </span><span class="n">wrapper</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">)</span><span class="err">:</span><span class="w"></span>
-<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="mi">3</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">f</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">)</span><span class="w"></span>
+<span class="n">def</span><span class="w"> </span><span class="n">add_three</span><span class="p">(</span><span class="n">f</span><span class="p">)</span><span class="err">:</span>
+<span class="w">    </span><span class="n">def</span><span class="w"> </span><span class="n">wrapper</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">)</span><span class="err">:</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="mi">3</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">f</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">)</span>
 
-<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">wrapper</span><span class="w"></span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">wrapper</span>
 
-<span class="nv">@compose</span><span class="p">(</span><span class="n">add_three</span><span class="p">,</span><span class="w"> </span><span class="k">double</span><span class="p">,</span><span class="w"> </span><span class="n">add_three</span><span class="p">)</span><span class="w"></span>
-<span class="n">def</span><span class="w"> </span><span class="n">seven</span><span class="p">()</span><span class="err">:</span><span class="w"></span>
-<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="mi">7</span><span class="w"></span>
+<span class="nv">@compose</span><span class="p">(</span><span class="n">add_three</span><span class="p">,</span><span class="w"> </span><span class="k">double</span><span class="p">,</span><span class="w"> </span><span class="n">add_three</span><span class="p">)</span>
+<span class="n">def</span><span class="w"> </span><span class="n">seven</span><span class="p">()</span><span class="err">:</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="mi">7</span>
 
-<span class="k">print</span><span class="p">(</span><span class="n">seven</span><span class="p">())</span><span class="w">  </span><span class="err">#</span><span class="w"> </span><span class="n">prints</span><span class="w"> </span><span class="mi">23</span><span class="w"></span>
+<span class="k">print</span><span class="p">(</span><span class="n">seven</span><span class="p">())</span><span class="w">  </span><span class="err">#</span><span class="w"> </span><span class="n">prints</span><span class="w"> </span><span class="mi">23</span>
 
-<span class="n">my_decorator</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">compose</span><span class="p">(</span><span class="n">add_three</span><span class="p">,</span><span class="w"> </span><span class="k">double</span><span class="p">,</span><span class="w"> </span><span class="n">add_three</span><span class="p">)</span><span class="w"></span>
+<span class="n">my_decorator</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">compose</span><span class="p">(</span><span class="n">add_three</span><span class="p">,</span><span class="w"> </span><span class="k">double</span><span class="p">,</span><span class="w"> </span><span class="n">add_three</span><span class="p">)</span>
 
-<span class="nv">@my_decorator</span><span class="w"></span>
-<span class="n">def</span><span class="w"> </span><span class="n">seven</span><span class="p">()</span><span class="err">:</span><span class="w"></span>
-<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="mi">7</span><span class="w"></span>
+<span class="nv">@my_decorator</span>
+<span class="n">def</span><span class="w"> </span><span class="n">seven</span><span class="p">()</span><span class="err">:</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="mi">7</span>
 
-<span class="k">print</span><span class="p">(</span><span class="n">seven</span><span class="p">())</span><span class="w">  </span><span class="err">#</span><span class="w"> </span><span class="n">prints</span><span class="w"> </span><span class="mi">23</span><span class="w"></span>
+<span class="k">print</span><span class="p">(</span><span class="n">seven</span><span class="p">())</span><span class="w">  </span><span class="err">#</span><span class="w"> </span><span class="n">prints</span><span class="w"> </span><span class="mi">23</span>
 </code></pre></div>
 
 <p><em>Note</em>. The function <code>compose</code> mathematically corresponds to <a target="_blank" href="https://en.wikipedia.org/wiki/Function_composition">function composition</a>.</p>
@@ -1560,28 +1577,28 @@ flow = 4
 </li>
 <li>
 <p><strong>Fibonacci iterator</strong>: Create an iterable <code>class Fibonacci</code> with methods <code>__init__</code> and <code>__iter__</code> and an iterator <code>class FibonacciIterator</code> with methods <code>__init__</code> and <code>__next__</code>. The object creation <code>Fibonacci(n)</code> should create an iterable object for the first <code>n</code> Fibonacci numbers, and the <code>__iter__</code> method should return an instance of <code>FibonacciIterator</code>. In the <code>class FibonacciIterator</code> implement the method <code>__next__</code>, that either returns the next Fibonacci number or raises a <code>StopIteration</code> exception.</p>
-<div class="codehilite"><pre><span></span><code><span class="o">&gt;</span><span class="w"> </span><span class="nv">f</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">Fibonacci</span><span class="ss">(</span><span class="mi">5</span><span class="ss">)</span><span class="w"></span>
-<span class="o">&gt;</span><span class="w"> </span><span class="nv">type</span><span class="ss">(</span><span class="nv">f</span><span class="ss">)</span><span class="w"></span>
-<span class="o">&lt;</span><span class="nv">class</span><span class="w"> </span><span class="s1">&#39;__main__.Fibonacci&#39;</span><span class="o">&gt;</span><span class="w"></span>
-<span class="o">&gt;</span><span class="w"> </span><span class="nv">it</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">iter</span><span class="ss">(</span><span class="nv">f</span><span class="ss">)</span><span class="w"></span>
-<span class="o">&gt;</span><span class="w"> </span><span class="nv">type</span><span class="ss">(</span><span class="nv">it</span><span class="ss">)</span><span class="w"></span>
-<span class="o">&lt;</span><span class="nv">class</span><span class="w"> </span><span class="s1">&#39;__main__.FibonacciIterator&#39;</span><span class="o">&gt;</span><span class="w"></span>
-<span class="o">&gt;</span><span class="w"> </span><span class="k">next</span><span class="ss">(</span><span class="nv">it</span><span class="ss">)</span><span class="w"></span>
-<span class="mi">1</span><span class="w"></span>
-<span class="o">&gt;</span><span class="w"> </span><span class="k">next</span><span class="ss">(</span><span class="nv">it</span><span class="ss">)</span><span class="w"></span>
-<span class="mi">1</span><span class="w"></span>
-<span class="o">&gt;</span><span class="w"> </span><span class="k">next</span><span class="ss">(</span><span class="nv">it</span><span class="ss">)</span><span class="w"></span>
-<span class="mi">2</span><span class="w"></span>
-<span class="o">&gt;</span><span class="w"> </span><span class="k">next</span><span class="ss">(</span><span class="nv">it</span><span class="ss">)</span><span class="w"></span>
-<span class="mi">3</span><span class="w"></span>
-<span class="o">&gt;</span><span class="w"> </span><span class="k">next</span><span class="ss">(</span><span class="nv">it</span><span class="ss">)</span><span class="w"></span>
-<span class="mi">5</span><span class="w"></span>
-<span class="o">&gt;</span><span class="w"> </span><span class="k">next</span><span class="ss">(</span><span class="nv">it</span><span class="ss">)</span><span class="w"></span>
-<span class="nv">StopIteration</span><span class="w"></span>
-<span class="o">&gt;</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="nv">_</span><span class="w"> </span><span class="nv">in</span><span class="w"> </span><span class="nv">range</span><span class="ss">(</span><span class="mi">3</span><span class="ss">)</span>:<span class="w"></span>
-<span class="w">      </span><span class="k">for</span><span class="w"> </span><span class="nv">x</span><span class="w"> </span><span class="nv">in</span><span class="w"> </span><span class="nv">f</span>:<span class="w"></span>
-<span class="w">          </span><span class="nv">print</span><span class="ss">(</span><span class="nv">x</span>,<span class="w"> </span><span class="k">end</span><span class="o">=</span><span class="s1">&#39; &#39;</span><span class="ss">)</span><span class="w"></span>
-<span class="mi">1</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="mi">3</span><span class="w"> </span><span class="mi">5</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="mi">3</span><span class="w"> </span><span class="mi">5</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="mi">3</span><span class="w"> </span><span class="mi">5</span><span class="w"></span>
+<div class="codehilite"><pre><span></span><code><span class="o">&gt;</span><span class="w"> </span><span class="nv">f</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">Fibonacci</span><span class="ss">(</span><span class="mi">5</span><span class="ss">)</span>
+<span class="o">&gt;</span><span class="w"> </span><span class="nv">type</span><span class="ss">(</span><span class="nv">f</span><span class="ss">)</span>
+<span class="o">&lt;</span><span class="nv">class</span><span class="w"> </span><span class="s1">&#39;__main__.Fibonacci&#39;</span><span class="o">&gt;</span>
+<span class="o">&gt;</span><span class="w"> </span><span class="nv">it</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">iter</span><span class="ss">(</span><span class="nv">f</span><span class="ss">)</span>
+<span class="o">&gt;</span><span class="w"> </span><span class="nv">type</span><span class="ss">(</span><span class="nv">it</span><span class="ss">)</span>
+<span class="o">&lt;</span><span class="nv">class</span><span class="w"> </span><span class="s1">&#39;__main__.FibonacciIterator&#39;</span><span class="o">&gt;</span>
+<span class="o">&gt;</span><span class="w"> </span><span class="k">next</span><span class="ss">(</span><span class="nv">it</span><span class="ss">)</span>
+<span class="mi">1</span>
+<span class="o">&gt;</span><span class="w"> </span><span class="k">next</span><span class="ss">(</span><span class="nv">it</span><span class="ss">)</span>
+<span class="mi">1</span>
+<span class="o">&gt;</span><span class="w"> </span><span class="k">next</span><span class="ss">(</span><span class="nv">it</span><span class="ss">)</span>
+<span class="mi">2</span>
+<span class="o">&gt;</span><span class="w"> </span><span class="k">next</span><span class="ss">(</span><span class="nv">it</span><span class="ss">)</span>
+<span class="mi">3</span>
+<span class="o">&gt;</span><span class="w"> </span><span class="k">next</span><span class="ss">(</span><span class="nv">it</span><span class="ss">)</span>
+<span class="mi">5</span>
+<span class="o">&gt;</span><span class="w"> </span><span class="k">next</span><span class="ss">(</span><span class="nv">it</span><span class="ss">)</span>
+<span class="nv">StopIteration</span>
+<span class="o">&gt;</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="nv">_</span><span class="w"> </span><span class="nv">in</span><span class="w"> </span><span class="nv">range</span><span class="ss">(</span><span class="mi">3</span><span class="ss">)</span>:
+<span class="w">      </span><span class="k">for</span><span class="w"> </span><span class="nv">x</span><span class="w"> </span><span class="nv">in</span><span class="w"> </span><span class="nv">f</span>:
+<span class="w">          </span><span class="nv">print</span><span class="ss">(</span><span class="nv">x</span>,<span class="w"> </span><span class="k">end</span><span class="o">=</span><span class="s1">&#39; &#39;</span><span class="ss">)</span>
+<span class="mi">1</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="mi">3</span><span class="w"> </span><span class="mi">5</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="mi">3</span><span class="w"> </span><span class="mi">5</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="mi">3</span><span class="w"> </span><span class="mi">5</span>
 </code></pre></div>
 
 </li>
@@ -1640,25 +1657,25 @@ exercise you should of course write the function from scratch). An example usage
 </li>
 </ul>
 <p><em>Example</em>. The figure shows the linked list <code>L</code> after executing the below first three <code>push</code> operations.</p>
-<div class="codehilite"><pre><span></span><code><span class="o">&gt;</span><span class="w"> </span><span class="n">L</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">LinkedList</span><span class="p">()</span><span class="w"></span>
-<span class="o">&gt;</span><span class="w"> </span><span class="n">L</span><span class="o">.</span><span class="n">push</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="w"></span>
-<span class="o">&gt;</span><span class="w"> </span><span class="n">L</span><span class="o">.</span><span class="n">push</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span><span class="w"></span>
-<span class="o">&gt;</span><span class="w"> </span><span class="n">L</span><span class="o">.</span><span class="n">push</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span><span class="w"></span>
-<span class="o">&gt;</span><span class="w"> </span><span class="n">list</span><span class="p">(</span><span class="n">L</span><span class="p">)</span><span class="w">  </span><span class="c1"># constructs a Python list by iterating over the elements of L</span><span class="w"></span>
-<span class="p">[</span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">]</span><span class="w"></span>
-<span class="o">&gt;</span><span class="w"> </span><span class="n">L</span><span class="o">.</span><span class="n">pop</span><span class="p">()</span><span class="w"></span>
-<span class="mi">3</span><span class="w"></span>
-<span class="o">&gt;</span><span class="w"> </span><span class="n">L2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">LinkedList</span><span class="p">()</span><span class="w"></span>
-<span class="o">&gt;</span><span class="w"> </span><span class="n">L2</span><span class="o">.</span><span class="n">push</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span><span class="w"></span>
-<span class="o">&gt;</span><span class="w"> </span><span class="n">L2</span><span class="o">.</span><span class="n">push</span><span class="p">(</span><span class="mi">6</span><span class="p">)</span><span class="w"></span>
-<span class="o">&gt;</span><span class="w"> </span><span class="n">L2</span><span class="o">.</span><span class="n">push</span><span class="p">(</span><span class="mi">7</span><span class="p">)</span><span class="w"></span>
-<span class="o">&gt;</span><span class="w"> </span><span class="n">L</span><span class="o">.</span><span class="n">extend</span><span class="p">(</span><span class="n">L2</span><span class="p">)</span><span class="w"></span>
-<span class="o">&gt;</span><span class="w"> </span><span class="n">L2</span><span class="o">.</span><span class="n">empty</span><span class="p">()</span><span class="w"></span>
-<span class="n">True</span><span class="w"></span>
-<span class="o">&gt;</span><span class="w"> </span><span class="n">list</span><span class="p">(</span><span class="n">L2</span><span class="p">)</span><span class="w"></span>
-<span class="p">[]</span><span class="w"></span>
-<span class="o">&gt;</span><span class="w"> </span><span class="n">list</span><span class="p">(</span><span class="n">L</span><span class="p">)</span><span class="w"></span>
-<span class="p">[</span><span class="mi">7</span><span class="p">,</span><span class="w"> </span><span class="mi">6</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">]</span><span class="w"></span>
+<div class="codehilite"><pre><span></span><code><span class="o">&gt;</span><span class="w"> </span><span class="n">L</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">LinkedList</span><span class="p">()</span>
+<span class="o">&gt;</span><span class="w"> </span><span class="n">L</span><span class="o">.</span><span class="n">push</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="o">&gt;</span><span class="w"> </span><span class="n">L</span><span class="o">.</span><span class="n">push</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+<span class="o">&gt;</span><span class="w"> </span><span class="n">L</span><span class="o">.</span><span class="n">push</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+<span class="o">&gt;</span><span class="w"> </span><span class="n">list</span><span class="p">(</span><span class="n">L</span><span class="p">)</span><span class="w">  </span><span class="c1"># constructs a Python list by iterating over the elements of L</span>
+<span class="p">[</span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">]</span>
+<span class="o">&gt;</span><span class="w"> </span><span class="n">L</span><span class="o">.</span><span class="n">pop</span><span class="p">()</span>
+<span class="mi">3</span>
+<span class="o">&gt;</span><span class="w"> </span><span class="n">L2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">LinkedList</span><span class="p">()</span>
+<span class="o">&gt;</span><span class="w"> </span><span class="n">L2</span><span class="o">.</span><span class="n">push</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+<span class="o">&gt;</span><span class="w"> </span><span class="n">L2</span><span class="o">.</span><span class="n">push</span><span class="p">(</span><span class="mi">6</span><span class="p">)</span>
+<span class="o">&gt;</span><span class="w"> </span><span class="n">L2</span><span class="o">.</span><span class="n">push</span><span class="p">(</span><span class="mi">7</span><span class="p">)</span>
+<span class="o">&gt;</span><span class="w"> </span><span class="n">L</span><span class="o">.</span><span class="n">extend</span><span class="p">(</span><span class="n">L2</span><span class="p">)</span>
+<span class="o">&gt;</span><span class="w"> </span><span class="n">L2</span><span class="o">.</span><span class="n">empty</span><span class="p">()</span>
+<span class="n">True</span>
+<span class="o">&gt;</span><span class="w"> </span><span class="n">list</span><span class="p">(</span><span class="n">L2</span><span class="p">)</span>
+<span class="p">[]</span>
+<span class="o">&gt;</span><span class="w"> </span><span class="n">list</span><span class="p">(</span><span class="n">L</span><span class="p">)</span>
+<span class="p">[</span><span class="mi">7</span><span class="p">,</span><span class="w"> </span><span class="mi">6</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">]</span>
 </code></pre></div>
 
 <p><em>Note</em>. Linked lists are standard in many languages, e.g. in C++ as <a target="_blank" href="https://en.cppreference.com/w/cpp/container/list"><code>std::list</code></a> and in Java <a target="_blank" href="https://docs.oracle.com/javase/10/docs/api/java/util/LinkedList.html"><code>java.util.LinkedList</code></a> - just not in Python. (Doubly) linked lists benefit from being efficient to concatenate and to support the efficient deletion of an arbitrary element in the middle of the list, but suffer from having no efficient index lookup.</p>
@@ -1738,24 +1755,24 @@ based on a regular expression capturing the set of separator symbols <code>!</co
 <div class="exercise">
 <h2>Exercise 22.3 (regular expression)</h2>
 <p>In exercise 16.2 (missing spaces) the problem statement includes the below lines. Explain what the following lines do.</p>
-<div class="codehilite"><pre><span></span><code><span class="nv">words</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>[<span class="nv">w</span>.<span class="nv">split</span><span class="ss">(</span><span class="s1">&#39;;&#39;</span><span class="ss">)</span>[<span class="mi">0</span>]<span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="nv">w</span><span class="w"> </span><span class="nv">in</span><span class="w"> </span><span class="nv">words</span>]<span class="w"></span>
-<span class="nv">words</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>{<span class="nv">re</span>.<span class="nv">sub</span><span class="ss">(</span><span class="s1">&#39;^[1-9][.] |[ .]&#39;</span>,<span class="w"> </span><span class="s1">&#39;&#39;</span>,<span class="w"> </span><span class="nv">w</span><span class="ss">)</span>.<span class="nv">lower</span><span class="ss">()</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="nv">w</span><span class="w"> </span><span class="nv">in</span><span class="w"> </span><span class="nv">words</span>}<span class="w"></span>
+<div class="codehilite"><pre><span></span><code><span class="nv">words</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>[<span class="nv">w</span>.<span class="nv">split</span><span class="ss">(</span><span class="s1">&#39;;&#39;</span><span class="ss">)</span>[<span class="mi">0</span>]<span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="nv">w</span><span class="w"> </span><span class="nv">in</span><span class="w"> </span><span class="nv">words</span>]
+<span class="nv">words</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>{<span class="nv">re</span>.<span class="nv">sub</span><span class="ss">(</span><span class="s1">&#39;^[1-9][.] |[ .]&#39;</span>,<span class="w"> </span><span class="s1">&#39;&#39;</span>,<span class="w"> </span><span class="nv">w</span><span class="ss">)</span>.<span class="nv">lower</span><span class="ss">()</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="nv">w</span><span class="w"> </span><span class="nv">in</span><span class="w"> </span><span class="nv">words</span>}
 </code></pre></div>
 </div>
 <div class="exercise">
 <h2>Exercise 22.4 (find frequent phrases)</h2>
 <p>Find all occurences of the form "the <em><code>word</code></em>" in the file <a target="_blank" href="http://www.gutenberg.org/ebooks/1150.txt.utf-8">saxo.txt</a> (see Exercise 4.8) using a regular expression (convert the string to lower case before searching). Generate a list of the most frequent occurences, like the below:</p>
-<div class="codehilite"><pre><span></span><code><span class="mf">410</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">king</span><span class="w"></span>
-<span class="mf">138</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">danes</span><span class="w"></span>
-<span class="mf">121</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">enemy</span><span class="w"></span>
-<span class="mf">110</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">same</span><span class="w"></span>
-<span class="w"> </span><span class="mf">87</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">other</span><span class="w"></span>
-<span class="w"> </span><span class="mf">83</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">first</span><span class="w"></span>
-<span class="w"> </span><span class="mf">80</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">most</span><span class="w"></span>
-<span class="w"> </span><span class="mf">64</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">sword</span><span class="w"></span>
-<span class="w"> </span><span class="mf">63</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">battle</span><span class="w"></span>
-<span class="w"> </span><span class="mf">62</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">sea</span><span class="w"></span>
-<span class="w"> </span><span class="mf">61</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">man</span><span class="w"></span>
+<div class="codehilite"><pre><span></span><code><span class="mf">410</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">king</span>
+<span class="mf">138</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">danes</span>
+<span class="mf">121</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">enemy</span>
+<span class="mf">110</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">same</span>
+<span class="w"> </span><span class="mf">87</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">other</span>
+<span class="w"> </span><span class="mf">83</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">first</span>
+<span class="w"> </span><span class="mf">80</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">most</span>
+<span class="w"> </span><span class="mf">64</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">sword</span>
+<span class="w"> </span><span class="mf">63</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">battle</span>
+<span class="w"> </span><span class="mf">62</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">sea</span>
+<span class="w"> </span><span class="mf">61</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">man</span>
 </code></pre></div>
 
 <p><em>Note</em>. There might me a linebreak between <code>the</code> and <em><code>word</code></em> (e.g. <code>the king</code> only occurs 387 times on a single line).</p>
