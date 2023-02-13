@@ -330,7 +330,7 @@ c = r.step
 <p>(<em>x</em><sub>0</sub> * 2<sup>15</sup> + <em>x</em><sub>1</sub> * 2<sup>14</sup> + &middot;&middot;&middot; + <em>x</em><sub>14</sub> * 2<sup>1</sup> + <em>x</em><sub>15</sub> * 2<sup>0</sup>) mod 11 = 1</p>
 </blockquote>
 <p>Write a program that asks for an ORCID, and checks if it is a valid ORCID, i.e. checks if the length, format, and checksum are correct.</p>
-<p><em>Hint</em>. You can use the string method <code>isdigit()</code> to test if a string is a digit, e.g. <code>'7'.isdigit()</code> returns <code>True</code>.</p>
+<p><em>Hint</em>. You can use the string method <code>isdigit()</code> to test if a string is a digit, e.g. <code>'7'.isdigit()</code> returns <code>True</code>, and in the above "mod" denotes the modulo operation that returns the remainder by division, that in Python can be computed using the <code>%</code> operator, e.g. <code>8 % 5 == 3</code>.</p>
 </div>
 <a name="handin2"></a>
 <div class="handin">
