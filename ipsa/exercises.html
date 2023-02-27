@@ -601,7 +601,7 @@ Right: (&#39;A&#39;, (&#39;G&#39;, ((&#39;E&#39;, &#39;F&#39;), ((&#39;B&#39;, &
 <h2>Exercise 8.3 (tree relabeling)</h2>
 <p>Make a recursive function <code>relabel(tree, new_names)</code> that takes a tree <code>tree</code> and a dictionary <code>new_names = {old_name: new_name, ...}</code>, and returns a new tree where labels in the dictionary <code>new_names</code> are replaced by the corresponding values in the dictionary. Leaves not in the dictionary remain unchanged.</p>
 <p><em>Example</em>. <code>relabel(('a', ('b', 'c')), {'a': 'x', 'c': 'y'})</code> should return <code>('x', ('b', 'y'))</code>.</p>
-<p><em>Hint</em>. Start making <code>relabel</code> for binary trees only.</p>
+<p><em>Hint</em>. Start making <code>relabel</code> for binary trees only. Use the method <code>isinstance</code> to check if a value is of class <code>tuple</code> or a <code>str</code>.</p>
 </div>
 <div class="exercise">
 <h2>Exercise 8.4* (validate leaf-labeled binary trees)</h2>
