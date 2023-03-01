@@ -598,13 +598,18 @@ Right: (&#39;A&#39;, (&#39;G&#39;, ((&#39;E&#39;, &#39;F&#39;), ((&#39;B&#39;, &
 <p>Make a recursive function <code>subsets(L)</code> that given a list <code>L</code> returns a list of all subsets of <code>L</code> (each subset being a list). E.g. <code>subsets([1, 2])</code> should return <code>[[], [1], [2], [1, 2]]</code>. The order of the returned lists can be arbitrary.</p>
 </div>
 <div class="exercise">
-<h2>Exercise 8.3 (tree relabeling)</h2>
+<h2>Exercise 8.3 (binary strings)</h2>
+<p>Create a recursive function <code>binary(n, k)</code> that returns a list of all binary strings of length <code>n</code> and containing <code>k</code> ones (0 &le; <code>k</code> &le; <code>n</code>).</p>
+<p>E.g. <code>binary(5, 3) = ['00111', '01011', '01101', '01110', '10011', '10101', '10110', '11001', '11010', '11100']</code>.</p>
+</div>
+<div class="exercise">
+<h2>Exercise 8.4 (tree relabeling)</h2>
 <p>Make a recursive function <code>relabel(tree, new_names)</code> that takes a tree <code>tree</code> and a dictionary <code>new_names = {old_name: new_name, ...}</code>, and returns a new tree where labels in the dictionary <code>new_names</code> are replaced by the corresponding values in the dictionary. Leaves not in the dictionary remain unchanged.</p>
 <p><em>Example</em>. <code>relabel(('a', ('b', 'c')), {'a': 'x', 'c': 'y'})</code> should return <code>('x', ('b', 'y'))</code>.</p>
 <p><em>Hint</em>. Start making <code>relabel</code> for binary trees only. Use the method <code>isinstance</code> to check if a value is of class <code>tuple</code> or a <code>str</code>.</p>
 </div>
 <div class="exercise">
-<h2>Exercise 8.4* (validate leaf-labeled binary trees)</h2>
+<h2>Exercise 8.5* (validate leaf-labeled binary trees)</h2>
 <p>Assume we want to represent binary trees, where each leaf has a string as a label, by nested tuples. We require the leaves are labeled with distinct non-empty strings and all non-leaf nodes have exactly two children. E.g. <code>((('A', 'B'), 'C'), ('D', ('F', 'E')))</code> is a valid binary tree.</p>
 <ol>
 <li>
@@ -617,7 +622,7 @@ Right: (&#39;A&#39;, (&#39;G&#39;, ((&#39;E&#39;, &#39;F&#39;), ((&#39;B&#39;, &
 <p><em>Hint</em>. Use the method <code>isinstance</code> to check if a value is of class <code>tuple</code> or a <code>str</code>, and use a recursive function to traverse a tree. Collect all leaf labels in a list, and check if all leaves are distinct by converting to <code>set</code>.</p>
 </div>
 <div class="exercise">
-<h2>Exercise 8.5* (subtree extraction)</h2>
+<h2>Exercise 8.6* (subtree extraction)</h2>
 <p>Make a recursive function <code>extract(tree, leaves)</code> that takes a binary tree <code>tree</code> and a set of <code>leaves</code>, generates a new binary tree only containing the leaves in <code>leaves</code>, i.e. repeatedly all other leaves are pruned, previous internal nodes with no children are removed, and previous internal nodes with only one child are replaced by the child.</p>
 <p><em>Example</em>. <code>extract(((('a', 'b'), 'c'), ((('d', 'e'), 'f'), 'g')), {'a', 'c', 'd', 'f', 'g'})</code> should return <code>(('a', 'c'), (('d', 'f'), 'g'))</code> (see illustration below where leaves <code>'b'</code> and <code>'e'</code> have been removed).</p>
 <div class="codehilite"><pre><span></span><code>           before                   after
@@ -641,7 +646,7 @@ Right: (&#39;A&#39;, (&#39;G&#39;, ((&#39;E&#39;, &#39;F&#39;), ((&#39;B&#39;, &
 </div>
 <a name="handin4"></a>
 <div class="handin">
-<h2>Exercise 8.6 - handin 4 (triplet distance - part II)</h2>
+<h2>Exercise 8.7 - handin 4 (triplet distance - part II)</h2>
 <p><em>This handin is a continuation of the previous handin. The code from the previous handin should be reused in this exercise.  In this second part the aim should be to write elegant recursive code using Python's tuples and list comprehensions</em>.</p>
 <ol>
 <li>
