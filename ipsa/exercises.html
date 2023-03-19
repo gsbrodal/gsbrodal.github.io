@@ -1227,7 +1227,20 @@ during the recursion when the first solution has been found. Do not generate an 
 <a name="lecture15"></a>
 <h1>Lecture 15 (Decorators)</h1>
 <div class="exercise">
-<h2>Exercise 15.1 (decorator returns int)</h2>
+<h2>Exercise 15.1 (integer rounding)</h2>
+<p>Create a function decorator <code>@integer_round</code> that can be applied to a function
+returning a float. The decorated function should apply the builtin function
+<code>round</code> to the returned float value.</p>
+<p>An example using the decorator is</p>
+<div class="codehilite"><pre><span></span><code><span class="nv">@integer_round</span>
+<span class="n">def</span><span class="w"> </span><span class="n">f</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="err">:</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">**</span><span class="w"> </span><span class="mf">0.5</span><span class="w">  </span><span class="err">#</span><span class="w"> </span><span class="nf">square</span><span class="w"> </span><span class="n">root</span>
+</code></pre></div>
+
+<p>where <code>f(30)</code> should return <code>5</code>, and <code>f(31)</code> should return <code>6</code>.</p>
+</div>
+<div class="exercise">
+<h2>Exercise 15.2 (decorator returns int)</h2>
 <p>Create a function decorator <code>@enforce_integer_return</code> that checks if a function returns a value of type <code>int</code> and raises an <code>AssertionError</code> if the result is of a different type. The decorator could e.g. be used as in the example below.</p>
 <div class="codehilite"><pre><span></span><code><span class="o">&gt;</span><span class="w"> </span><span class="nv">@enforce_integer_return</span>
 <span class="w">  </span><span class="n">def</span><span class="w"> </span><span class="n">my_sum</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="p">)</span><span class="err">:</span>
@@ -1242,7 +1255,7 @@ during the recursion when the first solution has been found. Do not generate an 
 </code></pre></div>
 </div>
 <div class="exercise">
-<h2>Exercise 15.2 (box it)</h2>
+<h2>Exercise 15.3 (box it)</h2>
 <p>Create a decorator <code>@BoxIt</code> for functions returning a string. The output of a function returning a string should be
 converted into a new string, with the output put into a 'box' (see example below).  You can assume that the string returned by a function only consist of a single line of text, i.e. the string does not contain <code>'\n'</code>.</p>
 <div class="codehilite"><pre><span></span><code><span class="nv">@BoxIt</span>
@@ -1259,7 +1272,7 @@ converted into a new string, with the output put into a 'box' (see example below
 </code></pre></div>
 </div>
 <div class="exercise">
-<h2>Exercise 15.3 (multiline box it) [optional]</h2>
+<h2>Exercise 15.4 (multiline box it) [optional]</h2>
 <p>Generalize your solution to Exercise 15.3, so that it can handle multiline output.</p>
 <div class="codehilite"><pre><span></span><code><span class="nv">@BoxIt</span>
 <span class="n">def</span><span class="w"> </span><span class="n">test</span><span class="p">()</span><span class="err">:</span>
@@ -1288,7 +1301,7 @@ converted into a new string, with the output put into a 'box' (see example below
 </code></pre></div>
 </div>
 <div class="exercise">
-<h2>Exercise 15.4** (decorator composition) [optional]</h2>
+<h2>Exercise 15.5** (decorator composition) [optional]</h2>
 <p>If you repeatedly apply the same set of decorators to your functions, it might be convenient to compose these decorators into one decorator.</p>
 <p>Recall that:</p>
 <div class="codehilite"><pre><span></span><code><span class="nv">@dec3</span>
