@@ -1352,19 +1352,19 @@ converted into a new string, with the output put into a 'box' (see example below
 
 <span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">wrapper</span>
 
-<span class="nv">@compose</span><span class="p">(</span><span class="n">add_three</span><span class="p">,</span><span class="w"> </span><span class="k">double</span><span class="p">,</span><span class="w"> </span><span class="n">add_three</span><span class="p">)</span>
+<span class="nv">@compose</span><span class="p">(</span><span class="k">double</span><span class="p">,</span><span class="w"> </span><span class="k">double</span><span class="p">,</span><span class="w"> </span><span class="n">add_three</span><span class="p">)</span>
 <span class="n">def</span><span class="w"> </span><span class="n">seven</span><span class="p">()</span><span class="err">:</span>
 <span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="mi">7</span>
 
-<span class="k">print</span><span class="p">(</span><span class="n">seven</span><span class="p">())</span><span class="w">  </span><span class="err">#</span><span class="w"> </span><span class="n">prints</span><span class="w"> </span><span class="mi">23</span>
+<span class="k">print</span><span class="p">(</span><span class="n">seven</span><span class="p">())</span><span class="w">  </span><span class="err">#</span><span class="w"> </span><span class="n">prints</span><span class="w"> </span><span class="mi">40</span>
 
-<span class="n">my_decorator</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">compose</span><span class="p">(</span><span class="n">add_three</span><span class="p">,</span><span class="w"> </span><span class="k">double</span><span class="p">,</span><span class="w"> </span><span class="n">add_three</span><span class="p">)</span>
+<span class="n">my_decorator</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">compose</span><span class="p">(</span><span class="k">double</span><span class="p">,</span><span class="w"> </span><span class="k">double</span><span class="p">,</span><span class="w"> </span><span class="n">add_three</span><span class="p">)</span>
 
 <span class="nv">@my_decorator</span>
 <span class="n">def</span><span class="w"> </span><span class="n">seven</span><span class="p">()</span><span class="err">:</span>
 <span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="mi">7</span>
 
-<span class="k">print</span><span class="p">(</span><span class="n">seven</span><span class="p">())</span><span class="w">  </span><span class="err">#</span><span class="w"> </span><span class="n">prints</span><span class="w"> </span><span class="mi">23</span>
+<span class="k">print</span><span class="p">(</span><span class="n">seven</span><span class="p">())</span><span class="w">  </span><span class="err">#</span><span class="w"> </span><span class="n">prints</span><span class="w"> </span><span class="mi">40</span>
 </code></pre></div>
 
 <p><em>Note</em>. The function <code>compose</code> mathematically corresponds to <a target="_blank" href="https://en.wikipedia.org/wiki/Function_composition">function composition</a>.</p>
@@ -1375,7 +1375,7 @@ converted into a new string, with the output put into a 'box' (see example below
 <h2>Exercise 16.1 (coins)</h2>
 <p>In this exercise we would like to achive some currency amount using the fewest coins available in the currency.  We assume that the set of different coin values of the currency is represented by a tuple, e.g. <code>coins = (1, 2, 5, 10, 20)</code> could represent the Danish coins.</p>
 <p>In this exercise you can assume that all amounts and coins have integer values, and that there is coin of value 1 in the currency - this guarantees that all values can be expressed using the available coin values. Furthermore you might assume that all amounts are ≤ 200.</p>
-<p>Consider the above <code>coints</code>. The amount 33 can be achieved in many different ways, e.g. 10 + 10 + 5 + 5 + 1 + 1 + 1 and 20 + 10 + 2 + 1. The last sum is a solution using the fewest coins.</p>
+<p>Consider the above <code>coins</code>. The amount 33 can be achieved in many different ways, e.g. 10 + 10 + 5 + 5 + 1 + 1 + 1 and 20 + 10 + 2 + 1. The last sum is a solution using the fewest coins.</p>
 <p>A simple <em>greedy strategy</em> to construct a list of coins for a given value, is to repeatedly take the coin with largest value until the remaining value is less that the value of the largest coin. Then repeatedly take the second largest valued coin as long as possible, etc. For some set of coins this strategy is guaranteeed to always find an optimal solution, like for the above tuple <code>coins</code>. But in general this strategy will not always find the optimal stragey, e.g. for the value 14 and possible coins (1, 7, 10), the greedy strategy will find the solution 10 + 1 + 1 + 1 + 1, whereas an optimal solution using the fewest coins is 7 + 7.</p>
 <ol>
 <li>
@@ -1385,8 +1385,8 @@ converted into a new string, with the output put into a 'box' (see example below
 <li>
 <p>Implement a recursive function <code>number_of_coins(value, coins)</code> that returns the numer of coins in an <em>optimal solution</em>. The function can implement the following recursive expression:</p>
 <ul>
-<li><em>number_of_coins</em>(<em>value</em>) = 0 if  <em>value</em> = 0, and</li>
-<li><em>number_of_coins</em>(<em>value</em>) = 1 + min<sub><em>coin</em> in <code>coins</code> where <em>coin</em> ≤ <em>value</em></sub> <em>number_of_coins</em>(<em>value</em> - <em>coin</em>) if <em>value</em> &gt; 0.</li>
+<li>If  <em>value</em> = 0: <em>number_of_coins</em>(<em>value</em>, <em>coins</em>) = 0</li>
+<li>If  <em>value</em> &gt; 0: <em>number_of_coins</em>(<em>value</em>, <em>coins</em>) = 1 + min<sub><em>coin</em> in <em>coins</em> where <em>coin</em> ≤ <em>value</em></sub> <em>number_of_coins</em>(<em>value</em> - <em>coin</em>, <em>coins</em>)</li>
 </ul>
 <p>To speed up  your computation use memoization, e.g. using the decorator <code>@memoized</code> (without memoization, the second example below will run for a very very long time).</p>
 <p><em>Example</em>. <code>number_of_coins(35, (1, 7, 10))</code> should return <code>5</code>, and <code>number_of_coins(100, (1, 2))</code> should return <code>50</code>.</p>
