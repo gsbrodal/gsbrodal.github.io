@@ -1,12 +1,17 @@
 INTRODUKTION TIL PROGRAMMERING MED VIDENSKABELIGE ANVENDELSER
 =============================================================
 
-  * Eksamen 10. juni 2022.
+  * Eksamen 17. juni 2023.
 
   * Hjælpemidler: alle, inkl. computer, høretelefoner og internet.
 
+  * ITX Flex skal være aktiveret under eksamen.
+
   * Det er ikke lovligt at kommunikere med andre om eksamensopgaverne
     under eksamen.
+
+  * Det er ikke tilladt at bruge en AI assistant som f.eks.
+    GitHub Copilot eller ChatGPT.
 
   * Sørg for at angive en kommentar i koden med en kildehenvisning,
     hvis man anvender kode man har fundet på internettet.
@@ -27,18 +32,9 @@ INTRODUKTION TIL PROGRAMMERING MED VIDENSKABELIGE ANVENDELSER
   * Vægtningen af opgaverne:
 
      Problem  Point  Navn
-        A       6    INTERVAL SUM    
-        B       6    MAXSUM
-        C       6    BLOCK
-        D       6    PLUSMINUS
-        E       6    CAPITAL
-        F      10    SELECT
-        G      10    FRAGILE VALUES
-        H      10    DRAW
-        I      10    RESTRICTED QUEENS
-        J      10    RESTRICTED LABELS
-        K      10    REVERSIBLE
-        L      10    SIGNED SUBSET
+        A
+        B
+        C
 
     Totalt 100 point
 
@@ -46,8 +42,8 @@ INTRODUKTION TIL PROGRAMMERING MED VIDENSKABELIGE ANVENDELSER
 
        A.py, B.py, ... og filen run_tests.log.
 
-    Man må meget gerne aflevere hele eksamensfolderen med tests, ikke
-    besvarede opgaver etc.
+    Det anbefales at man afleverer hele eksamensfolderen med tests, 
+    ikke besvarede opgaver etc.
     
     Information om hvordan man laver en zip fil under macOS og
     Windows 10 findes her:
@@ -60,7 +56,7 @@ INTRODUKTION TIL PROGRAMMERING MED VIDENSKABELIGE ANVENDELSER
     run_tests.log. Som kontrol, vil indholdet af run_tests.log blive
     sammenholdet med resultatet af den efterfølgende evaluering.
  
-  * Opgaverne skal laves i Python 3.10. Der må kun bruges de standard
+  * Opgaverne skal laves i Python 3.11. Der må kun bruges de standard
     moduler der følger med Python (f.eks. random, math, collections,
     etc., se https://docs.python.org/3/library/), såfremt der ikke er
     nævnt specifikke andre moduler i opgaveformuleringen.

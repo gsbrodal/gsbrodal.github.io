@@ -1607,27 +1607,27 @@ flow = 4
 </li>
 <li>
 <p><strong>Fibonacci iterator</strong>: Create an iterable <code>class Fibonacci</code> with methods <code>__init__</code> and <code>__iter__</code> and an iterator <code>class FibonacciIterator</code> with methods <code>__init__</code> and <code>__next__</code>. The object creation <code>Fibonacci(n)</code> should create an iterable object for the first <code>n</code> Fibonacci numbers, and the <code>__iter__</code> method should return an instance of <code>FibonacciIterator</code>. In the <code>class FibonacciIterator</code> implement the method <code>__next__</code>, that either returns the next Fibonacci number or raises a <code>StopIteration</code> exception.</p>
-<div class="codehilite"><pre><span></span><code><span class="o">&gt;</span><span class="w"> </span><span class="nv">f</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">Fibonacci</span><span class="ss">(</span><span class="mi">5</span><span class="ss">)</span>
-<span class="o">&gt;</span><span class="w"> </span><span class="nv">type</span><span class="ss">(</span><span class="nv">f</span><span class="ss">)</span>
-<span class="o">&lt;</span><span class="nv">class</span><span class="w"> </span><span class="s1">&#39;__main__.Fibonacci&#39;</span><span class="o">&gt;</span>
-<span class="o">&gt;</span><span class="w"> </span><span class="nv">it</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">iter</span><span class="ss">(</span><span class="nv">f</span><span class="ss">)</span>
-<span class="o">&gt;</span><span class="w"> </span><span class="nv">type</span><span class="ss">(</span><span class="nv">it</span><span class="ss">)</span>
-<span class="o">&lt;</span><span class="nv">class</span><span class="w"> </span><span class="s1">&#39;__main__.FibonacciIterator&#39;</span><span class="o">&gt;</span>
-<span class="o">&gt;</span><span class="w"> </span><span class="k">next</span><span class="ss">(</span><span class="nv">it</span><span class="ss">)</span>
+<div class="codehilite"><pre><span></span><code><span class="p">&gt;</span><span class="w"> </span><span class="nx">f</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nx">Fibonacci</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+<span class="p">&gt;</span><span class="w"> </span><span class="k">type</span><span class="p">(</span><span class="nx">f</span><span class="p">)</span>
+<span class="p">&lt;</span><span class="kd">class</span><span class="w"> </span><span class="err">&#39;</span><span class="nx">__main__</span><span class="p">.</span><span class="nx">Fibonacci</span><span class="err">&#39;</span><span class="p">&gt;</span>
+<span class="p">&gt;</span><span class="w"> </span><span class="nx">it</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nx">iter</span><span class="p">(</span><span class="nx">f</span><span class="p">)</span>
+<span class="p">&gt;</span><span class="w"> </span><span class="k">type</span><span class="p">(</span><span class="nx">it</span><span class="p">)</span>
+<span class="p">&lt;</span><span class="kd">class</span><span class="w"> </span><span class="err">&#39;</span><span class="nx">__main__</span><span class="p">.</span><span class="nx">FibonacciIterator</span><span class="err">&#39;</span><span class="p">&gt;</span>
+<span class="p">&gt;</span><span class="w"> </span><span class="nx">next</span><span class="p">(</span><span class="nx">it</span><span class="p">)</span>
 <span class="mi">1</span>
-<span class="o">&gt;</span><span class="w"> </span><span class="k">next</span><span class="ss">(</span><span class="nv">it</span><span class="ss">)</span>
+<span class="p">&gt;</span><span class="w"> </span><span class="nx">next</span><span class="p">(</span><span class="nx">it</span><span class="p">)</span>
 <span class="mi">1</span>
-<span class="o">&gt;</span><span class="w"> </span><span class="k">next</span><span class="ss">(</span><span class="nv">it</span><span class="ss">)</span>
+<span class="p">&gt;</span><span class="w"> </span><span class="nx">next</span><span class="p">(</span><span class="nx">it</span><span class="p">)</span>
 <span class="mi">2</span>
-<span class="o">&gt;</span><span class="w"> </span><span class="k">next</span><span class="ss">(</span><span class="nv">it</span><span class="ss">)</span>
+<span class="p">&gt;</span><span class="w"> </span><span class="nx">next</span><span class="p">(</span><span class="nx">it</span><span class="p">)</span>
 <span class="mi">3</span>
-<span class="o">&gt;</span><span class="w"> </span><span class="k">next</span><span class="ss">(</span><span class="nv">it</span><span class="ss">)</span>
+<span class="p">&gt;</span><span class="w"> </span><span class="nx">next</span><span class="p">(</span><span class="nx">it</span><span class="p">)</span>
 <span class="mi">5</span>
-<span class="o">&gt;</span><span class="w"> </span><span class="k">next</span><span class="ss">(</span><span class="nv">it</span><span class="ss">)</span>
-<span class="nv">StopIteration</span>
-<span class="o">&gt;</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="nv">_</span><span class="w"> </span><span class="nv">in</span><span class="w"> </span><span class="nv">range</span><span class="ss">(</span><span class="mi">3</span><span class="ss">)</span>:
-<span class="w">      </span><span class="k">for</span><span class="w"> </span><span class="nv">x</span><span class="w"> </span><span class="nv">in</span><span class="w"> </span><span class="nv">f</span>:
-<span class="w">          </span><span class="nv">print</span><span class="ss">(</span><span class="nv">x</span>,<span class="w"> </span><span class="k">end</span><span class="o">=</span><span class="s1">&#39; &#39;</span><span class="ss">)</span>
+<span class="p">&gt;</span><span class="w"> </span><span class="nx">next</span><span class="p">(</span><span class="nx">it</span><span class="p">)</span>
+<span class="nx">StopIteration</span>
+<span class="p">&gt;</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="nx">_</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="nx">range</span><span class="p">(</span><span class="mi">3</span><span class="p">):</span>
+<span class="w">      </span><span class="k">for</span><span class="w"> </span><span class="nx">x</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="nx">f</span><span class="p">:</span>
+<span class="w">          </span><span class="nx">print</span><span class="p">(</span><span class="nx">x</span><span class="p">,</span><span class="w"> </span><span class="nx">end</span><span class="p">=</span><span class="sc">&#39; &#39;</span><span class="p">)</span>
 <span class="mi">1</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="mi">3</span><span class="w"> </span><span class="mi">5</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="mi">3</span><span class="w"> </span><span class="mi">5</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="mi">3</span><span class="w"> </span><span class="mi">5</span>
 </code></pre></div>
 
