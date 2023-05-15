@@ -1911,7 +1911,12 @@ Remember to add the JDK folder containing <code>javac</code>, e.g. "C:\Program F
 <h2>Exercise 26.3 (down payment in Java)</h2>
 <p>Implement Exercise 2.8 (down payment) in Java.</p>
 <p>To read a double (64 bit floating point value) from the input you can use the following statement:</p>
-<div class="codehilite"><pre><span></span><code>double d = Double.parseDouble(System.console().readLine());
+<div class="codehilite"><pre><span></span><code>double loan = Double.parseDouble(System.console().readLine());
+</code></pre></div>
+
+<p>or using the <code>java.util.Scanner</code> class:</p>
+<div class="codehilite"><pre><span></span><code>Scanner sc = new Scanner(System.in);
+double loan = sc.nextDouble();
 </code></pre></div>
 </div>
 <a name="lecture27"></a>
