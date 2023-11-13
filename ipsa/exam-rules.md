@@ -14,7 +14,7 @@ program to test your solution during the exam, where it tests if your code gener
 _Communication with others about the exam is not permitted during the exam. Students are required to bring their own PC and have
 [ITX-Flex](https://studerende.au.dk/en/digital-eksamen/information-about-itx-flex/) turned on throughout the entire exam. Tablets are not allowed._
 
-_It is exam cheating, if you use AI assistant for the exam (ChatGPT, GitHub Copilot, etc.), as the exam assignment has not been solved independently and individually._
+_It is exam cheating, if you use an AI assistant for the exam (ChatGPT, GitHub Copilot, etc.), as the exam assignment has not been solved independently and individually._
 
 ## ITX-Flex and Linux
 
