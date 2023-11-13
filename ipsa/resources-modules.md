@@ -1,6 +1,6 @@
 # Python resources
 
-Below is a list of resources for information on Python. For information on specific Python try to [Google](https://www.google.com/search?q=python) it with "python _topic_, e.g. "[python string concatenation](https://www.google.com/search?q=python+string+concatenation). Many of the obvious questions have been asked and answered on e.g. [stackoverflow.com](https://stackoverflow.com).
+Below is a list of resources for information on Python. For information on specific Python try to [Google](https://www.google.com/search?q=python) it with "python _topic_", e.g. ["python string concatenation"](https://www.google.com/search?q=python+string+concatenation). Many of the obvious questions have been asked and answered on e.g. [stackoverflow.com](https://stackoverflow.com).
 
 ## Python programming language
 

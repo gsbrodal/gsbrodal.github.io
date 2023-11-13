@@ -15,4 +15,4 @@ Below is an estimation of the expected number of hours required for the course d
 | **Total**                             |               | **250** |
 
 According to the [ECTS system](https://ufm.dk/uddannelse/anerkendelse-og-dokumentation/dokumentation/ects),
-a 10 course corresponds to an expected total student workload of 250-300 hours.
+a 10 ECTS course corresponds to an expected total student workload of 250-300 hours.
