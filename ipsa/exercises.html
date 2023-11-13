@@ -93,24 +93,24 @@ The program should ask the user for the four end-points <em>a</em>, <em>b</em>, 
 <div class="exercise">
 <h2>Exercise 2.4 (integer square root)</h2>
 <p>Consider the following program for finding the integer square root of a non-negative integer:</p>
-<div class="codehilite"><pre><span></span><code><span class="nv">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">int</span><span class="ss">(</span><span class="nv">input</span><span class="ss">(</span><span class="s1">&#39;x: &#39;</span><span class="ss">))</span>
+<div class="codehilite"><pre><span></span><code>x = int(input(&#39;x: &#39;))
 
-<span class="nv">low</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span>
-<span class="nv">high</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">x</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span>
+low = 0
+high = x + 1
 
-<span class="k">while</span><span class="w"> </span><span class="nv">True</span>:<span class="w">  </span>#<span class="w"> </span><span class="nv">low</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="nv">sqrt</span><span class="ss">(</span><span class="nv">x</span><span class="ss">)</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="nv">high</span>
-<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="nv">low</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="nv">high</span>:
-<span class="w">        </span><span class="k">break</span>
+while True:  # low &lt;= sqrt(x) &lt; high
+    if low + 1 == high:
+        break
 
-<span class="w">    </span><span class="nv">mid</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ss">(</span><span class="nv">high</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nv">low</span><span class="ss">)</span><span class="w"> </span><span class="o">//</span><span class="w"> </span><span class="mi">2</span>
+    mid = (high + low) // 2
 
-<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="nv">mid</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="nv">mid</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="nv">x</span>:
-<span class="w">        </span><span class="nv">low</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">mid</span>
-<span class="w">        </span><span class="k">continue</span>
+    if mid * mid &lt;= x:
+        low = mid
+        continue
 
-<span class="w">    </span><span class="nv">high</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">mid</span>
+    high = mid
 
-<span class="nv">print</span><span class="ss">(</span><span class="nv">low</span><span class="ss">)</span><span class="w">  </span>#<span class="w"> </span><span class="nv">low</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">floor</span><span class="ss">(</span><span class="nv">sqrt</span><span class="ss">(</span><span class="nv">x</span><span class="ss">))</span>
+print(low)  # low = floor(sqrt(x))
 </code></pre></div>
 
 <ol>
@@ -126,7 +126,7 @@ The program should ask the user for the four end-points <em>a</em>, <em>b</em>, 
 <h2>Exercise 2.5 (primality test)</h2>
 <p>Write a naive program that tests if a small number <em>x</em> ≥ 2 is a prime number.</p>
 <p>Recall that a number is a <a target="_blank" href="https://en.wikipedia.org/wiki/Prime_number">prime number</a> if and only if the only numbers dividing the number is 1 and the number itself, like the numbers 2, 3, 5, 7, 11, 13...</p>
-<p>The program should ask the user for the number <em>x</em> and print wheter the number is a prime or not. If <em>x</em> is not a prime, it should print a divisor/factor in the range [2, <em>x</em> - 1].</p>
+<p>The program should ask the user for the number <em>x</em> and print whether the number is a prime or not. If <em>x</em> is not a prime, it should print a divisor/factor in the range [2, <em>x</em> - 1].</p>
 <p><em>Hint</em>. Try all relevant factors. Use the <code>%</code> operator to compute the remainder by integer division, e.g. <code>13 % 5 == 3</code>.</p>
 </div>
 <div class="exercise">
@@ -141,7 +141,7 @@ Note that for <em>x</em> = 126, the prime factor 3 should be printed two times.<
 <h2>Exercise 2.7* (Newton-Raphson square root)</h2>
 <p>Use the Newton-Raphson method to compute the square root of a float <em>n</em> ≥ 1.0, by finding a root of the function
 <em>f</em>(<em>x</em>) = <em>x</em><sup>2</sup> - <em>n</em> and letting your initial approximation of the root be <em>x</em> = <em>n</em>.
-Recall <em>f</em>'(<em>x</em>) = 2 * <em>x</em>. In your computaions you can use +, -, *, and /.</p>
+Recall <em>f</em>'(<em>x</em>) = 2 * <em>x</em>. In your computations you can use +, -, *, and /.</p>
 <p>You can compare your result to the result of the builtin <code>sqrt</code> function in the <code>math</code> module using:</p>
 <div class="codehilite"><pre><span></span><code><span class="kn">import</span> <span class="nn">math</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">math</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">n</span><span class="p">))</span>
@@ -208,7 +208,7 @@ Recall <em>f</em>'(<em>x</em>) = 2 * <em>x</em>. In your computaions you can use
 <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;An integer: [</span><span class="si">%08d</span><span class="s1">]&#39;</span> <span class="o">%</span> <span class="mi">42</span><span class="p">)</span>
 </code></pre></div>
 
-<p>Write similiar expressions using <a target="_blank" href="https://docs.python.org/3/reference/lexical_analysis.html#formatted-string-literals">f-strings</a>.</p>
+<p>Write similar expressions using <a target="_blank" href="https://docs.python.org/3/reference/lexical_analysis.html#formatted-string-literals">f-strings</a>.</p>
 <p><em>Hint</em>. See <a target="_blank" href="https://pyformat.info/">pyformat.info</a> for examples of string formatting.</p>
 </div>
 <a name="lecture4"></a>
@@ -254,7 +254,7 @@ print(x[0][0][0][0][0][1])
 </div>
 <div class="exercise">
 <h2>Exercise 4.4 (ranges and slices)</h2>
-<p>Run the below code and explain what is happing. What notations ismost intuitive and consistent?</p>
+<p>Run the below code and explain what is happing. What notations is most intuitive and consistent?</p>
 <div class="codehilite"><pre><span></span><code><span class="nf">print</span><span class="p">(</span><span class="nf">list</span><span class="p">(</span><span class="nf">range</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="mi">9</span><span class="p">)))</span>
 <span class="nf">print</span><span class="p">(</span><span class="nf">list</span><span class="p">(</span><span class="nf">range</span><span class="p">(</span><span class="mi">9</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">)))</span>
 <span class="nf">print</span><span class="p">(</span><span class="nf">list</span><span class="p">(</span><span class="nf">range</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">)))</span>
@@ -315,7 +315,7 @@ c = r.step
 </code></pre></div>
 
 <p><em>Note</em>. This is an exercise in <code>for</code>-loops and string formatting, see <a target="_blank" href="https://pyformat.info/">pyformat.info</a>.</p>
-<p>(Optional) If you are familiar with LaTeX, output LaTeX source code for a mulitplication table of a given dimension that can be translated using e.g. <a target="_blank" href="http://www.overleaf.com/">Overleaf</a> into a PDF figure like the below. Example output for dimension five <a target="_blank" href="multiplication.tex">multiplication.tex</a>.</p>
+<p>(Optional) If you are familiar with LaTeX, output LaTeX source code for a multiplication table of a given dimension that can be translated using e.g. <a target="_blank" href="http://www.overleaf.com/">Overleaf</a> into a PDF figure like the below. Example output for dimension five <a target="_blank" href="multiplication.tex">multiplication.tex</a>.</p>
 <p><img alt="Multiplication table" src="images/multiplication.png" /></p>
 </div>
 <div class="exercise">
@@ -335,7 +335,7 @@ c = r.step
 </div>
 <a name="handin2"></a>
 <div class="handin">
-<h2>Exercise 4.9 - handin 2 (palindrom)</h2>
+<h2>Exercise 4.9 - handin 2 (palindrome)</h2>
 <p>Write a program that given a long string (say order 1.000.000 characters), computes all palindromic substrings of length ≥ 7, i.e. substrings spelled identical read forwards and backwards.  You can use the below code to read a complete text from a file to a string, convert it to lower case, and remove everything except letters and digits.</p>
 <p>The file saxo.txt is a local copy <a target="_blank" href="http://www.gutenberg.org/ebooks/1150.txt.utf-8">http://www.gutenberg.org/cache/epub/1150/pg1150.txt.utf-8</a>.</p>
 <div class="codehilite"><pre><span></span><code><span class="kn">from</span> <span class="nn">string</span> <span class="kn">import</span> <span class="n">ascii_letters</span><span class="p">,</span> <span class="n">digits</span>
@@ -346,7 +346,7 @@ c = r.step
 </code></pre></div>
 
 <p><em>Note</em>. The solution from the lecture slides will be too slow.</p>
-<p><em>Handin format</em>. As in Handin 1 one .py file with a docstring with reflection. There are 118 palindroms of length 7 (56 distrinct), 4 of length 8 (3 distrinct), and 1 of length 10.</p>
+<p><em>Handin format</em>. As in Handin 1 one .py file with a docstring with reflection. There are 118 palindromes of length 7 (56 distinct), 4 of length 8 (3 distinct), and 1 of length 10.</p>
 </div>
 <a name="lecture5"></a>
 <h1>Lecture 5 (Tuples and lists)</h1>
@@ -387,7 +387,7 @@ alphabetically sorted list of names '<em>lastname</em>, <em>firstname</em>', i.e
 <div class="exercise">
 <h2>Exercise 6.2 (frequent long words)</h2>
 <p><em>This exercise extends Exercise 6.1.</em></p>
-<p>Write a program that prints the most frequent words containing at least six characters occuring in a text file. E.g. for the <a target="_blank" href="http://www.gutenberg.org/ebooks/1150.txt.utf-8">saxo.txt</a> file it should print something like the below.</p>
+<p>Write a program that prints the most frequent words containing at least six characters occurring in a text file. E.g. for the <a target="_blank" href="http://www.gutenberg.org/ebooks/1150.txt.utf-8">saxo.txt</a> file it should print something like the below.</p>
 <div class="codehilite"><pre><span></span><code>Rank Freq. Word
 ====================
    1  373  should
@@ -477,16 +477,16 @@ Right: (&#39;A&#39;, (&#39;G&#39;, ((&#39;E&#39;, &#39;F&#39;), ((&#39;B&#39;, &
                                     &#39;D&#39;  &#39;A&#39;
 </code></pre></div>
 
-<p>For a tree with <em>n</em> labels the number of subsets containing three labels equals binomial(<em>n</em>, 3) = <em>n</em> · (<em>n</em> - 1) · (<em>n</em> - 2) / 6.  Each such set of three labels defines a <em>triplet</em> in each input tree, i.e. the three leaves with the three labels induce a subtree with three leaves. Below we show the triplets induced for the three labels <code>{'A', 'D', 'F'}</code>.  The <code>'*'</code> marks the lowest commen ancestor (LCA) of the three labels. We say that these nodes are the <em>anchors</em> of the triplets in the two trees.</p>
+<p>For a tree with <em>n</em> labels the number of subsets containing three labels equals binomial(<em>n</em>, 3) = <em>n</em> · (<em>n</em> - 1) · (<em>n</em> - 2) / 6.  Each such set of three labels defines a <em>triplet</em> in each input tree, i.e. the three leaves with the three labels induce a subtree with three leaves. Below we show the triplets induced for the three labels <code>{'A', 'D', 'F'}</code>.  The <code>'*'</code> marks the lowest common ancestor (LCA) of the three labels. We say that these nodes are the <em>anchors</em> of the triplets in the two trees.</p>
 <div class="codehilite"><pre><span></span><code>           (a)                                    (b)
 
-     anchor *                                      /\
-           / \                                    /  \
-          /   \                                  /    \
-         /     \                                /      \
-        /       \                              /        \
-       /         \                            /          \
-      /\         /\                   anchor *           /\
+     anchor <span class="gs">*                                      /\</span>
+<span class="gs">           / \                                    /  \</span>
+<span class="gs">          /   \                                  /    \</span>
+<span class="gs">         /     \                                /      \</span>
+<span class="gs">        /       \                              /        \</span>
+<span class="gs">       /         \                            /          \</span>
+<span class="gs">      /\         /\                   anchor *</span>           /\
      /  \       /  \                        / \         /  \
     /    \     /    \                      /   \      &#39;C&#39;  &#39;E&#39;
    /\    &#39;B&#39; &#39;D&#39;    /\                    /     \
@@ -548,7 +548,7 @@ Right: (&#39;A&#39;, (&#39;G&#39;, ((&#39;E&#39;, &#39;F&#39;), ((&#39;B&#39;, &
 <p><em>Example</em>. For the root of the tree (a) <code>anchored_triplets(['A', 'F', 'B'], ['D', 'C', 'E'])</code> should return the following 18 canonical triplets: <code>[('A', ('D', 'E')), ('A', ('C', 'D')), ('A', ('C', 'E')), ('F', ('D', 'E')), ('F', ('C', 'D')), ('F', ('C', 'E')), ('B', ('D', 'E')), ('B', ('C', 'D')), ('B', ('C', 'E')), ('D', ('A', 'F')), ('D', ('A', 'B')), ('D', ('B', 'F')), ('C', ('A', 'F')), ('C', ('A', 'B')), ('C', ('B', 'F')), ('E', ('A', 'F')), ('E', ('A', 'B')), ('E', ('B', 'F'))]</code>.</p>
 </li>
 </ol>
-<p><em>Handin format</em>. As in Handin 1 one .py file with a docstring with reflection.</p>
+<p><em>Handin format</em>. As in handin 1 one .py file with a docstring with reflection.</p>
 </div>
 <a name="lecture7"></a>
 <h1>Lecture 7 (Functions)</h1>
@@ -572,11 +572,11 @@ Right: (&#39;A&#39;, (&#39;G&#39;, ((&#39;E&#39;, &#39;F&#39;), ((&#39;B&#39;, &
 <ol>
 <li>
 <p>Make a function that can take any number of arguments, and returns the sum of the squares of the values, i.e. <code>square_sum(x1, x2, x3)</code> returns <code>x1 ** 2 + x2 ** 2 + x3 ** 2</code>.</p>
-<div class="codehilite"><pre><span></span><code>&gt; square_sum()
+<div class="codehilite"><pre><span></span><code><span class="k">&gt; </span><span class="ge">square_sum()</span>
 0
-&gt; square_sum(3, 4, 5)
+<span class="k">&gt; </span><span class="ge">square_sum(3, 4, 5)</span>
 50
-&gt; square_sum(1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+<span class="k">&gt; </span><span class="ge">square_sum(1, 2, 3, 4, 5, 6, 7, 8, 9, 10)</span>
 385
 </code></pre></div>
 
@@ -586,6 +586,41 @@ Right: (&#39;A&#39;, (&#39;G&#39;, ((&#39;E&#39;, &#39;F&#39;), ((&#39;B&#39;, &
 </li>
 </ol>
 <p><em>Hint</em>. Use a <code>*</code> to indicate an arbitrary argument list.</p>
+</div>
+<div class="exercise">
+<h2>Exercise 7.3 (argmin)</h2>
+<p>Create a function <code>argmin(L)</code> that returns the index of the minimum element in a list <code>L</code>. If the minimum occurs multiple times in <code>L</code> the index of the first occurrence should be returned. If <code>L</code> is empty, <code>None</code> should be returned. E.g., <code>argmin([3, 7, 5, 4, 2, 9, 10, 2, 8])</code> should return 4, since 2 is the minimum in the list and its first occurrence is at index 4.</p>
+<p><em>Note</em>: The module <code>numpy</code> has a function <a target="_blank" href="https://numpy.org/doc/stable/reference/generated/numpy.argmin.html"><code>numpy.argmin</code></a> providing this functionality for non-empty lists.</p>
+</div>
+<div class="exercise">
+<h2>Exercise 7.4** (compensated summation) [optional]</h2>
+<p>The Python <a target="_blank" href="https://docs.python.org/3/library/functions.html#sum">builtin function <code>sum</code></a> can compute the sum of a list of floats. In Python 3.12 the numerical accuracy of <code>sum</code> for summing floats was improved by adopting <a target="_blank" href="https://en.wikipedia.org/wiki/Kahan_summation_algorithm">Neumaier summation</a> - see <a target="_blank" href="https://docs.python.org/3/whatsnew/3.12.html">What’s New In Python 3.12</a> and Raimund Hettinger's posting <a target="_blank" href="https://github.com/python/cpython/issues/100425">#100425</a>.</p>
+<div class="codehilite"><pre><span></span><code>    &gt; 1/3 + 1.0 - 1.0 - 1/3  # no compensation
+    -5.551115123125783e-17
+    &gt; sum([1/3, 1.0, -1.0, -1/3])  # with compensation in Python 3.12
+    0.0
+</code></pre></div>
+
+<p>In this exercise you should try to reproduce this improvement.</p>
+<ol>
+<li>
+<p>Create a function <code>my_sum(L)</code> that takes a list of floats and returns the sum (without compensated summation), e.g.,</p>
+<div class="codehilite"><pre><span></span><code><span class="k">&gt; </span><span class="ge">my_sum([1/3, 1.0, -1.0, -1/3])</span>
+-5.551115123125783e-17
+</code></pre></div>
+
+</li>
+<li>
+<p>Extend your function with compensated summation, e.g. using Neumaier summation, so that:</p>
+<div class="codehilite"><pre><span></span><code><span class="k">&gt; </span><span class="ge">my_sum_compensated([1/3, 1.0, -1.0, -1/3])</span>
+0.0
+</code></pre></div>
+
+</li>
+<li>
+<p>Compare the output of your function against the builtin <code>sum</code> function for lists of random floats, say 100 floats in the range [-0.5, 0.5].</p>
+</li>
+</ol>
 </div>
 <a name="lecture8"></a>
 <h1>Lecture 8 (Recursion)</h1>
@@ -741,7 +776,7 @@ Right: (&#39;A&#39;, (&#39;G&#39;, ((&#39;E&#39;, &#39;F&#39;), ((&#39;B&#39;, &
 </div>
 <div class="exercise">
 <h2>Exercise 9.4** (deepcopy)</h2>
-<p>In this exercise you should implement your own version of the <code>deepcopy</code> operation from the module <a target="_blank" href="https://docs.python.org/3/library/copy.html"><code>copy</code></a> for lists.  Recall that when copying a list <code>L</code> using <code>L.copy()</code>, only a copy of the list will be created. The new list will point to the same elements as <code>L</code>, which might cause unexpected behaviour when these are mutable structures, like recursive lists. The operation <code>copy.deepcopy</code> also makes a recursive copy of such recursive lists.</p>
+<p>In this exercise you should implement your own version of the <code>deepcopy</code> operation from the module <a target="_blank" href="https://docs.python.org/3/library/copy.html"><code>copy</code></a> for lists.  Recall that when copying a list <code>L</code> using <code>L.copy()</code>, only a copy of the list will be created. The new list will point to the same elements as <code>L</code>, which might cause unexpected behavior when these are mutable structures, like recursive lists. The operation <code>copy.deepcopy</code> also makes a recursive copy of such recursive lists.</p>
 <p>The difference is illustrated by the following code:</p>
 <div class="codehilite"><pre><span></span><code><span class="kn">import</span> <span class="nn">copy</span>
 <span class="n">L1</span> <span class="o">=</span> <span class="p">[[</span><span class="mi">1</span><span class="p">],</span> <span class="p">[</span><span class="mi">2</span><span class="p">]]</span>
@@ -756,7 +791,7 @@ Right: (&#39;A&#39;, (&#39;G&#39;, ((&#39;E&#39;, &#39;F&#39;), ((&#39;B&#39;, &
 </code></pre></div>
 
 <p>Your task is to implement your own function <code>deepcopy</code> that creates such a recursive deep copy of recursive lists.</p>
-<p><em>Hint</em>. Recall that the same list can be refered to multiple times, and that there can be cyclic references among the lists, like in the following example.</p>
+<p><em>Hint</em>. Recall that the same list can be referred to multiple times, and that there can be cyclic references among the lists, like in the following example.</p>
 <div class="codehilite"><pre><span></span><code>L = [[1], [2], [3]]
 L[2] = L
 </code></pre></div>
@@ -922,7 +957,7 @@ Margrethe (1940)
 <p><code>stop()</code> stop the stopwatch.</p>
 </li>
 <li>
-<p><code>lap()</code> record the current time as a laptime.</p>
+<p><code>lap()</code> record the current time as a lap time.</p>
 </li>
 <li>
 <p><code>total_time()</code> return the time between last <code>start</code> and subsequent call to <code>stop</code>. If the stopwatch is still running, return time since last call to <code>start</code> and the current time.</p>
@@ -972,7 +1007,7 @@ Margrethe (1940)
 <h1>Lecture 12 (Class hierarchies)</h1>
 <div class="exercise">
 <h2>Exercise 12.1 (geometric shapes)</h2>
-<p>Make a class <code>Shape</code> that represent an abstract geometric shape.  Conrete shapes, like circles, axis-aligned rectangles, and triangles should be defined as subclasses of <code>Shape</code>.  The class <code>Shape</code> should only define a method <code>fatness</code> that depends on methods <code>area</code> and <code>perimeter</code> that should be defined in  subclasses:</p>
+<p>Make a class <code>Shape</code> that represent an abstract geometric shape.  Concrete shapes, like circles, axis-aligned rectangles, and triangles should be defined as subclasses of <code>Shape</code>.  The class <code>Shape</code> should only define a method <code>fatness</code> that depends on methods <code>area</code> and <code>perimeter</code> that should be defined in  subclasses:</p>
 <ul>
 <li><code>fatness()</code> return 4·π·area / perimeter<sup>2</sup>.</li>
 </ul>
@@ -995,7 +1030,7 @@ Margrethe (1940)
 </li>
 </ul>
 <p>Create classes <code>Circle</code>, <code>Rectangle</code>, and <code>Triangle</code>, each inheriting from class <code>Shape</code>. Implementing class <code>Triangle</code> is optional (the methods <code>area</code> and <code>contains</code> require some amount of math, with solutions easily to find on the internet).  For each subclass implement the methods <code>__int__</code>, <code>__str__</code>, <code>area</code>, <code>perimeter</code>, and <code>contains</code>.</p>
-<p>It should be possible to create instances of the geometric opjects (calling <code>__init__</code>) as follows:</p>
+<p>It should be possible to create instances of the geometric objects (calling <code>__init__</code>) as follows:</p>
 <ul>
 <li>
 <p><code>Circle(radius, center_x, center_y)</code></p>
@@ -1008,17 +1043,17 @@ Margrethe (1940)
 </li>
 </ul>
 <p><em>Example</em>.</p>
-<div class="codehilite"><pre><span></span><code><span class="o">&gt;</span><span class="w"> </span><span class="nv">shapes</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>[<span class="nv">Rectangle</span><span class="ss">(</span><span class="mi">0</span>,<span class="w"> </span><span class="mi">10</span>,<span class="w"> </span><span class="mi">0</span>,<span class="w"> </span><span class="mi">1</span><span class="ss">)</span>,<span class="w"> </span><span class="nv">Circle</span><span class="ss">(</span><span class="mi">4</span>,<span class="w"> </span><span class="mi">1</span>,<span class="w"> </span><span class="mi">4</span><span class="ss">)</span>,<span class="w"> </span><span class="nv">Triangle</span><span class="ss">(</span><span class="mi">1</span>,<span class="w"> </span><span class="mi">2</span>,<span class="w"> </span><span class="mi">1</span>,<span class="w"> </span><span class="mi">4</span>,<span class="w"> </span><span class="mi">2</span>,<span class="w"> </span><span class="mi">3</span><span class="ss">)</span>]
-<span class="o">&gt;</span><span class="w"> </span>[<span class="nv">str</span><span class="ss">(</span><span class="nv">s</span><span class="ss">)</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="nv">s</span><span class="w"> </span><span class="nv">in</span><span class="w"> </span><span class="nv">shapes</span>]
-[<span class="s1">&#39;Rectangle((0, 0), (10, 1))&#39;</span>,<span class="w"> </span><span class="s1">&#39;Circle(radius=4, center_x=1, center_y=4)&#39;</span>,<span class="w"> </span><span class="s1">&#39;Triangle((1, 2), (1, 4), (2, 3))&#39;</span>]
-<span class="o">&gt;</span><span class="w"> </span>[<span class="nv">s</span>.<span class="nv">area</span><span class="ss">()</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="nv">s</span><span class="w"> </span><span class="nv">in</span><span class="w"> </span><span class="nv">shapes</span>]
-[<span class="mi">10</span>,<span class="w"> </span><span class="mi">50</span>.<span class="mi">26548245743669</span>,<span class="w"> </span><span class="mi">1</span>.<span class="mi">0</span>]
-<span class="o">&gt;</span><span class="w"> </span>[<span class="nv">s</span>.<span class="nv">perimeter</span><span class="ss">()</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="nv">s</span><span class="w"> </span><span class="nv">in</span><span class="w"> </span><span class="nv">shapes</span>]
-[<span class="mi">22</span>,<span class="w"> </span><span class="mi">25</span>.<span class="mi">132741228718345</span>,<span class="w"> </span><span class="mi">4</span>.<span class="mi">82842712474619</span>]
-<span class="o">&gt;</span><span class="w"> </span>[<span class="nv">s</span>.<span class="nv">fatness</span><span class="ss">()</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="nv">s</span><span class="w"> </span><span class="nv">in</span><span class="w"> </span><span class="nv">shapes</span>]
-[<span class="mi">0</span>.<span class="mi">25963575649502424</span>,<span class="w"> </span><span class="mi">1</span>.<span class="mi">0</span>,<span class="w"> </span><span class="mi">0</span>.<span class="mi">5390120844526473</span>]
-<span class="o">&gt;</span><span class="w"> </span>[<span class="nv">s</span>.<span class="nv">contains</span><span class="ss">(</span><span class="mi">1</span>,<span class="mi">1</span><span class="ss">)</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="nv">s</span><span class="w"> </span><span class="nv">in</span><span class="w"> </span><span class="nv">shapes</span>]
-[<span class="nv">True</span>,<span class="w"> </span><span class="nv">True</span>,<span class="w"> </span><span class="nv">False</span>]
+<div class="codehilite"><pre><span></span><code><span class="k">&gt; </span><span class="ge">shapes = [Rectangle(0, 10, 0, 1), Circle(4, 1, 4), Triangle(1, 2, 1, 4, 2, 3)]</span>
+<span class="k">&gt; </span><span class="ge">[str(s) for s in shapes]</span>
+[&#39;Rectangle((0, 0), (10, 1))&#39;, &#39;Circle(radius=4, center_x=1, center_y=4)&#39;, &#39;Triangle((1, 2), (1, 4), (2, 3))&#39;]
+<span class="k">&gt; </span><span class="ge">[s.area() for s in shapes]</span>
+[10, 50.26548245743669, 1.0]
+<span class="k">&gt; </span><span class="ge">[s.perimeter() for s in shapes]</span>
+[22, 25.132741228718345, 4.82842712474619]
+<span class="k">&gt; </span><span class="ge">[s.fatness() for s in shapes]</span>
+[0.25963575649502424, 1.0, 0.5390120844526473]
+<span class="k">&gt; </span><span class="ge">[s.contains(1,1) for s in shapes]</span>
+[True, True, False]
 </code></pre></div>
 </div>
 <a name="handin6"></a>
@@ -1033,10 +1068,10 @@ Margrethe (1940)
 <p><code>__str__</code> returning the string <code>'name born-died'</code>.</p>
 </li>
 <li>
-<p><code>ancestor()</code> returns a tupple <code>(name-string, recursive-father-ancestor, recursive-mother-ancestor)</code> (see example below).</p>
+<p><code>ancestor()</code> returns a tuple <code>(name-string, recursive-father-ancestor, recursive-mother-ancestor)</code> (see example below).</p>
 </li>
 </ul>
-<p>Create a second class <code>AnnotatedPerson</code> that is a subclass of <code>Person</code>, that allows each person to be annotated with a <code>note</code>, that can be given as an argument to the constructor, and will be part of the string returned by <code>__str__</code>, i.e. redefine the methods <code>__init__</code> and <code>__str__</code>.  The method <code>ancestor</code> should be inheritated from <code>Person</code> and not be redefined in <code>AnnotatedPerson</code>. Try to avoid repeating code from the super class, instead call the methods in the super class.</p>
+<p>Create a second class <code>AnnotatedPerson</code> that is a subclass of <code>Person</code>, that allows each person to be annotated with a <code>note</code>, that can be given as an argument to the constructor, and will be part of the string returned by <code>__str__</code>, i.e. redefine the methods <code>__init__</code> and <code>__str__</code>.  The method <code>ancestor</code> should be inherited from <code>Person</code> and not be redefined in <code>AnnotatedPerson</code>. Try to avoid repeating code from the super class, instead call the methods in the super class.</p>
 <p>Using the two classes you should be able to create the following objects:</p>
 <div class="codehilite"><pre><span></span><code>louise_af_HK = Person(&#39;Louise of Hessen-Kassel&#39;, None, None, 1817, 1898)
 christian_9  = Person(&#39;Christian 9.&#39;, None, None, 1818, 1906)
@@ -1086,7 +1121,7 @@ Sum = 5
 </div>
 <div class="exercise">
 <h2>Exercise 13.2 (transposing)</h2>
-<p>In this excercise we assume that a file stores a matrix, where the rows are stored in consecutive lines in the file, and where column values are separated by <code>;</code>. Your task is to make a program that writes the <a target="_blank" href="https://en.wikipedia.org/wiki/Transpose">transposed matrix</a> to another file - see example below.</p>
+<p>In this exercise we assume that a file stores a matrix, where the rows are stored in consecutive lines in the file, and where column values are separated by <code>;</code>. Your task is to make a program that writes the <a target="_blank" href="https://en.wikipedia.org/wiki/Transpose">transposed matrix</a> to another file - see example below.</p>
 <p>Input:</p>
 <div class="codehilite"><pre><span></span><code><span class="mf">1</span><span class="p">;</span><span class="mf">2</span><span class="p">;</span><span class="mf">3</span><span class="p">;</span><span class="mf">4</span>
 <span class="mf">5</span><span class="p">;</span><span class="mf">6</span><span class="p">;</span><span class="mf">7</span><span class="p">;</span><span class="mf">8</span>
@@ -1110,7 +1145,7 @@ Sum = 5
 <p>If output file already exists, warn the user, and ask the user to confirm to overwrite the existing file.</p>
 </li>
 <li>
-<p>If the lines in the input file have a different number of values, i.e. the input is not a valid matrix, report this to the user, and start over without writting any output.</p>
+<p>If the lines in the input file have a different number of values, i.e. the input is not a valid matrix, report this to the user, and start over without writing any output.</p>
 </li>
 </ul>
 <p><em>Hint</em>. Use the string method <a target="_blank" href="https://docs.python.org/3/library/stdtypes.html#str.split"><code>split</code></a> to split a line into a list of values.</p>
@@ -1148,13 +1183,13 @@ Sum = 5
 <h2>Exercise 13.4* (subset sum)</h2>
 <p>In this exercise we consider the <a target="_blank" href="https://en.wikipedia.org/wiki/Subset_sum_problem">subset sum</a> problem.  Write a function <code>subset_sum(x, L)</code> that as input takes a value <code>x</code> and a list of values <code>L</code>.  The function should return a list <code>L_</code> with a subset <code>L</code> where <code>sum(L_) == x</code> if such a set <code>L_</code> exists, otherwise <code>None</code> should be returned.</p>
 <p><em>Example</em>.</p>
-<div class="codehilite"><pre><span></span><code>&gt; print(subset_sum(12, [2, 3, 8, 11, -1]))
+<div class="codehilite"><pre><span></span><code><span class="k">&gt; </span><span class="ge">print(subset_sum(12, [2, 3, 8, 11, -1]))</span>
 [2, 11, -1]
-&gt; print(subset_sum(6, [2, 3, 8, 11, -1]))
+<span class="k">&gt; </span><span class="ge">print(subset_sum(6, [2, 3, 8, 11, -1]))</span>
 None
 </code></pre></div>
 
-<p>The subset sum is known to be a <em>computionally hard</em> problem that essentially only can be solved by considering all 2<sup>|<code>L</code>|</sup> possible subsets of the input list <code>L</code>.</p>
+<p>The subset sum is known to be a <em>computationally hard</em> problem that essentially only can be solved by considering all 2<sup>|<code>L</code>|</sup> possible subsets of the input list <code>L</code>.</p>
 <p><em>Hint</em>. Write a recursive function that generates all possible subsets, and raise an exception (ideally user defined)
 during the recursion when the first solution has been found. Do not generate an explicit list of all subsets, since this will quickly lead to <code>MemoryError</code> exceptions.</p>
 </div>
@@ -1185,12 +1220,12 @@ during the recursion when the first solution has been found. Do not generate an 
 <p>All input points are contained in or are on the boundary of the polygon defined by <code>CH</code>.</p>
 </li>
 <li>
-<p><code>CH</code> is the smallest possible point set with the above properties (i.e. no point in <code>CH</code> is on a straightline between two other points of <code>CH</code>).</p>
+<p><code>CH</code> is the smallest possible point set with the above properties (i.e. no point in <code>CH</code> is on a straight line between two other points of <code>CH</code>).</p>
 </li>
 </ul>
 <p>You can use the following function <code>left_turn</code> to determine if a point <code>r</code> is to the left of or on the line through <code>p</code> and <code>q</code> (seen from <code>p</code> towards <code>q</code>)</p>
-<div class="codehilite"><pre><span></span><code><span class="nv">def</span><span class="w"> </span><span class="nv">left_turn</span><span class="ss">(</span><span class="nv">p</span>,<span class="w"> </span><span class="nv">q</span>,<span class="w"> </span><span class="nv">r</span><span class="ss">)</span>:
-<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="ss">(</span><span class="nv">q</span>[<span class="mi">0</span>]<span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="nv">p</span>[<span class="mi">0</span>]<span class="ss">)</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="ss">(</span><span class="nv">r</span>[<span class="mi">1</span>]<span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="nv">p</span>[<span class="mi">1</span>]<span class="ss">)</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="ss">(</span><span class="nv">r</span>[<span class="mi">0</span>]<span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="nv">p</span>[<span class="mi">0</span>]<span class="ss">)</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="ss">(</span><span class="nv">q</span>[<span class="mi">1</span>]<span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="nv">p</span>[<span class="mi">1</span>]<span class="ss">)</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="mi">0</span>
+<div class="codehilite"><pre><span></span><code>def left_turn(p, q, r):
+    return (q[0] - p[0]) <span class="gs">* (r[1] - p[1]) - (r[0] - p[0]) *</span> (q[1] - p[1]) &gt;= 0
 </code></pre></div>
 
 <ol>
@@ -1217,7 +1252,7 @@ during the recursion when the first solution has been found. Do not generate an 
 <p>Use <code>assert</code> statements and the module <a target="_blank" href="https://docs.python.org/3/library/doctest.html"><code>doctest</code></a> to test your convex hull implementation on a set of represenative inputs.</p>
 </li>
 </ol>
-<p><em>Note</em>. The computation of the convex hull of a set of points in the plane (and higher dimensions) is a classical topic in the field of <em>Computational Goemetry</em>, and many different algorithms exist for solving this problem. In this exercise the speed of your program is not that important, since the input is assummed to be of a limited size. See e.g. <a target="_blank" href="https://en.wikibooks.org/wiki/Algorithm_Implementation/Geometry/Convex_hull/Monotone_chain">WikiBooks</a> for the animation of one possible algorithm, or this <a target="_blank" href="https://youtu.be/SMWzOs73O4g">YouTube animation</a>.  The module <code>scipy.spatial</code> contains a class <a target="_blank" href="https://docs.scipy.org/doc/scipy/reference/generated/scipy.spatial.ConvexHull.html">ConvexHull</a> that can compute the convex hull of a point set, but you are of course expected to implement your own algorithm in this exercise. You can use the Scipy convex hull implementation together with your implementation of <code>random_points</code> and <code>plot_hull</code> using the code below (requires you have installed the scipy library using pip).</p>
+<p><em>Note</em>. The computation of the convex hull of a set of points in the plane (and higher dimensions) is a classical topic in the field of <em>Computational Goemetry</em>, and many different algorithms exist for solving this problem. In this exercise the speed of your program is not that important, since the input is assumed to be of a limited size. See e.g. <a target="_blank" href="https://en.wikibooks.org/wiki/Algorithm_Implementation/Geometry/Convex_hull/Monotone_chain">WikiBooks</a> for the animation of one possible algorithm, or this <a target="_blank" href="https://youtu.be/SMWzOs73O4g">YouTube animation</a>.  The module <code>scipy.spatial</code> contains a class <a target="_blank" href="https://docs.scipy.org/doc/scipy/reference/generated/scipy.spatial.ConvexHull.html">ConvexHull</a> that can compute the convex hull of a point set, but you are of course expected to implement your own algorithm in this exercise. You can use the Scipy convex hull implementation together with your implementation of <code>random_points</code> and <code>plot_hull</code> using the code below (requires you have installed the Scipy library using pip).</p>
 <div class="codehilite"><pre><span></span><code><span class="kn">from</span> <span class="nn">scipy.spatial</span> <span class="kn">import</span> <span class="n">ConvexHull</span>
 <span class="n">points</span> <span class="o">=</span> <span class="n">random_points</span><span class="p">(</span><span class="mi">25</span><span class="p">)</span>
 <span class="n">convex_hull</span> <span class="o">=</span> <span class="p">[</span><span class="n">points</span><span class="p">[</span><span class="n">idx</span><span class="p">]</span> <span class="k">for</span> <span class="n">idx</span> <span class="ow">in</span> <span class="n">ConvexHull</span><span class="p">(</span><span class="n">points</span><span class="p">)</span><span class="o">.</span><span class="n">vertices</span><span class="p">]</span>
@@ -1319,8 +1354,8 @@ converted into a new string, with the output put into a 'box' (see example below
 </code></pre></div>
 
 <p>One could compose the three decorators into one decorator <code>dec_composed</code> as</p>
-<div class="codehilite"><pre><span></span><code><span class="nv">def</span><span class="w"> </span><span class="nv">dec_composed</span><span class="ss">(</span><span class="nv">f</span><span class="ss">)</span>:
-<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="nv">dec3</span><span class="ss">(</span><span class="nv">dec2</span><span class="ss">(</span><span class="nv">dec1</span><span class="ss">(</span><span class="nv">f</span><span class="ss">)))</span>
+<div class="codehilite"><pre><span></span><code>def dec_composed(f):
+    return dec3(dec2(dec1(f)))
 </code></pre></div>
 
 <p>and using this new decorator as</p>
@@ -1373,17 +1408,17 @@ converted into a new string, with the output put into a 'box' (see example below
 <h1>Lecture 16 (Dynamic programming)</h1>
 <div class="exercise">
 <h2>Exercise 16.1 (coins)</h2>
-<p>In this exercise we would like to achive some currency amount using the fewest coins available in the currency.  We assume that the set of different coin values of the currency is represented by a tuple, e.g. <code>coins = (1, 2, 5, 10, 20)</code> could represent the Danish coins.</p>
+<p>In this exercise we would like to obtain some currency amount using the fewest coins available in the currency.  We assume that the set of different coin values of the currency is represented by a tuple, e.g. <code>coins = (1, 2, 5, 10, 20)</code> could represent the Danish coins.</p>
 <p>In this exercise you can assume that all amounts and coins have integer values, and that there is coin of value 1 in the currency - this guarantees that all values can be expressed using the available coin values. Furthermore you might assume that all amounts are ≤ 200.</p>
 <p>Consider the above <code>coins</code>. The amount 33 can be achieved in many different ways, e.g. 10 + 10 + 5 + 5 + 1 + 1 + 1 and 20 + 10 + 2 + 1. The last sum is a solution using the fewest coins.</p>
-<p>A simple <em>greedy strategy</em> to construct a list of coins for a given value, is to repeatedly take the coin with largest value until the remaining value is less that the value of the largest coin. Then repeatedly take the second largest valued coin as long as possible, etc. For some set of coins this strategy is guaranteeed to always find an optimal solution, like for the above tuple <code>coins</code>. But in general this strategy will not always find the optimal stragey, e.g. for the value 14 and possible coins (1, 7, 10), the greedy strategy will find the solution 10 + 1 + 1 + 1 + 1, whereas an optimal solution using the fewest coins is 7 + 7.</p>
+<p>A simple <em>greedy strategy</em> to construct a list of coins for a given value, is to repeatedly take the coin with largest value until the remaining value is less that the value of the largest coin. Then repeatedly take the second largest valued coin as long as possible, etc. For some set of coins this strategy is guaranteed to always find an optimal solution, like for the above tuple <code>coins</code>. But in general this strategy will not always find the optimal strategy, e.g. for the value 14 and possible coins (1, 7, 10), the greedy strategy will find the solution 10 + 1 + 1 + 1 + 1, whereas an optimal solution using the fewest coins is 7 + 7.</p>
 <ol>
 <li>
 <p>Implement a function <code>change_greedy(value, coins)</code> that implements the greedy change strategy, and returns a list of integers, each integer in <code>coins</code>, and with sum equal to <code>value</code>.</p>
 <p><em>Example</em>. <code>change_greedy(35, (1, 7, 10))</code> should return <code>[10, 10, 10, 1, 1, 1, 1, 1]</code>.</p>
 </li>
 <li>
-<p>Implement a recursive function <code>number_of_coins(value, coins)</code> that returns the numer of coins in an <em>optimal solution</em>. The function can implement the following recursive expression:</p>
+<p>Implement a recursive function <code>number_of_coins(value, coins)</code> that returns the number of coins in an <em>optimal solution</em>. The function can implement the following recursive expression:</p>
 <ul>
 <li>If  <em>value</em> = 0: <em>number_of_coins</em>(<em>value</em>, <em>coins</em>) = 0</li>
 <li>If  <em>value</em> &gt; 0: <em>number_of_coins</em>(<em>value</em>, <em>coins</em>) = 1 + min<sub><em>coin</em> in <em>coins</em> where <em>coin</em> ≤ <em>value</em></sub> <em>number_of_coins</em>(<em>value</em> - <em>coin</em>, <em>coins</em>)</li>
@@ -1406,7 +1441,7 @@ converted into a new string, with the output put into a 'box' (see example below
 </div>
 <div class="exercise">
 <h2>Exercise 16.2 (missing spaces) [optional]</h2>
-<p>Assume you have a text <code>text</code> where all spaces have been lost. To recover the spaces you have a dictionary <code>words</code> (a Python set) containing known words. The original text can also contain words not in the dictionary. The goal is to try to recover the spaces as good as possible: Find in the string non-overlapping occurrences of words from the dictionary, such that the total number of words identified plus the number of characters in the text not contained in any of the identified word occurrences is minimized.  Equivalently if we put '_' between each word and charater not in a word occurrence, then we would like to return a shortest such string, i.e. minimize the number of '_' in the output.</p>
+<p>Assume you have a text <code>text</code> where all spaces have been lost. To recover the spaces you have a dictionary <code>words</code> (a Python set) containing known words. The original text can also contain words not in the dictionary. The goal is to try to recover the spaces as good as possible: Find in the string non-overlapping occurrences of words from the dictionary, such that the total number of words identified plus the number of characters in the text not contained in any of the identified word occurrences is minimized.  Equivalently if we put '_' between each word and character not in a word occurrence, then we would like to return a shortest such string, i.e. minimize the number of '_' in the output.</p>
 <div class="codehilite"><pre><span></span><code>text = &#39;aduckcrossestheroad&#39;
 words = {&#39;a&#39;, &#39;ad&#39;, &#39;cross&#39;, &#39;duck&#39;, &#39;est&#39;, &#39;he&#39;, &#39;road&#39;, &#39;the&#39;}
 solution_optimal = &#39;a_duck_cross_est_he_road&#39;
@@ -1421,7 +1456,7 @@ solution_greedy = &#39;ad_u_c_k_cross_est_he_road&#39;
 <p>Implement a dynamic programming solution, that finds an <em>optimal solution</em>. One systematic (non-recursive) approach is to create an array <code>solutions</code>, where you for increasing index <code>i</code>, from <code>0</code> to <code>len(text)</code>, compute an optimal solution for <code>text[:i]</code>     and store this in <code>solutions[i]</code>.</p>
 </li>
 </ol>
-<p><em>Note</em>. As a dictionary of Danish words, you can try to download the list of <a target="_blank" href="https://dsn.dk/wp-content/uploads/2021/03/RO2012.opslagsord.med_.homnr_.og_.ordklasse.zip">Danish words</a> from the webpage of <a target="_blank" href="https://dsn.dk/retskrivning/om-retskrivningsordbogen/ro-elektronisk-og-som-bog">Dansk Sprognævn</a>. Save the wordlist as <code>words.txt</code>, and run the below code to get the word list into your program as a set of words (in lower case without prefixes '1. ', '2. ', etc. and with spaces and periods removed).</p>
+<p><em>Note</em>. As a dictionary of Danish words, you can try to download the list of <a target="_blank" href="https://dsn.dk/wp-content/uploads/2021/03/RO2012.opslagsord.med_.homnr_.og_.ordklasse.zip">Danish words</a> from the webpage of <a target="_blank" href="https://dsn.dk/retskrivning/om-retskrivningsordbogen/ro-elektronisk-og-som-bog">Dansk Sprognævn</a>. Save the word list as <code>words.txt</code>, and run the below code to get the word list into your program as a set of words (in lower case without prefixes '1. ', '2. ', etc. and with spaces and periods removed).</p>
 <div class="codehilite"><pre><span></span><code><span class="kn">import</span> <span class="nn">re</span>
 <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;words.txt&#39;</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s1">&#39;utf-8&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
      <span class="n">words</span> <span class="o">=</span> <span class="n">f</span><span class="o">.</span><span class="n">readlines</span><span class="p">()</span>
@@ -1510,7 +1545,7 @@ text = re.sub(&#39;[ \n,.]&#39;, &#39;&#39;, text).lower()
 </div>
 <div class="exercise">
 <h2>Exercise 18.3 (polynomial fit)</h2>
-<p>Consider the below list <code>L</code> of 2D points. Apply <code>numpy.polyfit</code> for different degrees of the polymial fitting, and find the minimum degree polynomial where the maximal vertical distance between a point <code>(x, y)</code> in <code>L</code> and the polynomial <code>poly</code> is at most <code>1</code>, i.e. <code>abs(y - poly(x)) &lt;= 1</code> for all <code>(x, y)</code> in <code>L</code>.  Plot the data points and the different polynomial approximations. Present your work in Jupyter.</p>
+<p>Consider the below list <code>L</code> of 2D points. Apply <code>numpy.polyfit</code> for different degrees of the polynomial fitting, and find the minimum degree polynomial where the maximal vertical distance between a point <code>(x, y)</code> in <code>L</code> and the polynomial <code>poly</code> is at most <code>1</code>, i.e. <code>abs(y - poly(x)) &lt;= 1</code> for all <code>(x, y)</code> in <code>L</code>.  Plot the data points and the different polynomial approximations. Present your work in Jupyter.</p>
 <div class="codehilite"><pre><span></span><code>L = [(2, 3), (5, 7), (4, 10), (10, 15), (2.5, 5), (8, 4), (9, 10), (6, 6)]
 </code></pre></div>
 </div>
@@ -1607,28 +1642,28 @@ flow = 4
 </li>
 <li>
 <p><strong>Fibonacci iterator</strong>: Create an iterable <code>class Fibonacci</code> with methods <code>__init__</code> and <code>__iter__</code> and an iterator <code>class FibonacciIterator</code> with methods <code>__init__</code> and <code>__next__</code>. The object creation <code>Fibonacci(n)</code> should create an iterable object for the first <code>n</code> Fibonacci numbers, and the <code>__iter__</code> method should return an instance of <code>FibonacciIterator</code>. In the <code>class FibonacciIterator</code> implement the method <code>__next__</code>, that either returns the next Fibonacci number or raises a <code>StopIteration</code> exception.</p>
-<div class="codehilite"><pre><span></span><code><span class="p">&gt;</span><span class="w"> </span><span class="nx">f</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nx">Fibonacci</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
-<span class="p">&gt;</span><span class="w"> </span><span class="k">type</span><span class="p">(</span><span class="nx">f</span><span class="p">)</span>
-<span class="p">&lt;</span><span class="kd">class</span><span class="w"> </span><span class="err">&#39;</span><span class="nx">__main__</span><span class="p">.</span><span class="nx">Fibonacci</span><span class="err">&#39;</span><span class="p">&gt;</span>
-<span class="p">&gt;</span><span class="w"> </span><span class="nx">it</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nx">iter</span><span class="p">(</span><span class="nx">f</span><span class="p">)</span>
-<span class="p">&gt;</span><span class="w"> </span><span class="k">type</span><span class="p">(</span><span class="nx">it</span><span class="p">)</span>
-<span class="p">&lt;</span><span class="kd">class</span><span class="w"> </span><span class="err">&#39;</span><span class="nx">__main__</span><span class="p">.</span><span class="nx">FibonacciIterator</span><span class="err">&#39;</span><span class="p">&gt;</span>
-<span class="p">&gt;</span><span class="w"> </span><span class="nx">next</span><span class="p">(</span><span class="nx">it</span><span class="p">)</span>
-<span class="mi">1</span>
-<span class="p">&gt;</span><span class="w"> </span><span class="nx">next</span><span class="p">(</span><span class="nx">it</span><span class="p">)</span>
-<span class="mi">1</span>
-<span class="p">&gt;</span><span class="w"> </span><span class="nx">next</span><span class="p">(</span><span class="nx">it</span><span class="p">)</span>
-<span class="mi">2</span>
-<span class="p">&gt;</span><span class="w"> </span><span class="nx">next</span><span class="p">(</span><span class="nx">it</span><span class="p">)</span>
-<span class="mi">3</span>
-<span class="p">&gt;</span><span class="w"> </span><span class="nx">next</span><span class="p">(</span><span class="nx">it</span><span class="p">)</span>
-<span class="mi">5</span>
-<span class="p">&gt;</span><span class="w"> </span><span class="nx">next</span><span class="p">(</span><span class="nx">it</span><span class="p">)</span>
-<span class="nx">StopIteration</span>
-<span class="p">&gt;</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="nx">_</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="nx">range</span><span class="p">(</span><span class="mi">3</span><span class="p">):</span>
-<span class="w">      </span><span class="k">for</span><span class="w"> </span><span class="nx">x</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="nx">f</span><span class="p">:</span>
-<span class="w">          </span><span class="nx">print</span><span class="p">(</span><span class="nx">x</span><span class="p">,</span><span class="w"> </span><span class="nx">end</span><span class="p">=</span><span class="sc">&#39; &#39;</span><span class="p">)</span>
-<span class="mi">1</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="mi">3</span><span class="w"> </span><span class="mi">5</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="mi">3</span><span class="w"> </span><span class="mi">5</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="mi">3</span><span class="w"> </span><span class="mi">5</span>
+<div class="codehilite"><pre><span></span><code><span class="k">&gt; </span><span class="ge">f = Fibonacci(5)</span>
+<span class="k">&gt; </span><span class="ge">type(f)</span>
+&lt;class &#39;__main__.Fibonacci&#39;&gt;
+<span class="k">&gt; </span><span class="ge">it = iter(f)</span>
+<span class="k">&gt; </span><span class="ge">type(it)</span>
+&lt;class &#39;__main__.FibonacciIterator&#39;&gt;
+<span class="k">&gt; </span><span class="ge">next(it)</span>
+1
+<span class="k">&gt; </span><span class="ge">next(it)</span>
+1
+<span class="k">&gt; </span><span class="ge">next(it)</span>
+2
+<span class="k">&gt; </span><span class="ge">next(it)</span>
+3
+<span class="k">&gt; </span><span class="ge">next(it)</span>
+5
+<span class="k">&gt; </span><span class="ge">next(it)</span>
+StopIteration
+<span class="k">&gt; </span><span class="ge">for _ in range(3):</span>
+      for x in f:
+          print(x, end=&#39; &#39;)
+1 1 2 3 5 1 1 2 3 5 1 1 2 3 5
 </code></pre></div>
 
 </li>
@@ -1734,7 +1769,7 @@ exercise you should of course write the function from scratch). An example usage
 <div class="exercise">
 <h2>Exercise 21.1 (job scheduling)</h2>
 <p><img alt="Scheduling" src="images/scheduling.png" /></p>
-<p>Assume you have <em>n</em> jobs where each job needs to be performed on some machine at a particular interval of time, i.e. the <em>i</em>-th task has a start time <em>start</em><sub><em>i</em></sub> and finishing time <em>end</em><sub><em>i</em></sub>.  You are going to buy a number of identical machines and to schedule the jobs on the machinces such that two jobs scheduled on the same machine do not have overlapping time intervals (not even at the endpoints).</p>
+<p>Assume you have <em>n</em> jobs where each job needs to be performed on some machine at a particular interval of time, i.e. the <em>i</em>-th task has a start time <em>start</em><sub><em>i</em></sub> and finishing time <em>end</em><sub><em>i</em></sub>.  You are going to buy a number of identical machines and to schedule the jobs on the machines such that two jobs scheduled on the same machine do not have overlapping time intervals (not even at the endpoints).</p>
 <p>The problem is to <em>minimize</em> the number of machines required to execute all the <em>n</em> jobs.</p>
 <p>The below list of eight time intervals for eight jobs can be scheduled on three machines as shown in the figure.</p>
 <div class="codehilite"><pre><span></span><code>[(1, 5), (6, 7), (3, 8), (2, 4), (8, 10), (5, 9), (1, 2), (9, 10)]
@@ -1764,7 +1799,7 @@ exercise you should of course write the function from scratch). An example usage
 
 </li>
 </ol>
-<p><em>Hint</em>. Sort the jobs by start time and assign the jobs to machines by considering them in increasing order of start time. Use the module <a target="_blank" href="https://docs.python.org/3.0/library/heapq.html"><code>heapq</code></a> to keep track of the currently active jobs and their finishing times. Whenever the earliest finishing time of an active job is earlyer than the start time of the next job to schedule, terminate this active job and release its machine to a pool of free machines.</p>
+<p><em>Hint</em>. Sort the jobs by start time and assign the jobs to machines by considering them in increasing order of start time. Use the module <a target="_blank" href="https://docs.python.org/3.0/library/heapq.html"><code>heapq</code></a> to keep track of the currently active jobs and their finishing times. Whenever the earliest finishing time of an active job is earlier than the start time of the next job to schedule, terminate this active job and release its machine to a pool of free machines.</p>
 </div>
 <a name="lecture22"></a>
 <h1>Lecture 22 (Working with text)</h1>
@@ -1791,7 +1826,7 @@ based on a regular expression capturing the set of separator symbols <code>!</co
 </div>
 <div class="exercise">
 <h2>Exercise 22.4 (find frequent phrases)</h2>
-<p>Find all occurences of the form "the <em><code>word</code></em>" in the file <a target="_blank" href="http://www.gutenberg.org/ebooks/1150.txt.utf-8">saxo.txt</a> (see Exercise 4.8) using a regular expression (convert the string to lower case before searching). Generate a list of the most frequent occurences, like the below:</p>
+<p>Find all occurrences of the form "the <em><code>word</code></em>" in the file <a target="_blank" href="http://www.gutenberg.org/ebooks/1150.txt.utf-8">saxo.txt</a> (see Exercise 4.8) using a regular expression (convert the string to lower case before searching). Generate a list of the most frequent occurrences, like the below:</p>
 <div class="codehilite"><pre><span></span><code><span class="mf">410</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">king</span>
 <span class="mf">138</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">danes</span>
 <span class="mf">121</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">enemy</span>
@@ -1805,13 +1840,13 @@ based on a regular expression capturing the set of separator symbols <code>!</co
 <span class="w"> </span><span class="mf">61</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">man</span>
 </code></pre></div>
 
-<p><em>Note</em>. There might me a linebreak between <code>the</code> and <em><code>word</code></em> (e.g. <code>the king</code> only occurs 387 times on a single line).</p>
+<p><em>Note</em>. There might me a line break between <code>the</code> and <em><code>word</code></em> (e.g. <code>the king</code> only occurs 387 times on a single line).</p>
 </div>
 <a name="lecture23"></a>
 <h1>Lecture 23 (Relational data)</h1>
 <div class="exercise">
 <h2>Exercise 23.1 (World Bank data)</h2>
-<p>Plot the development in the polulation in the Scandinavian countries (Norway, Denmark, Sweeden, Finland, Iceland) since 1960 until last year.</p>
+<p>Plot the development in the population in the Scandinavian countries (Norway, Denmark, Sweden, Finland, Iceland) since 1960 until last year.</p>
 <p>Use the pandas data reader for the <a target="_blank" href="https://pandas-datareader.readthedocs.io/en/latest/remote_data.html#world-bank">World Bank</a> data to get the population data. The indicator is <code>SP.POP.TOTL</code>.</p>
 <p><em>Hint</em>. Use the data frame methods <a target="_blank" href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.unstack.html"><code>unstack</code></a> and <a target="_blank" href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.plot.html"><code>plot</code></a>.</p>
 </div>
@@ -1871,7 +1906,7 @@ where 1 ≤ <em>k</em> ≤ <em>K</em> and 1 ≤ <em>n</em> ≤ <em>N</em>.</p>
 <p>A button 'Quit' to close the program</p>
 </li>
 <li>
-<p>A button 'Clear' to remove all exisiting points</p>
+<p>A button 'Clear' to remove all existing points</p>
 </li>
 <li>
 <p>A <code>checkbutton</code> to enable/disable showing the convex hull of the     current point set</p>
@@ -1886,7 +1921,7 @@ where 1 ≤ <em>k</em> ≤ <em>K</em> and 1 ≤ <em>n</em> ≤ <em>N</em>.</p>
 <p>Clicking on an existing point should delete the point</p>
 </li>
 </ol>
-<p><em>Hint</em>. See handin 7 for the computation of the convex hull of a point set. Make a function <code>redraw</code> that redraws the
+<p><em>Hint</em>. See Handin 7 for the computation of the convex hull of a point set. Make a function <code>redraw</code> that redraws the
 content of the canvas, by first deleting all content of the canvas, and then plotting the points and the convex hull (if enabled) using the <code>create_oval</code> and <code>create_polygon methods</code>.  The <code>redraw</code> method should be called whenever the canvas should be updated (new point, point deleted, all points deleted, and convex hull enabled/disabled). To capture clicks to the canvas apply the <code>bind</code> method of the canvas.</p>
 </div>
 <a name="lecture26"></a>
