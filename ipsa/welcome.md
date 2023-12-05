@@ -1,6 +1,6 @@
 # Welcome
 
-<img src="gerth.jpg" title="Gerth Stølting Brodal (Foto: Søren Kjeldgaard)" border=1 width=250 width="40%" class="right">
+<img src="gerth.jpg" title="Gerth Stølting Brodal (Foto: Søren Kjeldgaard)" border=1 width=250 class="right">
 
 This page containts the public content for the course [_Introduction to Programming with Scientific Applications_](https://kursuskatalog.au.dk/en/course/123832/Introduction-to-Programming-with-Scientific-Applications) offered by Aarhus University, Department of Computer Science. The lectuerer is [Gerth Stølting Brodal](https://cs.au.dk/~gerth/index.html).  Class lists, discussions, student handins and feedback are handled using Brightspace at [brightspace.au.dk](https://brightspace.au.dk/).
 
