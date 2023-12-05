@@ -19,7 +19,7 @@ Below is a list of resources for information on Python. For information on speci
 ## Tools
 
 * pylint - a Python source code analyzer, incl. PEP8:
-  [www.pylint.org](https://www.pylint.org)
+  [pypi.org/project/pylint](https://pypi.org/project/pylint)
 * flake8 - another PEP 8 checker:
   [pypi.python.org/pypi/flake8](https://pypi.python.org/pypi/flake8)
 

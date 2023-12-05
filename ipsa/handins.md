@@ -2,7 +2,7 @@
 
 The weekly handins are stated together with the ordinary exercises on the [Exercises](exercises) page. Both the weekly handins and the final project can be done in groups of up to three persons.
 
-The weekly handins and the final project can be handed in under **Course Tools > Assignments** on the Brightspace course page on [brightspace.au.dk](https://brightspace.au.dk/). Before you can hand in your assignments on the page you need to get your handin group register in Brightspace. Please ask your TA to register your group well ahead of time before your handin.
+The weekly handins and the final project can be handed in under **Course Tools > Assignments** on the Brightspace course page on [brightspace.au.dk](https://brightspace.au.dk/). Before you can hand in your assignments on the page you need to get your handin group registered in Brightspace. Please ask your TA to register your group well ahead of time before your hand in.
 
 _The first lines of each handin must contain the study ids and full names of all group members who contributed to the handin._
 

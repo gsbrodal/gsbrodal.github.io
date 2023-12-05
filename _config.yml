@@ -47,7 +47,7 @@ menu:
     url: "literature"
   - title: "Python installation"
     url: "install-intro"
-  - title: "&nbsp;-&nbsp;Windows 10"
+  - title: "&nbsp;-&nbsp;Windows 11"
     url: "install-windows"
   - title: "&nbsp;-&nbsp;Mac &amp; Linux"
     url: "install-mac-linux"
