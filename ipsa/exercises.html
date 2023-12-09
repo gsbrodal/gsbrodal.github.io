@@ -1194,9 +1194,16 @@ during the recursion when the first solution has been found. Do not generate an 
 </div>
 <a name="lecture14"></a>
 <h1>Lecture 14 (Documentation, testing and debugging)</h1>
+<div class="exercise">
+<h2>Exercise 14.1 (identical pairs)</h2>
+<p>Write a method <code>identical_pairs(L)</code> that given a list <code>L</code> returns the number of index pairs (i, j) where <code>i &lt; j and L[i] == L[j]</code>. E.g., <code>identical_pairs([3, 2, 3, 1, 2, 3, 1])</code> should return <code>5</code>.</p>
+<p>Your code should be able to handle inputs with a million values.</p>
+<p>Write tests for your code.</p>
+<p><em>Hint</em>: Apply <code>sorted</code> to the list and only do one scan over the list to compute the result.</p>
+</div>
 <a name="handin7"></a>
 <div class="handin">
-<h2>Exercise 14.1 - handin 7 (convex hull)</h2>
+<h2>Exercise 14.2 - handin 7 (convex hull)</h2>
 <p><img alt="Convex hull" src="images/convex_hull.png" /></p>
 <p>In this exercise you should compute the <a target="_blank" href="https://en.wikipedia.org/wiki/Convex_hull">convex hull</a> of a set of points in the plane.</p>
 <p>We assume that a point is represented as a pair of floats (tuple of two floats), and a set of input points is given by a list of at least three points, e.g. <code>points = [(3,2), (1,1), (2,3), (2,2), (1.5, 2.25), (2.5, 2.25), (2, 1.25), (1, 1.5)]</code> shown as green points in the figure.</p>
