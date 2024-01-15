@@ -11,5 +11,5 @@ John V. Guttag.
 [Introduction to Computation and Programming Using Python - With Application to Computational Modeling and Understanding Data](https://mitpress.mit.edu/books/introduction-computation-and-programming-using-python-third-edition).
 Third Edition. 664 pages. MIT Press, 2021. ISBN: 9780262542364.
 
-The book will be available at the branch of [Stakbogladen](http://www.stakbogladen.dk/profil/naturfagsafdelingen) at the Department of Mathematics in January ([buy book online at Stakbogladen](https://www.stakbogladen.dk/soegning.asp?phrase=9780262542364)).
+The book will be available at the branch of [Stakbogladen](http://www.stakbogladen.dk/profil/naturfagsafdelingen) at the Department of Mathematics in January ([buy book online at Stakbogladen](http://www.stakbogladen.dk.server3.ivaldi.dk/isbn-nd-9780262542364-introduction-to-computation-and-programming-using-python-third-edition)).
 </div>
