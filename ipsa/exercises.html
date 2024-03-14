@@ -1067,10 +1067,10 @@ Margrethe (1940)
 <p><code>__str__</code> returning the string <code>'name born-died'</code>.</p>
 </li>
 <li>
-<p><code>ancestor()</code> returns a tuple <code>(name-string, recursive-father-ancestor, recursive-mother-ancestor)</code> (see example below).</p>
+<p><code>ancestors()</code> returns a tuple <code>(name-string, recursive-father-ancestors, recursive-mother-ancestors)</code> (see example below).</p>
 </li>
 </ul>
-<p>Create a second class <code>AnnotatedPerson</code> that is a subclass of <code>Person</code>, that allows each person to be annotated with a <code>note</code>, that can be given as an argument to the constructor, and will be part of the string returned by <code>__str__</code>, i.e. redefine the methods <code>__init__</code> and <code>__str__</code>.  The method <code>ancestor</code> should be inherited from <code>Person</code> and not be redefined in <code>AnnotatedPerson</code>. Try to avoid repeating code from the super class, instead call the methods in the super class.</p>
+<p>Create a second class <code>AnnotatedPerson</code> that is a subclass of <code>Person</code>, that allows each person to be annotated with a <code>note</code>, that can be given as an argument to the constructor, and will be part of the string returned by <code>__str__</code>, i.e. redefine the methods <code>__init__</code> and <code>__str__</code>.  The method <code>ancestors</code> should be inherited from <code>Person</code> and not be redefined in <code>AnnotatedPerson</code>. Try to avoid repeating code from the super class, instead call the methods in the super class.</p>
 <p>Using the two classes you should be able to create the following objects:</p>
 <div class="codehilite"><pre><span></span><code>louise_af_HK = Person(&#39;Louise of Hessen-Kassel&#39;, None, None, 1817, 1898)
 christian_9  = Person(&#39;Christian 9.&#39;, None, None, 1818, 1906)
