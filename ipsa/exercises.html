@@ -1277,7 +1277,7 @@ during the recursion when the first solution has been found. Do not generate an 
 </li>
 <li>
 <p>Implement a function <code>convex_hull(points)</code> that computes a list <code>CH</code> containing the points on the convex hull of <code>points</code> satisfying the above described output conditions.</p>
-<p><em>Hint</em>. One possible solution it to compute the <em>upper hull</em> and <em>lower hull</em> separately (in the figure the red and blue paths, respectively). The upper hull can e.g. be computed by first sorting the points lexicographically, and then repeatedly removing a point <code>q</code> if <code>p,q,r</code> constitutes a left turn, where <code>p</code> is the left neighbor of <code>q</code> and <code>r</code> the right neighbor of <code>q</code>.</p>
+<p><em>Hint</em>. One possible solution is to compute the <em>upper hull</em> and <em>lower hull</em> separately (in the figure the red and blue paths, respectively). The upper hull can e.g. be computed by first sorting the points lexicographically, and then repeatedly removing a point <code>q</code> if <code>p,q,r</code> constitutes a left turn, where <code>p</code> is the left neighbor of <code>q</code> and <code>r</code> the right neighbor of <code>q</code>.</p>
 </li>
 <li>
 <p>Use <code>assert</code> statements and the module <a target="_blank" href="https://docs.python.org/3/library/doctest.html"><code>doctest</code></a> to test your convex hull implementation on a set of represenative inputs.</p>
