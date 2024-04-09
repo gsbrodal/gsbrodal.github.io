@@ -1,6 +1,6 @@
 # Past exams
 
-2020- Programming  exams (zip files; use "Save Link As..." to download)
+2020- Programming exams (zip files; use "Save Link As..." to download)
 
 * August 2023 [
   [questions](exams/ipsa23r.zip),
