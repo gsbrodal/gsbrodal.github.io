@@ -1711,7 +1711,7 @@ StopIteration
 </div>
 <div class="exercise">
 <h2>Exercise 20.5 (permutations generator)</h2>
-<p>Make a generator function <code>permutations(L)</code> that given a list <code>L</code> returns a list of all permutations of <code>L</code>. The method should use the <code>yield</code> keyword. The order of the returned lists can be arbitrary.</p>
+<p>Make a generator function <code>permutations(L)</code> that given a list <code>L</code> generates all permutations of <code>L</code>. The method should use the <code>yield</code> keyword. The order of the returned lists can be arbitrary.</p>
 <p><em>Example</em>. <code>permutations([1, 2])</code> should return <code>[[1, 2], [2, 1]]</code>.</p>
 <p><em>Note</em>. An implementation of the permutations generator also exists in the standard library <code>itertools</code> (but in this
 exercise you should of course write the function from scratch). An example usage is:</p>
@@ -1750,7 +1750,7 @@ exercise you should of course write the function from scratch). An example usage
 <p><code>L.__iter__()</code> should be a <em>generator</em> to iterate over all the elements in the list.</p>
 </li>
 <li>
-<p><code>L.extend(L2)</code> inserts the linked list <code>L2</code> at the front of the linked list <code>L</code>. Sets <code>L2.last = None</code>.</p>
+<p><code>L.extend(L2)</code> inserts the linked list <code>L2</code> at the end of the linked list <code>L</code>. Sets <code>L2.last = None</code>.</p>
 </li>
 </ul>
 <p><em>Example</em>. The figure shows the linked list <code>L</code> after executing the below first three <code>push</code> operations.</p>
@@ -1789,7 +1789,7 @@ exercise you should of course write the function from scratch). An example usage
 
 </li>
 <li>
-<p>Use the <code>imshow</code> and <code>colorbar</code> functions from the <code>pyplot</code> module to visualize the frequency the different cells are visited in a random walk of length 1000.</p>
+<p>Use the <code>imshow</code> or <code>hist2d</code> and <code>colorbar</code> functions from the <code>pyplot</code> module to visualize the frequency the different cells are visited in a random walk of length 1000.</p>
 </li>
 </ol>
 <p><em>Hint</em>. <code>import matplotlib.pyplot as plt; plt.imshow([[1,2,4],[0,3,-1]]); plt.colorbar(); plt.show()</code></p>
@@ -1799,7 +1799,7 @@ exercise you should of course write the function from scratch). An example usage
 <a name="lecture21"></a>
 <h1>Lecture 21 (Modules and packages)</h1>
 <div class="exercise">
-<h2>Exercise 21.1 (job scheduling)</h2>
+<h2>Exercise 21.1* (job scheduling)</h2>
 <p><img alt="Scheduling" src="images/scheduling.png" /></p>
 <p>Assume you have <em>n</em> jobs where each job needs to be performed on some machine at a particular interval of time, i.e. the <em>i</em>-th task has a start time <em>start</em><sub><em>i</em></sub> and finishing time <em>end</em><sub><em>i</em></sub>.  You are going to buy a number of identical machines and to schedule the jobs on the machines such that two jobs scheduled on the same machine do not have overlapping time intervals (not even at the endpoints).</p>
 <p>The problem is to <em>minimize</em> the number of machines required to execute all the <em>n</em> jobs.</p>
