@@ -2,7 +2,8 @@
 
 [<img src="mnist.png" width="45%" class="right">](mnist.png)
        
-In this project we are going to create a very simple _neural network_ (_linear classifier_) to identify the  handwritten digits from the [MNIST](http://yann.lecun.com/exdb/mnist) database - often considered the "Hello World" problem in neural networks.
+In this project we are going to create a very simple _neural network_ (_linear classifier_) to identify the  handwritten digits from the [MNIST](http://yann.lecun.com/exdb/mnist) database - often considered the "Hello World" problem in neural networks
+(The page <em>does not</em> require a password, but your browser might anyway ask for a password; try an alternative browser Firefox/Google/Safari, possibly in incognito mode; alternatively you can get the data from a [mirror at GitHub](https://github.com/sunsided/mnist)).
 In this problem we are given grayscale images of size 28 &times; 28 showing handwritten digits and are going to classify them into the 10 _classes_ 0&nbsp;-&nbsp;9, depending on the digit depicted in the image.  The MNIST database consists of 60.000 images to train your network on and 10.000 images to test the
 quality (accuracy) of the resulting network. For all images the correct label 0&nbsp;-&nbsp;9 is part of the database.  There exist many of-the-shelf modules for this problem in Python, e.g.
 [Keras](https://keras.io),
