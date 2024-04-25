@@ -49,7 +49,7 @@ where &gamma; controls the balance between risk and return. A high value of &gam
 
 In this project you should find _w_* for different values of &gamma; and using real stock values of your choice. The project consists of the following three questions.
 
-1.  We need a module for collecting stock values. For this you can use the module [`pandas-datareader`](https://pandas-datareader.readthedocs.io/en/latest).
+1.  We need a module for collecting stock values. For this you can use the module [`pandas-datareader`](https://pandas-datareader.readthedocs.io/en/latest) (`pip install pandas-datareader setuptools`).
 Using this you should write a function `get_prices([stock`<sub>`1`</sub>`, ..., stock`<sub>`k`</sub>`], step_size, period)` that returns a tuple `(stocks, p)`, where `p[j, i]` represents the opening price of stock `i` at time step `j` and `stocks[i]` is the name of the `i`'th stock (adjust the arguments to `get_prices` to the data available at your data source). Make a plot of _p_, where each stock is labeled with its name, e.g.  MSFT or GOGL. You should use at least five stocks.
 
 2.  Calculate _r_, &mu; and &Sigma; using the formulas above and the _p_ calculated in the first question. Plot the probability density function (_pdf_) of the return of each stock.
