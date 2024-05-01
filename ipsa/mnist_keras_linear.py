@@ -1,6 +1,3 @@
-# Requires Python 3.7, since uses TensorFlow that does not support Python 3.8 (yet)
-# C:\Users\au121\AppData\Local\Programs\Python\Python37\python.exe mnist_keras_linear.py
-
 # Some accuracy values:
 
 # No hidden layers / linear classifier
