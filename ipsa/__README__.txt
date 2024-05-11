@@ -1,11 +1,11 @@
 INTRODUKTION TIL PROGRAMMERING MED VIDENSKABELIGE ANVENDELSER
 =============================================================
 
-  * Eksamen 17. juni 2023.
+  * Eksamen 15. juni 2024.
 
   * Hjælpemidler: alle, inkl. computer, høretelefoner og internet.
 
-  * ITX Flex skal være aktiveret under eksamen.
+  * WISEflow Device Monitor skal være aktiveret under eksamen.
 
   * Det er ikke lovligt at kommunikere med andre om eksamensopgaverne
     under eksamen.
@@ -16,7 +16,7 @@ INTRODUKTION TIL PROGRAMMERING MED VIDENSKABELIGE ANVENDELSER
   * Sørg for at angive en kommentar i koden med en kildehenvisning,
     hvis man anvender kode man har fundet på internettet.
 
-  * Opgaveformulering hentes og afleveres på eksamen.au.dk.
+  * Opgaveformulering hentes og afleveres på wiseflow.au.dk.
 
       Filer der udleveres til eksamen:
 
@@ -56,7 +56,7 @@ INTRODUKTION TIL PROGRAMMERING MED VIDENSKABELIGE ANVENDELSER
     run_tests.log. Som kontrol, vil indholdet af run_tests.log blive
     sammenholdet med resultatet af den efterfølgende evaluering.
  
-  * Opgaverne skal laves i Python 3.11. Der må kun bruges de standard
+  * Opgaverne skal laves i Python 3.12. Der må kun bruges de standard
     moduler der følger med Python (f.eks. random, math, collections,
     etc., se https://docs.python.org/3/library/), såfremt der ikke er
     nævnt specifikke andre moduler i opgaveformuleringen.
