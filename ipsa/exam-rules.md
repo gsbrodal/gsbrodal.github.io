@@ -12,19 +12,13 @@ See previous exams for examples of exercises. The exam is provided as a zip file
 program to test your solution during the exam, where it tests if your code generates the expected output for a set of test inputs provided. The exam should be handed in as a single zip file (how to create a .zip file on [macOS](https://support.apple.com/en-gb/guide/mac-help/mchlp2528/mac) and [Windows](https://support.microsoft.com/en-us/windows/zip-and-unzip-files-f6dde0a7-0fec-8294-e1d3-703ed85e7ebc)).
 
 _Communication with others about the exam is not permitted during the exam. Students are required to bring their own PC and have
-[ITX-Flex](https://studerende.au.dk/en/digital-eksamen/information-about-itx-flex/) turned on throughout the entire exam. Tablets are not allowed._
+[WISEflow Device Monitor](https://studerende.au.dk/en/wiseflow/) turned on throughout the entire exam. Tablets are not allowed._
 
 _It is exam cheating, if you use an AI assistant for the exam (ChatGPT, GitHub Copilot, etc.), as the exam assignment has not been solved independently and individually._
 
-## ITX-Flex and Linux
+## WISEflow and Linux
 
-The following information concerning the exam is taken from the study portal's [Important Information about Exams](https://studerende.au.dk/en/studies/subject-portals/computer-science/examination/important-information-about-exams):
-
-> _If you use the Linux operating system, it is not possible to activate the ITX-Flex digital monitoring system._
-
-> _When you arrive for the written on-site exam, you must notify the site supervisor about you using Linux. You will then be placed under more strict supervision by the exam site supervisor during the exam._
-
-> _It is your responsibility to make sure that the site supervisor is aware that you are using Linux._
+WISEflow has limited support for Linux, but according to the [WISEflow support page](https://wiseflow.zendesk.com/hc/en-gb/articles/12151266178844-Minimum-Requirements-for-Applications) the WISEflow Device Monitor can run on some versions of Linux.
 
 ## Curriculum
 
