@@ -1,4 +1,4 @@
-# Exam information
+#  Exam information
 
 **The exam is a 5 hours, written exam, with aids, including computer, headphone and internet**.
 
