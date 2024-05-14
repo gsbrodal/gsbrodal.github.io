@@ -57,7 +57,7 @@ This project consists of the below tasks. Please remember to split your code int
 8.  To get a more refined spectrum we will take couplings between atoms into account. Between two H-atoms _A_ and _B_ in an amino acid (i.e. two peaks) there can be a coupling with magnitude _J_<sub>_AB_</sub>, in the following just denoted _J_, that influences the resulting spectrum. (Many other factors influence the spectrum, but we will happily ignore these in our simulations).  The coupling between _A_ and _B_ causes both peaks to be split into two new peaks _A_<sub>inner</sub>, _A_<sub>outer</sub>, _B_<sub>inner</sub> and _B_<sub>outer</sub>, where _B_<sub>inner</sub> is closer to _A_ than _B_, and _B_<sub>outer</sub> is further away from _A_ than _B_. In the following we only consider _B_<sub>inner</sub> and _B_<sub>outer</sub> (_A_ is handled symmetrically).
 
     The height of _B_<sub>outer</sub> is smaller than the height of _B_<sub>inner</sub>, the sum of their heights equals the height of _B_, and their width equals the width of _B_.
-    Assume _A_ and _B_ have their maximum at_x_<sub>0</sub> = _&nu;_<sub>_A_</sub>
+    Assume _A_ and _B_ have their maximum at _x_<sub>0</sub> = _&nu;_<sub>_A_</sub>
     and _x_<sub>0</sub> = _&nu;_<sub>_B_</sub>, respectively.
     Let
 
