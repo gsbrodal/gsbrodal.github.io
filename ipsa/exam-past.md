@@ -2,6 +2,9 @@
 
 2020- Programming exams (zip files; use "Save Link As..." to download)
 
+* August 2024 [
+  [questions](exams/ipsa24r.zip),
+  [answers](exams/ipsa24r-answers.zip) ]
 * June 2024 [
   [questions](exams/ipsa24.zip),
   [answers](exams/ipsa24answers.zip) ]
