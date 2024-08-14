@@ -1,6 +1,9 @@
 # Past exams
 
-2020- Programming exams (zip files; use "Save Link As..." to download)
+2020- Programming exams 
+(zip files; use "Save Link As..." to download; 
+the assertions in the solutions verifying the validity of the input 
+are not required for a correct solution)
 
 * August 2024 [
   [questions](exams/ipsa24r.zip),
