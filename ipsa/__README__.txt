@@ -1,104 +1,102 @@
-INTRODUKTION TIL PROGRAMMERING MED VIDENSKABELIGE ANVENDELSER
-=============================================================
+INTRODUCTION TO PROGRAMMING WITH SCIENTIFIC APPLICATIONS
+========================================================
 
-  * Eksamen 15. juni 2024.
+  * Exam June 2025.
 
-  * Hjælpemidler: alle, inkl. computer, høretelefoner og internet.
+  * Aids: all, incl. computer, headphones and internet.
 
-  * WISEflow Device Monitor skal være aktiveret under eksamen.
+  * WISEflow Device Monitor must be activated throughout the exam.
 
-  * Det er ikke lovligt at kommunikere med andre om eksamensopgaverne
-    under eksamen.
+  * It is not allowed to communicate with others during the exam.
 
-  * Det er ikke tilladt at bruge en AI assistant som f.eks.
-    GitHub Copilot eller ChatGPT.
+  * It is not allowed to use an AI assistant like, e.g., 
+    GitHub Copilot or ChatGPT.
 
-  * Sørg for at angive en kommentar i koden med en kildehenvisning,
-    hvis man anvender kode man har fundet på internettet.
+  * When using code found on the internet, you must add a comment in your code
+    with a proper link/citation to the source.
+  
+  * The exam questions are downloaded and solutions handed in at wiseflow.au.dk
+    as a single zip file.
 
-  * Opgaveformulering hentes og afleveres på wiseflow.au.dk.
+      Files provided at the exam:
 
-      Filer der udleveres til eksamen:
+      A.py, B.py...: Exam questions. The question statements are contained in 
+                     the doc-strings in the header of the files. The exam hand 
+                     in consists of uploading these files with inserted code.
 
-      A.py, B.py...: Opgaver. Formuleringerne fremgår af doc-teksten i
-                     starten af filerne. En eksamensbesvarelse består af
-                     upload af disse filer med indsat kode.
+      tests        : A folder with examples of test input for all questions 
+                     and the corresponding correct output.
 
-      tests        : Folder med eksempler på test input og korrekte svar
-                     for alle opgaver.
+      run_tests.py : A program to run all the provided test inputs.
 
-      run_tests.py : Et program til at køre alle de udleverede tests.
+  * Weight of the questions (questions are not weighted equally):
 
-  * Vægtningen af opgaverne:
-
-     Problem  Point  Navn
+     Question  Point  Name
         A
         B
         C
 
-    Totalt 100 point
+    Total 100 points
 
-  * Aflevering skal være en zip fil med opgaverne
+  * The hand in must be a single zip file with your solutions
 
-       A.py, B.py, ... og filen run_tests.log.
+       A.py, B.py, ... and the file run_tests.log.
 
-    Det anbefales at man afleverer hele eksamensfolderen med tests, 
-    ikke besvarede opgaver etc.
+    It is recommended that one hands in the complete exam folder including
+    tests, not answered questions etc.
     
-    Information om hvordan man laver en zip fil under macOS og
-    Windows 10 findes her:
+    Information on how to create a zip file under macOS and Windows 10 can 
+    be found here:
 
        https://support.apple.com/en-gb/guide/mac-help/mchlp2528/mac
        https://support.microsoft.com/en-us/help/14200/windows-compress-uncompress-zip-files
 
-    Inden man afleverer bør man køre run_tests.py en sidste gang på
-    alle ens besvarelser. Resultatet af testene gemmes løbende i
-    run_tests.log. Som kontrol, vil indholdet af run_tests.log blive
-    sammenholdet med resultatet af den efterfølgende evaluering.
+    Before handing in your solutions it is strongly recommended you run the
+    script run_tests.py a final time on all your solutions. The result of
+    running the test script is logged throughout the exam in the file 
+    run_tests.log. As a control during the grading after the exam, the content
+    of run_tests.log is compared with subsequent testing to ensure consistent
+    evaluation with the score you experienced obtained during the exam.
  
-  * Opgaverne skal laves i Python 3.12. Der må kun bruges de standard
-    moduler der følger med Python (f.eks. random, math, collections,
-    etc., se https://docs.python.org/3/library/), såfremt der ikke er
-    nævnt specifikke andre moduler i opgaveformuleringen.
+  * The questions should be answered using Python 3.13. You are only allowed to 
+    use the standard modules installed with Python (e.g., random, math, 
+    collections, etc., see https://docs.python.org/3/library/), except if 
+    the questions state one or more specific modules.
 
-  * Eksamensbesvarelsen kan IKKE afleveres i en Jupyter Notebook.
+  * Hand ins CANNOT be done as Jupyter Notebooks.
 
-  * I opgavebeskrivelser er der angivet nogle inputbetingelser,
-    f.eks. at 1 <= n <= 10. Det er en garanti som alle test input vil
-    opfylde. Det er ikke noget man behøver checke for (med assertions
-    eller lignende). De skjulte input vil også overholde disse
-    inputbetingelser.
+  * The question statements contain some input constraints, e.g., that 
+    1 <= n <= 10. It is guaranteed that all test inputs for the question
+    satisfy these constraints. This is not something that you need to check
+    (using, e.g., assertions). The hidden test cases used for testing 
+    after the exam will also satisfy these constraints.
 
-  * run_tests.py kan køres på forskellige måder, hvilket beskrives i
-    starten af filen. 
+  * The script run_tests.py can be invoked in various ways, which is described
+    in the header of the file.
 
-    En mulig løsning er at udkommentere linjen
+    One possible way is to comment out the line
 
        DEFAULT_FILES = ['A', 'B', 'C']
 
-    og angive navnene på de filer der skal testes.
+    and add the names of the files that should be tested.
 
-  * Er kode-strukturen/læsbarheden ligegyldig til eksamen? Fokuseres
-    der udelukkende på dets funktionalitet, altså antal tests det
-    accepterer?
+  * The script run_tests.py terminates your programs after 5 seconds.
+    5 seconds should be sufficient to get the majority of the test inputs 
+    accepted. For some of the questions some inputs might require that your 
+    code is sufficiently fast to get the last test inputs accepted. During the 
+    evaluation after the exam, slightly more time will be allowed.
     
-    Svar: Ja. Men velstruktureret kode har nok større sandsynlighed
-          for at virke.
+  * You do not get points if you hard code the test inputs and outputs in
+    your solution. For each test input available during the exam you should 
+    expect that the hidden test cases contain an input of the same "type",
+    such that for each test input accepted during the exam, one should also 
+    pass the corresponding hidden test case after the exam.
 
-    Er det forventet vi skriver forklarende kommentarer til vores kode
-    til eksamen?
-
-    Svar: Nej. Dog skal man huske at skrive en kommentar med
-          kildehenvisning hvis man kopierer kode fra internettet.
-
-  * run_tests.py stopper jeres program efter 5 sekunder, men det burde
-    være rigeligt til at løse de fleste testinstanser. I enkelte
-    opgaver kan nogle af testinstanserne dog kræve at man har en
-    tilstrækkelig hurtig løsning for at få de sidste testinstanser
-    godkendt. Til den efterfølgende evaluering af programmerne vil der
-    blive tilladt lidt mere tid.
+  * For the grading, code structure and readability have limited influence on
+    the final grade. Focus will be on the functionality, i.e., how many test 
+    cases are accepted. But likely, more structured code has a higher chance
+    to work correctly on more inputs.
     
-  * Man får ikke point for at håndtere input ved at hard code input
-    instanser og deres svar. For hvert input må man forvente at der
-    vil være et hemmeligt input af samme "type", så hvis man klarer et
-    input så bør man også klare det tilsvarende skjulte input.
+    You are not expected to provide comments and documentation in your
+    solutions, except for the above mentioned required citations to sources
+    on the internet when you use/modify code from the internet.
