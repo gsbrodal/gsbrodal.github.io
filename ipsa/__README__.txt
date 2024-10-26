@@ -1,7 +1,7 @@
 INTRODUCTION TO PROGRAMMING WITH SCIENTIFIC APPLICATIONS
 ========================================================
 
-  * Exam June 2025.
+  * Exam June 14, 2025.
 
   * Aids: all, incl. computer, headphones and internet.
 

@@ -5,9 +5,9 @@
 From [python.org](https://www.python.org/downloads) you can download the reference implementation of Python, nicknamed CPython (since it is coded in C):
 
 * Open [www.python.org/downloads](https://www.python.org/downloads)
-* Select "Download Python 3.12.0" or newer
+* Select "Download Python 3.13.0" or newer
 * Download "Windows installer (64-bit)"
-* Run the downloaded application, e.g python-3.12.0-amd64.exe
+* Run the downloaded application, e.g python-3.13.0-amd64.exe
 * Select "Add python.exe to PATH"
 * Select "Install now"
 
