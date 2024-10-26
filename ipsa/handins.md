@@ -10,4 +10,4 @@ _The filename of each submission must contain the study ids and full names of al
 
 ## Changes to handin groups
 
-Make sure that that the names on your handin correspond to the registered group members in Brightspace. All group changes must be done by your TA. If one of the group members becomes inactive, the remaining active group members should be moved to a new group in Brightspace. If a group splits up, the new groups should be registered in Brightspace. You can also join an existing group.
+Make sure that that the names on your handin correspond to the registered group members in Brightspace. All group changes must be done by your TA. If one of the group members becomes inactive, the remaining active group members should be moved to a new group in Brightspace. If a group splits up, the new groups should be registered in Brightspace. Two existing groups can also join to become a new group.

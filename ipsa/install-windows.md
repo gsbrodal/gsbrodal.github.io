@@ -35,7 +35,7 @@ Anaconda wrote on their [webpage](https://www.anaconda.com) that it is "The Most
 
 * Open [www.anaconda.com/download](https://www.anaconda.com/download)
 * Select "Download"
-* Run the download application,	e.g. Anaconda3-2023.09-Windows-x86_64.exe
+* Run the download application,	e.g. Anaconda3-2024.10-1-Windows-x86_64.exe
 
 _Note_: Anaconda does not necessarily support the most recent version of Python provided at [python.org](https://www.python.org).
 
@@ -45,12 +45,12 @@ PyPy is an alternative implementation of the Python language that is often faste
 
 * Open [pypy.org](https://pypy.org)
 * Select "Download PyPy"
-* Find the section with the most recent Python 3 implementation	and download the Windows binary (64bit) (possibly [pypy3.10-v7.3.13-win64.zip](https://downloads.python.org/pypy/pypy3.10-v7.3.13-win64.zip)).
+* Find the section with the most recent Python 3 implementation	and download the Windows binary (64bit) (possibly [pypy3.10-v7.3.17-win64.zip](https://downloads.python.org/pypy/pypy3.10-v7.3.17-win64.zip)).
 * Unzip the download folder and move the folder to an appropriate place, e.g. C:\Program Files\
 * Add the PyPy folder to your path:
     * Windows-key + "Edit the system environment variables"
     * Select "Environment variables"
     * Select "Path"
-    * Select "New" and add the path to the folder with pypy3.exe, e.g. C:\Program Files\pypy3.10-v7.3.13-win64\
+    * Select "New" and add the path to the folder with pypy3.exe, e.g. C:\Program Files\pypy3.10-v7.3.17-win64\
 
 The speed improvements of PyPy over CPython are due to the usage of the Just-In-Time compilation technique, that e.g. also is used inside the Google Chrome browser for executing JavaScript (see the Wikipedia page on [Chrome V8](https://en.wikipedia.org/wiki/Chrome_V8) and by Java Virtual Machines for executing Java programs (bytecode) (see more on [Just-In-Time compilation](https://en.wikipedia.org/wiki/Just-in-time_compilation) on Wikipedia).
