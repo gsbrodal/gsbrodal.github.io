@@ -12,6 +12,12 @@ INTRODUCTION TO PROGRAMMING WITH SCIENTIFIC APPLICATIONS
   * It is not allowed to use an AI assistant like, e.g., 
     GitHub Copilot or ChatGPT.
 
+  * Headphones are only allowed for listing to course videos and videos on the
+    internet relevant to the content of the exam, like YouTube videos on
+    Python programming.
+
+    It is not allowed to use the headphones to listen to music during the exam.
+
   * When using code found on the internet, you must add a comment in your code
     with a proper link/citation to the source.
   

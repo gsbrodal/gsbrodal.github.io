@@ -16,6 +16,8 @@ _Communication with others about the exam is not permitted during the exam. Stud
 
 _It is exam cheating, if you use an AI assistant for the exam (ChatGPT, GitHub Copilot, etc.), as the exam assignment has not been solved independently and individually._
 
+_Headphones are only allowed for listing to course videos and videos on the internet relevant to the content of the exam, like YouTube videos on Python programming. It is not allowed to use the headphones to listen to music during the exam._
+
 ## WISEflow and Linux
 
 WISEflow has limited support for Linux, but according to the [WISEflow support page](https://wiseflow.zendesk.com/hc/en-gb/articles/12151266178844-Minimum-Requirements-for-Applications) the WISEflow Device Monitor can run on some versions of Linux.
