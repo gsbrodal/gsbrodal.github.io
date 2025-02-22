@@ -1442,6 +1442,13 @@ converted into a new string, with the output put into a 'box' (see example below
 
 <p><em>Note</em>. The function <code>compose</code> mathematically corresponds to <a target="_blank" href="https://en.wikipedia.org/wiki/Function_composition">function composition</a>.</p>
 </div>
+<div class="exercise">
+<h2>Exercise 15.6** (numba) [optional]</h2>
+<p>The module <code>numba</code> (<a target="_blank" href="https://numba.pydata.org/">numba.pydata.org</a>) provides a decorator <code>jit</code> that allows ''<a target="_blank" href="https://en.wikipedia.org/wiki/Just-in-time_compilation">Just In Time compilation</a>'' of a Python function, provided the function uses sufficiently simple Python code. The first time a <code>jit</code> decorated function is called, the function is translated into efficient low level code, that will be used for each of the subsequent calls.</p>
+<p>Try to install <code>numba</code> and apply the decorator <code>@numba.jit(nopython=True)</code> to a function, e.g., your Newton-Raphson square root computation from Exercise 2.7, or a function computing the sum of all primes in the range 2 to <em>n</em>.</p>
+<p>Measure the computation time with and without using Numba, e.g., using <code>time.time</code> and by repeating the computation sufficiently many times to make the computation time measurable, say 1 second. Note that the first call to a <code>jit</code> decorated function can take significantly more time than subsequent calls.</p>
+<p><em>Note</em>: Using <code>numba</code> optimally is nontrivial, and requires some knowledge about the inner workings of Numba and computer architecture. For functions doing numeric calculations using loops, speedups of the order of a factor 25 are not uncommon by applying just in time compilation.</p>
+</div>
 <a name="lecture16"></a>
 <h1>Lecture 16 (Dynamic programming)</h1>
 <div class="exercise">
