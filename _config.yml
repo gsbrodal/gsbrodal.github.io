@@ -39,7 +39,7 @@ menu:
     url: "exam-statistics"
   - title: "&nbsp;-&nbsp;Past exams"
     url: "exam-past"
-  - title: "Plagiarism"
+  - title: "Plagiarism &amp; GAI"
     url: "plagiarism"
   - title: "Workload"
     url: "workload"
