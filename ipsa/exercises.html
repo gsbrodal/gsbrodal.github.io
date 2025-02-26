@@ -889,20 +889,31 @@ length <em>i</em> with the column positions for the queens in the <em>i</em> fir
 <p><em>Note</em>. Your solution should not use the builtin <code>map</code> function.</p>
 </div>
 <div class="exercise">
-<h2>Exercise 10.2 (string sorting)</h2>
+<h2>Exercise 10.2 (tuple sorting)</h2>
+<p>Write a function <code>point_sort</code> that given a list of points represented as tuples (<em>x</em>, <em>y</em>), returns the list of points sorted first with respect to <em>y</em>, and secondly with respect to <em>x</em> if points have equal <em>y</em> value.</p>
+<p><em>Example</em>.</p>
+<div class="codehilite"><pre><span></span><code>point_sort([(1, 2), (5, 1), (2, 3), (4, 2), (2, 1)])
+</code></pre></div>
+
+<p>should return</p>
+<div class="codehilite"><pre><span></span><code>[(2, 1), (5, 1), (1, 2), (4, 2), (2, 3)]
+</code></pre></div>
+</div>
+<div class="exercise">
+<h2>Exercise 10.3 (string sorting)</h2>
 <p>Write a function <code>str_sort</code> that sorts a list of strings, such that the strings are sorted with respect to the number of distinct letters (<code>'a'</code> - <code>'z'</code>) there are in the strings. Strings with an equal number of distinct letters after converting to lower case should apper in alphabetical order.</p>
 <p><em>Example</em>.</p>
 <div class="codehilite"><pre><span></span><code>str_sort([&#39;AHA&#39;, &#39;Oasis&#39;, &#39;ABBA&#39;, &#39;Beatles&#39;, &#39;AC/DC&#39;, &#39;B. B. King&#39;, &#39;Bangles&#39;, &#39;Alan Parsons&#39;])
 </code></pre></div>
 
 <p>should return</p>
-<div class="codehilite"><pre><span></span><code>[&#39;ABBA&#39;, &#39;AHA&#39;, &#39;AC/DC&#39;, &#39;Oasis&#39;, &#39;B. B. King&#39;, &#39;Beatles&#39;, &#39;Alan Parsons&#39;, &#39;Bangles&#39;]`.
+<div class="codehilite"><pre><span></span><code>[&#39;ABBA&#39;, &#39;AHA&#39;, &#39;AC/DC&#39;, &#39;Oasis&#39;, &#39;B. B. King&#39;, &#39;Beatles&#39;, &#39;Alan Parsons&#39;, &#39;Bangles&#39;]
 </code></pre></div>
 
 <p><em>Hint</em>. Use <code>len(set(X))</code> to find the number of different elements in a list <code>X</code>.</p>
 </div>
 <div class="exercise">
-<h2>Exercise 10.3 (binary search)</h2>
+<h2>Exercise 10.4 (binary search)</h2>
 <p>Assume you have a function <code>f</code> mapping integers to <code>True</code> and <code>False</code>, and there exists an integer <code>x</code> such that <code>f(y) == False</code> for <code>y</code> &lt; <code>x</code>, and <code>f(y) == True</code> for <code>y</code> ≥ <code>x</code>. Write a function <code>binary_search(f, low, high)</code> that returns the smallest <code>x</code> where <code>f(x) == True</code>, provided <code>f(low) == False</code> and <code>f(high) == True</code>.  The function should use binary search, like in Exercise 9.1 (bitonic minimum).</p>
 <p><em>Example</em>. <code>binary_search(lambda x: x * x &gt;= 1000, 0, 1000) == 32 == ceil(sqrt(1000))</code>.</p>
 <p>Assume now <code>f</code> is a function from floats to floats that is strictly decreasing in an interval [<code>low</code>, <code>x_min</code>] and strictly increasing in the interval [<code>x_min</code>, <code>high</code>] for some real number <code>x_min</code> and integers <code>low</code> and <code>high</code>.
@@ -910,7 +921,7 @@ Use your function <code>binary_search</code> to write a function <code>local_min
 <p><em>Example</em>. <code>local_min(lambda x: (x - 3.5) ** 2 - 7 * x, -1000, 1000)</code> returns 7.</p>
 </div>
 <div class="exercise">
-<h2>Exercise 10.4* (foldr)</h2>
+<h2>Exercise 10.5* (foldr)</h2>
 <p>In this exercise the goal is to make an implementation of <code>foldr</code> (fold right).  Python's <code>reduce</code> function is often
 called <code>foldl</code> (fold left) in other programming languages, that given a function <code>f</code> and a list <code>[x1, x2, x3, ..., xn]</code> computes <code>f(f(···f(f(x1, x2), x3)···), xn)</code>.</p>
 <p>The function <code>foldr</code> should instead compute <code>f(x1, f(x2, f(x3, f(···f(xn-1, xn)···))))</code>.</p>
