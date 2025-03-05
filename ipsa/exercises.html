@@ -852,7 +852,7 @@ length <em>i</em> with the column positions for the queens in the <em>i</em> fir
 <p><code>valid(r1, c1, r2, c2)</code> that checks if two queens at positions <code>(r1, c1)</code> and <code>(r2, c2)</code> respectively do not threaten each other (i.e. are in different rows and columns and not on the same diagonal).</p>
 </li>
 <li>
-<p><code>print_solution(solution)</code> that prints a solution given by a list <code>solution</code> where queen <code>i</code> is at position <code>(i,solution(i))</code>.</p>
+<p><code>print_solution(solution)</code> that prints a solution given by a list <code>solution</code> where queen <code>i</code> is at position <code>(i,solution(i))</code>. The function should also be able to print a partial solution where <code>len(solution) &lt; n</code>.</p>
 </li>
 <li>
 <p><code>solve(solution)</code> is a recursive function that tries to expand a partial solution given by <code>solution</code> for the first <code>len(solution)</code> queens.</p>
