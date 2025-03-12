@@ -2,8 +2,7 @@
 
 [<img src="mnist.png" width="45%" class="right">](mnist.png)
        
-In this project we are going to create a very simple _neural network_ (_linear classifier_) to identify the  handwritten digits from the [MNIST](http://yann.lecun.com/exdb/mnist) database - often considered the "Hello World" problem in neural networks
-(the [MNIST webpage](http://yann.lecun.com/exdb/mnist) <em>does not</em> require a password, but your browser might for some reason anyway ask for a password; try an alternative browser Firefox/Google/Safari, possibly in incognito mode; alternatively you can get the data from a [mirror at GitHub](https://github.com/sunsided/mnist)).
+In this project we are going to create a very simple _neural network_ (_linear classifier_) to identify the  handwritten digits from the MNIST database - often considered the "Hello World" problem in neural networks.
 In this problem we are given grayscale images of size 28 &times; 28 showing handwritten digits and are going to classify them into the 10 _classes_ 0&nbsp;-&nbsp;9, depending on the digit depicted in the image.  The MNIST database consists of 60.000 images to train your network on and 10.000 images to test the
 quality (accuracy) of the resulting network. For all images the correct label 0&nbsp;-&nbsp;9 is part of the database.  There exist many of-the-shelf modules for this problem in Python, e.g.
 [Keras](https://keras.io),
@@ -24,17 +23,17 @@ The few mathematical equations required in this project for performing simple ba
 
 The first group of tasks concerns reading the raw data and visualizing them.
 
-1.  From [yann.lecun.com/exdb/mnist/](http://yann.lecun.com/exdb/mnist) download the following four files:
+1.  From [https://github.com/sunsided/mnist](https://github.com/sunsided/mnist) download the following four files:
     * t10k-images.idx3-ubyte.gz (1.6 MB)
     * t10k-labels.idx1-ubyte.gz (4.4 KB)
     * train-images.idx3-ubyte.gz (9.6 MB)
     * train-labels.idx1-ubyte.gz (28.3 KB)
 
-2.  Make a function `read_labels(filename)` to read a file containing labels (integers 0-9) in the format described under [FILE FORMATS FOR THE MNIST DATABASE](http://yann.lecun.com/exdb/mnist/). The function should return a list of integers. Test your method on the files t10k-labels.idx1-ubyte.gz and train-labels.idx1-ubyte.gz (the first five values of the 10.000 values in t10k-labels.idx1-ubyte.gz are [7, 2, 1, 0, 4]).  The function should check if the _magic number_ of the file is 2049.
+2.  Make a function `read_labels(filename)` to read a file containing labels (integers 0-9) in the IDX file format, described on [https://github.com/sunsided/mnist](https://github.com/sunsided/mnist). The function should return a list of integers. Test your method on the files t10k-labels.idx1-ubyte.gz and train-labels.idx1-ubyte.gz (the first five values of the 10.000 values in t10k-labels.idx1-ubyte.gz are [7, 2, 1, 0, 4]).  The function should check if the _magic number_ of the file is 2049.
 
     _Hint_: Open the files for reading in binary mode by providing `open` with the argument `'rb'`. You can either uncompress the files using a program like 7zip, or work directly with the compressed files using the `gzip` module in Python. In particular `gzip.open` will be relevant. To convert 4 bytes to an integer `int.from_bytes` might become useful.
 
-3.  Make a function `read_images(filename)` to read a file containing MNIST images in the format described under [FILE FORMATS FOR THE MNIST DATABASE](http://yann.lecun.com/exdb/mnist).  Test your method on the files t10k-images.idx3-ubyte.gz and train-images.idx3-ubyte.gz.  The function should return a three dimensional list of integers, such that images[image][row][column] is a pixel value (an integer in the range 0..255), and 0 &le; row, column &lt; 28 and 0 &le; image &lt; 10000 for t10k-images.idx3-ubyte.gz. The function should check if the _magic number_ of the file is 2051.
+3.  Make a function `read_images(filename)` to read a file containing MNIST images in hte IDX file format, described on [https://github.com/sunsided/mnist](https://github.com/sunsided/mnist).  Test your method on the files t10k-images.idx3-ubyte.gz and train-images.idx3-ubyte.gz.  The function should return a three dimensional list of integers, such that images[image][row][column] is a pixel value (an integer in the range 0..255), and 0 &le; row, column &lt; 28 and 0 &le; image &lt; 10000 for t10k-images.idx3-ubyte.gz. The function should check if the _magic number_ of the file is 2051.
 
 4.  Make a function `plot_images(images, labels)` to show a set of images and their corresponding labels as titles using `imshow` from `matplotlib.pyplot`. Show the first few images from t10k-images.idx3-ubyte.gz with their labels from t10k-labels.idx1-ubyte.gz as titles. Remember to select an appropriate colormap for `imshow`.
 
@@ -123,13 +122,13 @@ Here are some additional optional tasks. Feel free to come up with your own (oth
 
     _Hint_. You can use `matplotlib.animation.FuncAnimation`, and let the provided function apply one batch of training data to the network for each call.
 
-21. _Optional_: Redo the above exercises in Numpy. Create a generic method for reading IDX files into NumPy arrays based on the specification [THE IDX FILE FORMAT](http://yann.lecun.com/exdb/mnist).  Data can be read from a file directly into a NumPy array using `numpy.fromfile` and an appropriate
+21. _Optional_: Redo the above exercises in Numpy. Create a generic method for reading IDX files into NumPy arrays based on the specification of The IDX file format.  Data can be read from a file directly into a NumPy array using `numpy.fromfile` and an appropriate
 [dtype](https://docs.scipy.org/doc/numpy/reference/arrays.dtypes.html).
 
     _Hint_. `np.argmax(test_images.reshape(10000, 28 * 28) @ A + b, axis=1)` computes the predictions for all tests images, if they are all in one NumPy array with shape (10000, 28, 28).
 
 22. _Optional_: Compare your pure Python solution with your Numpy implementation (if you did the above optional task) and/or the solution using Keras, e.g. on running time, accuracy achieved, epochs.
 
-23. _Optional_: Try to take a picture of your own handwritten letters and see if your program can classify your digits. It is important that you preprocess your images to the same nomalized format as the original MNIST data: Images should be 28 &times; 28 pixels where each pixel is represented by an 8-bit greyscale value where 255 is black and 0 is white. The center of mass should be in the center of the image.  In the test data all images were first scaled to fit in a 20 &times; 20 box, and then padded with eight rows and columns with zeros to make the center of mass the center of the image, see [yann.lecun.com/exdb/mnist](http://yann.lecun.com/exdb/mnist).
+23. _Optional_: Try to take a picture of your own handwritten letters and see if your program can classify your digits. It is important that you preprocess your images to the same nomalized format as the original MNIST data: Images should be 28 &times; 28 pixels where each pixel is represented by an 8-bit greyscale value where 255 is black and 0 is white. The center of mass should be in the center of the image.  In the test data all images were first scaled to fit in a 20 &times; 20 box, and then padded with eight rows and columns with zeros to make the center of mass the center of the image.
 
-    _Hint_: `PIL.Image.resize` from the `Pillow` (Python Imaging Library) might be usefull. Remember to set the resampling filter to BILINEAR.
+    _Hint_: `PIL.Image.resize` from the `Pillow` (Python Imaging Library) might be useful. Remember to set the resampling filter to BILINEAR.
