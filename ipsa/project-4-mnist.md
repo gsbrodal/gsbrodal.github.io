@@ -23,17 +23,17 @@ The few mathematical equations required in this project for performing simple ba
 
 The first group of tasks concerns reading the raw data and visualizing them.
 
-1.  From [https://github.com/sunsided/mnist](https://github.com/sunsided/mnist) download the following four files:
+1.  From [github.com/sunsided/mnist](https://github.com/sunsided/mnist) download the following four files:
     * t10k-images.idx3-ubyte.gz (1.6 MB)
     * t10k-labels.idx1-ubyte.gz (4.4 KB)
     * train-images.idx3-ubyte.gz (9.6 MB)
     * train-labels.idx1-ubyte.gz (28.3 KB)
 
-2.  Make a function `read_labels(filename)` to read a file containing labels (integers 0-9) in the IDX file format, described on [https://github.com/sunsided/mnist](https://github.com/sunsided/mnist). The function should return a list of integers. Test your method on the files t10k-labels.idx1-ubyte.gz and train-labels.idx1-ubyte.gz (the first five values of the 10.000 values in t10k-labels.idx1-ubyte.gz are [7, 2, 1, 0, 4]).  The function should check if the _magic number_ of the file is 2049.
+2.  Make a function `read_labels(filename)` to read a file containing labels (integers 0-9) in the IDX file format, described on [github.com/sunsided/mnist](https://github.com/sunsided/mnist). The function should return a list of integers. Test your method on the files t10k-labels.idx1-ubyte.gz and train-labels.idx1-ubyte.gz (the first five values of the 10.000 values in t10k-labels.idx1-ubyte.gz are [7, 2, 1, 0, 4]).  The function should check if the _magic number_ of the file is 2049.
 
     _Hint_: Open the files for reading in binary mode by providing `open` with the argument `'rb'`. You can either uncompress the files using a program like 7zip, or work directly with the compressed files using the `gzip` module in Python. In particular `gzip.open` will be relevant. To convert 4 bytes to an integer `int.from_bytes` might become useful.
 
-3.  Make a function `read_images(filename)` to read a file containing MNIST images in hte IDX file format, described on [https://github.com/sunsided/mnist](https://github.com/sunsided/mnist).  Test your method on the files t10k-images.idx3-ubyte.gz and train-images.idx3-ubyte.gz.  The function should return a three dimensional list of integers, such that images[image][row][column] is a pixel value (an integer in the range 0..255), and 0 &le; row, column &lt; 28 and 0 &le; image &lt; 10000 for t10k-images.idx3-ubyte.gz. The function should check if the _magic number_ of the file is 2051.
+3.  Make a function `read_images(filename)` to read a file containing MNIST images in hte IDX file format, described on [github.com/sunsided/mnist](https://github.com/sunsided/mnist).  Test your method on the files t10k-images.idx3-ubyte.gz and train-images.idx3-ubyte.gz.  The function should return a three dimensional list of integers, such that images[image][row][column] is a pixel value (an integer in the range 0..255), and 0 &le; row, column &lt; 28 and 0 &le; image &lt; 10000 for t10k-images.idx3-ubyte.gz. The function should check if the _magic number_ of the file is 2051.
 
 4.  Make a function `plot_images(images, labels)` to show a set of images and their corresponding labels as titles using `imshow` from `matplotlib.pyplot`. Show the first few images from t10k-images.idx3-ubyte.gz with their labels from t10k-labels.idx1-ubyte.gz as titles. Remember to select an appropriate colormap for `imshow`.
 
