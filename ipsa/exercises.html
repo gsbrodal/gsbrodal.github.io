@@ -1876,6 +1876,31 @@ exercise you should of course write the function from scratch). An example usage
 <div class="exercise">
 <h2>Exercise 22.1 (reading csv)</h2>
 <p>Extend your code for Handin 9 (maximum flow) to read the graphs from CSV files. For 19.2(a) the first line should contain the names of the source and sink nodes, whereas for 19.2(b) the first line should contain the name of the source, sink, and the flow value.</p>
+<p>Input to 19.2(a):</p>
+<div class="codehilite"><pre><span></span><code>A,F
+A,B,3
+A,C,4
+B,D,1
+B,E,3
+C,D,1
+C,E,1
+D,F,5
+E,D,3
+E,F,1
+</code></pre></div>
+
+<p>Input to 19.2(b)</p>
+<div class="codehilite"><pre><span></span><code>A,F,4
+A,B,3,1
+A,C,4,1
+B,D,1,1
+B,E,3,1
+C,D,1,1
+C,E,1,1
+D,F,5,2
+E,D,3,0
+E,F,1,1
+</code></pre></div>
 </div>
 <div class="exercise">
 <h2>Exercise 22.2 (re.split)</h2>
@@ -1896,7 +1921,7 @@ based on a regular expression capturing the set of separator symbols <code>!</co
 </div>
 <div class="exercise">
 <h2>Exercise 22.4 (find frequent phrases)</h2>
-<p>Find all occurrences of the form "the <em><code>word</code></em>" in the file <a target="_blank" href="http://www.gutenberg.org/ebooks/1150.txt.utf-8">saxo.txt</a> (see Exercise 4.8) using a regular expression (convert the string to lower case before searching). Generate a list of the most frequent occurrences, like the below:</p>
+<p>Find all occurrences of the form "<strong>the <em><code>word</code></em></strong>" in the file <a target="_blank" href="http://www.gutenberg.org/ebooks/1150.txt.utf-8">saxo.txt</a> (see Exercise 4.8) using a regular expression (convert the string to lower case before searching). Generate a list of the most frequent occurrences, like the below:</p>
 <div class="codehilite"><pre><span></span><code><span class="mf">410</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">king</span>
 <span class="mf">138</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">danes</span>
 <span class="mf">121</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">enemy</span>
