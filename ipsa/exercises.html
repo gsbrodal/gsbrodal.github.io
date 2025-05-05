@@ -1954,6 +1954,7 @@ based on a regular expression capturing the set of separator symbols <code>!</co
 the <em>j</em>-th coordinate of the data point <em>i</em>. For each coordinate we compute the mean µ<sub><em>j</em></sub>  = (&sum;<sub><em>i</em>=1..<em>n</em></sub> <em>p</em><sub><em>ij</em></sub>) / <em>n</em>, the variance σ<sub><em>j</em></sub><sup>2</sup> = (&sum;<sub><em>i</em>=1..<em>n</em></sub> (<em>p<sub>ij</sub></em> - µ<sub><em>j</em></sub>)<sup>2</sup>) / <em>n</em>, and the standard deviation σ<sub><em>j</em></sub> = (σ<sub><em>j</em></sub><sup>2</sup>)<sup>0.5</sup>. The method <code>whiten</code> replaces <em>p</em><sub><em>ij</em></sub> by <em>p</em><sub><em>ij</em></sub> / σ<sub><em>j</em></sub>.</p>
 <p>You can either implement your method with plain Python using lists of tuples representing data-points or using <code>numpy</code>. For <code>numpy</code> be aware of the keyword arguments <code>axis</code> and <code>keepdims</code> for the <code>numpy.sum</code> method.</p>
 <div class="codehilite"><pre><span></span><code>&gt; whiten([(1.9, 2.3, 1.7),
+          (2.3, 1.8, 5.2),
           (1.5, 2.5, 2.2),
           (0.8, 0.6, 1.7)])
 [[4.179442778108569, 2.698113510169924, 7.212489168102781],
