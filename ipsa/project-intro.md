@@ -14,6 +14,14 @@ The project report must contain the below front page (not counted in the 4 pages
 > [project-front-page.docx](project-front-page.docx) |
 > [project-front-page.tex](project-front-page.tex)
 
+## Project submission
+
+The project report must be submitted on Brightspace as a *pdf-file* (if you write your report in Microsoft Word, Apple Pages, or the like, the document must be save as a pdf-file before submitting).
+
+Code must be submitted as second file, possible as a zip-file in case you have more files.
+
+Please make sure that the group members are correctly registered in Brightspace before submitting your report.
+
 ## Project descriptions
 
 You can choose any of the projects listed in the menu as your final project.
