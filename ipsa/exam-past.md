@@ -1,10 +1,15 @@
 # Past exams
 
 2020- Programming exams 
-(zip files; use "Save Link As..." to download; 
-the assertions in the solutions verifying the validity of the input 
-are not required for a correct solution)
+(zip files; use "Save Link As..." to download). 
+The assertions in the solutions verifying the validity of the input 
+are not required for a correct solution.
+The questions files contain 5 test cases per problem,
+whereas the answer files contain 5 additional test cases per problem).
 
+* June 2025 [
+  [questions](exams/ipsa25.zip),
+  [answers](exams/ipsa25answers.zip) ]
 * August 2024 [
   [questions](exams/ipsa24r.zip),
   [answers](exams/ipsa24r-answers.zip) ]
