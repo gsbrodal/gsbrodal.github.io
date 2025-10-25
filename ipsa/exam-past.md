@@ -7,6 +7,9 @@ are not required for a correct solution.
 The questions files contain 5 test cases per problem,
 whereas the answer files contain 5 additional test cases per problem).
 
+* August 2025 [
+  [questions](exams/ipsa25r.zip),
+  [answers](exams/ipsa25r-answers.zip) ]
 * June 2025 [
   [questions](exams/ipsa25.zip),
   [answers](exams/ipsa25answers.zip) ]
