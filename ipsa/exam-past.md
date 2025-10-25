@@ -1,7 +1,7 @@
 # Past exams
 
 2020- Programming exams 
-(zip files; use "Save Link As..." to download). 
+(links are to zip files; use "Save Link As..." to download). 
 The assertions in the solutions verifying the validity of the input 
 are not required for a correct solution.
 The questions files contain 5 test cases per problem,
