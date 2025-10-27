@@ -17,7 +17,7 @@ menu:
     url: "plan-compact"
   - title: "&nbsp;-&nbsp;All slides (pdf)"
     url: "slides/all-slides.pdf"
-  - title: "&nbsp;-&nbsp; with answers (pdf)"
+  - title: "&nbsp;-&nbsp;with answers (pdf)"
     url: "slides/all-slides-with-answers.pdf"
   - title: "Exercises"
     url: "exercises"
