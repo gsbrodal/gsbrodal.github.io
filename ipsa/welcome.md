@@ -6,7 +6,7 @@ This page containts the public content for the course [_Introduction to Programm
 
 Class lists, discussions, student handins and feedback are handled using Aarhus University's learning management system Brightspace at [brightspace.au.dk](https://brightspace.au.dk/).
 
-The course gives an introduction to the Python 3 programming language and applications using Python.  Throughout the course students are encouraged to seek online information in e.g. the Python language specification.
+The course gives an introduction to the Python 3 programming language and applications using Python.  Throughout the course students are encouraged to seek online information in, e.g., the Python language specification.
 
 The course will be run with weekly 2 x 2 hours lectures (alternatively recorded lectures on YouTube), 3 hours of exercise classes with a teaching assistant ("øvelser"), and 3 hours of staffed study café.
 
