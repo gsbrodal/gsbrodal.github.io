@@ -19,7 +19,7 @@ During the course students are required to hand in 10 weekly assignments and one
 
 All course material is in English and lectures will be conducted in English. 
 The exercise classes will be conducted in Danish or English depending on the staffing of the exercise classes.
-The language for the weekly assignments will depend on the staffing of the exercise classes.
+The language for submitting answers to the weekly assignments will depend on the staffing of the exercise classes.
 
 ## Course content
 
