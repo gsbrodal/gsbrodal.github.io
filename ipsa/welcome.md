@@ -2,15 +2,24 @@
 
 <img src="gerth.jpg" title="Gerth Stølting Brodal (Foto: Søren Kjeldgaard)" border=1 width=250 class="right">
 
-This page containts the public content for the course [_Introduction to Programming with Scientific Applications_](https://kursuskatalog.au.dk/en/course/123832/Introduction-to-Programming-with-Scientific-Applications) offered by Aarhus University, Department of Computer Science. The lectuerer is [Gerth Stølting Brodal](https://cs.au.dk/~gerth/index.html).
+This page contains the public content for the course _Introduction to Programming with Scientific Applications_ offered by Aarhus University, Department of Computer Science. The lecturer is [Gerth Stølting Brodal](https://cs.au.dk/~gerth/index.html). 
 
-Class lists, discussions, student handins and feedback are handled using Aarhus University's learning management system Brightspace at [brightspace.au.dk](https://brightspace.au.dk/).
+The courses is listed in the Aarhus University course catalogue with the two entries:
+
+* [Introduction to Programming with Scientific Applications (DK)](https://kursuskatalog.au.dk/en/course/138411/Introduction-to-Programming-with-Scientific-Applications)
+* [Introduction to Programming with Scientific Applications (EN)](https://kursuskatalog.au.dk/en/course/136445/Introduction-to-Programming-with-Scientific-Applications-EN)
+
+Class lists, discussions, student assignment submissions and feedback are handled using Aarhus University's learning management system Brightspace at [brightspace.au.dk](https://brightspace.au.dk/).
 
 The course gives an introduction to the Python 3 programming language and applications using Python.  Throughout the course students are encouraged to seek online information in, e.g., the Python language specification.
 
 The course will be run with weekly 2 x 2 hours lectures (alternatively recorded lectures on YouTube), 3 hours of exercise classes with a teaching assistant ("øvelser"), and 3 hours of staffed study café.
 
-During the course students are required to hand in 10 weekly handins and one larger implementation project. Handins and the project are done in groups of up to three persons. Approval of the weekly handins is a prerequisite to attend the exam. The final exam will be a programming exam with all aids, incl. internet, and _the final grade will be based on an overall evaluation of the implementation project (20%) and the programming exam (80%)_.
+During the course students are required to hand in 10 weekly assignments and one larger implementation project. The weekly assignments and the project final are done in groups of up to three persons. Approval of the weekly assignments is a prerequisite to attend the exam. The final exam will be a programming exam with all aids, incl. internet, and _the final grade will be based on an overall evaluation of the implementation project (20%) and the programming exam (80%)_.
+
+All course material is in English and lectures will be conducted in English. 
+The exercise classes will be conducted in Danish or English depending on the staffing of the exercise classes.
+The language for the weekly assignments will depend on the staffing of the exercise classes.
 
 ## Course content
 
