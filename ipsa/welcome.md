@@ -17,9 +17,9 @@ The course will be run with weekly 2 x 2 hours lectures (alternatively recorded 
 
 During the course students are required to hand in 10 weekly assignments and one larger implementation project. The weekly assignments and the project final are done in groups of up to three persons. Approval of the weekly assignments is a prerequisite to attend the exam. The final exam will be a programming exam with all aids, incl. internet, and _the final grade will be based on an overall evaluation of the implementation project (20%) and the programming exam (80%)_.
 
-All course material is in English and lectures will be conducted in English. 
-The exercise classes will be conducted in Danish or English depending on the staffing of the exercise classes.
-The language for submitting answers to the weekly assignments will depend on the staffing of the exercise classes.
+All course material in the course is in English. Lectures are conducted in English. 
+The exercise classes are conducted in Danish or English depending on the staffing of the individual exercise classes.
+The language for submitting answers to the weekly assignments depends on the staffing of the individual exercise classes.
 
 ## Course content
 
