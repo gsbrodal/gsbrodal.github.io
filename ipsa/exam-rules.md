@@ -43,3 +43,4 @@ Since your are not allowed to access the internet during the exam, it is importa
   download [python-3.14-docs-pdf-a4.zip](https://docs.python.org/3/archives/python-3.14-docs-pdf-a4.zip).
 * [Course slides](https://gsbrodal.github.io/ipsa/slides/all-slides.pdf).
 * Your solutions to exercises made throughout the semester.
+* Past exams and solutions to them.
