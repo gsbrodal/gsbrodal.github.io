@@ -36,7 +36,7 @@ The implementation project done during the course will also count towards the re
 
 ## Files to bring to the exam
 
-Since your are not allowed to access the internet during the exam, it is important that you before the exam already have downloaded
+Since your are not allowed to access the internet during the exam, it is important that you before the exam already have downloaded at least:
 
 * A working Python installation and code editor (IDE, e.g., IDLE).
 * Relevant lanuage documentation, e.g., from [docs.python.org/3/](https://docs.python.org/3/) 
