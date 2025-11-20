@@ -14,9 +14,9 @@ program to test your solution during the exam, where it tests if your code gener
 _Communication with others about the exam is not permitted during the exam. Students are required to bring their own PC and have
 [WISEflow Device Monitor](https://studerende.au.dk/en/wiseflow/) turned on throughout the entire exam. Tablets are not allowed._
 
-_It is exam cheating, if you use an AI assistant for the exam (ChatGPT, GitHub Copilot, etc.), as the exam assignment has not been solved independently and individually._
+_Accessing the internet is not allowed during the exam, except for downloading the exam questions, submitting your exam answers, and for running the WISEflow Device Monitor._
 
-_Headphones are only allowed for listing to course videos and videos on the internet related to the content of the exam, like YouTube videos on Python programming. It is not allowed to use the headphones to listen to music during the exam._
+_It is exam cheating, if you use an AI assistant for the exam (ChatGPT, GitHub Copilot, etc.). Locally installed AI assistants on your computer are also not allowed._
 
 ## WISEflow and Linux
 
@@ -33,3 +33,13 @@ The grade reflects an _overall assessment_ of the final implementation project a
 The final exam contributes 80% to the final grade and the implementation project 20%. The result of the final exam must meet the minimum requirements for acceptance to be able to pass the course.
 
 The implementation project done during the course will also count towards the reexam.
+
+## Files to bring to the exam
+
+Since your are not allowed to access the internet during the exam, it is important that you before the exam already have downloaded
+
+* A working Python installation.
+* Relevant lanuage documentation, e.g., from [docs.python.org/3/](https://docs.python.org/3/) 
+  download [python-3.14-docs-pdf-a4.zip](https://docs.python.org/3/archives/python-3.14-docs-pdf-a4.zip).
+* [Course slides]](https://gsbrodal.github.io/ipsa/slides/all-slides.pdf).
+* Your solutions to exercises made throughout the semester.
