@@ -1,6 +1,6 @@
 #  Exam information
 
-**The exam is a 5 hours, written exam, with aids, including computer, headphone and internet**.
+**The exam is a 5 hours, written exam, with aids, including computer.**.
 
 The ordinary exam is in June. The reexam is in August.
 
@@ -24,7 +24,7 @@ WISEflow has limited support for Linux, but according to the [WISEflow support p
 
 ## Curriculum
 
-The course curriculum for the exam consists of the slides covered during the course and available in the "Course plan" (see menu), the topic covered in the implementation project, and the topics covered in the mandatory handins.
+The course curriculum for the exam consists of the slides covered during the course and available in the "Course plan" (see menu), the topic covered in the implementation project, and the topics covered in the mandatory assignments.
 
 ## Grading
 
@@ -39,7 +39,7 @@ The implementation project done during the course will also count towards the re
 Since your are not allowed to access the internet during the exam, it is important that you before the exam already have downloaded at least:
 
 * A working Python installation and code editor (IDE, e.g., IDLE).
-* Relevant lanuage documentation, e.g., from [docs.python.org/3/](https://docs.python.org/3/) 
+* Relevant language documentation, e.g., from [docs.python.org/3/](https://docs.python.org/3/) 
   download [python-3.14-docs-pdf-a4.zip](https://docs.python.org/3/archives/python-3.14-docs-pdf-a4.zip).
 * [Course slides](https://gsbrodal.github.io/ipsa/slides/all-slides.pdf).
 * Your solutions to exercises made throughout the semester.
