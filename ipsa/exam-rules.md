@@ -1,6 +1,6 @@
 #  Exam information
 
-**The exam is a 5 hours, written exam, with aids, including computer.**.
+**The exam is a 5 hours, written exam, with aids, including computer without internet.**.
 
 The ordinary exam is in June. The reexam is in August.
 

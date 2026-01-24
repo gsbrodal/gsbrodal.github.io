@@ -19,7 +19,7 @@ INTRODUKTION TIL PROGRAMMERING MED VIDENSKABELIGE ANVENDELSER
     ikke tilladt.
 
   * Sørg for at angive en kommentar i koden med en kildehenvisning, hvis man
-  anvender kode fra f.eks. kursusslidesene.
+    anvender kode fra f.eks. kursusslidesene.
 
   * Opgaveformulering hentes og besvarelserne afleveres på wiseflow.au.dk som en
     enkelt zip file.
