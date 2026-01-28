@@ -2,7 +2,7 @@
 
 ## CPython, pip, and IDLE
 
-From [python.org](https://www.python.org/downloads) you can download the reference implementation of Python, nicknamed CPython (since it is coded in the programming language C). With Python 3.14 (October 2025), Python should now be installed using the Python install manager.
+From [python.org](https://www.python.org/downloads) you can download the reference implementation of Python, nicknamed CPython (since it is coded in the programming language C). Since Python 3.14 (October 2025), Python should now be installed using the Python install manager.
 
 * Open [www.python.org/downloads](https://www.python.org/downloads)
 * Select "Download Python install manager"
