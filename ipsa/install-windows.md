@@ -2,21 +2,19 @@
 
 ## CPython, pip, and IDLE
 
-From [python.org](https://www.python.org/downloads) you can download the reference implementation of Python, nicknamed CPython (since it is coded in C):
+From [python.org](https://www.python.org/downloads) you can download the reference implementation of Python, nicknamed CPython (since it is coded in the programming language C). With Python 3.14 (October 2025), Python should now be installed using the Python install manager.
 
 * Open [www.python.org/downloads](https://www.python.org/downloads)
-* Select "Download Python 3.13.0" or newer
-* Download "Windows installer (64-bit)"
-* Run the downloaded application, e.g python-3.13.0-amd64.exe
-* Select "Add python.exe to PATH"
-* Select "Install now"
+* Select "Download Python install manager"
+* Run the downloaded application, e.g python-manager-25.2.msix
+* Remember to answer YES when asked "Add commands directory to your PATH now?"
 
 _Note_. By default a 64-bit Windows version of Python is installed. For memory consuming Python programs on Windows (requiring above 2GB of RAM), it is important that you download the 64 bit version of Python, also available at [www.python.org/downloads/windows](https://www.python.org/downloads/windows) as "Windows installer (64-bit)". The 32-bit version is "Windows installer (32-bit)", and limits your programs to using 2GB of RAM.
 
-Additional **Python packages** are installed using the program "pip3", included in the above download. To e.g. install the _SciPy_ package that will be used in the course (see [SciPy.org](https://www.scipy.org) for more information on the package):
+Additional **Python packages** are installed using the module "pip", included in the above download. To e.g. install the _SciPy_ package that will be used in the course (see [SciPy.org](https://www.scipy.org) for more information on the package):
 
 * Open a Command Prompt (Windows-key + type "cmd")
-* Run "pip3 install scipy"
+* Run "python -m pip install scipy"
 
 Part of the download is **IDLE**, an **integrated development environment** for Python. Existing Python files (ending on .py) can be opened and edited in IDLE by right-clicking on the file and selecting "Edit with IDLE". The IDLE application should also appear in your Windows Start menu (or Windows-key + "IDLE").
 
@@ -35,7 +33,7 @@ Anaconda wrote on their [webpage](https://www.anaconda.com) that it is "The Most
 
 * Open [www.anaconda.com/download](https://www.anaconda.com/download)
 * Select "Download"
-* Run the download application,	e.g. Anaconda3-2024.10-1-Windows-x86_64.exe
+* Run the download application,	e.g. Anaconda3-2025.12-1-Windows-x86_64.exe
 
 _Note_: Anaconda does not necessarily support the most recent version of Python provided at [python.org](https://www.python.org).
 
@@ -45,12 +43,12 @@ PyPy is an alternative implementation of the Python language that is often faste
 
 * Open [pypy.org](https://pypy.org)
 * Select "Download PyPy"
-* Find the section with the most recent Python 3 implementation	and download the Windows binary (64bit) (possibly [pypy3.10-v7.3.17-win64.zip](https://downloads.python.org/pypy/pypy3.10-v7.3.17-win64.zip)).
+* Find the section with the most recent Python 3 implementation	and download the Windows binary (64bit) (possibly [https://downloads.python.org/pypy/pypy3.11-v7.3.20-win64.zip](https://downloads.python.org/pypy/pypy3.11-v7.3.20-win64.zip)).
 * Unzip the download folder and move the folder to an appropriate place, e.g. C:\Program Files\
 * Add the PyPy folder to your path:
     * Windows-key + "Edit the system environment variables"
     * Select "Environment variables"
     * Select "Path"
-    * Select "New" and add the path to the folder with pypy3.exe, e.g. C:\Program Files\pypy3.10-v7.3.17-win64\
+    * Select "New" and add the path to the folder with pypy3.exe, e.g. C:\Program Files\pypy3.11-v7.3.30-win64\
 
 The speed improvements of PyPy over CPython are due to the usage of the Just-In-Time compilation technique, that e.g. also is used inside the Google Chrome browser for executing JavaScript (see the Wikipedia page on [Chrome V8](https://en.wikipedia.org/wiki/Chrome_V8) and by Java Virtual Machines for executing Java programs (bytecode) (see more on [Just-In-Time compilation](https://en.wikipedia.org/wiki/Just-in-time_compilation) on Wikipedia).
