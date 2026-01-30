@@ -66,17 +66,38 @@ See <em>Installing Python</em> in the course menu for more information.</p>
 <a name="lecture2"></a>
 <h1>Lecture 2 (Python basics and control structures)</h1>
 <div class="exercise">
-<h2>Exercise 2.1 (sum of two numbers)</h2>
+<h2>Exercise 2.1 (increment a number)</h2>
+<p>Create a program that asks the user for a number <em>x</em> and prints <em>x</em>+1. Example:</p>
+<div class="codehilite"><pre><span></span><code>A number x: 4
+x + 1 = 5
+</code></pre></div>
+
+<p><em>Hint</em>. Use the function <code>input</code>. Recall that the function <code>input</code> returns a <code>str</code>.</p>
+</div>
+<div class="exercise">
+<h2>Exercise 2.2 (sum of two numbers)</h2>
 <p>Create a program that asks the user for two numbers and then prints their sum.</p>
 <p><em>Hint</em>. Use the function <code>input</code>. Recall that the function <code>input</code> returns a <code>str</code>.</p>
 </div>
 <div class="exercise">
-<h2>Exercise 2.2 (sum of <em>k</em> numbers)</h2>
+<h2>Exercise 2.3 (count)</h2>
+<p>Create a program that ask a user for a positive integer <em>n</em>, and prints the numbers 1, 2, ..., <em>n</em> each on a separate line. Example:</p>
+<div class="codehilite"><pre><span></span><code>A positive integer n: 4
+1
+2
+3
+4
+</code></pre></div>
+
+<p><em>Hint</em>. Use a <code>while</code>-loop.</p>
+</div>
+<div class="exercise">
+<h2>Exercise 2.4 (sum of <em>k</em> numbers)</h2>
 <p>Create a program that adds a user specified number of numbers. The program should first ask the user for a number <em>k</em>, and then <em>k</em> times ask the user for a number, and finally print the sum of the <em>k</em> numbers.</p>
 <p><em>Hint</em>. Use a <code>while</code>-loop.</p>
 </div>
 <div class="exercise">
-<h2>Exercise 2.3 (intersection of two intervals)</h2>
+<h2>Exercise 2.5 (intersection of two intervals)</h2>
 <p>Write a program that determines if two intervals [<em>a</em>, <em>b</em>] and [<em>c</em>, <em>d</em>] overlap, where <em>a</em> ≤ <em>b</em> and <em>c</em> ≤ <em>d</em>.
 The program should ask the user for the four end-points <em>a</em>, <em>b</em>, <em>c</em> and <em>d</em> of the two intervals, and print if the two intervals overlap or not. If the two intervals overlap, the program should print the interval where the two input intervals overlap.</p>
 <p><em>Hint</em>. Use one or more <code>if</code>-statements.</p>
@@ -90,7 +111,7 @@ The program should ask the user for the four end-points <em>a</em>, <em>b</em>, 
 </code></pre></div>
 </div>
 <div class="exercise">
-<h2>Exercise 2.4 (integer square root)</h2>
+<h2>Exercise 2.6 (integer square root)</h2>
 <p>Consider the following program for finding the integer square root of a non-negative integer:</p>
 <div class="codehilite"><pre><span></span><code>x = int(input(&#39;x: &#39;))
 
@@ -122,14 +143,14 @@ print(low)  # low = floor(sqrt(x))
 </ol>
 </div>
 <div class="exercise">
-<h2>Exercise 2.5 (primality test)</h2>
+<h2>Exercise 2.7 (primality test)</h2>
 <p>Write a naive program that tests if a small number <em>x</em> ≥ 2 is a prime number.</p>
 <p>Recall that a number is a <a target="_blank" href="https://en.wikipedia.org/wiki/Prime_number">prime number</a> if and only if the only numbers dividing the number is 1 and the number itself, like the numbers 2, 3, 5, 7, 11, 13...</p>
 <p>The program should ask the user for the number <em>x</em> and print whether the number is a prime or not. If <em>x</em> is not a prime, it should print a divisor/factor in the range [2, <em>x</em> - 1].</p>
 <p><em>Hint</em>. Try all relevant factors. Use the <code>%</code> operator to compute the remainder by integer division, e.g. <code>13 % 5 == 3</code>.</p>
 </div>
 <div class="exercise">
-<h2>Exercise 2.6 (integer factorization)</h2>
+<h2>Exercise 2.8 (integer factorization)</h2>
 <p>Write a program that, given a positive integer <em>x</em>, prints the prime factors of that number.
 Recall that any positive number has a unique prime factorization, e.g. 126 = 2 * 3 * 3 * 7.</p>
 <p>The program should ask the user for the integer <em>x</em>, and then print each prime factor.
@@ -137,7 +158,7 @@ Note that for <em>x</em> = 126, the prime factor 3 should be printed two times.<
 <p><em>Hint</em>. Repeatedly divide <em>x</em> by 2 until 2 is not a prime factor any longer. Repeat the same for 3, 4, 5,... Note that 4 = 2 * 2 is not a prime number. But since its prime factors cannot be divisors of <em>x</em> divided by the prime factors found so far, then we will not find 4 (and any other composite number) as a prime divisor of <em>x</em>.</p>
 </div>
 <div class="exercise">
-<h2>Exercise 2.7* (Newton-Raphson square root)</h2>
+<h2>Exercise 2.9* (Newton-Raphson square root)</h2>
 <p>Use the Newton-Raphson method to compute the square root of a float <em>n</em> ≥ 1.0, by finding a root of the function
 <em>f</em>(<em>x</em>) = <em>x</em><sup>2</sup> - <em>n</em> and letting your initial approximation of the root be <em>x</em> = <em>n</em>.
 Recall <em>f</em>'(<em>x</em>) = 2 * <em>x</em>. In your computations you can use +, -, *, and /.</p>
@@ -147,7 +168,7 @@ Recall <em>f</em>'(<em>x</em>) = 2 * <em>x</em>. In your computations you can us
 </code></pre></div>
 </div>
 <div class="exercise">
-<h2>Exercise 2.8** (Stirlings's approximation)</h2>
+<h2>Exercise 2.10** (Stirlings's approximation)</h2>
 <p><a target="_blank" href="https://en.wikipedia.org/wiki/Stirling%27s_approximation">Stirling's approximation</a> states that <em>n</em>! can be approximated by <em>S</em>(<em>n</em>) = (2 <em>&pi;</em> <em>n</em>)<sup>0.5</sup> &middot; (<em>n</em> / <em>e</em>)<sup><em>n</em></sup>.</p>
 <p>Write a program that asks the user for an <em>n</em> and prints the ratio <em>n</em>! / <em>S</em>(<em>n</em>), i.e. how good an approximation <em>S</em>(<em>n</em>) is to <em>n</em>!.</p>
 <p>Some example outputs:</p>
@@ -165,7 +186,7 @@ Recall <em>f</em>'(<em>x</em>) = 2 * <em>x</em>. In your computations you can us
 </div>
 <a name="handin1"></a>
 <div class="handin">
-<h2>Exercise 2.9 - handin 1 (down payment)</h2>
+<h2>Exercise 2.11 - handin 1 (down payment)</h2>
 <p>Write a program to compute how many months it takes to pay down a loan, that has a fixed monthly interest rate, and the borrower makes a fixed monthly payment. The program should ask the user for three values: The size of the initial loan, the monthly interest rate in percent, and the size of the monthly payment of the borrower. The program should output for each month the size of the remaining loan.</p>
 <p><em>Handin format</em>. The handin should consist of a <strong>single Python file</strong>. The files should start with a Python docstring (string in triple quotes, <code>"""</code> or <code>'''</code>) containing the <strong>study ids</strong> and <strong>names</strong> of the students who made the handin. A handin group consists of 1-3 students. Furthermore the docstring must contain a short <strong>reflection</strong> (5-10 lines) on your solution to the exercise. This could be a short discussion of the design choices you made during your implementation, the problems you encountered, what were the hard and easy parts to get your solution to work, what restrictions on the user input did you make, limitations in your implementation, what language features were particularly useful, ... A template for the handin is below.  The <strong>filename</strong> of a submission must contain the names of all group members and their study id.</p>
 <div class="codehilite"><pre><span></span><code><span class="s">&#39;&#39;&#39;</span>
