@@ -476,7 +476,21 @@ e.g. the polynomial 3·<em>x</em><sup>3</sup> - 2·<em>x</em><sup>2</sup> + 0·<
 E.g. for <em>x</em> = 7 and coefficients (5, 0, -2, 3) your code should compute the value 936.</p>
 </div>
 <div class="exercise">
-<h2>Exercise 5.2 (list grouping)</h2>
+<h2>Exercise 5.2 (zipping names)</h2>
+<p>Given a list of first names <code>first = ['Donald', 'Mickey', 'Scrooge']</code> and last names <code>last = ['Duck', 'Mouse', 'McDuck']</code>, use list comprehension, <code>zip</code> and <code>sorted</code> to generate an
+alphabetically sorted list of names '<em>lastname</em>, <em>firstname</em>', i.e. generates the list <code>['Duck, Donald', 'McDuck, Scrooge', 'Mouse, Mickey']</code>.</p>
+</div>
+<div class="exercise">
+<h2>Exercise 5.3 (zip)</h2>
+<p>Implement your own version <code>my_zip</code> of <code>zip</code>, such that
+<code>my_zip([L1, L2,..., Lk]) == list(zip(L1, L2, ...., Lk))</code>.</p>
+</div>
+<div class="exercise">
+<h2>Exercise 5.4 (flatten)</h2>
+<p>Make a method <code>flatten(L)</code> that given a list of lists <code>L = [L1,L2,...,Lk]</code> returns one list that is the concatenation of all lists, i.e. <code>L1 + L2 + ··· + Lk</code>. Your implementation should use list comprehension.</p>
+</div>
+<div class="exercise">
+<h2>Exercise 5.5 (list grouping)</h2>
 <p>Assume you have a list <code>L</code> and a positive integer <code>group_size</code>. Your task is to
 split the list into groups of size <code>group_size</code>, except for possibly the last
 group. More precisely, create a new list-of-lists <code>groups</code> where <code>groups[0]</code> are
@@ -493,20 +507,6 @@ group_size = 4
 
 <p><em>Hint</em>. Use a range and list slicing to extract the groups from <code>L</code>. Use a
 list comprehension to do it with one line of code.</p>
-</div>
-<div class="exercise">
-<h2>Exercise 5.3 (zipping names)</h2>
-<p>Given a list of first names <code>first = ['Donald', 'Mickey', 'Scrooge']</code> and last names <code>last = ['Duck', 'Mouse', 'McDuck']</code>, use list comprehension, <code>zip</code> and <code>sorted</code> to generate an
-alphabetically sorted list of names '<em>lastname</em>, <em>firstname</em>', i.e. generates the list <code>['Duck, Donald', 'McDuck, Scrooge', 'Mouse, Mickey']</code>.</p>
-</div>
-<div class="exercise">
-<h2>Exercise 5.4 (zip)</h2>
-<p>Implement your own version <code>my_zip</code> of <code>zip</code>, such that
-<code>my_zip([L1, L2,..., Lk]) == list(zip(L1, L2, ...., Lk))</code>.</p>
-</div>
-<div class="exercise">
-<h2>Exercise 5.5 (flatten)</h2>
-<p>Make a method <code>flatten(L)</code> that given a list of lists <code>L = [L1,L2,...,Lk]</code> returns one list that is the concatenation of all lists, i.e. <code>L1 + L2 + ··· + Lk</code>. Your implementation should use list comprehension.</p>
 </div>
 <a name="lecture6"></a>
 <h1>Lecture 6 (Dictionaries and sets)</h1>
