@@ -433,7 +433,7 @@ c = r.step
 <h2>Exercise 4.10 (list subsequence)</h2>
 <p>Make a program that given two lists <code>L1</code> and <code>L2</code>, determines if <code>L1</code> is a subsequence of <code>L2</code>, i.e., if <code>L1</code> can be obtained by deleting zero or more values from <code>L2</code>.</p>
 <p>E.g. for <code>L1 = [7, 2, 3]</code> and <code>L2 = [3, 7, 2, 5, 1, 3, 4]</code> your program should print that <code>L1</code> is a subsequence of <code>L2</code> (since <code>L1</code> can be obtained  from <code>L2</code> by deleting the first <code>3</code> together with <code>5</code>, <code>1</code> and <code>4</code>). For <code>L1 = [7, 4, 3]</code> and the same <code>L2</code>, your program should print that <code>L1</code> is <em>not</em> a subsequence of <code>L2</code>.</p>
-<p><em>Hint</em>. First find the first occurence of <code>L1[0]</code> in <code>L2</code>, and then repeat appropriately.</p>
+<p><em>Hint</em>. First find the first occurrence of <code>L1[0]</code> in <code>L2</code>, and then repeat appropriately.</p>
 </div>
 <div class="exercise">
 <h2>Exercise 4.11 (interval union)</h2>
@@ -452,7 +452,7 @@ c = r.step
 </div>
 <a name="handin2"></a>
 <div class="handin">
-<h2>Exercise 4.13 - handin 2 (palindrome)</h2>
+<h2>Exercise 4.14 - handin 2 (palindrome)</h2>
 <p>Write a program that given a long string (say order 1.000.000 characters), computes all palindromic substrings of length ≥ 7, i.e. substrings spelled identical read forwards and backwards.  You can use the below code to read a complete text from a file to a string, convert it to lower case, and remove everything except letters and digits.</p>
 <p>The file <code>saxo.txt</code> is a local copy of <a target="_blank" href="http://www.gutenberg.org/ebooks/1150.txt.utf-8">http://www.gutenberg.org/cache/epub/1150/pg1150.txt.utf-8</a>.</p>
 <div class="codehilite"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">string</span><span class="w"> </span><span class="kn">import</span> <span class="n">ascii_letters</span><span class="p">,</span> <span class="n">digits</span>
@@ -476,17 +476,36 @@ e.g. the polynomial 3·<em>x</em><sup>3</sup> - 2·<em>x</em><sup>2</sup> + 0·<
 E.g. for <em>x</em> = 7 and coefficients (5, 0, -2, 3) your code should compute the value 936.</p>
 </div>
 <div class="exercise">
-<h2>Exercise 5.2 (zipping names)</h2>
+<h2>Exercise 5.2 (list grouping)</h2>
+<p>Assume you have a list <code>L</code> and a positive integer <code>group_size</code>. Your task is to
+split the list into groups of size <code>group_size</code>, except for possibly the last
+group. More precisely, create a new list-of-lists <code>groups</code> where <code>groups[0]</code> are
+the first <code>group_size</code> elements of <code>L</code>, <code>groups[1]</code> the next <code>group_size</code>
+elements of <code>L</code>, etc.</p>
+<p><em>Example</em>: For</p>
+<div class="codehilite"><pre><span></span><code>L = [3, 2, 1, 7, 14, 4, 6, 8, 10, 11, 13, 5, 12, 9]
+group_size = 4
+</code></pre></div>
+
+<p>the resulting value of <code>groups</code> should be</p>
+<div class="codehilite"><pre><span></span><code>[[3, 2, 1, 7], [14, 4, 6, 8], [10, 11, 13, 5], [12, 9]]
+</code></pre></div>
+
+<p><em>Hint</em>. Use a range and list slicing to extract the groups from <code>L</code>. Use a
+list comprehension to do it with one line of code.</p>
+</div>
+<div class="exercise">
+<h2>Exercise 5.3 (zipping names)</h2>
 <p>Given a list of first names <code>first = ['Donald', 'Mickey', 'Scrooge']</code> and last names <code>last = ['Duck', 'Mouse', 'McDuck']</code>, use list comprehension, <code>zip</code> and <code>sorted</code> to generate an
 alphabetically sorted list of names '<em>lastname</em>, <em>firstname</em>', i.e. generates the list <code>['Duck, Donald', 'McDuck, Scrooge', 'Mouse, Mickey']</code>.</p>
 </div>
 <div class="exercise">
-<h2>Exercise 5.3 (zip)</h2>
+<h2>Exercise 5.4 (zip)</h2>
 <p>Implement your own version <code>my_zip</code> of <code>zip</code>, such that
 <code>my_zip([L1, L2,..., Lk]) == list(zip(L1, L2, ...., Lk))</code>.</p>
 </div>
 <div class="exercise">
-<h2>Exercise 5.4 (flatten)</h2>
+<h2>Exercise 5.5 (flatten)</h2>
 <p>Make a method <code>flatten(L)</code> that given a list of lists <code>L = [L1,L2,...,Lk]</code> returns one list that is the concatenation of all lists, i.e. <code>L1 + L2 + ··· + Lk</code>. Your implementation should use list comprehension.</p>
 </div>
 <a name="lecture6"></a>
