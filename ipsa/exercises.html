@@ -756,13 +756,50 @@ Right: (&#39;A&#39;, (&#39;G&#39;, ((&#39;E&#39;, &#39;F&#39;), ((&#39;B&#39;, &
 <p>E.g. <code>binary(5, 3)</code> should return the list <code>['00111', '01011', '01101', '01110', '10011', '10101', '10110', '11001', '11010', '11100']</code> (in any order).</p>
 </div>
 <div class="exercise">
-<h2>Exercise 8.4 (tree relabeling)</h2>
+<h2>Exercise 8.4 (label function)</h2>
+<p>Assume you enumerate all nonempty strings with letters A-Z as follows:</p>
+<div class="codehilite"><pre><span></span><code>A,B,...,Z,AA,AB,...,AZ,BA,...,BZ,...,ZZ,AAA,AAB,...,ZZZ,AAAA,...
+</code></pre></div>
+
+<p>I.e. the strings are sorted first by length and then lexicographically.
+We number the strings 0,1,2,... such that the first 26 strings are the letters
+<code>A</code> to <code>Z</code>, the next 26 ** 2 strings the strings <code>AA</code> to <code>ZZ</code> with two letters
+and which have numbers 26,...,26+26**26-1, ...</p>
+<p>Create a function <code>label</code> that takes as argument a single non-negative integer
+<code>i</code> and prints the <code>i</code>th label in the enumeration above.</p>
+<p><em>Example</em>:</p>
+<div class="codehilite"><pre><span></span><code>for i in [0, 1, 2, 3, 24, 25, 26, 27, 51, 52, 26+26*26-1, 26+26*26, 201883747]:
+    print(i, label(i))
+</code></pre></div>
+
+<p>should print</p>
+<div class="codehilite"><pre><span></span><code><span class="mf">0</span><span class="w"> </span><span class="n">A</span>
+<span class="mf">1</span><span class="w"> </span><span class="n">B</span>
+<span class="mf">2</span><span class="w"> </span><span class="n">C</span>
+<span class="mf">3</span><span class="w"> </span><span class="n">D</span>
+<span class="mf">24</span><span class="w"> </span><span class="n">Y</span>
+<span class="mf">25</span><span class="w"> </span><span class="n">Z</span>
+<span class="mf">26</span><span class="w"> </span><span class="n">AA</span>
+<span class="mf">27</span><span class="w"> </span><span class="n">AB</span>
+<span class="mf">51</span><span class="w"> </span><span class="n">AZ</span>
+<span class="mf">52</span><span class="w"> </span><span class="n">BA</span>
+<span class="mf">701</span><span class="w"> </span><span class="n">ZZ</span>
+<span class="mf">702</span><span class="w"> </span><span class="n">AAA</span>
+<span class="mf">201883747</span><span class="w"> </span><span class="n">PYTHON</span>
+</code></pre></div>
+
+<p><em>Hint</em>. Think recursively. If <code>i</code> is less than 26, the string only
+consists of a single letter. Otherwise, the string consists of the last letter
+and a prefix (a label with one letter less) that changes whenever <code>i</code> increases by 26.</p>
+</div>
+<div class="exercise">
+<h2>Exercise 8.5 (tree relabeling)</h2>
 <p>Make a recursive function <code>relabel(tree, new_names)</code> that takes a tree <code>tree</code> and a dictionary <code>new_names = {old_name: new_name, ...}</code>, and returns a new tree where labels in the dictionary <code>new_names</code> are replaced by the corresponding values in the dictionary. Leaves not in the dictionary remain unchanged.</p>
 <p><em>Example</em>. <code>relabel(('a', ('b', 'c')), {'a': 'x', 'c': 'y'})</code> should return <code>('x', ('b', 'y'))</code>.</p>
 <p><em>Hint</em>. Start making <code>relabel</code> for binary trees only. Use the method <code>isinstance</code> to check if a value is of class <code>tuple</code> or a <code>str</code>.</p>
 </div>
 <div class="exercise">
-<h2>Exercise 8.5* (validate leaf-labeled binary trees)</h2>
+<h2>Exercise 8.6* (validate leaf-labeled binary trees)</h2>
 <p>Assume we want to represent binary trees, where each leaf has a string as a label, by nested tuples. We require the leaves are labeled with distinct non-empty strings and all non-leaf nodes have exactly two children. E.g. <code>((('A', 'B'), 'C'), ('D', ('F', 'E')))</code> is a valid binary tree.</p>
 <ol>
 <li>
@@ -775,7 +812,7 @@ Right: (&#39;A&#39;, (&#39;G&#39;, ((&#39;E&#39;, &#39;F&#39;), ((&#39;B&#39;, &
 <p><em>Hint</em>. Use the method <code>isinstance</code> to check if a value is of class <code>tuple</code> or a <code>str</code>, and use a recursive function to traverse a tree. Collect all leaf labels in a list, and check if all leaves are distinct by converting to <code>set</code>.</p>
 </div>
 <div class="exercise">
-<h2>Exercise 8.6* (subtree extraction)</h2>
+<h2>Exercise 8.7* (subtree extraction)</h2>
 <p>Make a recursive function <code>extract(tree, leaves)</code> that takes a binary tree <code>tree</code> and a set of <code>leaves</code>, generates a new binary tree only containing the leaves in <code>leaves</code>, i.e. repeatedly all other leaves are pruned, previous internal nodes with no children are removed, and previous internal nodes with only one child are replaced by the child.</p>
 <p><em>Example</em>. <code>extract(((('a', 'b'), 'c'), ((('d', 'e'), 'f'), 'g')), {'a', 'c', 'd', 'f', 'g'})</code> should return <code>(('a', 'c'), (('d', 'f'), 'g'))</code> (see illustration below where leaves <code>'b'</code> and <code>'e'</code> have been removed).</p>
 <div class="codehilite"><pre><span></span><code>           before                   after
@@ -799,7 +836,7 @@ Right: (&#39;A&#39;, (&#39;G&#39;, ((&#39;E&#39;, &#39;F&#39;), ((&#39;B&#39;, &
 </div>
 <a name="handin4"></a>
 <div class="handin">
-<h2>Exercise 8.7 - handin 4 (triplet distance - part II)</h2>
+<h2>Exercise 8.8 - handin 4 (triplet distance - part II)</h2>
 <p><em>This handin is a continuation of the previous handin. The code from the previous handin should be reused in this exercise.  In this second part the aim should be to write elegant recursive code using Python's tuples and list comprehensions</em>.</p>
 <ol>
 <li>
@@ -1010,9 +1047,22 @@ length <em>i</em> with the column positions for the queens in the <em>i</em> fir
 <p>should return</p>
 <div class="codehilite"><pre><span></span><code>[(2, 1), (5, 1), (1, 2), (4, 2), (2, 3)]
 </code></pre></div>
+
+<p><em>Hint</em>. Use the function <code>sorted</code> using the keyword argument <code>key</code>.</p>
 </div>
 <div class="exercise">
-<h2>Exercise 10.3 (string sorting)</h2>
+<h2>Exercise 10.3 (label sorting)</h2>
+<p>Assume are given labels (strings) only containing one or more letters A-Z. Make a function <code>sort_labels</code> that given a list of labels sorts them such that the labels appear in increasing length order, and those with equal length appear in lexicographical order.</p>
+<p><em>Example</em>.</p>
+<div class="codehilite"><pre><span></span><code>sort_labels([&#39;ANNA&#39;, &#39;IB&#39;, &#39;JENS&#39;, &#39;BO&#39;, &#39;PETER&#39;, &#39;HANS&#39;, &#39;JAKOB&#39;])
+</code></pre></div>
+
+<p>should return</p>
+<div class="codehilite"><pre><span></span><code>[&#39;BO&#39;, &#39;IB&#39;, &#39;ANNA&#39;, &#39;HANS&#39;, &#39;JENS&#39;, &#39;JAKOB&#39;, &#39;PETER&#39;]
+</code></pre></div>
+</div>
+<div class="exercise">
+<h2>Exercise 10.4 (string sorting)</h2>
 <p>Write a function <code>str_sort</code> that sorts a list of strings, such that the strings are sorted with respect to the number of distinct letters (<code>'a'</code> - <code>'z'</code>) there are in the strings. Strings with an equal number of distinct letters after converting to lower case should apper in alphabetical order.</p>
 <p><em>Example</em>.</p>
 <div class="codehilite"><pre><span></span><code>str_sort([&#39;AHA&#39;, &#39;Oasis&#39;, &#39;ABBA&#39;, &#39;Beatles&#39;, &#39;AC/DC&#39;, &#39;B. B. King&#39;, &#39;Bangles&#39;, &#39;Alan Parsons&#39;])
@@ -1025,7 +1075,7 @@ length <em>i</em> with the column positions for the queens in the <em>i</em> fir
 <p><em>Hint</em>. Use <code>len(set(X))</code> to find the number of different elements in a list <code>X</code>.</p>
 </div>
 <div class="exercise">
-<h2>Exercise 10.4* (binary search)</h2>
+<h2>Exercise 10.5* (binary search)</h2>
 <p>Assume you have a function <code>f</code> mapping integers to <code>True</code> and <code>False</code>, and there exists an integer <code>x</code> such that <code>f(y) == False</code> for <code>y</code> &lt; <code>x</code>, and <code>f(y) == True</code> for <code>y</code> ≥ <code>x</code>. Write a function <code>binary_search(f, low, high)</code> that returns the smallest <code>x</code> where <code>f(x) == True</code>, provided <code>f(low) == False</code> and <code>f(high) == True</code>.  The function should use binary search.</p>
 <p><em>Example</em>. Assume we would like to compute <code>ceil(sqrt(1000))</code> using binary search, exploiting that <em>x</em><sup>2</sup> &lt; 1000 for 0 &le; <em>x</em> &lt; sqrt(1000) and <em>x</em><sup>2</sup> &ge; 1000 for x &ge; sqrt(1000). We can then compute <code>ceil(sqrt(1000))</code> as <code>binary_search(lambda x: x * x &gt;= 1000, 0, 1000) == 32</code>.</p>
 <p>Assume now <code>f</code> is a function from floats to floats that is strictly decreasing in an interval [<code>low</code>, <code>x_min</code>] and strictly increasing in the interval [<code>x_min</code>, <code>high</code>] for some real number <code>x_min</code> and integers <code>low</code> and <code>high</code>. Furthermore, assume <code>f(low)</code> &ge;  <code>f(low + 1)</code> and <code>f(high - 1)</code> &lt; <code>f (high)</code>.
@@ -1033,7 +1083,7 @@ Use your function <code>binary_search</code> to write a function <code>local_min
 <p><em>Example</em>. <code>local_min(lambda x: (x - 3.5) ** 2 - 7 * x, -1000, 1000)</code> returns 7.</p>
 </div>
 <div class="exercise">
-<h2>Exercise 10.5* (foldr)</h2>
+<h2>Exercise 10.6* (foldr)</h2>
 <p>In this exercise the goal is to make an implementation of <code>foldr</code> (fold right).  Python's <code>reduce</code> function is often
 called <code>foldl</code> (fold left) in other programming languages, that given a function <code>f</code> and a list <code>[x1, x2, x3, ..., xn]</code> computes <code>f(f(···f(f(x1, x2), x3)···), xn)</code>.</p>
 <p>The function <code>foldr</code> should instead compute <code>f(x1, f(x2, f(x3, f(···f(xn-1, xn)···))))</code>.</p>
