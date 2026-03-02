@@ -40,7 +40,7 @@ Since your are not allowed to access the internet during the exam, it is importa
 
 * A working Python installation and code editor (IDE, e.g., IDLE).
 * Relevant language documentation, e.g., from [docs.python.org/3/](https://docs.python.org/3/) 
-  download [python-3.14-docs-pdf-a4.zip](https://docs.python.org/3/archives/python-3.14-docs-pdf-a4.zip).
-* [Course slides](https://gsbrodal.github.io/ipsa/slides/all-slides.pdf).
+  download [python-3.14-docs-pdf-a4.zip](https://docs.python.org/3/archives/python-3.14-docs-pdf-a4.zip) (in particular the files _tutorial.pdf_, _library.pdf_, and _reference.pdf_).
+* [Course slides](https://gsbrodal.github.io/ipsa/slides/all-slides.pdf) and [code from course slides](https://gsbrodal.github.io/ipsa/slides/code.zip)
+* [Past exams and solutions](exam-past/).
 * Your solutions to exercises made throughout the semester.
-* Past exams and solutions to them.
