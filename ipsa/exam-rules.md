@@ -12,7 +12,9 @@ See previous exams for examples of exercises. The exam is provided as a zip file
 program to test your solution during the exam, where it tests if your code generates the expected output for a set of test inputs provided. The exam should be handed in as a single zip file (how to create a .zip file on [macOS](https://support.apple.com/en-gb/guide/mac-help/mchlp2528/mac) and [Windows](https://support.microsoft.com/en-us/windows/zip-and-unzip-files-f6dde0a7-0fec-8294-e1d3-703ed85e7ebc)).
 
 _Communication with others about the exam is not permitted during the exam. Students are required to bring their own PC and have
-[WISEflow Device Monitor](https://studerende.au.dk/en/wiseflow/) turned on throughout the entire exam. Tablets are not allowed._
+[WISEflow Device Monitor](https://studerende.au.dk/en/wiseflow/) turned on throughout the entire exam. Tablets are not allowed.
+At most one screen is allowed, max 17 inches (see §4, 
+"[Regler om tilsynsprøver ved Aarhus Universitet](https://medarbejdere.au.dk/strategi/vedtaegter-og-regler-for-au/vedtaegter-og-regler-for-uddannelser-og-studerende)")._
 
 _Accessing the internet is not allowed during the exam, except for downloading the exam questions, submitting your exam answers, and for running the WISEflow Device Monitor._
 
