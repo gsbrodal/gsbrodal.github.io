@@ -13,7 +13,7 @@ Class lists, discussions, student assignment submissions and feedback are handle
 
 The course gives an introduction to the Python 3 programming language and applications using Python.  Throughout the course students are encouraged to seek online information in, e.g., the Python language specification.
 
-The course will be run with weekly 2 x 2 hours lectures (alternatively recorded lectures on YouTube), 3 hours of exercise classes with a teaching assistant ("øvelser"), and 3 hours of staffed study café.
+The course will be run with weekly 2 x 2 hours lectures (alternatively recorded lectures on YouTube), 3 hours of exercise classes with a teaching assistant ("øvelser"), and <!-- 3 --> 2 hours of staffed study café.
 
 During the course students are required to hand in 10 weekly assignments and one larger implementation project. The weekly assignments and the project final are done in groups of up to three persons. Approval of the weekly assignments is a prerequisite to attend the exam. The final exam will be a programming exam with all aids, incl. internet, and _the final grade will be based on an overall evaluation of the implementation project (20%) and the programming exam (80%)_.
 
