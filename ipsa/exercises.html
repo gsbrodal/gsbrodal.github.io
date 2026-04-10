@@ -1738,7 +1738,7 @@ text = re.sub(&#39;[ \n,.]&#39;, &#39;&#39;, text).lower()
 <h1>Lecture 17 (Visualization and optimization)</h1>
 <div class="exercise">
 <h2>Exercise 17.1 (Jupyter install)</h2>
-<p>Install and lunch Jupyter.</p>
+<p>Install and launch Jupyter.</p>
 </div>
 <div class="exercise">
 <h2>Exercise 17.2 (getting started with Jupyter)</h2>
@@ -1769,9 +1769,9 @@ text = re.sub(&#39;[ \n,.]&#39;, &#39;&#39;, text).lower()
 </ol>
 </div>
 <div class="exercise">
-<h2>Exercise 18.2 (computing pi using sampling)</h2>
+<h2>Exercise 18.2 (computing π using sampling)</h2>
 <p><img alt="Circle sampling" src="images/circle_sample.png" /></p>
-<p>In this exercise we want compute an approximation of π using random sampling: Given a uniformly selected random point in the unit-square [0,1]<sup>2</sup>, it has probability π / 4 to have distance ≤ 1.0 to (0,0), i.e., to be within the circle with radius one and center located in the origo.</p>
+<p>In this exercise we want compute an approximation of π using random sampling (<a target="_blank" href="https://en.wikipedia.org/wiki/Monte_Carlo_method">Monte Carlo simulation</a>): Given a uniformly selected random point in the unit-square [0,1]<sup>2</sup>, it has probability π / 4 to have distance ≤ 1.0 to (0,0), i.e., to be within the circle with radius one and center located in the origo.</p>
 <ol>
 <li>
 <p>Compute an approximation of π from sufficiently many uniform samples from the unit-square [0,1]<sup>2</sup>. You solution must use <code>numpy</code>. You can, e.g., generate a 2 x 1000000 matrix with random values and use some of the functions <code>numpy.random.random</code>,<code>numpy.random.uniform</code>, <code>numpy.linalg.norm</code>, <code>numpy.average</code>, <code>numpy.sum</code>, <code>numpy.size</code>, ...</p>
@@ -1783,8 +1783,8 @@ text = re.sub(&#39;[ \n,.]&#39;, &#39;&#39;, text).lower()
 </div>
 <div class="exercise">
 <h2>Exercise 18.3 (polynomial fit)</h2>
-<p>Consider the below list <code>L</code> of 2D points. Apply <code>numpy.polyfit</code> for different degrees of the polynomial fitting, and find the minimum degree polynomial where the maximal vertical distance between a point <code>(x, y)</code> in <code>L</code> and the polynomial <code>poly</code> is at most <code>1</code>, i.e., <code>abs(y - poly(x)) &lt;= 1</code> for all <code>(x, y)</code> in <code>L</code>.  Plot the data points and the different polynomial approximations. Present your work in Jupyter.</p>
-<div class="codehilite"><pre><span></span><code>L = [(2, 3), (5, 7), (4, 10), (10, 15), (2.5, 5), (8, 4), (9, 10), (6, 6)]
+<p>Consider the below list <code>points</code> of 2D points. Apply <code>numpy.polyfit</code> for different degrees of the polynomial fitting, and find the minimum degree polynomial where the maximal vertical distance between a point <code>(x, y)</code> in <code>points</code> and the polynomial <code>poly</code> is at most <code>1</code>, i.e., <code>abs(y - poly(x)) &lt;= 1</code> for all <code>(x, y)</code> in <code>points</code>.  Plot the data points and the different polynomial approximations. Present your work in Jupyter.</p>
+<div class="codehilite"><pre><span></span><code>points = [(2, 3), (5, 7), (4, 10), (10, 15), (2.5, 5), (8, 4), (9, 10), (6, 6)]
 </code></pre></div>
 </div>
 <a name="lecture19"></a>
@@ -1832,8 +1832,8 @@ source = &#39;A&#39;
 sink = &#39;F&#39;
 </code></pre></div>
 
-<p>Write a program that, given any flow problem in the above representation,  finds the maximum flow from <code>source</code> to <code>sink</code> in the graph.</p>
-<p><em>Hint</em>. Convert the input to the representation used in the lecture.</p>
+<p>Write a program that, given <em>any</em> flow problem in the above representation,  finds the maximum flow from <code>source</code> to <code>sink</code> in the graph.</p>
+<p><em>Hint</em>. Write a program that converts input in the above representation to the representation used in the lecture.</p>
 </li>
 <li>
 <p>We now want to consider a variant of the flow problem. Assume we are given a value <code>flow</code> for the flow that we want to send from the <code>source</code> to the <code>sink</code> (not necessarily the maximum flow), but now each edge also has a <em>cost</em> for sending one unit of flow along the edge. The input consist of a list of edges represented by 4-tuples (<em>from</em>, <em>to</em>, <em>capacity</em>, <em>cost</em>), and the <code>source</code>, <code>sink</code> and <code>flow</code> values. See example below, where the cost is 2 for sending one unit of flow from 'D' to 'F' and it is for free to send one unit of flow from 'E' and 'D'.</p>
