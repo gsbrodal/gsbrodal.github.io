@@ -18,7 +18,9 @@ At most one screen is allowed, max 17 inches (see §4,
 
 _Accessing the internet is not allowed during the exam, except for downloading the exam questions, submitting your exam answers, and for running the WISEflow Device Monitor._
 
-_It is exam cheating, if you use an AI assistant for the exam (ChatGPT, GitHub Copilot, etc.). Locally installed AI assistants on your computer are also not allowed._
+_It is exam cheating, if you use an AI assistant for the exam (ChatGPT, GitHub Copilot, etc.). Locally installed AI assistants on your computer are also not allowed.
+
+_**New for the exam June 2026**: The exam statements and the [`__`README`__`.txt](__README__.txt) file will be both in Danish and English ([example](exam-question-dk-en.py), originally Problem G, exam August 2025). Searching the internet is **not allowed** during the exam (using AI assistants are still not allowed, neither online or locally on your computer)._
 
 ## WISEflow and Linux
 
