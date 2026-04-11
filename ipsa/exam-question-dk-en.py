@@ -1,7 +1,6 @@
 '''
     MAKE DISTINCT
 
-#> DK
     [DANSK PROBLEMFORMULERING]
 
     Din opgave er, givet en liste af heltal, at erstatte gentagne forekomster af
@@ -37,7 +36,6 @@
 
     [ENGLISH PROBLEM STATEMENT]
 
-#< DK
     Your task is given a list of integers, to replace repeating occurrences of
     integers with the smallest possible larger integers, to make all integers
     distinct. The resulting list should be printed sorted in increasing order.
@@ -72,16 +70,3 @@
 
 # insert code
 pass
-#> solution
-L = list(map(int, input().split()))
-#< solution
-#> validate input
-assert 1 <= len(L) <= 1000
-assert all(1 <= x <= 1_000_000_000 for x in L)
-#< validate input
-#> solution
-distinct = []
-for x in sorted(L):
-    distinct.append(x if not distinct or x > distinct[-1] else distinct[-1] + 1)
-print(*distinct)
-#< solution
