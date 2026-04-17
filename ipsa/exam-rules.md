@@ -24,7 +24,7 @@ _**New for the exam June 2026**: For those registered for the Danish version of 
 
 ## WISEflow and Linux
 
-WISEflow has limited support for Linux, but according to the [WISEflow support page](https://wiseflow.zendesk.com/hc/en-gb/articles/12151266178844-Minimum-Requirements-for-Applications) the WISEflow Device Monitor can run on some versions of Linux.
+WISEflow has limited support for Linux, but according to the [WISEflow support page](https://help.wiseflow.net/service-centre/minimum-requirements-for-applications) the WISEflow Device Monitor can run on some versions of Linux.
 
 ## Curriculum
 
