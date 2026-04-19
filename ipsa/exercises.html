@@ -1867,7 +1867,21 @@ flow = 4
 <p>Explain the difference between <code>sum(range(1_000_000_000))</code> and <code>sum(list(range(1_000_000_000)))</code>.</p>
 </div>
 <div class="exercise">
-<h2>Exercise 20.2 (subsequence)</h2>
+<h2>Exercise 20.2 (generator count)</h2>
+<p>Create a generator function <code>count</code> that generates an infinite sequence of values. <code>count(n)</code> should generate the infinite sequence n, n+1, n+2, ... and <code>count(n, step)</code>should generate n, n+step, n+2*step, ...</p>
+<p>Example of usage:</p>
+<div class="codehilite"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">itertools</span><span class="w"> </span><span class="kn">import</span> <span class="n">islice</span>
+<span class="nb">print</span><span class="p">(</span><span class="o">*</span><span class="n">islice</span><span class="p">(</span><span class="n">count</span><span class="p">(</span><span class="mi">25</span><span class="p">,</span> <span class="mi">5</span><span class="p">),</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">13</span><span class="p">))</span>
+</code></pre></div>
+
+<p>should print the following numbers</p>
+<div class="codehilite"><pre><span></span><code><span class="mf">40</span><span class="w"> </span><span class="mf">45</span><span class="w"> </span><span class="mf">50</span><span class="w"> </span><span class="mf">55</span><span class="w"> </span><span class="mf">60</span><span class="w"> </span><span class="mf">65</span><span class="w"> </span><span class="mf">70</span><span class="w"> </span><span class="mf">75</span><span class="w"> </span><span class="mf">80</span><span class="w"> </span><span class="mf">85</span>
+</code></pre></div>
+
+<p><em>Note</em>: This exercise essentially asks you to implement <code>itertools.count</code> from the standard library using a generator function.</p>
+</div>
+<div class="exercise">
+<h2>Exercise 20.3 (subsequence)</h2>
 <p>Create a function <code>is_subsequence(X, Y)</code> that takes two iterable sequences, and returns if <code>X</code> is a subsequence of <code>Y</code>, i.e., if <code>X</code> can be obtained by deleting zero or more characters from <code>Y</code>. Your solution should only assume that the sequences are iterable, i.e., you can call <code>iter</code> on them but you cannot index into the sequences.</p>
 <div class="codehilite"><pre><span></span><code><span class="o">&gt;</span> <span class="n">is_subsequence</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">5</span><span class="p">],</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">])</span>
 <span class="kc">False</span>
@@ -1881,7 +1895,7 @@ flow = 4
 </code></pre></div>
 </div>
 <div class="exercise">
-<h2>Exercise 20.3 (Fibonacci numbers - generator and iterator)</h2>
+<h2>Exercise 20.4 (Fibonacci numbers - generator and iterator)</h2>
 <ol>
 <li>
 <p><strong>Fibonacci generator</strong>: Make a generator <code>fib(n)</code> to generate the first <code>n</code> <a target="_blank" href="https://mathworld.wolfram.com/FibonacciNumber.html">Fibonacci numbers</a>. Your solution should use the <code>yield</code> keyword.</p>
@@ -1922,15 +1936,15 @@ StopIteration
 </ol>
 </div>
 <div class="exercise">
-<h2>Exercise 20.4 (subsets generator)</h2>
+<h2>Exercise 20.5 (subsets generator)</h2>
 <p>Make a generator version of the <code>subsets</code> function (see Exercise 8.2) using the <code>yield</code> keyword.</p>
 </div>
 <div class="exercise">
-<h2>Exercise 20.5 (subset sum generator)</h2>
+<h2>Exercise 20.6 (subset sum generator)</h2>
 <p>Write a generator function <code>subset_sum(x, L)</code> that reports all subsets of <code>L</code> with sum <code>x</code> (see also Exercise 13.4). Your solution should use the generator function from Exercise 20.4.</p>
 </div>
 <div class="exercise">
-<h2>Exercise 20.6 (permutations generator)</h2>
+<h2>Exercise 20.7 (permutations generator)</h2>
 <p>Make a generator function <code>permutations(L)</code> that given a list <code>L</code> generates all permutations of <code>L</code>. The method should use the <code>yield</code> keyword. The order of the returned lists can be arbitrary.</p>
 <p><em>Example</em>. <code>permutations([1, 2])</code> should return <code>[[1, 2], [2, 1]]</code>.</p>
 <p><em>Note</em>. An implementation of the permutations generator also exists in the standard library <code>itertools</code> (but in this
@@ -1943,7 +1957,7 @@ exercise you should of course write the function from scratch). An example usage
 </code></pre></div>
 </div>
 <div class="exercise">
-<h2>Exercise 20.7* (linked list)</h2>
+<h2>Exercise 20.8* (linked list)</h2>
 <p><img alt="Linked list" src="images/linked_list.png" /></p>
 <p>Lists are fundamental to Python, but a shortcoming of Python's builtin lists is that <code>L.extend(L2)</code> takes time proportional to the number of elements added to <code>L</code> from <code>L2</code>. In this exercise you should implement the alternative <em>linked lists</em>, more precisely <em>cyclic singly linked lists</em>.</p>
 <p>Implement two classes <code>Node</code> and <code>LinkedList</code>.</p>
@@ -1999,7 +2013,7 @@ exercise you should of course write the function from scratch). An example usage
 </div>
 <a name="handin10"></a>
 <div class="handin">
-<h2>Exercise 20.8 - handin 10 (random walk)</h2>
+<h2>Exercise 20.9 - handin 10 (random walk)</h2>
 <p><img alt="Random walk" src="images/random_walk.png" /></p>
 <ol>
 <li>
