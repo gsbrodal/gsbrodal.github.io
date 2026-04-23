@@ -40,11 +40,11 @@ The implementation project done during the course will also count towards the re
 
 ## Files to bring to the exam
 
-Since your are not allowed to access the internet during the exam, it is important that you before the exam already have downloaded at least:
+Since your are not allowed to access the internet during the exam, it is important that you _before the exam_ already have downloaded at least:
 
 * A working Python installation and code editor (IDE, e.g., IDLE). Remember to disable any integrated AI assistant.
 * Relevant language documentation, e.g., from [docs.python.org/3/](https://docs.python.org/3/) 
   download [python-3.14-docs-pdf-a4.zip](https://docs.python.org/3/archives/python-3.14-docs-pdf-a4.zip) (contains in particular the files _tutorial.pdf_, _library.pdf_, and _reference.pdf_).
-* [Course slides](https://gsbrodal.github.io/ipsa/slides/all-slides.pdf) and [code from course slides](https://gsbrodal.github.io/ipsa/slides/code.zip).
+* [Course slides](slides/all-slides.pdf) and [code from course slides](slides/code.zip).
 * [Past exams and solutions](exam-past).
-* Your solutions to exercises made throughout the semester.
+* Your solutions to the exercises made throughout the semester and the [exercise statements](exercises).
