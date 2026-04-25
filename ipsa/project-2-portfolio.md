@@ -57,7 +57,7 @@ The project consists of the following three questions.
 
 3.  Calculate _r_, &mu; and &Sigma; using the formulas above and the prices _p_ calculated in the first question. Plot the probability density function (_pdf_) of the return of each stock.
 <br>
-_Hint_. The method `norm.pdf` from the module `scipy.stats` might become convenient.
+_Hint_. The method `norm.pdf` from the module `scipy.stats` might become convenient. Note that it takes the mean and the standard deviation as arguments.
 
 4.  Solve the optimization problem defined above for different values of &gamma;, e.g., `gammas = numpy.linspace(1.0, 2.8, 10)`, and plot the _pdf_ of each solution to a single plot with appropriate legends.  Finally, create a scatter plot of how _w_* changes as &gamma; changes. For each value of &gamma; plot the fraction of
 each stock in the portfolio.
