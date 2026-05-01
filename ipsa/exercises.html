@@ -1006,12 +1006,12 @@ print(f&#39;{L1 = } {L2 = } {L3 = }&#39;)
 
 <p><em>Hint</em>. Write a recursive solution that generates all possible solutions, but avoids expanding partial solutions already known to be invalid. Since no two queens can be in the same row, a solution must have exactly one queen in each row. A partial solution for the first <em>i</em> queens can be described by a tuple of
 length <em>i</em> with the column positions for the queens in the <em>i</em> first rows. E.g., the tuple (0, 2, 4) could represent a partial solution for the first three rows of a 5 x 5 board:</p>
-<div class="codehilite"><pre><span></span><code><span class="n">column</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="mi">01234</span>
-<span class="n">row</span><span class="w"> </span><span class="mi">0</span><span class="w">  </span><span class="o">:</span><span class="w"> </span><span class="n">Q</span><span class="o">....</span>
-<span class="n">row</span><span class="w"> </span><span class="mi">1</span><span class="w">  </span><span class="o">:</span><span class="w"> </span><span class="o">..</span><span class="n">Q</span><span class="o">..</span>
-<span class="n">row</span><span class="w"> </span><span class="mi">2</span><span class="w">  </span><span class="o">:</span><span class="w"> </span><span class="o">....</span><span class="n">Q</span>
-<span class="n">row</span><span class="w"> </span><span class="mi">3</span><span class="w">  </span><span class="o">:</span><span class="w"> </span><span class="o">.....</span>
-<span class="n">row</span><span class="w"> </span><span class="mi">4</span><span class="w">  </span><span class="o">:</span><span class="w"> </span><span class="o">.....</span>
+<div class="codehilite"><pre><span></span><code>column : 01234
+row 0  : Q....
+row 1  : ..Q..
+row 2  : ....Q
+row 3  : .....
+row 4  : .....
 </code></pre></div>
 
 <p>One way to structure your program is to define three functions:</p>
@@ -2138,8 +2138,8 @@ based on a regular expression capturing the set of separator symbols <code>!</co
 <div class="exercise">
 <h2>Exercise 23.1 (World Bank data)</h2>
 <p>Plot the development in the population in the Scandinavian countries (Norway, Denmark, Sweden, Finland, Iceland) since 1960 until last year.</p>
-<p>Use the pandas data reader for the <a target="_blank" href="https://pandas-datareader.readthedocs.io/en/latest/remote_data.html#world-bank">World Bank</a> data to get the population data. The indicator is <code>SP.POP.TOTL</code>.</p>
-<p><em>Hint</em>. Use the data frame methods <a target="_blank" href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.unstack.html"><code>unstack</code></a> and <a target="_blank" href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.plot.html"><code>plot</code></a>.</p>
+<p>Use the data API for the <a target="_blank" href="https://pypi.org/project/wbgapi/">World Bank</a> to get the population data. The indicator is <code>SP.POP.TOTL</code>.</p>
+<p><em>Hint</em>. Use the pandas data frame methods <a target="_blank" href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.transpose.html"><code>transpose</code></a> and <a target="_blank" href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.plot.html"><code>plot</code></a>.</p>
 </div>
 <a name="lecture24"></a>
 <h1>Lecture 24 (Clustering)</h1>
@@ -2168,7 +2168,7 @@ point <em>c</em> = (&sum;<sub><em>p</em>&in;<em>C</em></sub> <em>p</em>) / <em>n
 </div>
 <div class="exercise">
 <h2>Exercise 24.3* (k-means clustering in 1D)</h2>
-<p>Assume we have a sorted list <em>L</em> of <em>N</em> ≥ 1 real values <em>x</em><sub>1</sub> ≤ ··· ≤ <em>x<sub>N</sub></em>,
+<p>Assume we have a sorted list <em>L</em> of <em>N</em> ≥ 1 <strong>real</strong> values <em>x</em><sub>1</sub> ≤ ··· ≤ <em>x<sub>N</sub></em>,
 and we want to solve the k-means problem for this input <em>optimally</em>, i.e., to find <em>K</em>
 centroids <em>c</em><sub>1</sub>,...,<em>c<sub>K</sub></em>, 1 ≤ <em>K</em> ≤ <em>N</em>, such that the distortion
 &sum;<sub><em>i</em>=1..<em>N</em></sub> min<sub><em>j</em>=1..<em>K</em></sub> (<em>x<sub>i</sub></em> - <em>c<sub>j</sub></em>)<sup>2</sup> is minimized.</p>
