@@ -676,11 +676,11 @@ Right: (&#39;A&#39;, (&#39;G&#39;, ((&#39;E&#39;, &#39;F&#39;), ((&#39;B&#39;, &
 <p><em>Example</em>. <code>pairs(['A', 'F', 'B'])</code> should return <code>[('A', 'F'), ('A', 'B'), ('B', 'F')]</code>.</p>
 </li>
 <li>
-<p>Make a function <code>canonical_triplets(A, B)</code> that returns a list of all canonical triples where the left subtree contains a label from <code>A</code> and the right subtree is a pair from <code>B</code>.</p>
+<p>Make a function <code>canonical_triplets(A, B)</code> that returns a list of all canonical triplets where the left subtree is a label from <code>A</code> and the right subtree is a pair from <code>B</code>.</p>
 <p><em>Example</em>. <code>canonical_triplets(['A', 'B'], ['C', 'D', 'E'])</code> should return: <code>[('A', ('C', 'D')), ('A', ('C', 'E')), ('A', ('D', 'E')), ('B', ('C', 'D')), ('B', ('C', 'E')), ('B', ('D', 'E'))]</code>.</p>
 </li>
 <li>
-<p>Make a function <code>anchored_triplets(L, R)</code> that returns a list of all canonical triples anchored at a node <em>v</em> where the leaves in the left subtree of <em>v</em> contains the labels in the list <code>L</code> and the leaves in the right subtree of <em>v</em> contains the labels in the list <code>R</code>.</p>
+<p>Make a function <code>anchored_triplets(L, R)</code> that returns a list of all canonical triples anchored at a node <em>v</em> where the leaves in the left subtree of <em>v</em> contains the labels in the list <code>L</code> and the leaves in the right subtree of <em>v</em> contains the labels in the list <code>R</code>.  Remember that in canonical triplets we still write the "only child" to the left, no matter if it’s from the left or right subtree.</p>
 <p><em>Example</em>. For the root of the tree (a) <code>anchored_triplets(['A', 'F', 'B'], ['D', 'C', 'E'])</code> should return the following 18 canonical triplets: <code>[('A', ('D', 'E')), ('A', ('C', 'D')), ('A', ('C', 'E')), ('F', ('D', 'E')), ('F', ('C', 'D')), ('F', ('C', 'E')), ('B', ('D', 'E')), ('B', ('C', 'D')), ('B', ('C', 'E')), ('D', ('A', 'F')), ('D', ('A', 'B')), ('D', ('B', 'F')), ('C', ('A', 'F')), ('C', ('A', 'B')), ('C', ('B', 'F')), ('E', ('A', 'F')), ('E', ('A', 'B')), ('E', ('B', 'F'))]</code>.</p>
 </li>
 </ol>
@@ -1277,14 +1277,14 @@ louise_af_SN = AnnotatedPerson(&#39;Louise of Sweden-Norway&#39;, None, None, 18
 frederik_8   = Person(&#39;Frederik 8.&#39;, louise_af_HK, christian_9, 1870, 1947)
 christian_10 = Person(&#39;Christian 10.&#39;, louise_af_SN, frederik_8, 1870, 1947)
 ingrid       = AnnotatedPerson(&#39;Ingrid of Sweden&#39;, None, None, 1910, 2000, &#39;Queen of Denmark 1947-1970&#39;)
-frederik_9   = Person(&#39;Fredrik 9.&#39;, None, christian_10, 1899, 1972)
+frederik_9   = Person(&#39;Frederik 9.&#39;, None, christian_10, 1899, 1972)
 margrethe_ii  = AnnotatedPerson(&#39;Margrethe II&#39;, ingrid, frederik_9, 1940, note=&#39;Queen of Denmark&#39;)`
 </code></pre></div>
 
-<p>Calling <code>margrethe_ii.ancestors()</code> should return something like: <code>('Margrethe II 1940- [Queen of Denmark]', ('Fredrik 9. 1899-1972', ('Christian 10. 1870-1947', ('Frederik 8. 1870-1947', ('Christian 9. 1818-1906', '-', '-'), ('Louise of Hessen-Kassel 1817-1898', '-', '-')), ('Louise of Sweden-Norway 1851-1926 [born Princess of Sweden and Norway]', '-', '-')), '-'), ('Ingrid of Sweden 1910-2000 [Queen of Denmark 1947-1970]', '-', '-'))</code></p>
+<p>Calling <code>margrethe_ii.ancestors()</code> should return something like: <code>('Margrethe II 1940- [Queen of Denmark]', ('Frederik 9. 1899-1972', ('Christian 10. 1870-1947', ('Frederik 8. 1870-1947', ('Christian 9. 1818-1906', '-', '-'), ('Louise of Hessen-Kassel 1817-1898', '-', '-')), ('Louise of Sweden-Norway 1851-1926 [born Princess of Sweden and Norway]', '-', '-')), '-'), ('Ingrid of Sweden 1910-2000 [Queen of Denmark 1947-1970]', '-', '-'))</code></p>
 <p>Applying the tree printing program of Exercise 9.2 to this output would print something like the below (creating the recursive print out is not part of the exercise).</p>
 <div class="codehilite"><pre><span></span><code>--Margrethe II 1940- [Queen of Denmark]
-  |--Fredrik 9. 1899-1972
+  |--Frederik 9. 1899-1972
   |  |--Christian 10. 1870-1947
   |  |  |--Frederik 8. 1870-1947
   |  |  |  |--Christian 9. 1818-1906
@@ -1306,7 +1306,7 @@ margrethe_ii  = AnnotatedPerson(&#39;Margrethe II&#39;, ingrid, frederik_9, 1940
 <h1>Lecture 13 (Exceptions and file input/output)</h1>
 <div class="exercise">
 <h2>Exercise 13.1 (sum of two integers)</h2>
-<p>Write a program that as input takes a single line with two integers and outputs their sum. A valid input line consist of two integers separated by one or more white spaces. Input can be preceded and followed by white spaces. The program should repeat asking for input until a valid input is given.</p>
+<p>Write a program that as input takes a single line with two integers and outputs their sum. A valid input line consists of two integers separated by one or more white spaces. Input can be preceded and followed by white spaces. The program should repeat asking for input until a valid input is given.</p>
 <div class="codehilite"><pre><span></span><code>Input two integers, separated by space: 2 a
 invalid input
 Input two integers, separated by space: 2 3.0
@@ -1480,7 +1480,12 @@ during the recursion when the first solution has been found. Do not generate an 
 <p><em>Hint</em>. One possible solution is to compute the <em>upper hull</em> and <em>lower hull</em> separately (in the figure the red and blue paths, respectively). The upper hull can, e.g., be computed by first sorting the points lexicographically, and then repeatedly removing a point <code>q</code> if <code>p,q,r</code> constitutes a left turn, where <code>p</code> is the left neighbor of <code>q</code> and <code>r</code> the right neighbor of <code>q</code>.</p>
 </li>
 <li>
-<p>Use <code>assert</code> statements and the module <a target="_blank" href="https://docs.python.org/3/library/doctest.html"><code>doctest</code></a> to test your convex hull implementation on a set of represenative inputs.</p>
+<p>Use <code>assert</code> statements within the functions and the module <a target="_blank" href="https://docs.python.org/3/library/doctest.html"><code>doctest</code></a> to test your convex hull implementation on a set of representative inputs with known outputs.
+    At the bottom of the file add the following two lines, and make sure that all your tests are passing.</p>
+<div class="codehilite"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">doctest</span>
+<span class="n">doctest</span><span class="o">.</span><span class="n">testmod</span><span class="p">(</span><span class="n">verbose</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</code></pre></div>
+
 </li>
 </ol>
 <p><em>Note</em>. The computation of the convex hull of a set of points in the plane (and higher dimensions) is a classical topic in the field of <em>Computational Goemetry</em>, and many different algorithms exist for solving this problem. In this exercise the speed of your program is not that important, since the input is assumed to be of a limited size. See, e.g., <a target="_blank" href="https://en.wikibooks.org/wiki/Algorithm_Implementation/Geometry/Convex_hull/Monotone_chain">WikiBooks</a> for the animation of one possible algorithm, or this <a target="_blank" href="https://youtu.be/SMWzOs73O4g">YouTube animation</a>.  The module <code>scipy.spatial</code> contains a class <a target="_blank" href="https://docs.scipy.org/doc/scipy/reference/generated/scipy.spatial.ConvexHull.html">ConvexHull</a> that can compute the convex hull of a point set, but you are of course expected to implement your own algorithm in this exercise. You can use the Scipy convex hull implementation together with your implementation of <code>random_points</code> and <code>plot_hull</code> using the code below (requires you have installed the Scipy library using pip).</p>
