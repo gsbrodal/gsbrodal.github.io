@@ -1513,7 +1513,7 @@ assert raises_exception(lambda: 1 / 0, ZeroDivisionError)
 <span class="n">doctest</span><span class="o">.</span><span class="n">testmod</span><span class="p">(</span><span class="n">verbose</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 </code></pre></div>
 
-<p>You can also make tests with bad inputs to see that your assert statements catch said misinputs. It can be tricky to get doctest to recognize your assertion strings, so you may have to copy the stack trace directly from the terminal eg:</p>
+<p>You can also make tests with bad inputs to see that your assert statements catch said misinputs. It can be tricky to get doctest to recognize your assertion strings, so you may have to copy the stack trace directly from the terminal, e.g.,</p>
 <div class="codehilite"><pre><span></span><code>Traceback (most recent call last):
 ...
 AssertionError: Input must contain at least 3 points
