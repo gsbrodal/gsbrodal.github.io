@@ -1513,6 +1513,12 @@ assert raises_exception(lambda: 1 / 0, ZeroDivisionError)
 <span class="n">doctest</span><span class="o">.</span><span class="n">testmod</span><span class="p">(</span><span class="n">verbose</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 </code></pre></div>
 
+<p>You can also make tests with bad inputs to see that your assert statements catch said misinputs. It can be tricky to get doctest to recognize your assertion strings, so you may have to copy the stack trace directly from the terminal eg:</p>
+<div class="codehilite"><pre><span></span><code>Traceback (most recent call last):
+...
+AssertionError: Input must contain at least 3 points
+</code></pre></div>
+
 </li>
 </ol>
 <p><em>Note</em>. The computation of the convex hull of a set of points in the plane (and higher dimensions) is a classical topic in the field of <em>Computational Goemetry</em>, and many different algorithms exist for solving this problem. In this exercise the speed of your program is not that important, since the input is assumed to be of a limited size. See, e.g., <a target="_blank" href="https://en.wikibooks.org/wiki/Algorithm_Implementation/Geometry/Convex_hull/Monotone_chain">WikiBooks</a> for the animation of one possible algorithm, or this <a target="_blank" href="https://youtu.be/SMWzOs73O4g">YouTube animation</a>.  The module <code>scipy.spatial</code> contains a class <a target="_blank" href="https://docs.scipy.org/doc/scipy/reference/generated/scipy.spatial.ConvexHull.html">ConvexHull</a> that can compute the convex hull of a point set, but you are of course expected to implement your own algorithm in this exercise. You can use the Scipy convex hull implementation together with your implementation of <code>random_points</code> and <code>plot_hull</code> using the code below (requires you have installed the Scipy library using pip).</p>
