@@ -1426,9 +1426,36 @@ during the recursion when the first solution has been found. Do not generate an 
 <p>Write tests for your code.</p>
 <p><em>Hint</em>: Apply <code>sorted</code> to the list and only do one scan over the list to compute the result.</p>
 </div>
+<div class="exercise">
+<h2>Exercise 14.2* (catching exception)</h2>
+<p>Assume we have a list <code>L</code> and a variable <code>i</code> in a program. Sometimes, we add assertions to a program to ensure that <code>i</code> is a valid index into <code>L</code> by adding an assertion, like</p>
+<div class="codehilite"><pre><span></span><code>assert 0 &lt;= i &lt; len(L)
+</code></pre></div>
+
+<p>or, if we allow also negative indexes,</p>
+<div class="codehilite"><pre><span></span><code>assert -len(L) &lt;= i &lt; len(L)
+</code></pre></div>
+
+<p>To ensure <code>i</code> is <em>not</em> a valid index we could have the assertion</p>
+<div class="codehilite"><pre><span></span><code>assert not -len(L) &lt;= i &lt; len(L)
+</code></pre></div>
+
+<p>But what if we instead would like an assertion that checks if <code>L[i]</code> raises an <code>IndexError</code> exception?</p>
+<p>In this exercise you should write a function <code>raises_exception(f, exception_type)</code> that returns <code>True</code> if calling <code>f()</code> raises an exception of type <code>exception_type</code>, and otherwise returns <code>False</code>.</p>
+<p>An application could be in assertions like the below</p>
+<div class="codehilite"><pre><span></span><code>assert raises_exception(lambda: [1,2,3][10], IndexError)
+assert raises_exception(lambda: 1 / 0, ZeroDivisionError)
+</code></pre></div>
+
+<p>or that</p>
+<div class="codehilite"><pre><span></span><code>print(raises_exception(lambda: 1 / 0, IndexError))
+</code></pre></div>
+
+<p>prints <code>False</code>.</p>
+</div>
 <a name="handin7"></a>
 <div class="handin">
-<h2>Exercise 14.2 - handin 7 (convex hull)</h2>
+<h2>Exercise 14.3 - handin 7 (convex hull)</h2>
 <p><img alt="Convex hull" src="images/convex_hull.png" /></p>
 <p>In this exercise you should compute the <a target="_blank" href="https://en.wikipedia.org/wiki/Convex_hull">convex hull</a> of a set of points in the plane.</p>
 <p>We assume that a point is represented as a pair of floats (tuple of two floats), and a set of input points is given by a list of at least three points, e.g., <code>points = [(3,2), (1,1), (2,3), (2,2), (1.5, 2.25), (2.5, 2.25), (2, 1.25), (1, 1.5)]</code> shown as green points in the figure.</p>
