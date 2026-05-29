@@ -3,15 +3,15 @@
 INTRODUKTION TIL PROGRAMMERING MED VIDENSKABELIGE ANVENDELSER
 =============================================================
 
-  * Eksamen juni 2026.
+  * Eksamen 20. juni 2026.
 
   * Hjælpemidler: Egen computer, internetadgang ikke tilladt (bortset fra til at
     hente eksamensformuleringen og at aflevere ens eksamensbesvarelse på
     wiseflow.au.dk, og for at kunne køre WISEflow Device Monitor).
 
-  * WISEflow Device Monitor skal være aktiveret under eksamen.
+  * WISEflow Device Monitor skal være aktiveret under hele eksamenen.
 
-  * Det er ikke lovligt at kommunikere med andre om eksamensopgaverne under
+  * Det er ikke tilladt at kommunikere med andre om eksamensopgaverne under
     eksamen.
 
   * Det er ikke tilladt at bruge en AI assistant, som f.eks. ChatGPT eller
@@ -64,8 +64,8 @@ INTRODUKTION TIL PROGRAMMERING MED VIDENSKABELIGE ANVENDELSER
     den efterfølgende evaluering.
  
   * Opgaverne skal laves i Python 3.14. Der må kun bruges de standard moduler
-    der følger med Python (f.eks. random, math, collections, etc., se
-    https://docs.python.org/3/library/).
+    der følger med Python (jævnfør https://docs.python.org/3/library/,
+    f.eks. random, math, collections, etc., ).
 
   * Eksamensbesvarelsen kan IKKE afleveres i en Jupyter Notebook.
 
@@ -89,19 +89,19 @@ INTRODUKTION TIL PROGRAMMERING MED VIDENSKABELIGE ANVENDELSER
     tilsvarende skjulte input i den efterfølgende evaluering.
 
   * I karaktergivningen har kodestruktur og læsbarhed begrænset indflydelse på
-    den endelige karakter. Fokus er på funktionaliteten af koden, d.v.s, hvor
+    den endelige karakter. Fokus er på funktionaliteten af koden, d.v.s., hvor
     mange testinstanser der bliver godkendt. Men sandsynligivs virker mere
     struktureret kode korrekt på flere inputinstanser.
 
-    Det forventes ikke at man skriver kommentarer og docstring's i ens
-    besvarelser, ud over de ovenstående kilder når man genbruger/ændrer
-    eksisterende kode.
+  * Det forventes ikke at man skriver kommentarer og docstrings i ens
+    besvarelser, ud over kommentarer med kildehenvisninger når man 
+    genbruger/ændrer eksisterende kode.
 
 
 INTRODUCTION TO PROGRAMMING WITH SCIENTIFIC APPLICATIONS
 ========================================================
 
-  * Exam June, 2026.
+  * Exam June 20, 2026.
 
   * Aids: Own computer, internet access not allowed (except for downloading the
     exam and submitting your exam answers on wiseflow.au.dk, and running the
@@ -135,7 +135,7 @@ INTRODUCTION TO PROGRAMMING WITH SCIENTIFIC APPLICATIONS
 
   * Weight of the questions (questions are not weighted equally):
 
-     Question  Point  Name
+     Problem  Point  Name
         A
         B
         C
@@ -146,8 +146,8 @@ INTRODUCTION TO PROGRAMMING WITH SCIENTIFIC APPLICATIONS
 
        A.py, B.py, ... and the file run_tests.log.
 
-    It is recommended that one submits the complete exam folder including tests,
-    not answered questions etc.
+    It is recommended to submit the complete exam folder including tests,
+    non-answered questions etc.
     
     Information on how to create a zip file under macOS and Windows can 
     be found here:
@@ -163,8 +163,8 @@ INTRODUCTION TO PROGRAMMING WITH SCIENTIFIC APPLICATIONS
     evaluation with the score you experienced obtained during the exam.
  
   * The questions should be answered using Python 3.14. You are only allowed to 
-    use the standard modules installed with Python (e.g., random, math,
-    collections, etc., see https://docs.python.org/3/library/).
+    use the standard modules installed with Python (cf. 
+    https://docs.python.org/3/library/, e.g., random, math, collections, etc.).
 
   * Submissions CANNOT be done as a Jupyter Notebook.
 
@@ -194,6 +194,6 @@ INTRODUCTION TO PROGRAMMING WITH SCIENTIFIC APPLICATIONS
     cases are accepted. But likely, more structured code has a higher chance to
     work correctly on more inputs.
     
-    You are not expected to provide comments and docstrings in your solutions,
-    except for the above mentioned required references to sources when you
-    reuse/modify existing code.
+  * You are not expected to provide comments and docstrings in your solutions,
+    except for the required comments with the references to your sources when
+    you reuse/modify existing code.
