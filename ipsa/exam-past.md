@@ -9,6 +9,9 @@ are not required for a correct solution.
 The questions files contain 5 test cases per problem,
 whereas the answer files contain 5 additional test cases per problem.
 
+* June 2026 [
+  questions [dk](exams/ipsa26dk.zip) | [en](exams/ipsa26en.zip),
+  [answers](exams/ipsa26answers.zip) ]
 * August 2025 [
   [questions](exams/ipsa25r.zip),
   [answers](exams/ipsa25r-answers.zip) ]
