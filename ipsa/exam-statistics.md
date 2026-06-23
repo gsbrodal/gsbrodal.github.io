@@ -2,6 +2,7 @@
 
 | Grade     | -3 | 00 | 02 |  4 |  7 | 10 | 12 | Total |
 |:----------|---:|---:|---:|---:|---:|---:|---:|------:|
+| June 2026 |  1 | 27 | 20 | 32 | 44 | 22 | 21 |  179  |
 | June 2025 |  4 | 15 | 19 | 32 | 55 | 27 | 26 |  192  |
 | June 2024 |  3 | 11 | 23 | 20 | 44 | 18 | 25 |  144  |
 | June 2023 |  1 |  8 | 25 | 35 | 35 | 28 | 13 |  145  |
@@ -11,4 +12,4 @@
 | June 2019 |  1 |  4 | 13 | 26 | 51 | 36 | 12 |  143  |
 | June 2018 |  0 |  0 |  6 | 16 | 34 | 23 | 12 |   91  | 
 
-Notice that during 2018-2019 the final exam in the course was a multiple-choice exam. Since 2020 the exam has been a programming exam.
+Notice that during 2018-2019 the final exam in the course was a multiple-choice exam. Since 2020 the exam has been a programming exam, with internet access allowed during 2020-2025.
